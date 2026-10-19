@@ -1,9 +1,10 @@
-const CACHE_NAME = "vcryptoscope-v2";
+const CACHE_NAME = "vcryptoscope-v3";
 
 const APP_FILES = [
   "./",
   "./index.html",
   "./analysis.html",
+  "./trade.html",
   "./news.html",
   "./privacy.html",
   "./manifest.json",
