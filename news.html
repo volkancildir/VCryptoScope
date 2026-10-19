@@ -4,163 +4,695 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
 <title>VCryptoScope | Kripto Haberleri</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#0b1020;color:#e8edf7;font-family:Arial,sans-serif}
-header{padding:24px 16px;background:#111a2e;border-bottom:1px solid #26334d}
-.container{max-width:1050px;margin:auto}
-h1{margin:0 0 8px;font-size:25px}
-.subtitle{color:#9eabc3;font-size:13px}
-main{max-width:1050px;margin:auto;padding:18px 14px}
-#search{width:100%;padding:13px;border-radius:10px;border:1px solid #2c3b57;background:#111a2e;color:#fff;font-size:15px;margin-bottom:14px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.filters button{border:1px solid #33415c;background:#141e33;color:#c8d3e7;padding:10px 13px;border-radius:9px;font-size:13px;cursor:pointer}
-.filters button.active{background:#2563eb;border-color:#3b82f6;color:white}
-#status{color:#9eabc3;font-size:13px;margin:12px 0}
-.article{background:#111a2e;border:1px solid #26334d;border-radius:12px;padding:16px;margin-bottom:12px}
-.article h2{font-size:17px;line-height:1.45;margin:0 0 10px}
-.article h2 a{color:#edf3ff;text-decoration:none}
-.article h2 a:hover{color:#60a5fa}
-.summary{font-size:14px;line-height:1.6;color:#bac6da;margin:0 0 12px}
-.meta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:#8494af}
-.category{color:#7dd3fc}
-.empty{padding:28px;text-align:center;color:#9eabc3;background:#111a2e;border-radius:12px}
-footer{text-align:center;padding:24px;color:#65738b;font-size:12px}
+:root {
+  --bg: #0b1020;
+  --panel: #111a2e;
+  --panel2: #17233b;
+  --border: #293854;
+  --text: #e8edf7;
+  --muted: #9eabc3;
+  --blue: #3b82f6;
+  --cyan: #7dd3fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background: linear-gradient(135deg, #111a2e, #152442);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 27px;
+  letter-spacing: 0.3px;
+}
+
+.logo-accent {
+  color: var(--cyan);
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 14px 35px;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#search {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+}
+
+#search:focus {
+  border-color: var(--blue);
+}
+
+#search::placeholder {
+  color: #7e8da7;
+}
+
+.section-title {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 9px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.filters button {
+  appearance: none;
+  border: 1px solid #34435f;
+  background: var(--panel);
+  color: #cbd5e7;
+  padding: 10px 13px;
+  border-radius: 9px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.filters button:hover {
+  border-color: var(--blue);
+}
+
+.filters button.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+
+.filters button:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 12px;
+}
+
+#status {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#sort {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text);
+  padding: 9px;
+  font-size: 12px;
+  max-width: 100%;
+}
+
+.article {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+  transition: border-color 0.15s;
+}
+
+.article:hover {
+  border-color: #405579;
+}
+
+.article h2 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.article h2 a {
+  color: #edf3ff;
+  text-decoration: none;
+}
+
+.article h2 a:hover {
+  color: var(--cyan);
+}
+
+.summary {
+  color: #bac6da;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 13px;
+  white-space: normal;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 13px;
+  font-size: 12px;
+  color: #8e9db6;
+}
+
+.category-label {
+  display: inline-block;
+  color: var(--cyan);
+  background: #102a42;
+  border: 1px solid #20435c;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.source-label {
+  color: #c1cce0;
+}
+
+.empty, .error {
+  padding: 28px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--muted);
+  text-align: center;
+}
+
+.error {
+  color: #fca5a5;
+}
+
+.load-more-wrap {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#loadMore {
+  display: none;
+  padding: 11px 20px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--panel2);
+  color: var(--text);
+  cursor: pointer;
+}
+
+#loadMore:hover {
+  border-color: var(--blue);
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding: 22px 14px;
+  color: #74839c;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 23px;
+  }
+
+  header {
+    padding: 20px 14px;
+  }
+
+  main {
+    padding: 15px 11px 28px;
+  }
+
+  .filters button {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+
+  .article {
+    padding: 14px;
+  }
+
+  .article h2 {
+    font-size: 16px;
+  }
+
+  .toolbar {
+    align-items: flex-start;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
   <div class="container">
-    <h1>VCryptoScope</h1>
-    <div class="subtitle">Kripto piyasaları ve küresel ekonomi haberleri</div>
+    <div class="header-top">
+      <div>
+        <h1><span class="logo-accent">VCrypto</span>Scope</h1>
+        <div class="subtitle">
+          Kripto piyasaları, Bitcoin, Ethereum ve küresel ekonomi
+        </div>
+      </div>
+      <div class="updated" id="updatedAt">Güncelleme bilgisi alınıyor...</div>
+    </div>
   </div>
 </header>
 
 <main>
-  <input id="search" type="search" placeholder="Haber ara...">
-
-  <div class="filters" id="filters">
-    <button class="active" data-category="Tümü">Tüm Haberler</button>
-    <button data-category="Bitcoin">Bitcoin</button>
-    <button data-category="Ethereum">Ethereum</button>
-    <button data-category="Makroekonomi">Makroekonomi</button>
-    <button data-category="Regülasyon">Regülasyon</button>
-    <button data-category="Kurumsal Yatırım">Kurumsal Yatırım</button>
-    <button data-category="Kripto Piyasası">Kripto Piyasası</button>
+  <div class="search-row">
+    <input
+      id="search"
+      type="search"
+      placeholder="Haber başlığı, içerik veya kaynak ara..."
+      autocomplete="off"
+      aria-label="Haberlerde ara"
+    >
   </div>
 
-  <div id="status">Haberler yükleniyor...</div>
+  <p class="section-title">Haber kategorileri</p>
+
+  <div class="filters" id="filters">
+    <button type="button" class="active" data-category="Tümü">Tüm Haberler</button>
+    <button type="button" data-category="Bitcoin">Bitcoin</button>
+    <button type="button" data-category="Ethereum">Ethereum</button>
+    <button type="button" data-category="Makroekonomi">Makroekonomi</button>
+    <button type="button" data-category="Regülasyon">Regülasyon</button>
+    <button type="button" data-category="Kurumsal Yatırım">Kurumsal Yatırım</button>
+    <button type="button" data-category="Kripto Piyasası">Kripto Piyasası</button>
+  </div>
+
+  <div class="toolbar">
+    <div id="status" aria-live="polite">Haberler yükleniyor...</div>
+
+    <select id="sort" aria-label="Haberleri sırala">
+      <option value="newest">En yeni haberler</option>
+      <option value="oldest">En eski haberler</option>
+    </select>
+  </div>
+
   <div id="articles"></div>
+
+  <div class="load-more-wrap">
+    <button type="button" id="loadMore">Daha fazla haber göster</button>
+  </div>
 </main>
 
-<footer>VCryptoScope · Bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.</footer>
+<footer>
+  VCryptoScope · Haberler bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.
+</footer>
 
 <script>
-const list = document.getElementById("articles");
-const statusBox = document.getElementById("status");
-const searchBox = document.getElementById("search");
-const filterButtons = [...document.querySelectorAll("#filters button")];
+(() => {
+  "use strict";
 
-let allArticles = [];
-let selectedCategory = "Tümü";
+  const searchBox = document.getElementById("search");
+  const filterContainer = document.getElementById("filters");
+  const filterButtons = Array.from(
+    filterContainer.querySelectorAll("button[data-category]")
+  );
+  const statusBox = document.getElementById("status");
+  const articlesBox = document.getElementById("articles");
+  const sortBox = document.getElementById("sort");
+  const loadMoreButton = document.getElementById("loadMore");
+  const updatedAtBox = document.getElementById("updatedAt");
 
-function escapeHTML(value) {
-  return String(value ?? "").replace(/[&<>"']/g, char => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",
-    '"':"&quot;","'":"&#39;"
-  }[char]));
-}
+  let allArticles = [];
+  let selectedCategory = "Tümü";
+  let visibleLimit = 20;
 
-function dateText(value) {
-  if (!value) return "Tarih bilinmiyor";
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "Tarih bilinmiyor";
-  return date.toLocaleString("tr-TR", {
-    dateStyle:"medium", timeStyle:"short"
-  });
-}
-
-function render() {
-  const query = searchBox.value.trim().toLocaleLowerCase("tr-TR");
-
-  const filtered = allArticles.filter(article => {
-    const category = article.category || "Kripto Piyasası";
-    const title = article.titleTr || article.title || "";
-    const summary = article.summaryTr || article.summary || article.description || "";
-
-    const matchesCategory =
-      selectedCategory === "Tümü" || category === selectedCategory;
-
-    const matchesSearch =
-      (title + " " + summary + " " + category)
-      .toLocaleLowerCase("tr-TR").includes(query);
-
-    return matchesCategory && matchesSearch;
-  });
-
-  statusBox.textContent = `${filtered.length} haber gösteriliyor`;
-
-  if (!filtered.length) {
-    list.innerHTML = '<div class="empty">Bu kategoride haber bulunamadı.</div>';
-    return;
+  function normalize(value) {
+    return String(value ?? "")
+      .trim()
+      .toLocaleLowerCase("tr-TR")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
   }
 
-  list.innerHTML = filtered.map(article => {
-    const title = article.titleTr || article.title || "Başlıksız haber";
-    const summary = article.summaryTr || article.summary || article.description || "";
-    const category = article.category || "Kripto Piyasası";
-    const url = article.url || "#";
+  function escapeHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, character => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    })[character]);
+  }
 
-    return `
-      <article class="article">
-        <h2><a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(title)}</a></h2>
-        ${summary ? `<p class="summary">${escapeHTML(summary)}</p>` : ""}
-        <div class="meta">
-          <span class="category">${escapeHTML(category)}</span>
-          <span>${escapeHTML(article.source || "Haber kaynağı")}</span>
-          <span>${escapeHTML(dateText(article.publishedAt))}</span>
-        </div>
-      </article>`;
-  }).join("");
-}
+  function getTitle(article) {
+    return article.titleTr ||
+      article.title_tr ||
+      article.translTitle ||
+      article.title ||
+      "Başlıksız haber";
+  }
 
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    selectedCategory = button.dataset.category;
-    filterButtons.forEach(item =>
-      item.classList.toggle("active", item === button)
+  function getSummary(article) {
+    return article.summaryTr ||
+      article.summary_tr ||
+      article.marketImpactTr ||
+      article.summary ||
+      article.description ||
+      "";
+  }
+
+  function getCategory(article) {
+    const original = article.category || article.categoryTr || "";
+
+    if (original) {
+      const value = normalize(original);
+
+      if (value.includes("bitcoin") || value === "btc") {
+        return "Bitcoin";
+      }
+
+      if (value.includes("ethereum") || value === "eth") {
+        return "Ethereum";
+      }
+
+      if (
+        value.includes("regulasyon") ||
+        value.includes("regulation") ||
+        value.includes("mevzuat") ||
+        value.includes("hukuk")
+      ) {
+        return "Regülasyon";
+      }
+
+      if (
+        value.includes("makro") ||
+        value.includes("ekonomi") ||
+        value.includes("economy") ||
+        value.includes("fed") ||
+        value.includes("enflasyon")
+      ) {
+        return "Makroekonomi";
+      }
+
+      if (
+        value.includes("kurumsal") ||
+        value.includes("institutional") ||
+        value.includes("etf")
+      ) {
+        return "Kurumsal Yatırım";
+      }
+
+      if (
+        value.includes("kripto") ||
+        value.includes("crypto") ||
+        value.includes("market") ||
+        value.includes("piyasa")
+      ) {
+        return "Kripto Piyasası";
+      }
+    }
+
+    const text = normalize(
+      getTitle(article) + " " + getSummary(article)
     );
-    render();
-  });
-});
 
-searchBox.addEventListener("input", render);
+    if (/\b(bitcoin|btc)\b/.test(text)) return "Bitcoin";
+    if (/\b(ethereum|ether|eth)\b/.test(text)) return "Ethereum";
 
-async function loadNews() {
-  try {
-    const response = await fetch("./news.json?update=" + Date.now(), {
-      cache:"no-store"
+    if (
+      /\b(sec|regulation|regulatory|lawsuit|legislation|ban|regulasyon)\b/.test(text)
+    ) {
+      return "Regülasyon";
+    }
+
+    if (
+      /\b(fed|federal reserve|inflation|interest rate|economy|economic|gdp|enflasyon)\b/.test(text)
+    ) {
+      return "Makroekonomi";
+    }
+
+    if (
+      /\b(etf|institutional|institution|fund|asset manager)\b/.test(text)
+    ) {
+      return "Kurumsal Yatırım";
+    }
+
+    return "Kripto Piyasası";
+  }
+
+  function getDate(article) {
+    const value =
+      article.publishedAt ||
+      article.published_at ||
+      article.pubDate ||
+      article.date ||
+      null;
+
+    if (!value) return null;
+
+    const parsed = new Date(value);
+    return Number.isNaN(parsed.getTime()) ? null : parsed;
+  }
+
+  function formatDate(article) {
+    const date = getDate(article);
+
+    if (!date) return "Tarih bilinmiyor";
+
+    return date.toLocaleString("tr-TR", {
+      dateStyle: "medium",
+      timeStyle: "short"
     });
-    if (!response.ok) throw new Error("HTTP " + response.status);
+  }
 
-    const data = await response.json();
-    allArticles = Array.isArray(data) ? data : (data.articles || data.items || []);
+  function getFilteredArticles() {
+    const query = normalize(searchBox.value);
 
-    if (!allArticles.length) {
-      statusBox.textContent = "Henüz haber bulunamadı.";
-      list.innerHTML = "";
+    const filtered = allArticles.filter(article => {
+      const category = getCategory(article);
+
+      const categoryMatches =
+        selectedCategory === "Tümü" ||
+        normalize(category) === normalize(selectedCategory);
+
+      const searchableText = normalize([
+        getTitle(article),
+        getSummary(article),
+        article.title || "",
+        article.summary || "",
+        article.description || "",
+        article.source || "",
+        category
+      ].join(" "));
+
+      return categoryMatches && searchableText.includes(query);
+    });
+
+    filtered.sort((a, b) => {
+      const dateA = getDate(a)?.getTime() || 0;
+      const dateB = getDate(b)?.getTime() || 0;
+
+      return sortBox.value === "oldest"
+        ? dateA - dateB
+        : dateB - dateA;
+    });
+
+    return filtered;
+  }
+
+  function render() {
+    const filtered = getFilteredArticles();
+    const visible = filtered.slice(0, visibleLimit);
+
+    statusBox.textContent =
+      `${filtered.length} haber bulundu · ${visible.length} haber gösteriliyor`;
+
+    loadMoreButton.style.display =
+      filtered.length > visibleLimit ? "inline-block" : "none";
+
+    if (filtered.length === 0) {
+      articlesBox.innerHTML =
+        '<div class="empty">Bu arama veya kategoride haber bulunamadı.</div>';
       return;
     }
 
-    render();
-  } catch (error) {
-    statusBox.textContent = "Haberler yüklenemedi. Lütfen sayfayı yenileyin.";
-    console.error(error);
-  }
-}
+    articlesBox.innerHTML = visible.map(article => {
+      const title = getTitle(article);
+      const summary = getSummary(article);
+      const category = getCategory(article);
+      const source = article.source || "Haber kaynağı";
+      const url = article.url || article.link || "";
 
-loadNews();
+      const safeLink = /^https?:\/\//i.test(url)
+        ? escapeHTML(url)
+        : "";
+
+      const titleHTML = safeLink
+        ? `<a href="${safeLink}" target="_blank" rel="noopener noreferrer">${escapeHTML(title)}</a>`
+        : escapeHTML(title);
+
+      return `
+        <article class="article">
+          <h2>${titleHTML}</h2>
+
+          ${summary
+            ? `<p class="summary">${escapeHTML(summary)}</p>`
+            : ""}
+
+          <div class="meta">
+            <span class="category-label">${escapeHTML(category)}</span>
+            <span class="source-label">${escapeHTML(source)}</span>
+            <span>${escapeHTML(formatDate(article))}</span>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  filterContainer.addEventListener("click", event => {
+    const button = event.target.closest("button[data-category]");
+
+    if (!button || !filterContainer.contains(button)) return;
+
+    selectedCategory = button.dataset.category || "Tümü";
+    visibleLimit = 20;
+
+    filterButtons.forEach(item => {
+      const isActive = item === button;
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+
+    render();
+  });
+
+  filterButtons.forEach(button => {
+    button.setAttribute(
+      "aria-pressed",
+      String(button.dataset.category === selectedCategory)
+    );
+  });
+
+  searchBox.addEventListener("input", () => {
+    visibleLimit = 20;
+    render();
+  });
+
+  sortBox.addEventListener("change", () => {
+    visibleLimit = 20;
+    render();
+  });
+
+  loadMoreButton.addEventListener("click", () => {
+    visibleLimit += 20;
+    render();
+  });
+
+  async function loadNews() {
+    try {
+      statusBox.textContent = "Haberler yükleniyor...";
+
+      const response = await fetch(
+        "./news.json?cacheBust=" + Date.now(),
+        { cache: "no-store" }
+      );
+
+      if (!response.ok) {
+        throw new Error("Haber dosyası alınamadı: HTTP " + response.status);
+      }
+
+      const data = await response.json();
+
+      allArticles = Array.isArray(data)
+        ? data
+        : Array.isArray(data.articles)
+          ? data.articles
+          : Array.isArray(data.items)
+            ? data.items
+            : [];
+
+      if (data.updatedAt) {
+        updatedAtBox.textContent =
+          "Son güncelleme: " +
+          new Date(data.updatedAt).toLocaleString("tr-TR");
+      } else {
+        updatedAtBox.textContent = "Haber akışı";
+      }
+
+      if (!allArticles.length) {
+        statusBox.textContent = "Haber bulunamadı.";
+        articlesBox.innerHTML =
+          '<div class="empty">Haber akışı şu anda boş.</div>';
+        return;
+      }
+
+      render();
+    } catch (error) {
+      console.error("VCryptoScope haber yükleme hatası:", error);
+
+      statusBox.textContent = "Haberler yüklenemedi.";
+
+      articlesBox.innerHTML =
+        '<div class="error">Haber dosyası okunamadı. İnternet bağlantısını kontrol edip sayfayı yenileyin.</div>';
+    }
+  }
+
+  loadNews();
+})();
 </script>
+
 </body>
 </html>
