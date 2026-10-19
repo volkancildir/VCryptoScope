@@ -1,212 +1,215 @@
-<!doctype html>
-<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#08111f"><meta name="description" content="Kripto para piyasası, Fed, istihdam, petrol ve küresel ekonomi haberleri"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="icon.svg"><title>VCryptoScope — Piyasa Haberleri</title>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08111f">
+<title>VCryptoScope | Haberler</title>
 <style>
-:root{color-scheme:dark;--bg:#08111f;--p:#101d30;--p2:#15253b;--line:#263850;--t:#edf4ff;--m:#91a4bf;--g:#21d6b0;--r:#ff647c;--y:#f6c85f;--b:#7d9cff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#12233b,#08111f 48%);font:14px/1.5 system-ui,-apple-system,Segoe UI,Arial;color:var(--t)}button,input,select{font:inherit}a{color:inherit}.app{max-width:1300px;margin:auto;padding:18px 14px 40px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px}.brand{display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:14px;background:#13213a;display:grid;place-items:center;overflow:hidden}.logo svg{width:42px;height:42px}.brand h1{font-size:19px;margin:0}.brand p{font-size:11px;color:var(--m);margin:3px 0 0}.nav{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.nav a,.prefs-btn,.btn,.chip{border:1px solid #354464;color:var(--t);background:#17233a;border-radius:10px;padding:9px 12px;font-weight:700;text-decoration:none;cursor:pointer}.nav a.active{background:#e9f0ff;color:#10182a;border-color:#e9f0ff}.prefs-btn{font-size:13px}.hero{padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(130deg,#14243b,#0e192a);margin-bottom:18px}.eyebrow{font-size:11px;color:var(--b);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 7px}.hero h2{font-size:clamp(23px,4vw,34px);letter-spacing:-.7px;line-height:1.15;margin:0 0 9px}.hero p{color:var(--m);margin:0;max-width:800px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:16px 0}.search{min-width:220px;flex:1;background:#091524;border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--t)}.chip{padding:8px 11px;font-size:12px;color:var(--m)}.chip.active{color:#10182a;background:#e9f0ff;border-color:#e9f0ff}.meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--m);font-size:12px;margin:10px 0}.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.article{display:flex;flex-direction:column;gap:10px;background:linear-gradient(145deg,#121f32,#0e1929);border:1px solid var(--line);border-radius:15px;padding:17px;min-width:0;transition:border-color .15s,transform .15s}.article:hover{border-color:#526e9e;transform:translateY(-1px)}.article-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.tag{font-size:10px;font-weight:800;letter-spacing:.3px;padding:5px 8px;border-radius:7px;background:#1a3150;color:#a9c5ff}.tag.macro{background:#3a3020;color:#f5d28c}.tag.energy{background:#3b2c20;color:#ffbc86}.tag.jobs{background:#1d3440;color:#95d9ec}.tag.fed{background:#382746;color:#ddb7ff}.source,.time{font-size:11px;color:var(--m)}.source-link{color:#a9c5ff;text-decoration:none;font-weight:700;overflow-wrap:anywhere}.source-link:hover{text-decoration:underline}.article h3{font-size:16px;line-height:1.35;margin:0;letter-spacing:-.2px}.article p{color:#a9b7cd;font-size:12px;line-height:1.55;margin:0;overflow-wrap:anywhere}.article-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:7px}.read{font-size:12px;color:#a9c5ff;font-weight:800;text-decoration:none}.read:hover{text-decoration:underline}.empty{padding:36px;text-align:center;color:var(--m);background:#101d30;border:1px solid var(--line);border-radius:14px;grid-column:1/-1}.notice{margin-top:16px;border:1px solid #293854;background:#111c30;border-radius:12px;padding:12px;color:var(--m);font-size:11px}.loading{display:flex;align-items:center;gap:9px;color:var(--m);padding:28px}.dot{width:8px;height:8px;border-radius:50%;background:var(--y);box-shadow:0 0 12px #f6c85f55}.prefs-backdrop{position:fixed;inset:0;z-index:1000;background:#030711d9;display:none;align-items:center;justify-content:center;padding:16px}.prefs-backdrop.open{display:flex}.prefs-panel{width:min(100%,520px);max-height:90vh;overflow:auto;background:#101a2c;border:1px solid #30415f;border-radius:18px;padding:20px;box-shadow:0 25px 80px #0009}.prefs-panel h2{margin:0 0 6px;font-size:20px}.prefs-muted,.prefs-sub{color:var(--m);font-size:12px}.prefs-muted{margin:0 0 18px}.prefs-row{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #26344b}.prefs-name{flex:1;font-weight:700}.prefs-move{display:flex;gap:6px}.prefs-move button,.prefs-close{border:1px solid #354464;background:#192741;color:var(--t);border-radius:8px;padding:8px 11px;cursor:pointer}.prefs-move button:disabled{opacity:.3}.prefs-home{display:flex;align-items:center;gap:9px;padding:10px 0}.prefs-home input{accent-color:#7d9cff;width:17px;height:17px}.prefs-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.prefs-actions button{flex:1}.prefs-hint{background:#0b1424;border:1px solid #26344b;border-radius:10px;padding:10px;color:var(--m);font-size:11px;margin-top:12px}.footer{font-size:11px;color:var(--m);margin-top:18px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}@media(max-width:720px){.news-grid{grid-template-columns:1fr}.app{padding:14px 11px 30px}.hero{padding:17px}.nav{width:100%}.nav a{padding:8px 9px;font-size:12px}.top{align-items:flex-start}.search{min-width:100%}}
-</style><style id="vcrypto-theme-overrides">
-/* Unified, accessible theme controls */
-.theme-btn,.prefs-btn{width:42px;height:42px;min-width:42px;display:inline-grid;place-items:center;padding:0!important;line-height:1;border:1px solid var(--line,#354464);color:var(--t,var(--text,#edf4ff));background:var(--p2,#17233a);border-radius:12px;cursor:pointer;flex:0 0 42px;transition:background .18s,border-color .18s,transform .18s}
-.theme-btn svg{display:block}
-.theme-btn:hover,.prefs-btn:hover{border-color:#7192c9;transform:translateY(-1px)}
-.theme-btn:focus-visible,.prefs-btn:focus-visible{outline:3px solid #7da7ff;outline-offset:2px}
-body.light-mode{color-scheme:light!important;background:#f3f6fb!important;color:#1b2a41!important}
-body.light-mode .wrap,body.light-mode .app{background:transparent!important}
-body.light-mode .brand h1,body.light-mode h1,body.light-mode h2,body.light-mode h3,body.light-mode h4,body.light-mode strong,body.light-mode label,body.light-mode th,body.light-mode td{color:#1b2a41}
-body.light-mode .brand p,body.light-mode .sub,body.light-mode .status,body.light-mode .updated,body.light-mode .footer,body.light-mode .section-head p,body.light-mode .map-meta,body.light-mode .map-info,body.light-mode .source,body.light-mode .time,body.light-mode .article p,body.light-mode .prefs-muted,body.light-mode .prefs-sub,body.light-mode .notice,body.light-mode .muted,body.light-mode .note,body.light-mode .hint,body.light-mode .adesc,body.light-mode .label{color:#596b83!important}
-body.light-mode .card,body.light-mode .table-shell,body.light-mode .article,body.light-mode .hero,body.light-mode .notice,body.light-mode .empty,body.light-mode .prefs-panel,body.light-mode .prefs-hint{background:#fff!important;border-color:#d8e1ed!important;color:#1b2a41!important;box-shadow:0 5px 18px #24344b0b}
-body.light-mode .btn,body.light-mode .period,body.light-mode .period-btn,body.light-mode .prefs-btn,body.light-mode .theme-btn,body.light-mode .refresh-btn,body.light-mode .prefs-close,body.light-mode .prefs-move button,body.light-mode .chip{background:#fff!important;color:#263a55!important;border-color:#cbd7e6!important}
-body.light-mode .btn.active,body.light-mode .period.active,body.light-mode .period-btn.active,body.light-mode .chip.active{background:#e3ecff!important;color:#183b73!important;border-color:#a9c2f7!important}
-body.light-mode .search,body.light-mode input,body.light-mode select,body.light-mode textarea{background:#fff!important;color:#1b2a41!important;border-color:#cbd7e6!important}
-body.light-mode thead,body.light-mode th{background:#edf2f8!important;color:#526178!important;border-color:#d7dfeb!important}
-body.light-mode td,body.light-mode .prefs-row{border-color:#e0e6ef!important}
-body.light-mode tbody tr:hover{background:#edf3fb!important}
-body.light-mode .prefs-backdrop{background:#24344b77!important}
-body.light-mode .prefs-panel{box-shadow:0 25px 80px #24344b22!important}
-body.light-mode .period-btn{color:#33435a!important}
-/* Technical analysis cards and controls need their own light palette. */
-body.light-mode .panel,body.light-mode .metric,body.light-mode .acard,body.light-mode .indicator-card,body.light-mode .indicator-empty,body.light-mode .liq-empty,body.light-mode .prefs-panel,body.light-mode .prefs-hint{background:#fff!important;border-color:#d7e0eb!important;color:#1b2a41!important;box-shadow:0 4px 16px #1c35500a}
-body.light-mode .coin{color:#263a55!important}
-body.light-mode .coin.active,body.light-mode .coin:hover{background:#e8f0fc!important;border-color:#c5d7f1!important}
-body.light-mode .period,body.light-mode .tab{background:#fff!important;color:#40536d!important;border-color:#d1dce9!important}
-body.light-mode .period.active{background:#c8f5e8!important;color:#075d4d!important;border-color:#8be2cc!important}
-body.light-mode .tab.active{background:#d8f5ed!important;color:#08604e!important;border-color:#8bdac8!important}
-body.light-mode .acard.positive{background:linear-gradient(145deg,#e5f8f1,#fff 75%)!important;border-color:#9bdcc5!important}
-body.light-mode .acard.negative{background:linear-gradient(145deg,#fff0f2,#fff 75%)!important;border-color:#efb2bd!important}
-body.light-mode .acard.positive .avalue,body.light-mode .acard.positive .atitle{color:#08785b!important}
-body.light-mode .acard.negative .avalue,body.light-mode .acard.negative .atitle{color:#b42342!important}
-body.light-mode .ring:before{background:#fff!important}
-body.light-mode .liq-row{background:#f4f7fb!important}
-body.light-mode .liq-price{color:#263a55!important}
-body.light-mode .liq-track{background:#e4eaf2!important}
-body.light-mode .liq-row.current{background:#fff7dc!important;outline-color:#d7a925!important}
-body.light-mode .liq-row.current .liq-price,body.light-mode .liq-current-line{color:#855b00!important}
-body.light-mode .error{color:#b42342!important}
-@media(max-width:740px){.theme-btn,.prefs-btn{width:40px;height:40px;min-width:40px;flex-basis:40px}}
+*{box-sizing:border-box}
+body{margin:0;background:#08111f;color:#edf4ff;font-family:Arial,sans-serif}
+.container{max-width:1100px;margin:auto;padding:20px}
+header{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-bottom:1px solid #263750;padding-bottom:20px}
+.logo{font-size:23px;font-weight:bold;color:#fff;text-decoration:none}
+.logo span{color:#4d83ff}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav a{color:#91a4bd;text-decoration:none;padding:9px;border-radius:8px}
+nav a.active,nav a:hover{background:#1b3153;color:white}
+h1{font-size:clamp(28px,5vw,42px);margin-bottom:8px}
+p{line-height:1.6}
+.muted{color:#91a4bd}
+.status{margin:20px 0;padding:14px;background:#101c2e;border:1px solid #263750;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+button{cursor:pointer;border:0;border-radius:9px;padding:11px 14px;background:#3978ff;color:white;font-weight:bold}
+button:disabled{opacity:.6}
+.search{width:100%;padding:14px;background:#101c2e;color:white;border:1px solid #263750;border-radius:10px;font-size:16px;margin:8px 0 14px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{background:#101c2e;border:1px solid #263750;color:#91a4bd}
+.chip.active{background:#2457d6;color:white}
+.heading{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.article{background:#101c2e;border:1px solid #263750;border-radius:14px;padding:18px;display:flex;flex-direction:column;overflow-wrap:anywhere}
+.article h3{font-size:17px;line-height:1.5}
+.meta{font-size:12px;color:#91a4bd}
+.tag{font-size:11px;color:#30d6a0;font-weight:bold}
+.bottom{border-top:1px solid #263750;padding-top:12px;margin-top:auto;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.read{color:#8db2ff;text-decoration:none;font-weight:bold;font-size:13px}
+.message{grid-column:1/-1;padding:28px;text-align:center;background:#101c2e;border:1px solid #263750;border-radius:12px;color:#91a4bd;overflow-wrap:anywhere}
+.message strong{display:block;color:white;margin-bottom:8px}
+footer{margin-top:35px;padding-top:20px;border-top:1px solid #263750;color:#91a4bd;font-size:12px;text-align:center}
+@media(max-width:650px){.container{padding:14px}.grid{grid-template-columns:1fr}header{align-items:flex-start}nav{width:100%}.article{padding:15px}}
 </style>
+</head>
+<body>
+<div class="container">
+<header>
+<a class="logo" href="./index.html">VCrypto<span>Scope</span></a>
+<nav>
+<a href="./index.html">Ana Sayfa</a>
+<a href="./analysis.html">Analiz</a>
+<a class="active" href="./news.html">Haberler</a>
+</nav>
+</header>
 
-<style id="theme-logo-toggle-style">.theme-logo-toggle{cursor:pointer;user-select:none;transition:transform .18s,filter .18s;outline-offset:3px}.theme-logo-toggle:hover{transform:translateY(-1px);filter:brightness(1.12)}.theme-logo-toggle:focus-visible{outline:3px solid #7da7ff}</style>
+<main>
+<h1>Piyasa Haberleri</h1>
+<p class="muted">Bitcoin, altcoinler ve küresel ekonomiden son gelişmeler.</p>
 
-<style id="vcrypto-readable-light-theme">
-/* Contrast-first light mode, shared by every page */
-body.light-mode{background:#eef2f7!important;color:#17263b!important;color-scheme:light!important}
-body.light-mode .wrap,body.light-mode .app{background:transparent!important}
-body.light-mode p,body.light-mode li,body.light-mode td,body.light-mode .value,body.light-mode .coin-name,body.light-mode .atitle,body.light-mode .avalue,body.light-mode .article h3,body.light-mode .hero h2{color:#17263b}
-body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-mode .hint,body.light-mode .note,body.light-mode .foot,body.light-mode .footer,body.light-mode .updated,body.light-mode .map-meta,body.light-mode .map-info,body.light-mode .section-head p,body.light-mode .card-label,body.light-mode .label,body.light-mode .adesc,body.light-mode .prefs-muted,body.light-mode .prefs-sub,body.light-mode .source,body.light-mode .time,body.light-mode .meta,body.light-mode .loading,body.light-mode .liq-legend,body.light-mode .liq-axis{color:#465873!important}
-body.light-mode .panel,body.light-mode .card,body.light-mode .metric,body.light-mode .acard,body.light-mode .indicator-card,body.light-mode .table-shell,body.light-mode .article,body.light-mode .hero,body.light-mode .notice,body.light-mode .empty,body.light-mode .indicator-empty,body.light-mode .liq-empty,body.light-mode .prefs-panel,body.light-mode .prefs-hint{background:#fff!important;background-image:none!important;border-color:#cbd5e1!important;color:#17263b!important;box-shadow:0 4px 16px #17263b0d!important}
-body.light-mode .hero p,body.light-mode .article p{color:#465873!important}
-body.light-mode .btn,body.light-mode .period,body.light-mode .period-btn,body.light-mode .prefs-btn,body.light-mode .refresh-btn,body.light-mode .prefs-close,body.light-mode .prefs-move button,body.light-mode .chip,body.light-mode .tab{background:#fff!important;color:#263a55!important;border-color:#bac8da!important}
-body.light-mode .btn.active,body.light-mode .period.active,body.light-mode .period-btn.active,body.light-mode .chip.active,body.light-mode .tab.active{background:#dce8fb!important;color:#153d78!important;border-color:#86a9e8!important}
-body.light-mode input,body.light-mode select,body.light-mode textarea,body.light-mode .search{background:#fff!important;color:#17263b!important;border-color:#b8c6d8!important}
-body.light-mode input::placeholder,body.light-mode textarea::placeholder{color:#65758b!important;opacity:1!important}
-body.light-mode th,body.light-mode thead{background:#e7edf5!important;color:#34445c!important;border-color:#cbd5e1!important}
-body.light-mode td,body.light-mode .prefs-row{border-color:#dbe3ed!important}
-body.light-mode tbody tr:hover,body.light-mode .coin.active,body.light-mode .coin:hover{background:#eaf1fa!important}
-body.light-mode .source-link,body.light-mode .read,body.light-mode a:not(.btn):not(.period){color:#174ea6!important}
-body.light-mode .tag{background:#e2ebfb!important;color:#17427d!important}
-body.light-mode .tag.macro{background:#fff0c9!important;color:#754b00!important}
-body.light-mode .tag.energy{background:#ffead9!important;color:#7a3708!important}
-body.light-mode .tag.jobs{background:#dff4fa!important;color:#15566a!important}
-body.light-mode .tag.fed{background:#f0e4ff!important;color:#60318d!important}
-body.light-mode .prefs-backdrop{background:#17263b70!important}
-body.light-mode .prefs-btn{background:#fff!important;color:#263a55!important;border-color:#bac8da!important}
-body.light-mode .error{color:#a31332!important;background:#fff0f2!important;border-color:#e8aab6!important}
-body.light-mode .period.active{background:#d5f5e9!important;color:#075d4d!important;border-color:#7dd9bd!important}
-body.light-mode .tab.active{background:#d5f5e9!important;color:#075d4d!important;border-color:#7dd9bd!important}
-body.light-mode .liq-row{background:#f3f6fa!important}
-body.light-mode .liq-price{color:#263a55!important}
-body.light-mode .liq-track{background:#e1e7ef!important}
-body.light-mode .liq-row.current{background:#fff4d2!important;outline-color:#c69a19!important}
-body.light-mode .liq-row.current .liq-price,body.light-mode .liq-current-line{color:#704c00!important}
-body.light-mode .green,body.light-mode .g{color:#087b54!important}
-body.light-mode .red,body.light-mode .r{color:#bd263e!important}
-body.light-mode .gold{color:#855b00!important}
-body.light-mode .pill{background:#e1f7ed!important;color:#08785b!important;border-color:#9dddc4!important}
-body.light-mode .pill.down{background:#ffebee!important;color:#ad1e37!important;border-color:#f0b2bd!important}
-body.light-mode .map-legend,body.light-mode .rank,body.light-mode .symbol{color:#465873!important}
-body.light-mode .coin-row:hover{background:#eaf1fa!important;outline-color:#b6cbe7!important}
-body.light-mode .tag,body.light-mode .chip{font-weight:700}
-/* Identical, aligned settings control on all pages */
-.prefs-btn{width:42px!important;height:42px!important;min-width:42px!important;flex:0 0 42px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:0!important;border-radius:12px!important;line-height:1!important}
-.prefs-btn svg{width:19px;height:19px;display:block}
-.theme-logo-toggle{cursor:pointer;user-select:none;touch-action:manipulation}
-@media(max-width:740px){.prefs-btn{width:40px!important;height:40px!important;min-width:40px!important;flex-basis:40px!important}}
-</style>
+<div class="status">
+<span id="status">Haberler yükleniyor...</span>
+<button id="refresh" type="button">↻ Yenile</button>
+</div>
 
-<style id="vcryptoscope-blue-accent-settings">
-/* Shared filled settings button + blue-accent light theme */
-.prefs-btn{background:#2457d6!important;color:#fff!important;border:1px solid #2457d6!important;box-shadow:0 3px 10px #2457d633!important;border-radius:12px!important;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s!important}
-.prefs-btn svg{width:21px!important;height:21px!important;display:block;fill:currentColor}
-.prefs-btn:hover{background:#1746b5!important;border-color:#1746b5!important;box-shadow:0 5px 14px #2457d64a!important;transform:translateY(-1px)}
-.prefs-btn:active{transform:translateY(0) scale(.97)}
-.prefs-btn:focus-visible{outline:3px solid #7eb0ff!important;outline-offset:3px}
-body.light-mode{background:#f3f7fd!important;color:#15243b!important;color-scheme:light!important}
-body.light-mode h1,body.light-mode h2,body.light-mode h3,body.light-mode h4,body.light-mode label,body.light-mode strong,body.light-mode b{color:#15243b!important}
-body.light-mode .btn.active,body.light-mode .period.active,body.light-mode .period-btn.active,body.light-mode .chip.active,body.light-mode .tab.active{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important;box-shadow:0 2px 7px #2457d62e!important}
-body.light-mode .nav a.active{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important}
-body.light-mode .prefs-btn{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important}
-body.light-mode .source-link,body.light-mode .read,body.light-mode a:not(.btn):not(.period){color:#174ea6!important;text-decoration-color:#8db3f2}
-body.light-mode .panel,body.light-mode .card,body.light-mode .metric,body.light-mode .acard,body.light-mode .indicator-card,body.light-mode .table-shell,body.light-mode .article,body.light-mode .hero,body.light-mode .notice,body.light-mode .empty,body.light-mode .indicator-empty,body.light-mode .liq-empty{border-color:#c6d4e6!important}
-body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-mode .hint,body.light-mode .note,body.light-mode .foot,body.light-mode .footer,body.light-mode .updated,body.light-mode .map-meta,body.light-mode .map-info,body.light-mode .section-head p,body.light-mode .card-label,body.light-mode .adesc,body.light-mode .source,body.light-mode .time,body.light-mode .meta,body.light-mode .loading,body.light-mode .liq-legend,body.light-mode .liq-axis{color:#465873!important}
-</style>
+<input id="search" class="search" type="search" placeholder="Bitcoin, Fed, Ethereum ara...">
 
+<div class="filters" id="filters">
+<button class="chip active" data-cat="all">Tümü</button>
+<button class="chip" data-cat="bitcoin">Bitcoin</button>
+<button class="chip" data-cat="altcoin">Altcoin</button>
+<button class="chip" data-cat="economy">Ekonomi</button>
+<button class="chip" data-cat="other">Diğer</button>
+</div>
 
-<style id="news-shared-button-layout-fix">
-/* Match the shared VCryptoScope navigation/button palette and keep settings flush right. */
-.top{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto!important;align-items:center!important;gap:14px!important}
-#pageNav.nav{display:flex!important;min-width:0;justify-content:center!important;align-items:center!important;gap:8px!important;flex-wrap:wrap!important}
-.header-tools{display:flex!important;align-items:center!important;justify-content:flex-end!important;margin-left:0!important;justify-self:end!important;width:42px!important}
-.nav a,.btn,.chip{border:1px solid #354a68!important;background:#17263d!important;color:#eaf1ff!important;border-radius:10px!important;font-weight:700!important;box-shadow:none!important;transition:background .16s,border-color .16s,color .16s,transform .16s!important}
-.nav a:hover,.btn:hover,.chip:hover{border-color:#6487bd!important;background:#203653!important}
-.nav a.active,.chip.active,.btn.active{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important;box-shadow:0 2px 8px #2457d633!important}
-.prefs-btn{justify-self:end!important}
-body.light-mode .nav a,body.light-mode .btn,body.light-mode .chip{background:#fff!important;color:#263a55!important;border-color:#bac8da!important}
-body.light-mode .nav a:hover,body.light-mode .btn:hover,body.light-mode .chip:hover{background:#edf3ff!important;border-color:#86a9e9!important;color:#183b73!important}
-body.light-mode .nav a.active,body.light-mode .btn.active,body.light-mode .chip.active{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important;box-shadow:0 2px 8px #2457d633!important}
-body.light-mode #refresh{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important}
-@media(max-width:720px){
- .top{grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:12px!important}
- .brand{grid-column:1;grid-row:1;min-width:0}
- .header-tools{grid-column:2;grid-row:1;justify-self:end!important}
- #pageNav.nav{grid-column:1/-1;grid-row:2;width:100%!important;justify-content:flex-start!important}
- .nav a{padding:8px 10px!important;font-size:12px!important}
+<div class="heading">
+<h2>Son gelişmeler</h2>
+<span id="count" class="muted"></span>
+</div>
+
+<div class="grid" id="news">
+<div class="message">Haberler yükleniyor...</div>
+</div>
+</main>
+
+<footer>
+<p>VCryptoScope — Piyasa haberleri</p>
+<p>Bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.</p>
+</footer>
+</div>
+
+<script>
+const newsBox=document.getElementById("news");
+const statusBox=document.getElementById("status");
+const countBox=document.getElementById("count");
+const searchBox=document.getElementById("search");
+const refreshBtn=document.getElementById("refresh");
+const filters=document.getElementById("filters");
+let articles=[];
+let category="all";
+
+function message(title,detail,retry=false){
+newsBox.replaceChildren();
+const box=document.createElement("div");
+box.className="message";
+const strong=document.createElement("strong");
+strong.textContent=title;
+const p=document.createElement("p");
+p.textContent=detail;
+box.append(strong,p);
+if(retry){
+const b=document.createElement("button");
+b.textContent="Tekrar dene";
+b.onclick=loadNews;
+box.append(b);
 }
-</style>
-
-</head><body><main class="app">
-<header class="top"><div class="brand"><div class="logo theme-logo-toggle" role="button" tabindex="0" onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme()}" aria-label="Gündüz/gece modunu değiştir" title="Gündüz/gece modunu değiştir"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1ce0bd"/><stop offset="1" stop-color="#1879bc"/></linearGradient></defs><rect width="128" height="128" rx="28" fill="#08111f"/><rect x="8" y="8" width="112" height="112" rx="25" fill="url(#g)"/><path d="M34 32h60v12H71v52H57V44H34z" fill="#071421"/><path d="M25 68h16l8-12 10 24 11-18 7 6h26" fill="none" stroke="#edf4ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h1>VCryptoScope</h1><p>Kripto · Makroekonomi · Küresel piyasalar</p></div></div><div class="nav" id="pageNav"><a id="mapNav" data-page="tree" href="./index.html?view=tree&nav=1">▦ Ağaç Haritası</a><a id="marketNav" data-page="list" href="./index.html?view=market&nav=1">☷ Coin Listesi</a><a id="analysisNav" data-page="analysis" href="./analysis.html?nav=1">↗ Analiz</a><a id="newsNav" class="active" data-page="news" href="./news.html?nav=1" aria-current="page">▤ Piyasa Haberleri</a></div><div class="header-tools"><button class="prefs-btn" onclick="openPagePrefs()" aria-label="Ayarlar" title="Ayarlar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M19.14 12.94c.04-.31.06-.62.06-.94s-.02-.63-.07-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94l-.36-2.54A.49.49 0 0 0 13.88 2h-3.76a.49.49 0 0 0-.49.42L9.27 4.96c-.59.23-1.14.55-1.63.94l-2.39-.96a.5.5 0 0 0-.61.22L2.72 8.48a.5.5 0 0 0 .12.64l2.03 1.58a6.2 6.2 0 0 0 0 1.88l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.12.2.36.29.61.22l2.39-.96c.49.39 1.04.71 1.63.94l.36 2.54c.04.24.25.42.49.42h3.76c.24 0 .45-.18.49-.42l.36-2.54c.59-.23 1.14-.55 1.63-.94l2.39.96c.23.09.49-.01.61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.02-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7Z" clip-rule="evenodd"/></svg></button></div></header>
-<section class="hero"><p class="eyebrow">GÜNDEM PANOSU</p><h2>Fiyatı hareket ettirebilecek haberleri takip et.</h2><p>Kripto varlıklar, Bitcoin ETF'leri, regülasyonlar, Fed ve faizler, ABD istihdam/enflasyon verileri, petrol ve küresel risk iştahı tek ekranda. Başlıklar canlı kaynaklardan alınır; yorum değil, kaynak habere bağlantı sunulur.</p></section>
-<div class="toolbar" id="filters"><button class="chip active" data-cat="all">Tüm haberler</button><button class="chip" data-cat="crypto">Kripto</button><button class="chip" data-cat="fed">Fed & Faiz</button><button class="chip" data-cat="jobs">İstihdam & Enflasyon</button><button class="chip" data-cat="energy">Petrol & Enerji</button><button class="chip" data-cat="regulation">Regülasyon</button><button class="chip" data-cat="markets">Küresel piyasalar</button></div>
-<div class="toolbar"><input class="search" id="search" type="search" placeholder="Haber, kurum veya konu ara…" aria-label="Haber ara"><button class="btn" id="refresh">↻ Haberleri yenile</button><select id="language" aria-label="Haber dili" style="background:#091524;border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--t);font-weight:700"><option value="tr">Türkçe</option><option value="en">English</option></select></div><div class="meta"><span id="status">Haber kaynaklarına bağlanılıyor…</span><span id="updated">Son kontrol: —</span></div><section id="newsGrid" class="news-grid"><div class="loading"><span class="dot"></span> Canlı haberler yükleniyor…</div></section><div class="notice">Kaynak notu: Haberler İngilizce kaynaklardan Google News RSS aramalarıyla alınır. Türkçe görünümde başlık ve açıklamalar otomatik çevrilmeye çalışılır; çeviri servisi çalışmazsa orijinal İngilizce metin gösterilir. Haberlerin etkisi otomatik olarak pozitif/negatif kabul edilmez; başlıkları okuyup orijinal haberi kontrol et. Veri sağlayıcıların erişim ve hız limitleri değişebilir.</div><footer class="footer"><span>VCryptoScope · Piyasa Haberleri</span><span>Haber akışı otomatik yenilenir · 5 dakika</span></footer>
-<div class="prefs-backdrop" id="prefsBackdrop" role="dialog" aria-modal="true" aria-labelledby="prefsTitle" onclick="if(event.target===this)closePagePrefs()"><section class="prefs-panel"><h2 id="prefsTitle">Sayfa düzeni</h2><p class="prefs-muted">Menü sırasını ve açılış sayfasını belirle.</p><div id="prefsOrder"></div><div style="height:1px;background:#26344b;margin:16px 0"></div><strong>Uygulama açıldığında</strong><div id="prefsHome"></div><div class="prefs-hint">Tercihler bu cihazın tarayıcısında saklanır.</div><div class="prefs-actions"><button class="prefs-close" onclick="resetPagePrefs()">Varsayılana dön</button><button class="prefs-close" onclick="savePagePrefs()">Kaydet</button><button class="prefs-close" onclick="closePagePrefs()">Kapat</button></div></section></div>
-</main><script>
-'use strict';
-const $=id=>document.getElementById(id), PREFS_KEY='vcryptoscopePrefsV1';
-const PAGE_INFO={tree:{label:'Ağaç Haritası',desc:'Piyasa görünümü'},list:{label:'Coin Listesi',desc:'İlk 250 coin'},analysis:{label:'Analiz',desc:'Teknik analiz'},news:{label:'Piyasa Haberleri',desc:'Kripto, Fed, istihdam, petrol ve makroekonomi'}};
-const DEFAULT_PREFS={order:['tree','list','analysis','news'],home:'tree'};
-function readPagePrefs(){try{const x=JSON.parse(localStorage.getItem(PREFS_KEY)||'null');if(!x)return {...DEFAULT_PREFS,order:[...DEFAULT_PREFS.order]};const order=Array.isArray(x.order)?x.order.filter((v,i,a)=>PAGE_INFO[v]&&a.indexOf(v)===i):[];for(const k of DEFAULT_PREFS.order)if(!order.includes(k))order.push(k);return {order,home:PAGE_INFO[x.home]?x.home:'tree'}}catch(e){return {...DEFAULT_PREFS,order:[...DEFAULT_PREFS.order]}}}
-let pagePrefs=readPagePrefs();function applyPageOrder(){const nav=$('pageNav');const nodes={tree:$('mapNav'),list:$('marketNav'),analysis:$('analysisNav'),news:$('newsNav')};pagePrefs.order.forEach(k=>nodes[k]&&nav.insertBefore(nodes[k],nav.querySelector('.prefs-btn')))}
-function openPagePrefs(){pagePrefs=readPagePrefs();renderPagePrefs();$('prefsBackdrop').classList.add('open');document.body.style.overflow='hidden'}function closePagePrefs(){$('prefsBackdrop').classList.remove('open');document.body.style.overflow=''}
-function renderPagePrefs(){$('prefsOrder').innerHTML=pagePrefs.order.map((k,i)=>`<div class="prefs-row"><div class="prefs-name">${i+1}. ${PAGE_INFO[k].label}<div class="prefs-sub">${PAGE_INFO[k].desc}</div></div><div class="prefs-move"><button ${i===0?'disabled':''} onclick="movePagePref('${k}',-1)">↑</button><button ${i===pagePrefs.order.length-1?'disabled':''} onclick="movePagePref('${k}',1)">↓</button></div></div>`).join('');$('prefsHome').innerHTML=pagePrefs.order.map(k=>`<label class="prefs-home"><input type="radio" name="prefsHome" value="${k}" ${pagePrefs.home===k?'checked':''} onchange="pagePrefs.home=this.value"><span><strong>${PAGE_INFO[k].label}</strong><span class="prefs-sub" style="display:block">Açılış sayfası</span></span></label>`).join('')}
-function movePagePref(k,d){const i=pagePrefs.order.indexOf(k),j=i+d;if(j<0||j>=pagePrefs.order.length)return;[pagePrefs.order[i],pagePrefs.order[j]]=[pagePrefs.order[j],pagePrefs.order[i]];renderPagePrefs()}function savePagePrefs(){try{localStorage.setItem(PREFS_KEY,JSON.stringify(pagePrefs));applyPageOrder();closePagePrefs()}catch(e){alert('Tarayıcı ayarları kaydedemedi.')}}function resetPagePrefs(){pagePrefs={order:[...DEFAULT_PREFS.order],home:DEFAULT_PREFS.home};renderPagePrefs()}applyPageOrder();
-let articles=[],activeCategory='all',busy=false,language='tr',translationBusy=false;const NEWS_CACHE_KEY='vcryptoscopeNewsCacheV3';try{const cached=JSON.parse(localStorage.getItem(NEWS_CACHE_KEY)||'[]');if(Array.isArray(cached))articles=cached.filter(a=>a&&a.title&&a.url).slice(0,200)}catch(e){}const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function categoryFor(a){const s=((a.title||'')+' '+(a.description||'')+' '+(a.categories||'')+' '+(a.tags||'')).toLowerCase();if(/crude oil|brent|wti|opec|petrol|energy prices|natural gas/.test(s))return 'energy';if(/federal reserve|\bfed\b|interest rate|rate cut|rate hike|powell|fomc|treasury yield|faiz/.test(s))return 'fed';if(/jobs report|nonfarm|payroll|unemployment|employment|inflation|cpi|ppi|pce price|labor market|istihdam/.test(s))return 'jobs';if(/regulation|regulator|sec |cftc|lawsuit|court ruling|crypto bill|legislation|ban on crypto/.test(s))return 'regulation';if(/stock market|s&p 500|nasdaq|dollar index|dxy|bond market|global economy|recession|economic growth|gdp/.test(s))return 'markets';return 'crypto'}
-function timeLabel(ts){if(!ts)return 'Tarih bilinmiyor';const d=new Date(ts);if(Number.isNaN(+d))return 'Tarih bilinmiyor';return d.toLocaleString('tr-TR',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'})}
-function normalizeCrypto(x){return {title:x.title||'Başlıksız haber',description:x.body||x.description||'',url:x.url||'#',source:x.source_info?.name||x.source||'CryptoCompare',published:x.published_on?Number(x.published_on)*1000:Date.now(),category:categoryFor({title:x.title,description:x.body,categories:x.categories}),kind:'crypto'}}
-function normalizeRss(x,kind){const title=x.title||'Untitled news';const description=(x.description||x.content||'').replace(/<[^>]*>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').trim().slice(0,320);return {title,originalTitle:title,description,originalDescription:description,url:x.link||'#',source:x.author||x.source||'Google News',sourceUrl:x.sourceUrl||'',published:x.pubDate?new Date(x.pubDate).getTime():Date.now(),category:kind||categoryFor({title,description}),kind:'macro'}}
-async function getText(url,timeout=12000){const ctl=new AbortController(),t=setTimeout(()=>ctl.abort('request timeout'),timeout);try{const r=await fetch(url,{signal:ctl.signal,cache:'no-store',credentials:'omit'});if(!r.ok)throw Error('HTTP '+r.status);return await r.text()}finally{clearTimeout(t)}}
-
-const rssQueries=[
- {q:'Bitcoin OR cryptocurrency OR crypto market OR crypto ETF',cat:'crypto'},
- {q:'Federal Reserve interest rates Powell FOMC',cat:'fed'},
- {q:'US jobs report unemployment payrolls inflation CPI PCE',cat:'jobs'},
- {q:'Brent crude oil WTI OPEC energy prices',cat:'energy'},
- {q:'crypto regulation SEC CFTC Bitcoin ETF legislation',cat:'regulation'},
- {q:'global markets US dollar Treasury yields economy GDP',cat:'markets'}
-];
-async function loadPublishedNews(){
- const url='./news.json?ts='+Date.now();
- const response=await fetch(url,{cache:'no-store',credentials:'same-origin'});
- if(!response.ok)throw Error('news.json HTTP '+response.status);
- const data=await response.json();
- const items=Array.isArray(data)?data:data.items;
- if(!Array.isArray(items)||!items.length)throw Error('news.json dosyası boş veya henüz oluşturulmamış');
- return items.filter(x=>x&&x.title&&x.url).map(x=>({...x,originalTitle:x.originalTitle||x.title,originalDescription:x.originalDescription||x.description||'',kind:x.kind||'macro'}));
+newsBox.append(box);
+countBox.textContent="0 haber";
 }
-function render(){let list=articles.filter(a=>(activeCategory==='all'||a.category===activeCategory)&&((a.title+' '+a.description+' '+a.source).toLowerCase().includes($('search').value.trim().toLowerCase())));list.sort((a,b)=>(b.published||0)-(a.published||0));if(!window.newsSourceStatus)$('status').textContent=articles.length?`${list.length} haber gösteriliyor · ${articles.length} haber toplandı`:(busy?'Haber kaynakları kontrol ediliyor…':'Henüz haber alınamadı');$('newsGrid').innerHTML=list.length?list.map(a=>`<article class="article"><div class="article-top"><span class="tag ${a.category==='fed'?'fed':a.category==='jobs'?'jobs':a.category==='energy'?'energy':a.kind==='macro'?'macro':''}">${({crypto:'Kripto',fed:'Fed & Faiz',jobs:'İstihdam & Enflasyon',energy:'Petrol & Enerji',regulation:'Regülasyon',markets:'Küresel piyasalar'})[a.category]||'Piyasa'}</span><span class="time">${escapeHtml(timeLabel(a.published))}</span></div><h3>${escapeHtml(language==='tr'?(a.translatedTitle||a.title):(a.originalTitle||a.title))}</h3>${(language==='tr'?(a.translatedDescription||a.description):(a.originalDescription||a.description))?`<p>${escapeHtml(language==='tr'?(a.translatedDescription||a.description):(a.originalDescription||a.description))}</p>`:''}<div class="article-foot"><a class="source source-link" href="${escapeHtml(a.sourceUrl||a.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(a.source)} kaynağını aç">Kaynak: ${escapeHtml(a.source)} ↗</a><a class="read" href="${escapeHtml(a.url)}" target="_blank" rel="noopener noreferrer">Haberi aç ↗</a></div></article>`).join(''):(articles.length?'<div class="empty">Bu filtrede haber bulunamadı. “Tüm haberler”i seç veya arama kutusunu temizle.</div>':(window.newsSourceDetail?`<div class="empty"><strong>Canlı haber akışı açılamadı.</strong><br>Kaynakların hiçbiri yanıt vermedi. Teknik bilgi: ${escapeHtml(window.newsSourceDetail)}<br><br><button class="btn" onclick="refreshNews()">Tekrar dene</button></div>`:'<div class="empty">Haber akışı henüz yüklenmedi. “Haberleri yenile”ye dokun. Kaynaklara erişim sorunu varsa biraz sonra tekrar dene.</div>'))}
-async function refreshNews(){
- if(busy)return;busy=true;$('refresh').disabled=true;$('status').textContent='Güncel haber dosyası kontrol ediliyor…';
- if(!articles.length)$('newsGrid').innerHTML='<div class="loading"><span class="dot"></span> Haber akışı yükleniyor…</div>';
- try{
-   const fresh=await loadPublishedNews();
-   articles=fresh.sort((a,b)=>(b.published||0)-(a.published||0)).slice(0,200);
-   try{localStorage.setItem(NEWS_CACHE_KEY,JSON.stringify(articles))}catch(e){}
-   window.newsSourceDetail='';window.newsSourceStatus='';
-   $('updated').textContent='Son güncelleme: '+(new Date()).toLocaleTimeString('tr-TR');
-   $('status').textContent=`${articles.length} haber yüklendi · Sunucu akışı`;
-   render();if(language==='tr')translateVisible();
- }catch(e){
-   window.newsSourceDetail='news.json: '+(e&&e.message?e.message:String(e));
-   if(articles.length){window.newsSourceStatus='Canlı akışa ulaşılamadı · Kayıtlı haberler gösteriliyor';$('status').textContent=window.newsSourceStatus;render();}
-   else {window.newsSourceStatus='Haber akışı dosyasına ulaşılamadı';$('status').textContent=window.newsSourceStatus;$('newsGrid').innerHTML='<div class="empty"><strong>Haber akışı henüz hazır değil.</strong><br>Önce GitHub Actions üzerinden haber güncelleme iş akışının çalışması ve news.json dosyasının oluşması gerekiyor.<br><br><span style="font-size:11px">Teknik bilgi: '+escapeHtml(window.newsSourceDetail)+'</span><br><br><button class="btn" onclick="refreshNews()">Tekrar dene</button></div>';}
- }finally{busy=false;$('refresh').disabled=false;}
+
+function detect(a){
+const t=((a.title||"")+" "+(a.source||"")).toLowerCase();
+if(/bitcoin|\bbtc\b/.test(t))return "bitcoin";
+if(/ethereum|\beth\b|altcoin|solana|xrp|ripple|dogecoin|avax|crypto|kripto|token/.test(t))return "altcoin";
+if(/fed|faiz|inflation|enflasyon|ekonomi|economic|dolar|petrol|oil|istihdam|recession|resesyon|merkez bank/.test(t))return "economy";
+return "other";
 }
-async function translateOne(text){if(!text||!text.trim())return '';const target='https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=tr&dt=t&q='+encodeURIComponent(text.slice(0,900));const raw=await getText('https://proxy.cors.dev/'+target,10000);const data=JSON.parse(raw);return (data[0]||[]).map(x=>x&&x[0]||'').join('')||text}
-async function translateVisible(){if(translationBusy||language!=='tr')return;translationBusy=true;const targets=articles.filter(a=>a.kind==='macro'&&!a.translatedTitle).sort((a,b)=>(b.published||0)-(a.published||0)).slice(0,24);for(let i=0;i<targets.length;i+=4){await Promise.all(targets.slice(i,i+4).map(async a=>{try{a.translatedTitle=await translateOne(a.originalTitle||a.title);if(a.originalDescription)a.translatedDescription=await translateOne(a.originalDescription)}catch(e){a.translatedTitle=a.originalTitle||a.title;a.translatedDescription=a.originalDescription||a.description}}));render()}translationBusy=false;try{localStorage.setItem(NEWS_CACHE_KEY,JSON.stringify(articles))}catch(e){}}
-$('language').addEventListener('change',e=>{language=e.target.value;render();if(language==='tr')translateVisible()});
-$('filters').addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;activeCategory=b.dataset.cat;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===b));render()});$('search').addEventListener('input',render);$('refresh').addEventListener('click',refreshNews);refreshNews();setInterval(refreshNews,300000);
-if('serviceWorker'in navigator&&location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
-</script><script id="vcrypto-theme-script">
-(function(){
- const KEY='vcryptoscopeThemeModeV1';
- function applyTheme(mode){
-  const light=mode==='light';
-  document.body.classList.toggle('light-mode',light);
-  const logo=document.querySelector('.theme-logo-toggle');
-  if(logo){logo.title=light?'Gündüz modu açık · gece moduna geçmek için dokun':'Gece modu açık · gündüz moduna geçmek için dokun';logo.setAttribute('aria-label',logo.title);logo.setAttribute('aria-pressed',String(light));}
-  try{document.querySelector('meta[name="theme-color"]')?.setAttribute('content',light?'#f4f7fc':'#08111f');}catch(e){}
-  try{window.dispatchEvent(new CustomEvent('vcryptoscope-theme-change',{detail:{mode:light?'light':'dark'}}));}catch(e){}
- }
- window.toggleTheme=function(){let next=document.body.classList.contains('light-mode')?'dark':'light';try{localStorage.setItem(KEY,next)}catch(e){}applyTheme(next)};
- let saved='dark';try{saved=localStorage.getItem(KEY)||'dark'}catch(e){}applyTheme(saved);
-})();
+
+function dateText(value){
+if(!value)return "Tarih belirtilmemiş";
+const d=new Date(value);
+if(Number.isNaN(d.getTime()))return "Tarih belirtilmemiş";
+return new Intl.DateTimeFormat("tr-TR",{dateStyle:"medium",timeStyle:"short",timeZone:"Europe/Istanbul"}).format(d);
+}
+
+function render(){
+const q=searchBox.value.trim().toLocaleLowerCase("tr-TR");
+const visible=articles.filter(a=>{
+const text=((a.title||"")+" "+(a.source||"")).toLocaleLowerCase("tr-TR");
+return text.includes(q)&&(category==="all"||detect(a)===category);
+});
+newsBox.replaceChildren();
+if(!visible.length){
+message("Haber bulunamadı","Aramanı veya kategori seçimini değiştirebilirsin.");
+return;
+}
+const frag=document.createDocumentFragment();
+visible.forEach(a=>{
+const card=document.createElement("article");
+card.className="article";
+const tag=document.createElement("span");
+tag.className="tag";
+tag.textContent=detect(a).toUpperCase();
+const meta=document.createElement("div");
+meta.className="meta";
+meta.style.marginTop="8px";
+meta.textContent=dateText(a.publishedAt);
+const title=document.createElement("h3");
+title.textContent=a.title;
+const bottom=document.createElement("div");
+bottom.className="bottom";
+const source=document.createElement("span");
+source.className="meta";
+source.textContent=a.source||"Haber kaynağı";
+const link=document.createElement("a");
+link.className="read";
+link.href=a.url;
+link.target="_blank";
+link.rel="noopener noreferrer";
+link.textContent="Haberi oku ↗";
+bottom.append(source,link);
+card.append(tag,meta,title,bottom);
+frag.append(card);
+});
+newsBox.append(frag);
+countBox.textContent=visible.length+" haber";
+}
+
+async function loadNews(){
+refreshBtn.disabled=true;
+refreshBtn.textContent="Yükleniyor...";
+statusBox.textContent="news.json okunuyor...";
+try{
+const response=await fetch("./news.json?t="+Date.now(),{cache:"no-store"});
+if(!response.ok)throw new Error("HTTP "+response.status+" — news.json dosyası açılamadı.");
+const data=await response.json();
+if(!data||!Array.isArray(data.articles))throw new Error("JSON içinde articles listesi bulunamadı.");
+articles=data.articles.filter(a=>a&&typeof a.title==="string"&&typeof a.url==="string"&&/^https?:\/\//i.test(a.url));
+articles.sort((a,b)=>(new Date(b.publishedAt||0).getTime()||0)-(new Date(a.publishedAt||0).getTime()||0));
+if(!articles.length){
+statusBox.textContent="Haber bulunamadı";
+message("Haber listesi boş","news.json içinde geçerli haber yok.",true);
+return;
+}
+statusBox.textContent=articles.length+" haber yüklendi · Son güncelleme: "+dateText(data.updatedAt);
+render();
+}catch(error){
+console.error(error);
+statusBox.textContent="Haberler yüklenemedi";
+message("Haber yükleme hatası",error.message+" GitHub Pages ve news.json dosyasını kontrol et.",true);
+}finally{
+refreshBtn.disabled=false;
+refreshBtn.textContent="↻ Yenile";
+}
+}
+
+searchBox.addEventListener("input",render);
+filters.addEventListener("click",e=>{
+const b=e.target.closest("button[data-cat]");
+if(!b)return;
+category=b.dataset.cat;
+filters.querySelectorAll("button").forEach(x=>x.classList.toggle("active",x===b));
+render();
+});
+refreshBtn.addEventListener("click",loadNews);
+loadNews();
 </script>
-</body></html>
+</body>
+</html>
