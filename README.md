@@ -12,6 +12,7 @@ The repository includes a Capacitor-based Android wrapper foundation:
 - Web assets are copied to `www/` by `npm run build:web`.
 - `npm run android:sync` prepares assets and synchronizes an existing Android project.
 - GitHub Actions can generate an Android project and build a **debug APK** for testing.
+- The Android launcher icon rotates among turquoise, blue, green and gold variants on an approximately six-hour schedule. Android battery management and launcher caching may delay the visible change.
 
 A debug APK is not a Play Store release. A release requires a stable package ID, a signed Android App Bundle (AAB), a Play Console developer account, testing, store listing assets, Data safety declarations and a privacy policy.
 
