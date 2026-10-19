@@ -1,194 +1,248 @@
+
 name: Update News
 
 on:
-workflow_dispatch:
-push:
-branches:
-- main
-schedule:
-- cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "7,22,37,52 * * * *"
 
 permissions:
-contents: write
+  contents: write
 
 jobs:
-update-news:
-runs-on: ubuntu-latest
-timeout-minutes: 15
+  update-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
 
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  - name: Fetch, translate and classify news
-    run: |
-      python - <<'PY'
-      import json
-      import re
-      import time
-      import urllib.request
-      import urllib.parse
-      import xml.etree.ElementTree as ET
-      from datetime import datetime, timezone
-      from email.utils import parsedate_to_datetime
-      from html import unescape
+      - name: Fetch and classify global market news
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          import time
+          import urllib.request
+          import urllib.parse
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from email.utils import parsedate_to_datetime
+          from html import unescape
 
-      feeds = [
-          ("Kripto", "https://news.google.com/rss/search?q=Bitcoin+OR+Ethereum+OR+cryptocurrency+OR+altcoin&hl=en-US&gl=US&ceid=US:en"),
-          ("Fed & Faiz", "https://news.google.com/rss/search?q=Federal+Reserve+OR+interest+rates+OR+central+bank+rates&hl=en-US&gl=US&ceid=US:en"),
-          ("İstihdam & Enflasyon", "https://news.google.com/rss/search?q=US+jobs+report+OR+employment+OR+inflation+CPI+OR+PCE&hl=en-US&gl=US&ceid=US:en"),
-          ("Petrol & Enerji", "https://news.google.com/rss/search?q=crude+oil+OR+Brent+oil+OR+OPEC+OR+energy+prices&hl=en-US&gl=US&ceid=US:en"),
-          ("Regülasyon", "https://news.google.com/rss/search?q=cryptocurrency+regulation+OR+SEC+crypto+OR+crypto+lawsuit&hl=en-US&gl=US&ceid=US:en"),
-          ("Küresel Piyasalar", "https://news.google.com/rss/search?q=global+markets+OR+stock+market+OR+bond+yields+OR+forex&hl=en-US&gl=US&ceid=US:en"),
-      ]
+          FEEDS = {
+              "Kripto": [
+                  "Bitcoin OR Ethereum OR cryptocurrency market when:7d",
+                  "crypto ETF flows OR digital asset funds when:7d",
+                  "Solana OR XRP OR altcoins blockchain when:7d",
+                  "site:tradingview.com/news crypto Bitcoin Ethereum when:7d",
+              ],
+              "Fed & Faiz": [
+                  "Federal Reserve OR FOMC interest rate decision when:7d",
+                  "Jerome Powell Fed policy OR US Treasury yields when:7d",
+                  "central bank interest rates rate cut rate hike when:7d",
+                  "site:tradingview.com/news Fed interest rates yields when:7d",
+              ],
+              "İstihdam & Enflasyon": [
+                  "US CPI inflation OR PCE inflation data when:7d",
+                  "US jobs report nonfarm payrolls unemployment wages when:7d",
+                  "US producer price index PPI inflation data when:7d",
+                  "site:tradingview.com/news US inflation employment CPI when:7d",
+              ],
+              "Petrol & Enerji": [
+                  "Brent crude WTI oil prices when:7d",
+                  "OPEC OPEC+ oil production supply decision when:7d",
+                  "EIA US crude oil inventories energy prices when:7d",
+                  "site:tradingview.com/news crude oil Brent energy when:7d",
+              ],
+              "Regülasyon": [
+                  "SEC cryptocurrency regulation lawsuit decision when:7d",
+                  "crypto regulation legislation digital assets law when:7d",
+                  "crypto ETF approval regulator policy when:7d",
+                  "site:tradingview.com/news crypto regulation SEC when:7d",
+              ],
+              "Küresel Piyasalar": [
+                  "global stock markets equities futures when:7d",
+                  "US dollar index Treasury bond yields forex when:7d",
+                  "China economy global trade tariffs market when:7d",
+                  "site:tradingview.com/news global markets dollar stocks when:7d",
+              ],
+          }
 
-      def clean_html(value):
-          value = re.sub(r"<[^>]+>", " ", value or "")
-          return re.sub(r"\s+", " ", unescape(value)).strip()
+          HEADERS = {
+              "User-Agent": "Mozilla/5.0 (compatible; VCryptoScope/1.0)"
+          }
 
-      def translate_tr(text):
-          if not text:
-              return ""
-          try:
-              params = urllib.parse.urlencode({
-                  "client": "gtx",
-                  "sl": "auto",
-                  "tl": "tr",
-                  "dt": "t",
-                  "q": text[:3000]
-              })
-              url = "https://translate.googleapis.com/translate_a/single?" + params
-              request = urllib.request.Request(
-                  url, headers={"User-Agent": "Mozilla/5.0"}
-              )
-              with urllib.request.urlopen(request, timeout=15) as response:
-                  result = json.loads(response.read().decode("utf-8"))
-              return "".join(
-                  part[0] for part in result[0] if part and part[0]
-              ) or text
-          except Exception as error:
-              print(f"Translation fallback: {error}")
-              return text
+          def get_url(url, timeout=20):
+              req = urllib.request.Request(url, headers=HEADERS)
+              with urllib.request.urlopen(req, timeout=timeout) as response:
+                  return response.read()
 
-      def classify(text, feed_category):
-          t = text.lower()
+          def clean_text(value):
+              value = unescape(value or "")
+              value = re.sub(r"<[^>]+>", " ", value)
+              return re.sub(r"\s+", " ", value).strip()
 
-          critical = [
-              "hack", "hacked", "exploit", "bankruptcy",
-              "collapse", "emergency", "liquidation", "crash",
-              "war", "default", "emergency rate cut"
-          ]
-          high = [
-              "sec", "etf", "fed", "interest rate", "inflation",
-              "regulation", "lawsuit", "approval", "rejection",
-              "reserve", "bitcoin", "ethereum", "sanction",
-              "jobs report", "unemployment", "opec", "oil price"
-          ]
-          medium = [
-              "forecast", "prediction", "upgrade", "partnership",
-              "adoption", "investment", "fund", "launch"
-          ]
-
-          if any(word in t for word in critical):
-              importance = "KRİTİK"
-          elif any(word in t for word in high):
-              importance = "YÜKSEK"
-          elif any(word in t for word in medium):
-              importance = "ORTA"
-          else:
-              importance = "DÜŞÜK"
-
-          impact = {
-              "KRİTİK": "Çok yüksek piyasa etkisi oluşturabilir; doğrulanması gerekir.",
-              "YÜKSEK": "Piyasa oynaklığını artırabilecek önemli gelişme.",
-              "ORTA": "İlgili varlıklarda orta düzeyde etki oluşturabilir.",
-              "DÜŞÜK": "Doğrudan piyasa etkisi belirsiz veya sınırlı."
-          }[importance]
-
-          return importance, feed_category, impact
-
-      articles = []
-      seen = set()
-
-      for source, url in feeds:
-          try:
-              request = urllib.request.Request(
-                  url, headers={"User-Agent": "Mozilla/5.0 VCryptoScope/1.0"}
-              )
-              with urllib.request.urlopen(request, timeout=20) as response:
-                  root = ET.fromstring(response.read())
-
-              for item in root.findall(".//item"):
-                  title = clean_html(item.findtext("title", ""))
-                  link = item.findtext("link", "").strip()
-                  description = clean_html(item.findtext("description", ""))
-                  pub_date = item.findtext("pubDate", "").strip()
-
-                  if not title or not link or link in seen:
-                      continue
-
-                  seen.add(link)
-                  published = None
-                  try:
-                      published = parsedate_to_datetime(pub_date).isoformat()
-                  except Exception:
-                      pass
-
-                  importance, category, impact = classify(
-                      title + " " + description, source
-                  )
-
-                  articles.append({
-                      "title": title,
-                      "titleTr": title,
-                      "summary": description,
-                      "summaryTr": description,
-                      "url": link,
-                      "source": source,
-                      "publishedAt": published,
-                      "importance": importance,
-                      "category": category,
-                      "marketImpactTr": impact
+          def translate_tr(text):
+              if not text:
+                  return ""
+              try:
+                  query = urllib.parse.urlencode({
+                      "client": "gtx",
+                      "sl": "auto",
+                      "tl": "tr",
+                      "dt": "t",
+                      "q": text[:4000],
                   })
-          except Exception as error:
-              print(f"Feed error ({source}): {error}")
+                  data = json.loads(get_url(
+                      "https://translate.googleapis.com/translate_a/single?" + query
+                  ).decode("utf-8"))
+                  return "".join(
+                      part[0] for part in data[0] if part and part[0]
+                  ).strip() or text
+              except Exception:
+                  return text
 
-      if not articles:
-          raise SystemExit("No news received; existing news.json preserved.")
+          def published_date(value):
+              if not value:
+                  return datetime.now(timezone.utc).isoformat()
+              try:
+                  dt = parsedate_to_datetime(value)
+                  if dt.tzinfo is None:
+                      dt = dt.replace(tzinfo=timezone.utc)
+                  return dt.astimezone(timezone.utc).isoformat()
+              except Exception:
+                  return datetime.now(timezone.utc).isoformat()
 
-      articles.sort(
-          key=lambda item: item.get("publishedAt") or "",
-          reverse=True
-      )
+          def classify_importance(title, summary, category):
+              text = (title + " " + summary).lower()
+              high_words = [
+                  "rate decision", "interest rate", "fed", "fomc",
+                  "inflation", "cpi", "pce", "jobs report", "nonfarm",
+                  "unemployment", "opec", "oil supply", "sec approves",
+                  "etf approval", "recession", "emergency", "crash",
+                  "surge", "record high", "sanction"
+              ]
+              medium_words = [
+                  "forecast", "outlook", "earnings", "fund flows",
+                  "treasury", "yield", "brent", "wti", "regulation",
+                  "economic growth", "dollar index"
+              ]
+              if any(word in text for word in high_words):
+                  return "Yüksek"
+              if category in ("Fed & Faiz", "İstihdam & Enflasyon"):
+                  return "Orta"
+              if any(word in text for word in medium_words):
+                  return "Orta"
+              return "Normal"
 
-      articles = articles[:60]
+          def infer_impact(category, title):
+              if category == "Kripto":
+                  return "Kripto piyasasında fiyatlar, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
+              if category == "Fed & Faiz":
+                  return "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
+              if category == "İstihdam & Enflasyon":
+                  return "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir."
+              if category == "Petrol & Enerji":
+                  return "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyüme görünümünü etkileyebilir."
+              if category == "Regülasyon":
+                  return "Düzenleyici kararlar kripto varlıkların erişimini, kurumsal yatırımları ve piyasa algısını etkileyebilir."
+              return "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
 
-      for index, article in enumerate(articles):
-          article["titleTr"] = translate_tr(article["title"])
-          article["summaryTr"] = translate_tr(article["summary"])
-          print(f"Translated {index + 1}/{len(articles)}")
-          time.sleep(0.2)
+          items = []
+          seen = set()
 
-      data = {
-          "updatedAt": datetime.now(timezone.utc).isoformat(),
-          "articles": articles
-      }
+          for category, queries in FEEDS.items():
+              category_items = []
 
-      with open("news.json", "w", encoding="utf-8") as file:
-          json.dump(data, file, ensure_ascii=False, indent=2)
+              for query in queries:
+                  try:
+                      rss_url = (
+                          "https://news.google.com/rss/search?"
+                          + urllib.parse.urlencode({
+                              "q": query,
+                              "hl": "en-US",
+                              "gl": "US",
+                              "ceid": "US:en",
+                          })
+                      )
+                      root = ET.fromstring(get_url(rss_url))
+                      for node in root.findall(".//item"):
+                          title = clean_text(node.findtext("title", ""))
+                          summary = clean_text(node.findtext("description", ""))
+                          url = (node.findtext("link", "") or "").strip()
+                          source_node = node.find("source")
+                          source = clean_text(
+                              source_node.text if source_node is not None else "Google News"
+                          )
+                          published = published_date(node.findtext("pubDate", ""))
 
-      print(f"Saved {len(articles)} translated and classified articles.")
-      PY
+                          if not title or not url:
+                              continue
 
-  - name: Commit updated news
-    run: |
-      if git diff --quiet -- news.json; then
-        echo "No news changes."
-        exit 0
-      fi
+                          key = url.split("&ved=")[0].strip()
+                          if key in seen:
+                              continue
+                          seen.add(key)
 
-      git config user.name "github-actions[bot]"
-      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      git add news.json
-      git commit -m "Update crypto news"
-      git push
+                          category_items.append({
+                              "title": title,
+                              "summary": summary,
+                              "url": url,
+                              "source": source,
+                              "publishedAt": published,
+                              "category": category,
+                          })
+                  except Exception as exc:
+                      print(f"Feed error [{category}] [{query}]: {exc}")
+
+                  time.sleep(0.3)
+
+              category_items.sort(
+                  key=lambda item: item["publishedAt"], reverse=True
+              )
+
+              for item in category_items[:12]:
+                  print("Translating:", item["title"][:100])
+                  item["titleTr"] = translate_tr(item["title"])
+                  item["summaryTr"] = translate_tr(item["summary"])
+                  item["importance"] = classify_importance(
+                      item["title"], item["summary"], category
+                  )
+                  item["marketImpactTr"] = infer_impact(
+                      category, item["titleTr"]
+                  )
+                  items.append(item)
+                  time.sleep(0.15)
+
+          items.sort(key=lambda item: item["publishedAt"], reverse=True)
+          items = items[:72]
+
+          output = {
+              "updatedAt": datetime.now(timezone.utc).isoformat(),
+              "count": len(items),
+              "news": items,
+          }
+
+          with open("news.json", "w", encoding="utf-8") as file:
+              json.dump(output, file, ensure_ascii=False, indent=2)
+
+          print(f"Saved {len(items)} news items.")
+          print("Categories:", ", ".join(FEEDS.keys()))
+          PY
+
+      - name: Commit updated news
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          if git diff --cached --quiet; then
+            echo "No news changes to commit."
+          else
+            git commit -m "Update market news"
+            git push
+          fi
