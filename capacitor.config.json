@@ -1,0 +1,11 @@
+{
+  "appId": "com.volkancildir.vcryptoscope",
+  "appName": "VCryptoScope",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}
