@@ -27,68 +27,118 @@ body {
 }
 
 .container {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: auto;
 }
 
-h1 { margin-bottom: 6px; }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+}
 
 .subtitle {
   color: var(--muted);
-  margin-top: 0;
-  margin-bottom: 24px;
+  margin: 10px 0 22px;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.top-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.action-button {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  padding: 11px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.action-button:hover {
+  border-color: var(--accent);
+}
+
+.refresh-button {
+  background: #123653;
+  border-color: var(--accent);
+  color: #7dd3fc;
+}
+
+.refresh-button:disabled {
+  opacity: .6;
+  cursor: wait;
 }
 
 .toolbar {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 16px;
+  margin: 18px 0;
 }
 
-input, select, #refreshButton {
+input, select {
   background: var(--panel);
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 12px;
-  font-size: 14px;
+  min-width: 0;
 }
 
-input {
+#searchInput {
   flex: 1;
-  min-width: 180px;
+  min-width: 200px;
 }
 
-select { max-width: 100%; }
-
-#refreshButton {
-  background: #123653;
-  color: #7dd3fc;
-  border-color: var(--accent);
-  cursor: pointer;
-  white-space: nowrap;
+select {
+  max-width: 100%;
 }
 
-#refreshButton:disabled {
-  opacity: .6;
-  cursor: wait;
+.section-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 22px 0 10px;
+  color: #d5e2f5;
 }
 
 .filters {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 18px 0;
 }
 
 .filters button {
   border: 1px solid var(--border);
   background: var(--panel);
-  color: var(--text);
+  color: #cbd5e1;
   padding: 9px 13px;
   border-radius: 20px;
-  cursor: pointer;
+  font-size: 13px;
+  transition: .15s;
+}
+
+.filters button:hover {
+  border-color: var(--accent);
 }
 
 .filters button.active {
@@ -97,9 +147,41 @@ select { max-width: 100%; }
   color: #7dd3fc;
 }
 
+.importance-filters button.active[data-importance="KRİTİK"] {
+  background: #491b26;
+  border-color: #ff657d;
+  color: #ff9baa;
+}
+
+.importance-filters button.active[data-importance="YÜKSEK"] {
+  background: #4a2b16;
+  border-color: #ffad63;
+  color: #ffbf83;
+}
+
+.importance-filters button.active[data-importance="ORTA"] {
+  background: #453b16;
+  border-color: #e7cb56;
+  color: #f9df70;
+}
+
+.importance-filters button.active[data-importance="DÜŞÜK"] {
+  background: #163d30;
+  border-color: #51d5a0;
+  color: #76e4b1;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 12px;
+}
+
 .status {
   color: var(--muted);
-  margin: 14px 0;
   font-size: 13px;
 }
 
@@ -123,16 +205,35 @@ select { max-width: 100%; }
   display: inline-block;
   font-size: 11px;
   font-weight: bold;
-  letter-spacing: .4px;
+  letter-spacing: .3px;
   border-radius: 5px;
   padding: 5px 8px;
 }
 
-.critical { background: #491b26; color: #ff8294; }
-.high { background: #4a2b16; color: #ffb36b; }
-.medium { background: #453b16; color: #f9df70; }
-.low { background: #163d30; color: #76e4b1; }
-.category-tag { background: #1b2c44; color: #9dcaff; }
+.critical {
+  background: #491b26;
+  color: #ff8294;
+}
+
+.high {
+  background: #4a2b16;
+  color: #ffb36b;
+}
+
+.medium {
+  background: #453b16;
+  color: #f9df70;
+}
+
+.low {
+  background: #163d30;
+  color: #76e4b1;
+}
+
+.category-tag {
+  background: #1b2c44;
+  color: #9dcaff;
+}
 
 .meta {
   color: var(--muted);
@@ -154,7 +255,7 @@ select { max-width: 100%; }
 
 .market-impact {
   border-left: 3px solid var(--accent);
-  padding: 8px 11px;
+  padding: 9px 11px;
   margin: 12px 0;
   background: #0c1728;
   color: #c5d8ee;
@@ -163,13 +264,17 @@ select { max-width: 100%; }
 }
 
 .read-link {
+  display: inline-block;
   color: var(--accent);
   text-decoration: none;
   font-size: 13px;
   font-weight: bold;
+  margin-top: 3px;
 }
 
-.read-link:hover { text-decoration: underline; }
+.read-link:hover {
+  text-decoration: underline;
+}
 
 .empty {
   padding: 28px;
@@ -177,21 +282,66 @@ select { max-width: 100%; }
   color: var(--muted);
   border: 1px dashed var(--border);
   border-radius: 12px;
+  line-height: 1.6;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   body { padding: 14px; }
-  .news-card { padding: 14px; }
-  .news-card h2 { font-size: 16px; }
-  .toolbar > * { max-width: 100%; }
-  input { width: 100%; }
+
+  .header {
+    align-items: flex-start;
+  }
+
+  h1 { font-size: 24px; }
+
+  .top-actions {
+    width: 100%;
+  }
+
+  .action-button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .toolbar > * {
+    width: 100%;
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+
+  .news-card {
+    padding: 14px;
+  }
+
+  .news-card h2 {
+    font-size: 16px;
+  }
 }
 </style>
 </head>
 
 <body>
 <div class="container">
-  <h1>Kripto Haberleri</h1>
+
+  <header class="header">
+    <h1>Kripto Haberleri</h1>
+
+    <div class="top-actions">
+      <a class="action-button" href="./index.html">
+        ← Ana Sayfaya Dön
+      </a>
+
+      <button
+        class="action-button refresh-button"
+        id="refreshButton"
+        type="button">
+        ↻ Verileri Yenile
+      </button>
+    </div>
+  </header>
+
   <p class="subtitle">
     Kripto piyasası, ekonomi ve dijital varlık gündemi
   </p>
@@ -201,8 +351,7 @@ select { max-width: 100%; }
       id="searchInput"
       type="search"
       placeholder="Haber, kaynak veya kelime ara..."
-      aria-label="Haberlerde ara"
-    >
+      aria-label="Haberlerde ara">
 
     <select id="sortSelect" aria-label="Haber sıralaması">
       <option value="dateImportance">Tarih ve önem sırasına göre</option>
@@ -210,24 +359,46 @@ select { max-width: 100%; }
       <option value="importance">Önem seviyesi önce</option>
       <option value="oldest">En eski tarih önce</option>
     </select>
-
-    <button id="refreshButton" type="button">
-      ↻ Haberleri Yenile
-    </button>
   </div>
 
-  <!-- Önem seviyeleri filtrelerde değil, haber kartlarında gösterilir. -->
-  <div class="filters" id="filters">
-    <button type="button" class="active" data-category="Tümü" aria-pressed="true">Tüm Haberler</button>
-    <button type="button" data-category="Bitcoin" aria-pressed="false">Bitcoin</button>
-    <button type="button" data-category="Ethereum" aria-pressed="false">Ethereum</button>
-    <button type="button" data-category="Makroekonomi" aria-pressed="false">Makroekonomi</button>
-    <button type="button" data-category="Regülasyon" aria-pressed="false">Regülasyon</button>
-    <button type="button" data-category="Kurumsal Yatırım" aria-pressed="false">Kurumsal Yatırım</button>
-    <button type="button" data-category="Kripto Piyasası" aria-pressed="false">Kripto Piyasası</button>
+  <div class="section-title">Kategoriye göre filtrele</div>
+
+  <div class="filters" id="categoryFilters">
+    <button type="button" class="active"
+      data-category="Tümü" aria-pressed="true">Tüm Haberler</button>
+    <button type="button"
+      data-category="Bitcoin" aria-pressed="false">Bitcoin</button>
+    <button type="button"
+      data-category="Ethereum" aria-pressed="false">Ethereum</button>
+    <button type="button"
+      data-category="Makroekonomi" aria-pressed="false">Makroekonomi</button>
+    <button type="button"
+      data-category="Regülasyon" aria-pressed="false">Regülasyon</button>
+    <button type="button"
+      data-category="Kurumsal Yatırım" aria-pressed="false">Kurumsal Yatırım</button>
+    <button type="button"
+      data-category="Kripto Piyasası" aria-pressed="false">Kripto Piyasası</button>
   </div>
 
-  <div id="status" class="status">Haberler yükleniyor...</div>
+  <div class="section-title">Önem derecesine göre filtrele</div>
+
+  <div class="filters importance-filters" id="importanceFilters">
+    <button type="button" class="active"
+      data-importance="Tümü" aria-pressed="true">Tüm Önem Seviyeleri</button>
+    <button type="button"
+      data-importance="KRİTİK" aria-pressed="false">🔴 KRİTİK</button>
+    <button type="button"
+      data-importance="YÜKSEK" aria-pressed="false">🟠 YÜKSEK</button>
+    <button type="button"
+      data-importance="ORTA" aria-pressed="false">🟡 ORTA</button>
+    <button type="button"
+      data-importance="DÜŞÜK" aria-pressed="false">🟢 DÜŞÜK</button>
+  </div>
+
+  <div class="status-row">
+    <div id="status" class="status">Haberler yükleniyor...</div>
+  </div>
+
   <div id="newsList"></div>
 </div>
 
@@ -239,11 +410,13 @@ select { max-width: 100%; }
   const status = document.getElementById("status");
   const searchInput = document.getElementById("searchInput");
   const sortSelect = document.getElementById("sortSelect");
-  const filters = document.getElementById("filters");
+  const categoryFilters = document.getElementById("categoryFilters");
+  const importanceFilters = document.getElementById("importanceFilters");
   const refreshButton = document.getElementById("refreshButton");
 
   let allArticles = [];
   let selectedCategory = "Tümü";
+  let selectedImportance = "Tümü";
   let refreshInProgress = false;
 
   const importanceOrder = {
@@ -259,48 +432,109 @@ select { max-width: 100%; }
   function getText(article, keys) {
     for (const key of keys) {
       const value = article[key];
+
       if (typeof value === "string" && value.trim()) {
         return value.trim();
       }
+
+      if (typeof value === "number") {
+        return String(value);
+      }
     }
+
     return "";
   }
 
   function getTitle(article) {
     return getText(article, [
-      "titleTr", "title_tr", "translatedTitle", "title"
+      "titleTr",
+      "title_tr",
+      "translatedTitle",
+      "title"
     ]) || "Başlıksız haber";
   }
 
   function getSummary(article) {
     return getText(article, [
-      "summaryTr", "summary_tr", "descriptionTr",
-      "summary", "description"
+      "summaryTr",
+      "summary_tr",
+      "descriptionTr",
+      "summary",
+      "description"
     ]);
   }
 
-  function getImportance(article) {
-    const raw = getText(article, [
-      "importance", "importanceLevel",
-      "importance_level", "priority", "severity"
-    ]).toLocaleUpperCase("tr-TR");
+  function normalizeImportance(value) {
+    const raw = String(value || "")
+      .trim()
+      .toLocaleUpperCase("tr-TR");
 
-    if (raw.includes("KRİTİK") || raw.includes("KRITIK")) return "KRİTİK";
-    if (raw.includes("YÜKSEK") || raw.includes("YUKSEK")) return "YÜKSEK";
-    if (raw.includes("ORTA")) return "ORTA";
-    if (raw.includes("DÜŞÜK") || raw.includes("DUSUK")) return "DÜŞÜK";
+    if (raw.includes("KRİTİK") || raw.includes("KRITIK")) {
+      return "KRİTİK";
+    }
+
+    if (raw.includes("YÜKSEK") || raw.includes("YUKSEK")) {
+      return "YÜKSEK";
+    }
+
+    if (raw.includes("ORTA")) {
+      return "ORTA";
+    }
+
+    if (raw.includes("DÜŞÜK") || raw.includes("DUSUK")) {
+      return "DÜŞÜK";
+    }
 
     return "ORTA";
   }
 
-  function getCategory(article) {
-    const explicit = getText(article, ["category", "kategori"]);
-    const known = [
-      "Bitcoin", "Ethereum", "Makroekonomi",
-      "Regülasyon", "Kurumsal Yatırım", "Kripto Piyasası"
-    ];
+  function getImportance(article) {
+    return normalizeImportance(getText(article, [
+      "importance",
+      "importanceLevel",
+      "importance_level",
+      "priority",
+      "severity"
+    ]));
+  }
 
-    if (known.includes(explicit)) return explicit;
+  function normalizeCategory(value) {
+    const category = String(value || "")
+      .trim()
+      .toLocaleLowerCase("tr-TR");
+
+    const aliases = {
+      "tümü": "Tümü",
+      "bitcoin": "Bitcoin",
+      "btc": "Bitcoin",
+      "ethereum": "Ethereum",
+      "eth": "Ethereum",
+      "makroekonomi": "Makroekonomi",
+      "macro": "Makroekonomi",
+      "regülasyon": "Regülasyon",
+      "regulasyon": "Regülasyon",
+      "regulation": "Regülasyon",
+      "kurumsal yatırım": "Kurumsal Yatırım",
+      "kurumsal yatirim": "Kurumsal Yatırım",
+      "institutional investment": "Kurumsal Yatırım",
+      "kripto piyasası": "Kripto Piyasası",
+      "kripto piyasasi": "Kripto Piyasası",
+      "crypto": "Kripto Piyasası",
+      "cryptocurrency": "Kripto Piyasası",
+      "crypto markets": "Kripto Piyasası"
+    };
+
+    return aliases[category] || "";
+  }
+
+  function getCategory(article) {
+    const explicit = normalizeCategory(
+      getText(article, ["category", "kategori"])
+    );
+
+    if (explicit && explicit !== "Tümü") {
+      return explicit;
+    }
 
     const text = (
       getTitle(article) + " " + getSummary(article)
@@ -317,7 +551,7 @@ select { max-width: 100%; }
       return "Makroekonomi";
     }
 
-    if (/kurumsal yatırım|kurumsal yatirim|etf|fon girişi|fon girisi|şirket alımı|sirket alimi/.test(text)) {
+    if (/kurumsal yatırım|kurumsal yatirim|etf|fon girişi|fon girisi|şirket alımı|sirket alimi|institutional/.test(text)) {
       return "Kurumsal Yatırım";
     }
 
@@ -326,10 +560,15 @@ select { max-width: 100%; }
 
   function getDate(article) {
     const raw = getText(article, [
-      "publishedAt", "published_at", "date", "pubDate"
+      "publishedAt",
+      "published_at",
+      "date",
+      "pubDate"
     ]);
 
-    const parsed = raw ? Date.parse(raw) : NaN;
+    if (!raw) return 0;
+
+    const parsed = Date.parse(raw);
     return Number.isFinite(parsed) ? parsed : 0;
   }
 
@@ -344,7 +583,9 @@ select { max-width: 100%; }
 
   function getSource(article) {
     return getText(article, [
-      "source", "sourceName", "publisher"
+      "source",
+      "sourceName",
+      "publisher"
     ]) || "Haber kaynağı";
   }
 
@@ -353,6 +594,7 @@ select { max-width: 100%; }
 
     try {
       const parsed = new URL(url);
+
       return ["https:", "http:"].includes(parsed.protocol)
         ? parsed.href
         : "";
@@ -385,20 +627,28 @@ select { max-width: 100%; }
 
     let articles = allArticles.filter(article => {
       const category = getCategory(article);
+      const importance = getImportance(article);
 
       const matchesCategory =
         selectedCategory === "Tümü" ||
         category === selectedCategory;
+
+      const matchesImportance =
+        selectedImportance === "Tümü" ||
+        importance === selectedImportance;
 
       const searchable = [
         getTitle(article),
         getSummary(article),
         getSource(article),
         category,
-        getImportance(article)
+        importance,
+        getText(article, ["marketImpactTr", "market_impact_tr", "marketImpact"])
       ].join(" ").toLocaleLowerCase("tr-TR");
 
-      return matchesCategory && searchable.includes(query);
+      return matchesCategory &&
+        matchesImportance &&
+        searchable.includes(query);
     });
 
     const sortMode = sortSelect.value;
@@ -406,8 +656,8 @@ select { max-width: 100%; }
     articles.sort((a, b) => {
       const dateA = getDate(a);
       const dateB = getDate(b);
-      const importanceA = importanceOrder[getImportance(a)] || 2;
-      const importanceB = importanceOrder[getImportance(b)] || 2;
+      const impA = importanceOrder[getImportance(a)] || 2;
+      const impB = importanceOrder[getImportance(b)] || 2;
 
       if (sortMode === "newest") {
         return dateB - dateA;
@@ -418,18 +668,24 @@ select { max-width: 100%; }
       }
 
       if (sortMode === "importance") {
-        return importanceB - importanceA || dateB - dateA;
+        return impB - impA || dateB - dateA;
       }
 
-      // Varsayılan: en yeni tarih önce; eşit tarihte önem önce.
-      return dateB - dateA || importanceB - importanceA;
+      // Varsayılan: tarih önce, aynı tarihte önem seviyesi.
+      return dateB - dateA || impB - impA;
     });
 
-    status.textContent = `${articles.length} haber listeleniyor`;
+    status.textContent =
+      `${articles.length} haber listeleniyor · Toplam ${allArticles.length} haber`;
 
     if (!articles.length) {
-      newsList.innerHTML =
-        '<div class="empty">Bu filtrelerle eşleşen haber bulunamadı.</div>';
+      newsList.innerHTML = `
+        <div class="empty">
+          Seçtiğin filtrelerle eşleşen haber bulunamadı.
+          <br>
+          Kategori veya önem filtresini değiştirebilirsin.
+        </div>
+      `;
       return;
     }
 
@@ -443,7 +699,9 @@ select { max-width: 100%; }
       const url = getUrl(article);
 
       const impact = escapeHTML(getText(article, [
-        "marketImpactTr", "market_impact_tr", "marketImpact"
+        "marketImpactTr",
+        "market_impact_tr",
+        "marketImpact"
       ]));
 
       return `
@@ -479,13 +737,30 @@ select { max-width: 100%; }
     }).join("");
   }
 
-  filters.addEventListener("click", event => {
+  // Kategori filtresi
+  categoryFilters.addEventListener("click", event => {
     const button = event.target.closest("button[data-category]");
     if (!button) return;
 
     selectedCategory = button.dataset.category;
 
-    filters.querySelectorAll("button[data-category]").forEach(item => {
+    categoryFilters.querySelectorAll("button[data-category]").forEach(item => {
+      const active = item === button;
+      item.classList.toggle("active", active);
+      item.setAttribute("aria-pressed", String(active));
+    });
+
+    render();
+  });
+
+  // Önem derecesi filtresi
+  importanceFilters.addEventListener("click", event => {
+    const button = event.target.closest("button[data-importance]");
+    if (!button) return;
+
+    selectedImportance = button.dataset.importance;
+
+    importanceFilters.querySelectorAll("button[data-importance]").forEach(item => {
       const active = item === button;
       item.classList.toggle("active", active);
       item.setAttribute("aria-pressed", String(active));
@@ -498,7 +773,7 @@ select { max-width: 100%; }
   sortSelect.addEventListener("change", render);
 
   async function loadNews() {
-    status.textContent = "Haberler yükleniyor...";
+    status.textContent = "Veriler yükleniyor...";
 
     try {
       const response = await fetch("./news.json?ts=" + Date.now(), {
@@ -506,10 +781,11 @@ select { max-width: 100%; }
       });
 
       if (!response.ok) {
-        throw new Error("HTTP " + response.status);
+        throw new Error("Haber dosyası yüklenemedi: HTTP " + response.status);
       }
 
       const data = await response.json();
+
       const items = Array.isArray(data)
         ? data
         : (data.articles || data.items);
@@ -521,34 +797,36 @@ select { max-width: 100%; }
       allArticles = items;
       render();
     } catch (error) {
-      console.error("Haber yükleme hatası:", error);
-      status.textContent = "Haberler yüklenemedi.";
+      console.error("Veri yenileme hatası:", error);
+
+      status.textContent = "Veriler yüklenemedi.";
 
       newsList.innerHTML = `
         <div class="empty">
-          Haberler yüklenemedi. news.json dosyasını ve GitHub Pages bağlantısını kontrol et.
+          Haber verileri alınamadı.
+          İnternet bağlantısını ve news.json dosyasını kontrol et.
           <br><br>
-          <button type="button" onclick="location.reload()">
-            Sayfayı Yeniden Yükle
-          </button>
+          <button class="action-button" type="button"
+            onclick="location.reload()">Sayfayı Yeniden Yükle</button>
         </div>
       `;
     }
   }
 
+  // Veri yenileme butonu
   refreshButton.addEventListener("click", async () => {
     if (refreshInProgress) return;
 
     refreshInProgress = true;
     refreshButton.disabled = true;
-    refreshButton.textContent = "Yükleniyor...";
+    refreshButton.textContent = "Yenileniyor...";
 
     try {
       await loadNews();
     } finally {
       refreshInProgress = false;
       refreshButton.disabled = false;
-      refreshButton.textContent = "↻ Haberleri Yenile";
+      refreshButton.textContent = "↻ Verileri Yenile";
     }
   });
 
