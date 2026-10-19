@@ -4,12 +4,9 @@ name: Update News
 concurrency:
   group: update-news-main
   cancel-in-progress: false
-  
+
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
   schedule:
     - cron: "7,22,37,52 * * * *"
 
@@ -24,6 +21,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Fetch and classify global market news
         run: |
@@ -103,12 +102,14 @@ jobs:
                       "q": text[:4000],
                   })
                   data = json.loads(get_url(
-                      "https://translate.googleapis.com/translate_a/single?" + query
+                      "https://translate.googleapis.com/translate_a/single?"
+                      + query
                   ).decode("utf-8"))
                   return "".join(
                       part[0] for part in data[0] if part and part[0]
                   ).strip() or text
-              except Exception:
+              except Exception as exc:
+                  print(f"Translation error: {exc}")
                   return text
 
           def published_date(value):
@@ -144,18 +145,16 @@ jobs:
                   return "Orta"
               return "Normal"
 
-          def infer_impact(category, title):
-              if category == "Kripto":
-                  return "Kripto piyasasında fiyatlar, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
-              if category == "Fed & Faiz":
-                  return "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
-              if category == "İstihdam & Enflasyon":
-                  return "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir."
-              if category == "Petrol & Enerji":
-                  return "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyüme görünümünü etkileyebilir."
-              if category == "Regülasyon":
-                  return "Düzenleyici kararlar kripto varlıkların erişimini, kurumsal yatırımları ve piyasa algısını etkileyebilir."
-              return "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
+          def infer_impact(category):
+              impacts = {
+                  "Kripto": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin.",
+                  "Fed & Faiz": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir.",
+                  "İstihdam & Enflasyon": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir.",
+                  "Petrol & Enerji": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir.",
+                  "Regülasyon": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir.",
+                  "Küresel Piyasalar": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir.",
+              }
+              return impacts.get(category, "")
 
           items = []
           seen = set()
@@ -175,15 +174,20 @@ jobs:
                           })
                       )
                       root = ET.fromstring(get_url(rss_url))
+
                       for node in root.findall(".//item"):
                           title = clean_text(node.findtext("title", ""))
                           summary = clean_text(node.findtext("description", ""))
                           url = (node.findtext("link", "") or "").strip()
                           source_node = node.find("source")
                           source = clean_text(
-                              source_node.text if source_node is not None else "Google News"
+                              source_node.text
+                              if source_node is not None
+                              else "Google News"
                           )
-                          published = published_date(node.findtext("pubDate", ""))
+                          published = published_date(
+                              node.findtext("pubDate", "")
+                          )
 
                           if not title or not url:
                               continue
@@ -201,13 +205,15 @@ jobs:
                               "publishedAt": published,
                               "category": category,
                           })
+
                   except Exception as exc:
-                      print(f"Feed error [{category}] [{query}]: {exc}")
+                      print(f"Feed error [{category}]: {exc}")
 
                   time.sleep(0.3)
 
               category_items.sort(
-                  key=lambda item: item["publishedAt"], reverse=True
+                  key=lambda item: item["publishedAt"],
+                  reverse=True
               )
 
               for item in category_items[:12]:
@@ -217,13 +223,14 @@ jobs:
                   item["importance"] = classify_importance(
                       item["title"], item["summary"], category
                   )
-                  item["marketImpactTr"] = infer_impact(
-                      category, item["titleTr"]
-                  )
+                  item["marketImpactTr"] = infer_impact(category)
                   items.append(item)
                   time.sleep(0.15)
 
-          items.sort(key=lambda item: item["publishedAt"], reverse=True)
+          items.sort(
+              key=lambda item: item["publishedAt"],
+              reverse=True
+          )
           items = items[:72]
 
           output = {
@@ -239,7 +246,6 @@ jobs:
           print("Categories:", ", ".join(FEEDS.keys()))
           PY
 
-      - 
       - name: Commit and push updated news
         run: |
           git config user.name "github-actions[bot]"
@@ -256,6 +262,4 @@ jobs:
 
           git fetch origin main
           git rebase origin/main
-
           git push origin HEAD:main
-
