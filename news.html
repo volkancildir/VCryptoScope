@@ -39,13 +39,17 @@ button{cursor:pointer}
 .read-link{color:var(--accent);text-decoration:none;font-size:13px;font-weight:bold}
 .empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--border);border-radius:12px}
 @media(max-width:650px){body{padding:14px}.header{align-items:flex-start}h1{font-size:24px}.top-actions{width:100%}.action-button{flex:1;text-align:center}.toolbar>*{width:100%}.news-card{padding:14px}.news-card h2{font-size:16px}}
+
+.site-nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:8px 0 14px}.site-nav a{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border:1px solid var(--line,#263550);border-radius:10px;background:var(--panel,#111a2b);color:var(--text,#eef3ff);text-decoration:none;font-size:12px;font-weight:650;white-space:nowrap}.site-nav a:hover{border-color:var(--blue,#7d9cff)}@media(max-width:700px){.site-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.site-nav a{padding:9px 5px;font-size:11px;text-align:center;white-space:normal}}
 </style>
 </head>
 <body>
 <div class="container">
 <header class="header">
 <h1>Kripto ve Piyasa Haberleri</h1>
-<div class="top-actions">
+<nav class="site-nav" aria-label="Ana gezinme">
+<a href="./index.html?view=tree&nav=1">Ağaç Haritası</a><a href="./index.html?view=market&nav=1">Coin Listesi</a><a href="./analysis.html?nav=1">Analiz</a><a href="./trade.html?nav=1">İşlem Planı</a><a href="./backtest.html?nav=1">Otomatik Tarayıcı</a><a href="./news.html?nav=1">Piyasa Haberleri</a>
+</nav><div class="top-actions">
 <a class="action-button" href="./index.html">← Ana Sayfaya Dön</a>
 <button class="action-button refresh-button" id="refreshButton">↻ Verileri Yenile</button>
 </div>
