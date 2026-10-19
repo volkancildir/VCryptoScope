@@ -15,9 +15,9 @@ const foreground = `<?xml version="1.0" encoding="utf-8"?>
     <path android:pathData="M65,110 L175,390 L285,110 L365,220 L455,45"
         android:fillColor="#00000000" android:strokeColor="#53E0E5"
         android:strokeWidth="26" android:strokeLineCap="round" android:strokeLineJoin="round"/>
-    <path android:pathData="M285,97 A13,13 0,1 0,285.01 97 Z"
+    <path android:pathData="M285,97 m-13,0 a13,13 0,1,0 26,0 a13,13 0,1,0 -26,0"
         android:fillColor="#FFFFFF"/>
-    <path android:pathData="M365,207 A13,13 0,1 0,365.01 207 Z"
+    <path android:pathData="M365,207 m-13,0 a13,13 0,1,0 26,0 a13,13 0,1,0 -26,0"
         android:fillColor="#FFFFFF"/>
 </vector>
 `;
@@ -35,7 +35,7 @@ let colors;
 try { colors = await readFile(colorsPath, "utf8"); }
 catch { colors = `<?xml version="1.0" encoding="utf-8"?>\n<resources>\n</resources>\n`; }
 if (!colors.includes('name="ic_launcher_background"')) {
-  colors = colors.replace(/<resources([^>]*)>/, '$&\\n    <color name="ic_launcher_background">#102A56</color>');
+  colors = colors.replace(/<resources([^>]*)>/, (_, attrs) => `<resources${attrs}>\n    <color name="ic_launcher_background">#102A56</color>`);
   await writeFile(colorsPath, colors);
 }
 console.log("Applied VCryptoScope adaptive launcher icon resources.");
