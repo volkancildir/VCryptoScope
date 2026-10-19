@@ -2,15 +2,14 @@ name: Update News
 
 on:
 workflow_dispatch:
+push:
+branches:
+- main
 schedule:
 - cron: "7,22,37,52 * * * *"
 
 permissions:
 contents: write
-
-concurrency:
-group: update-news
-cancel-in-progress: false
 
 jobs:
 update-news:
@@ -22,8 +21,6 @@ steps:
     uses: actions/checkout@v4
 
   - name: Fetch, translate and classify news
-    env:
-      PYTHONUNBUFFERED: "1"
     run: |
       python - <<'PY'
       import json
@@ -37,225 +34,140 @@ steps:
       from html import unescape
 
       feeds = [
-          ("Kripto Piyasası", "Bitcoin OR Ethereum OR cryptocurrency OR altcoin OR blockchain"),
-          ("Fed & Faiz", "Federal Reserve OR FOMC OR interest rates OR Jerome Powell"),
-          ("İstihdam & Enflasyon", "US inflation OR CPI OR PCE OR US jobs report OR unemployment OR payrolls"),
-          ("Petrol & Enerji", "oil prices OR crude oil OR Brent crude OR OPEC OR natural gas OR energy markets"),
-          ("Regülasyon", "cryptocurrency regulation OR SEC crypto OR crypto legislation OR crypto lawsuit"),
-          ("Küresel Piyasalar", "global markets OR US dollar OR Treasury yields OR stock markets OR bond yields"),
-          ("Kurumsal Yatırım", "Bitcoin ETF OR Ethereum ETF OR institutional crypto investment"),
+          ("Kripto", "https://news.google.com/rss/search?q=Bitcoin+OR+Ethereum+OR+cryptocurrency+OR+altcoin&hl=en-US&gl=US&ceid=US:en"),
+          ("Fed & Faiz", "https://news.google.com/rss/search?q=Federal+Reserve+OR+interest+rates+OR+central+bank+rates&hl=en-US&gl=US&ceid=US:en"),
+          ("İstihdam & Enflasyon", "https://news.google.com/rss/search?q=US+jobs+report+OR+employment+OR+inflation+CPI+OR+PCE&hl=en-US&gl=US&ceid=US:en"),
+          ("Petrol & Enerji", "https://news.google.com/rss/search?q=crude+oil+OR+Brent+oil+OR+OPEC+OR+energy+prices&hl=en-US&gl=US&ceid=US:en"),
+          ("Regülasyon", "https://news.google.com/rss/search?q=cryptocurrency+regulation+OR+SEC+crypto+OR+crypto+lawsuit&hl=en-US&gl=US&ceid=US:en"),
+          ("Küresel Piyasalar", "https://news.google.com/rss/search?q=global+markets+OR+stock+market+OR+bond+yields+OR+forex&hl=en-US&gl=US&ceid=US:en"),
       ]
 
-      def clean(value):
+      def clean_html(value):
           value = re.sub(r"<[^>]+>", " ", value or "")
           return re.sub(r"\s+", " ", unescape(value)).strip()
 
-      def translate(text):
+      def translate_tr(text):
           if not text:
               return ""
           try:
               params = urllib.parse.urlencode({
-                  "client": "gtx", "sl": "auto", "tl": "tr",
-                  "dt": "t", "q": text[:3000]
+                  "client": "gtx",
+                  "sl": "auto",
+                  "tl": "tr",
+                  "dt": "t",
+                  "q": text[:3000]
               })
-              req = urllib.request.Request(
-                  "https://translate.googleapis.com/translate_a/single?" + params,
-                  headers={"User-Agent": "Mozilla/5.0"}
+              url = "https://translate.googleapis.com/translate_a/single?" + params
+              request = urllib.request.Request(
+                  url, headers={"User-Agent": "Mozilla/5.0"}
               )
-              with urllib.request.urlopen(req, timeout=12) as response:
+              with urllib.request.urlopen(request, timeout=15) as response:
                   result = json.loads(response.read().decode("utf-8"))
               return "".join(
                   part[0] for part in result[0] if part and part[0]
               ) or text
-          except Exception as exc:
-              print(f"Translation fallback: {exc}")
+          except Exception as error:
+              print(f"Translation fallback: {error}")
               return text
 
       def classify(text, feed_category):
           t = text.lower()
 
-          critical_words = [
+          critical = [
               "hack", "hacked", "exploit", "bankruptcy",
-              "exchange insolvency", "market crash", "liquidation",
-              "emergency", "collapse"
+              "collapse", "emergency", "liquidation", "crash",
+              "war", "default", "emergency rate cut"
           ]
-          high_words = [
-              "federal reserve", "fomc", "interest rate", "rate cut",
-              "rate hike", "inflation", "cpi", "jobs report",
-              "unemployment", "payrolls", "crude oil", "oil prices",
-              "opec", "sanctions", "regulation", "legislation",
-              "lawsuit", "sec", "etf", "treasury yields"
+          high = [
+              "sec", "etf", "fed", "interest rate", "inflation",
+              "regulation", "lawsuit", "approval", "rejection",
+              "reserve", "bitcoin", "ethereum", "sanction",
+              "jobs report", "unemployment", "opec", "oil price"
           ]
-          medium_words = [
+          medium = [
               "forecast", "prediction", "upgrade", "partnership",
-              "adoption", "investment", "fund", "launch",
-              "natural gas", "employment", "economic growth"
+              "adoption", "investment", "fund", "launch"
           ]
 
-          if any(w in t for w in critical_words):
+          if any(word in t for word in critical):
               importance = "KRİTİK"
-          elif any(w in t for w in high_words):
+          elif any(word in t for word in high):
               importance = "YÜKSEK"
-          elif any(w in t for w in medium_words):
+          elif any(word in t for word in medium):
               importance = "ORTA"
           else:
               importance = "DÜŞÜK"
 
-          if any(w in t for w in [
-              "crude oil", "oil prices", "brent", "wti",
-              "opec", "natural gas", "energy market", "petroleum"
-          ]):
-              category = "Petrol & Enerji"
-          elif any(w in t for w in [
-              "federal reserve", "fomc", "jerome powell", "interest rate",
-              "rate cut", "rate hike", "monetary policy", "central bank"
-          ]):
-              category = "Fed & Faiz"
-          elif any(w in t for w in [
-              "inflation", "consumer price index", "cpi", "pce",
-              "payrolls", "unemployment", "jobs report", "jobless claims",
-              "nonfarm payroll", "labor market", "labour market"
-          ]):
-              category = "İstihdam & Enflasyon"
-          elif any(w in t for w in [
-              "regulation", "regulatory", "legislation", "lawsuit",
-              "court ruling", "crypto law", "sec enforcement"
-          ]):
-              category = "Regülasyon"
-          elif "bitcoin" in t or re.search(r"\bbtc\b", t):
-              category = "Bitcoin"
-          elif "ethereum" in t or re.search(r"\beth\b", t):
-              category = "Ethereum"
-          elif any(w in t for w in [
-              "bitcoin etf", "ethereum etf", "institutional investment",
-              "institutional investor", "asset manager"
-          ]):
-              category = "Kurumsal Yatırım"
-          elif any(w in t for w in [
-              "global markets", "stock market", "treasury yields",
-              "bond yields", "us dollar", "dollar index", "wall street",
-              "equity markets"
-          ]):
-              category = "Küresel Piyasalar"
-          else:
-              category = feed_category
-
           impact = {
-              "KRİTİK": "Çok yüksek potansiyel etki; haber doğrulanmalıdır.",
+              "KRİTİK": "Çok yüksek piyasa etkisi oluşturabilir; doğrulanması gerekir.",
               "YÜKSEK": "Piyasa oynaklığını artırabilecek önemli gelişme.",
-              "ORTA": "İlgili piyasalarda orta düzeyde etki oluşturabilir.",
-              "DÜŞÜK": "Doğrudan piyasa etkisi sınırlı veya belirsiz."
+              "ORTA": "İlgili varlıklarda orta düzeyde etki oluşturabilir.",
+              "DÜŞÜK": "Doğrudan piyasa etkisi belirsiz veya sınırlı."
           }[importance]
 
-          return importance, category, impact
+          return importance, feed_category, impact
 
       articles = []
       seen = set()
 
-      for feed_category, query in feeds:
-          feed_url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({
-              "q": query,
-              "hl": "en-US",
-              "gl": "US",
-              "ceid": "US:en"
-          })
-
+      for source, url in feeds:
           try:
-              req = urllib.request.Request(
-                  feed_url,
-                  headers={"User-Agent": "Mozilla/5.0 VCryptoScope/1.0"}
+              request = urllib.request.Request(
+                  url, headers={"User-Agent": "Mozilla/5.0 VCryptoScope/1.0"}
               )
-              with urllib.request.urlopen(req, timeout=20) as response:
+              with urllib.request.urlopen(request, timeout=20) as response:
                   root = ET.fromstring(response.read())
 
-              count = 0
               for item in root.findall(".//item"):
-                  title = clean(item.findtext("title", ""))
+                  title = clean_html(item.findtext("title", ""))
                   link = item.findtext("link", "").strip()
-                  summary = clean(item.findtext("description", ""))
-                  date_text = item.findtext("pubDate", "").strip()
+                  description = clean_html(item.findtext("description", ""))
+                  pub_date = item.findtext("pubDate", "").strip()
 
                   if not title or not link or link in seen:
                       continue
-                  seen.add(link)
 
+                  seen.add(link)
                   published = None
                   try:
-                      dt = parsedate_to_datetime(date_text)
-                      if dt.tzinfo is None:
-                          dt = dt.replace(tzinfo=timezone.utc)
-                      published = dt.astimezone(timezone.utc).isoformat()
+                      published = parsedate_to_datetime(pub_date).isoformat()
                   except Exception:
                       pass
 
                   importance, category, impact = classify(
-                      title + " " + summary, feed_category
+                      title + " " + description, source
                   )
 
                   articles.append({
                       "title": title,
                       "titleTr": title,
-                      "summary": summary,
-                      "summaryTr": summary,
+                      "summary": description,
+                      "summaryTr": description,
                       "url": link,
-                      "source": "Google News",
+                      "source": source,
                       "publishedAt": published,
                       "importance": importance,
                       "category": category,
                       "marketImpactTr": impact
                   })
-                  count += 1
-
-              print(f"{feed_category}: {count} yeni haber")
-
-          except Exception as exc:
-              print(f"Feed error ({feed_category}): {exc}")
+          except Exception as error:
+              print(f"Feed error ({source}): {error}")
 
       if not articles:
-          raise SystemExit(
-              "Haber alınamadı. Mevcut news.json dosyası korunuyor."
-          )
+          raise SystemExit("No news received; existing news.json preserved.")
 
       articles.sort(
-          key=lambda a: a.get("publishedAt") or "",
+          key=lambda item: item.get("publishedAt") or "",
           reverse=True
       )
 
-      # Kategori çeşitliliği: her kategoriden önce en yeni haberler.
-      selected = []
-      selected_urls = set()
-      categories = [
-          "Bitcoin", "Ethereum", "Kripto Piyasası",
-          "Fed & Faiz", "İstihdam & Enflasyon",
-          "Petrol & Enerji", "Regülasyon",
-          "Küresel Piyasalar", "Kurumsal Yatırım"
-      ]
+      articles = articles[:60]
 
-      for category in categories:
-          matches = [a for a in articles if a["category"] == category]
-          for article in matches[:6]:
-              if article["url"] not in selected_urls:
-                  selected.append(article)
-                  selected_urls.add(article["url"])
-
-      for article in articles:
-          if len(selected) >= 50:
-              break
-          if article["url"] not in selected_urls:
-              selected.append(article)
-              selected_urls.add(article["url"])
-
-      selected.sort(
-          key=lambda a: a.get("publishedAt") or "",
-          reverse=True
-      )
-      articles = selected[:50]
-
-      for i, article in enumerate(articles, 1):
-          article["titleTr"] = translate(article["title"])
-          article["summaryTr"] = translate(article["summary"])
-          print(f"Çeviri: {i}/{len(articles)}")
-          time.sleep(0.15)
+      for index, article in enumerate(articles):
+          article["titleTr"] = translate_tr(article["title"])
+          article["summaryTr"] = translate_tr(article["summary"])
+          print(f"Translated {index + 1}/{len(articles)}")
+          time.sleep(0.2)
 
       data = {
           "updatedAt": datetime.now(timezone.utc).isoformat(),
@@ -265,10 +177,7 @@ steps:
       with open("news.json", "w", encoding="utf-8") as file:
           json.dump(data, file, ensure_ascii=False, indent=2)
 
-      print(f"Toplam kaydedilen haber: {len(articles)}")
-      for category in categories:
-          total = sum(1 for a in articles if a["category"] == category)
-          print(f"Kategori — {category}: {total}")
+      print(f"Saved {len(articles)} translated and classified articles.")
       PY
 
   - name: Commit updated news
@@ -281,5 +190,5 @@ steps:
       git config user.name "github-actions[bot]"
       git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       git add news.json
-      git commit -m "Update news"
+      git commit -m "Update crypto news"
       git push
