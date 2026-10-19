@@ -5,212 +5,519 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#08111f">
-<title>VCryptoScope | Haberler</title>
+<title>VCryptoScope | Piyasa Haberleri</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#08111f;color:#edf4ff;font-family:Arial,sans-serif}
-.container{max-width:1100px;margin:auto;padding:20px}
-header{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;border-bottom:1px solid #263750;padding-bottom:20px}
-.logo{font-size:23px;font-weight:bold;color:#fff;text-decoration:none}
-.logo span{color:#4d83ff}
-nav{display:flex;gap:8px;flex-wrap:wrap}
-nav a{color:#91a4bd;text-decoration:none;padding:9px;border-radius:8px}
-nav a.active,nav a:hover{background:#1b3153;color:white}
-h1{font-size:clamp(28px,5vw,42px);margin-bottom:8px}
-p{line-height:1.6}
-.muted{color:#91a4bd}
-.status{margin:20px 0;padding:14px;background:#101c2e;border:1px solid #263750;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-button{cursor:pointer;border:0;border-radius:9px;padding:11px 14px;background:#3978ff;color:white;font-weight:bold}
-button:disabled{opacity:.6}
-.search{width:100%;padding:14px;background:#101c2e;color:white;border:1px solid #263750;border-radius:10px;font-size:16px;margin:8px 0 14px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.chip{background:#101c2e;border:1px solid #263750;color:#91a4bd}
-.chip.active{background:#2457d6;color:white}
-.heading{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.article{background:#101c2e;border:1px solid #263750;border-radius:14px;padding:18px;display:flex;flex-direction:column;overflow-wrap:anywhere}
-.article h3{font-size:17px;line-height:1.5}
-.meta{font-size:12px;color:#91a4bd}
-.tag{font-size:11px;color:#30d6a0;font-weight:bold}
-.bottom{border-top:1px solid #263750;padding-top:12px;margin-top:auto;display:flex;justify-content:space-between;gap:10px;align-items:center}
-.read{color:#8db2ff;text-decoration:none;font-weight:bold;font-size:13px}
-.message{grid-column:1/-1;padding:28px;text-align:center;background:#101c2e;border:1px solid #263750;border-radius:12px;color:#91a4bd;overflow-wrap:anywhere}
-.message strong{display:block;color:white;margin-bottom:8px}
-footer{margin-top:35px;padding-top:20px;border-top:1px solid #263750;color:#91a4bd;font-size:12px;text-align:center}
-@media(max-width:650px){.container{padding:14px}.grid{grid-template-columns:1fr}header{align-items:flex-start}nav{width:100%}.article{padding:15px}}
+:root {
+  --bg:#08111f;
+  --panel:#101d30;
+  --panel2:#15253b;
+  --line:#263850;
+  --text:#edf4ff;
+  --muted:#91a4bf;
+  --blue:#7d9cff;
+  --green:#21d6b0;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  background:radial-gradient(circle at top,#142743,var(--bg) 55%);
+  color:var(--text);
+  font:14px/1.55 system-ui,Arial,sans-serif;
+}
+button,input,select { font:inherit; }
+button,select,input {
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:10px 12px;
+}
+button {
+  cursor:pointer;
+  background:var(--panel2);
+  color:var(--text);
+}
+button:hover { border-color:var(--blue); }
+a { color:#a9c5ff; }
+.app { max-width:1200px; margin:auto; padding:20px 14px 40px; }
+header {
+  display:flex; justify-content:space-between;
+  align-items:center; gap:14px; flex-wrap:wrap;
+  margin-bottom:22px;
+}
+.brand { display:flex; align-items:center; gap:12px; }
+.logo {
+  width:44px;height:44px;border-radius:13px;
+  display:grid;place-items:center;
+  background:#172b49;color:var(--green);
+  font-size:22px;font-weight:900;
+}
+h1 { font-size:20px; margin:0; }
+.subtitle { color:var(--muted); font-size:12px; }
+.nav { display:flex; gap:8px; flex-wrap:wrap; }
+.nav a {
+  text-decoration:none;padding:9px 12px;
+  background:var(--panel2);border:1px solid var(--line);
+  border-radius:10px;
+}
+.nav a.active { background:#e9f0ff;color:#10182a; }
+.hero {
+  background:linear-gradient(130deg,#172b47,#101a2c);
+  border:1px solid var(--line);
+  border-radius:18px;padding:23px;margin-bottom:18px;
+}
+.eyebrow {
+  color:var(--blue);font-size:11px;
+  letter-spacing:1.4px;font-weight:800;
+}
+.hero h2 { font-size:clamp(24px,4vw,36px);line-height:1.2;margin:8px 0; }
+.hero p { color:var(--muted);max-width:760px;margin:0; }
+.toolbar {
+  display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;
+}
+.toolbar input { flex:1;min-width:180px; }
+input,select { background:#091524;color:var(--text); }
+input::placeholder { color:var(--muted); }
+.categories {
+  display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;
+}
+.chip { font-size:12px;color:var(--muted); }
+.chip.active { background:#e9f0ff;color:#10182a; }
+.meta {
+  display:flex;justify-content:space-between;
+  gap:8px;flex-wrap:wrap;color:var(--muted);
+  font-size:12px;margin:12px 0;
+}
+.news-grid {
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.article {
+  display:flex;flex-direction:column;gap:12px;
+  min-width:0;padding:17px;
+  background:linear-gradient(145deg,#122138,#0e1929);
+  border:1px solid var(--line);border-radius:15px;
+}
+.article-top {
+  display:flex;justify-content:space-between;
+  align-items:center;gap:8px;flex-wrap:wrap;
+}
+.tag,.importance {
+  font-size:10px;font-weight:900;
+  padding:5px 8px;border-radius:7px;
+}
+.tag { background:#1a3150;color:#a9c5ff; }
+.importance { white-space:nowrap; }
+.critical { background:#48212a;color:#ff8b96; }
+.high { background:#49361b;color:#ffd078; }
+.medium { background:#193a4a;color:#81d8f2; }
+.low { background:#263447;color:#bdc9d9; }
+.article h3 { font-size:16px;line-height:1.4;margin:0; }
+.article p { color:#b3c0d4;font-size:13px;margin:0;overflow-wrap:anywhere; }
+.article-foot {
+  display:flex;justify-content:space-between;
+  align-items:center;gap:10px;flex-wrap:wrap;
+  margin-top:auto;padding-top:6px;
+}
+.source,.time { font-size:11px;color:var(--muted); }
+.read { text-decoration:none;font-weight:800;font-size:12px; }
+.read:hover { text-decoration:underline; }
+.empty {
+  grid-column:1/-1;text-align:center;padding:35px;
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;color:var(--muted);
+}
+.notice {
+  margin-top:18px;padding:13px;border:1px solid var(--line);
+  border-radius:12px;color:var(--muted);font-size:11px;
+}
+footer {
+  display:flex;justify-content:space-between;
+  gap:10px;flex-wrap:wrap;margin-top:18px;
+  color:var(--muted);font-size:11px;
+}
+@media(max-width:700px) {
+  .news-grid { grid-template-columns:1fr; }
+  .app { padding:14px 11px 30px; }
+  .hero { padding:17px; }
+  .toolbar input { min-width:100%; }
+}
 </style>
 </head>
+
 <body>
-<div class="container">
+<main class="app">
+
 <header>
-<a class="logo" href="./index.html">VCrypto<span>Scope</span></a>
-<nav>
-<a href="./index.html">Ana Sayfa</a>
-<a href="./analysis.html">Analiz</a>
-<a class="active" href="./news.html">Haberler</a>
-</nav>
+  <div class="brand">
+    <div class="logo">V</div>
+    <div>
+      <h1>VCryptoScope</h1>
+      <div class="subtitle" id="brandSubtitle">
+        Finansal piyasalar için haber terminali
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html" id="homeLink">Ana Sayfa</a>
+    <a href="news.html" class="active" id="newsLink">Haberler</a>
+    <select id="language" aria-label="Language">
+      <option value="tr">Türkçe</option>
+      <option value="en">English</option>
+    </select>
+  </nav>
 </header>
 
-<main>
-<h1>Piyasa Haberleri</h1>
-<p class="muted">Bitcoin, altcoinler ve küresel ekonomiden son gelişmeler.</p>
+<section class="hero">
+  <div class="eyebrow" id="eyebrow">PİYASA GÜNDEMİ</div>
+  <h2 id="heroTitle">Piyasayı etkileyen gelişmeleri takip et.</h2>
+  <p id="heroDescription">
+    Kripto para, merkez bankaları, enflasyon, enerji ve küresel
+    piyasalar hakkındaki haberleri tek ekranda incele.
+  </p>
+</section>
 
-<div class="status">
-<span id="status">Haberler yükleniyor...</span>
-<button id="refresh" type="button">↻ Yenile</button>
+<div class="toolbar">
+  <input id="search" type="search"
+    placeholder="Haber, kurum veya konu ara...">
+
+  <select id="importanceFilter" aria-label="Importance filter">
+    <option value="all">Tüm önem seviyeleri</option>
+    <option value="critical">Kritik</option>
+    <option value="high">Yüksek</option>
+    <option value="medium">Orta</option>
+    <option value="low">Düşük</option>
+  </select>
+
+  <button id="refresh">↻ Haberleri yenile</button>
 </div>
 
-<input id="search" class="search" type="search" placeholder="Bitcoin, Fed, Ethereum ara...">
-
-<div class="filters" id="filters">
-<button class="chip active" data-cat="all">Tümü</button>
-<button class="chip" data-cat="bitcoin">Bitcoin</button>
-<button class="chip" data-cat="altcoin">Altcoin</button>
-<button class="chip" data-cat="economy">Ekonomi</button>
-<button class="chip" data-cat="other">Diğer</button>
+<div class="categories" id="categories">
+  <button class="chip active" data-cat="all">Tümü</button>
+  <button class="chip" data-cat="crypto">Kripto</button>
+  <button class="chip" data-cat="fed">Fed ve Faizler</button>
+  <button class="chip" data-cat="jobs">İstihdam ve Enflasyon</button>
+  <button class="chip" data-cat="energy">Petrol ve Enerji</button>
+  <button class="chip" data-cat="regulation">Regülasyon</button>
+  <button class="chip" data-cat="markets">Küresel Piyasalar</button>
 </div>
 
-<div class="heading">
-<h2>Son gelişmeler</h2>
-<span id="count" class="muted"></span>
+<div class="meta">
+  <span id="status">Haberler yükleniyor...</span>
+  <span id="updated">Son kontrol: —</span>
 </div>
 
-<div class="grid" id="news">
-<div class="message">Haberler yükleniyor...</div>
+<section class="news-grid" id="newsGrid">
+  <div class="empty">Haber akışı yükleniyor...</div>
+</section>
+
+<div class="notice" id="notice">
+  Önem etiketleri haber başlığı ve açıklamasına dayalı otomatik
+  bir sınıflandırmadır; piyasa etkisinin garantisi değildir.
+  Haber özetleri mevcut kaynak açıklamalarına dayanır ve yatırım
+  tavsiyesi değildir. Ayrıntılar için kaynak bağlantısını aç.
 </div>
-</main>
 
 <footer>
-<p>VCryptoScope — Piyasa haberleri</p>
-<p>Bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.</p>
+  <span>VCryptoScope · Piyasa Haberleri</span>
+  <span id="autoRefresh">Otomatik yenileme: 5 dakika</span>
 </footer>
-</div>
+
+</main>
 
 <script>
-const newsBox=document.getElementById("news");
-const statusBox=document.getElementById("status");
-const countBox=document.getElementById("count");
-const searchBox=document.getElementById("search");
-const refreshBtn=document.getElementById("refresh");
-const filters=document.getElementById("filters");
-let articles=[];
-let category="all";
+const $ = id => document.getElementById(id);
 
-function message(title,detail,retry=false){
-newsBox.replaceChildren();
-const box=document.createElement("div");
-box.className="message";
-const strong=document.createElement("strong");
-strong.textContent=title;
-const p=document.createElement("p");
-p.textContent=detail;
-box.append(strong,p);
-if(retry){
-const b=document.createElement("button");
-b.textContent="Tekrar dene";
-b.onclick=loadNews;
-box.append(b);
-}
-newsBox.append(box);
-countBox.textContent="0 haber";
+let allNews = [];
+let activeCategory = "all";
+let activeImportance = "all";
+let language = "tr";
+
+const TXT = {
+  tr: {
+    subtitle:"Finansal piyasalar için haber terminali",
+    home:"Ana Sayfa", news:"Haberler",
+    eyebrow:"PİYASA GÜNDEMİ",
+    heroTitle:"Piyasayı etkileyen gelişmeleri takip et.",
+    heroDescription:"Kripto para, merkez bankaları, enflasyon, enerji ve küresel piyasalar hakkındaki haberleri tek ekranda incele.",
+    search:"Haber, kurum veya konu ara...",
+    refresh:"↻ Haberleri yenile",
+    all:"Tümü", crypto:"Kripto", fed:"Fed ve Faizler",
+    jobs:"İstihdam ve Enflasyon", energy:"Petrol ve Enerji",
+    regulation:"Regülasyon", markets:"Küresel Piyasalar",
+    allImportance:"Tüm önem seviyeleri",
+    critical:"Kritik", high:"Yüksek", medium:"Orta", low:"Düşük",
+    loading:"Haberler yükleniyor...",
+    empty:"Bu filtrelerle eşleşen haber bulunamadı.",
+    source:"Kaynağa git ↗",
+    summary:"Haber özeti",
+    updated:"Son kontrol",
+    count:n=>`${n} haber gösteriliyor`,
+    failed:"Haberler yüklenemedi. news.json dosyasını kontrol et.",
+    notice:"Önem etiketleri haber başlığı ve açıklamasına dayalı otomatik bir sınıflandırmadır; piyasa etkisinin garantisi değildir. Haber özetleri mevcut kaynak açıklamalarına dayanır ve yatırım tavsiyesi değildir. Ayrıntılar için kaynak bağlantısını aç.",
+    auto:"Otomatik yenileme: 5 dakika"
+  },
+  en: {
+    subtitle:"Financial markets news terminal",
+    home:"Home", news:"News",
+    eyebrow:"MARKET BRIEFING",
+    heroTitle:"Follow the developments moving markets.",
+    heroDescription:"Explore crypto, central banks, inflation, energy and global markets in one place.",
+    search:"Search news, institutions or topics...",
+    refresh:"↻ Refresh news",
+    all:"All", crypto:"Crypto", fed:"Fed & Rates",
+    jobs:"Jobs & Inflation", energy:"Oil & Energy",
+    regulation:"Regulation", markets:"Global Markets",
+    allImportance:"All importance levels",
+    critical:"Critical", high:"High", medium:"Medium", low:"Low",
+    loading:"Loading news...",
+    empty:"No news matches these filters.",
+    source:"Open original source ↗",
+    summary:"News summary",
+    updated:"Last checked",
+    count:n=>`${n} stories shown`,
+    failed:"Could not load news. Check the news.json file.",
+    notice:"Importance labels are automatically estimated from headlines and descriptions; they do not guarantee market impact. Summaries use available source descriptions and are not investment advice. Open the original source for more details.",
+    auto:"Auto-refresh: 5 minutes"
+  }
+};
+
+const CATEGORY_NAMES = {
+  crypto:["crypto","cryptocurrency","bitcoin","ethereum","kripto","bitcoin etf"],
+  fed:["fed","rates","interest rate","central bank","faiz","merkez bankası","ecb"],
+  jobs:["jobs","inflation","cpi","employment","payroll","enflasyon","istihdam","üfe","tüfe"],
+  energy:["oil","energy","opec","brent","petrol","enerji"],
+  regulation:["regulation","regulatory","sec ","lawsuit","regülasyon","düzenleme","mevzuat"],
+  markets:["market","stocks","bond","dollar","forex","markets","piyasa","borsa","tahvil","dolar"]
+};
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;",
+    '"':"&quot;", "'":"&#39;"
+  })[c]);
 }
 
-function detect(a){
-const t=((a.title||"")+" "+(a.source||"")).toLowerCase();
-if(/bitcoin|\bbtc\b/.test(t))return "bitcoin";
-if(/ethereum|\beth\b|altcoin|solana|xrp|ripple|dogecoin|avax|crypto|kripto|token/.test(t))return "altcoin";
-if(/fed|faiz|inflation|enflasyon|ekonomi|economic|dolar|petrol|oil|istihdam|recession|resesyon|merkez bank/.test(t))return "economy";
-return "other";
+function categoryOf(item) {
+  if (item.kind && CATEGORY_NAMES[item.kind]) return item.kind;
+  const text = `${item.title || ""} ${item.description || ""}`.toLowerCase();
+  for (const [cat, terms] of Object.entries(CATEGORY_NAMES)) {
+    if (terms.some(term => text.includes(term))) return cat;
+  }
+  return "markets";
 }
 
-function dateText(value){
-if(!value)return "Tarih belirtilmemiş";
-const d=new Date(value);
-if(Number.isNaN(d.getTime()))return "Tarih belirtilmemiş";
-return new Intl.DateTimeFormat("tr-TR",{dateStyle:"medium",timeStyle:"short",timeZone:"Europe/Istanbul"}).format(d);
+function importanceOf(item) {
+  const text = `${item.title || ""} ${item.description || ""}`.toLowerCase();
+
+  if (/emergency|crash|collapse|war breaks|default|hack|exploit|acil durum|çöküş|savaş başladı|iflas|büyük saldırı/.test(text))
+    return "critical";
+
+  if (/fed decision|rate decision|rate hike|rate cut|inflation surges|sec approves|etf approved|faiz kararı|faiz artır|faiz indir|enflasyon|etf onay|sec onay/.test(text))
+    return "high";
+
+  if (/bitcoin|ethereum|crypto|cpi|jobs report|oil prices|bitcoin|kripto|istihdam|petrol|merkez bankası/.test(text))
+    return "medium";
+
+  return "low";
 }
 
-function render(){
-const q=searchBox.value.trim().toLocaleLowerCase("tr-TR");
-const visible=articles.filter(a=>{
-const text=((a.title||"")+" "+(a.source||"")).toLocaleLowerCase("tr-TR");
-return text.includes(q)&&(category==="all"||detect(a)===category);
+function importanceLabel(level) {
+  return TXT[language][level] || TXT[language].medium;
+}
+
+function getDate(item) {
+  const raw = item.publishedAt || item.pubDate || item.date || item.published;
+  if (!raw) return "";
+  const d = new Date(raw);
+  if (Number.isNaN(d.getTime())) return "";
+  return d.toLocaleString(language === "tr" ? "tr-TR" : "en-US", {
+    dateStyle:"medium", timeStyle:"short"
+  });
+}
+
+function render() {
+  const t = TXT[language];
+  const q = $("search").value.trim().toLowerCase();
+
+  const filtered = allNews.filter(item => {
+    const cat = categoryOf(item);
+    const imp = item.importance || importanceOf(item);
+    const text = `${item.title || ""} ${item.description || ""} ${item.source || ""}`.toLowerCase();
+
+    return (activeCategory === "all" || cat === activeCategory)
+      && (activeImportance === "all" || imp === activeImportance)
+      && (!q || text.includes(q));
+  });
+
+  $("status").textContent = t.count(filtered.length);
+
+  if (!filtered.length) {
+    $("newsGrid").innerHTML = `<div class="empty">${t.empty}</div>`;
+    return;
+  }
+
+  $("newsGrid").innerHTML = filtered.map(item => {
+    const cat = categoryOf(item);
+    const imp = item.importance || importanceOf(item);
+    const title = item.title || "Untitled";
+    const description = item.description || item.summary || "";
+    const source = item.source || item.publisher || "News source";
+    const url = safeURL(item.url || item.link);
+    const date = getDate(item);
+
+    return `
+      <article class="article">
+        <div class="article-top">
+          <span class="tag">${escapeHTML(TXT[language][cat] || cat)}</span>
+          <span class="importance ${escapeHTML(imp)}">
+            ${escapeHTML(importanceLabel(imp))}
+          </span>
+        </div>
+
+        <h3>${escapeHTML(title)}</h3>
+
+        <div class="source">
+          ${escapeHTML(source)}
+          ${date ? " · " + escapeHTML(date) : ""}
+        </div>
+
+        <div class="eyebrow">${escapeHTML(TXT[language].summary)}</div>
+        <p>${escapeHTML(description || title)}</p>
+
+        <div class="article-foot">
+          <span class="time">${escapeHTML(importanceLabel(imp))}</span>
+          ${url ? `<a class="read" href="${escapeHTML(url)}"
+            target="_blank" rel="noopener noreferrer">
+            ${escapeHTML(t.source)}
+          </a>` : ""}
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function safeURL(value) {
+  try {
+    const u = new URL(value, location.href);
+    return ["https:", "http:"].includes(u.protocol) ? u.href : "";
+  } catch {
+    return "";
+  }
+}
+
+function applyLanguage() {
+  const t = TXT[language];
+  document.documentElement.lang = language;
+
+  $("brandSubtitle").textContent = t.subtitle;
+  $("homeLink").textContent = t.home;
+  $("newsLink").textContent = t.news;
+  $("eyebrow").textContent = t.eyebrow;
+  $("heroTitle").textContent = t.heroTitle;
+  $("heroDescription").textContent = t.heroDescription;
+  $("search").placeholder = t.search;
+  $("refresh").textContent = t.refresh;
+  $("notice").textContent = t.notice;
+  $("autoRefresh").textContent = t.auto;
+
+  document.querySelectorAll("[data-cat]").forEach(button => {
+    const cat = button.dataset.cat;
+    button.textContent = t[cat] || t.all;
+  });
+
+  const filter = $("importanceFilter");
+  const previous = filter.value;
+  filter.innerHTML = `
+    <option value="all">${t.allImportance}</option>
+    <option value="critical">${t.critical}</option>
+    <option value="high">${t.high}</option>
+    <option value="medium">${t.medium}</option>
+    <option value="low">${t.low}</option>
+  `;
+  filter.value = previous;
+}
+
+async function loadNews() {
+  $("refresh").disabled = true;
+  $("status").textContent = TXT[language].loading;
+
+  try {
+    const response = await fetch("./news.json?ts=" + Date.now(), {
+      cache:"no-store"
+    });
+
+    if (!response.ok) throw new Error("HTTP " + response.status);
+
+    const data = await response.json();
+    const items = Array.isArray(data) ? data : data.items;
+
+    if (!Array.isArray(items)) {
+      throw new Error("Invalid news.json format");
+    }
+
+    allNews = items
+      .filter(item => item && (item.title || item.headline))
+      .map(item => ({
+        ...item,
+        title:item.title || item.headline,
+        description:item.description || item.summary || "",
+        url:item.url || item.link,
+        source:item.source || item.publisher,
+        kind:item.kind || item.category
+      }));
+
+    $("updated").textContent =
+      TXT[language].updated + ": " +
+      new Date().toLocaleTimeString(
+        language === "tr" ? "tr-TR" : "en-US"
+      );
+
+    render();
+  } catch (error) {
+    console.error("News loading error:", error);
+    $("status").textContent = TXT[language].failed;
+    $("newsGrid").innerHTML =
+      `<div class="empty">${escapeHTML(TXT[language].failed)}
+      <br><br><button onclick="loadNews()">
+      ${escapeHTML(TXT[language].refresh)}
+      </button></div>`;
+  } finally {
+    $("refresh").disabled = false;
+  }
+}
+
+$("search").addEventListener("input", render);
+
+$("importanceFilter").addEventListener("change", event => {
+  activeImportance = event.target.value;
+  render();
 });
-newsBox.replaceChildren();
-if(!visible.length){
-message("Haber bulunamadı","Aramanı veya kategori seçimini değiştirebilirsin.");
-return;
-}
-const frag=document.createDocumentFragment();
-visible.forEach(a=>{
-const card=document.createElement("article");
-card.className="article";
-const tag=document.createElement("span");
-tag.className="tag";
-tag.textContent=detect(a).toUpperCase();
-const meta=document.createElement("div");
-meta.className="meta";
-meta.style.marginTop="8px";
-meta.textContent=dateText(a.publishedAt);
-const title=document.createElement("h3");
-title.textContent=a.title;
-const bottom=document.createElement("div");
-bottom.className="bottom";
-const source=document.createElement("span");
-source.className="meta";
-source.textContent=a.source||"Haber kaynağı";
-const link=document.createElement("a");
-link.className="read";
-link.href=a.url;
-link.target="_blank";
-link.rel="noopener noreferrer";
-link.textContent="Haberi oku ↗";
-bottom.append(source,link);
-card.append(tag,meta,title,bottom);
-frag.append(card);
-});
-newsBox.append(frag);
-countBox.textContent=visible.length+" haber";
-}
 
-async function loadNews(){
-refreshBtn.disabled=true;
-refreshBtn.textContent="Yükleniyor...";
-statusBox.textContent="news.json okunuyor...";
-try{
-const response=await fetch("./news.json?t="+Date.now(),{cache:"no-store"});
-if(!response.ok)throw new Error("HTTP "+response.status+" — news.json dosyası açılamadı.");
-const data=await response.json();
-if(!data||!Array.isArray(data.articles))throw new Error("JSON içinde articles listesi bulunamadı.");
-articles=data.articles.filter(a=>a&&typeof a.title==="string"&&typeof a.url==="string"&&/^https?:\/\//i.test(a.url));
-articles.sort((a,b)=>(new Date(b.publishedAt||0).getTime()||0)-(new Date(a.publishedAt||0).getTime()||0));
-if(!articles.length){
-statusBox.textContent="Haber bulunamadı";
-message("Haber listesi boş","news.json içinde geçerli haber yok.",true);
-return;
-}
-statusBox.textContent=articles.length+" haber yüklendi · Son güncelleme: "+dateText(data.updatedAt);
-render();
-}catch(error){
-console.error(error);
-statusBox.textContent="Haberler yüklenemedi";
-message("Haber yükleme hatası",error.message+" GitHub Pages ve news.json dosyasını kontrol et.",true);
-}finally{
-refreshBtn.disabled=false;
-refreshBtn.textContent="↻ Yenile";
-}
-}
+$("categories").addEventListener("click", event => {
+  const button = event.target.closest("[data-cat]");
+  if (!button) return;
 
-searchBox.addEventListener("input",render);
-filters.addEventListener("click",e=>{
-const b=e.target.closest("button[data-cat]");
-if(!b)return;
-category=b.dataset.cat;
-filters.querySelectorAll("button").forEach(x=>x.classList.toggle("active",x===b));
-render();
+  activeCategory = button.dataset.cat;
+
+  document.querySelectorAll("[data-cat]").forEach(b => {
+    b.classList.toggle("active", b === button);
+  });
+
+  render();
 });
-refreshBtn.addEventListener("click",loadNews);
+
+$("language").addEventListener("change", event => {
+  language = event.target.value;
+  applyLanguage();
+  render();
+});
+
+$("refresh").addEventListener("click", loadNews);
+
+applyLanguage();
 loadNews();
+setInterval(loadNews, 5 * 60 * 1000);
 </script>
 </body>
 </html>
