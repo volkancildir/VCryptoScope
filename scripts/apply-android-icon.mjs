@@ -140,7 +140,8 @@ await writeFile(javaDir + "/IconRotationReceiver.java", [
 const manifestPath = "android/app/src/main/AndroidManifest.xml";
 let manifest = await readFile(manifestPath, "utf8");
 if (!manifest.includes(".MainActivityTurquoise")) {
-  const start = manifest.indexOf('<activity android:name=".MainActivity"');
+  const mainNameIndex = manifest.indexOf('android:name=".MainActivity"');
+  const start = mainNameIndex < 0 ? -1 : manifest.lastIndexOf("<activity", mainNameIndex);
   if (start < 0) throw new Error("Could not find MainActivity in AndroidManifest.xml");
   const end = manifest.indexOf("</activity>", start);
   if (end < 0) throw new Error("Could not find MainActivity closing tag");
