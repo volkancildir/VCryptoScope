@@ -1,11 +1,12 @@
-const CACHE_NAME = "vcryptoscope-v1";
+const CACHE_NAME = "vcryptoscope-v2";
 
 const APP_FILES = [
   "./",
   "./index.html",
   "./analysis.html",
   "./news.html",
-  "./manifest.json"
+  "./manifest.json",
+  "./icon.svg"
 ];
 
 self.addEventListener("install", (event) => {
