@@ -101,10 +101,11 @@ jobs:
                       "dt": "t",
                       "q": text[:4000],
                   })
-                  data = json.loads(get_url(
+                  url = (
                       "https://translate.googleapis.com/translate_a/single?"
                       + query
-                  ).decode("utf-8"))
+                  )
+                  data = json.loads(get_url(url).decode("utf-8"))
                   return "".join(
                       part[0] for part in data[0] if part and part[0]
                   ).strip() or text
@@ -177,7 +178,9 @@ jobs:
 
                       for node in root.findall(".//item"):
                           title = clean_text(node.findtext("title", ""))
-                          summary = clean_text(node.findtext("description", ""))
+                          summary = clean_text(
+                              node.findtext("description", "")
+                          )
                           url = (node.findtext("link", "") or "").strip()
                           source_node = node.find("source")
                           source = clean_text(
@@ -207,7 +210,7 @@ jobs:
                           })
 
                   except Exception as exc:
-                      print(f"Feed error [{category}]: {exc}")
+                      print(f"Feed error [{category}] [{query}]: {exc}")
 
                   time.sleep(0.3)
 
@@ -236,7 +239,9 @@ jobs:
           output = {
               "updatedAt": datetime.now(timezone.utc).isoformat(),
               "count": len(items),
+              "articles": items,
               "news": items,
+              "items": items,
           }
 
           with open("news.json", "w", encoding="utf-8") as file:
