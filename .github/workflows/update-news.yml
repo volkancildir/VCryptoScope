@@ -1,6 +1,10 @@
 
 name: Update News
 
+concurrency:
+  group: update-news-main
+  cancel-in-progress: false
+  
 on:
   workflow_dispatch:
   push:
