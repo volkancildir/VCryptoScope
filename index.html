@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020"><meta name="description" content="Canlı kripto para piyasası takip paneli"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="icon.svg"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>VCryptoScope — Piyasa</title>
+<style>
+:root{--bg:#080d19;--panel:#111a2b;--panel2:#0d1525;--line:#22304a;--text:#eef3ff;--muted:#8e9bb4;--green:#31d6a0;--red:#ff6b81;--blue:#7d9cff;--gold:#f2c66d}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% -10%,#1a2b50 0,transparent 38%),var(--bg);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.wrap{max-width:1500px;margin:auto;padding:28px 24px 50px}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:14px;overflow:hidden;display:grid;place-items:center;flex:0 0 44px;box-shadow:0 8px 28px #6e79ff30}.logo img{display:block;width:44px;height:44px;object-fit:contain}.brand h1{font-size:22px;margin:0;letter-spacing:-.7px}.brand p{color:var(--muted);margin:2px 0 0;font-size:12px}.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.status{color:var(--muted);font-size:12px;display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}.dot.live{background:var(--green);box-shadow:0 0 10px #31d6a055}.btn{border:1px solid #354464;color:var(--text);background:#17233a;border-radius:10px;padding:10px 14px;font-weight:650;cursor:pointer}.btn:hover{background:#213252}.btn.active{background:#e9f0ff;color:#10182a;border-color:#e9f0ff}.btn:disabled{opacity:.55;cursor:wait}.eyebrow{color:var(--blue);font-size:11px;text-transform:uppercase;letter-spacing:1.6px;font-weight:800;margin:0 0 12px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 13px}.section-head h2{font-size:17px;margin:0;letter-spacing:-.3px}.section-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:linear-gradient(145deg,#141f33,#101827);border:1px solid var(--line);border-radius:16px;padding:19px;min-width:0;box-shadow:0 8px 24px #0000000b}.card-label{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:600;gap:8px}.icon{width:32px;height:32px;border-radius:10px;background:#253352;display:grid;place-items:center;color:var(--blue);font-size:16px}.value{font-size:clamp(23px,2.2vw,32px);font-weight:800;letter-spacing:-1px;margin:17px 0 6px;overflow-wrap:anywhere}.sub{font-size:12px;color:var(--muted)}.mini-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.mini-card .value{font-size:clamp(19px,1.7vw,25px);margin-top:14px}.mini-card .card-label{min-height:32px}.green{color:var(--green)!important}.red{color:var(--red)!important}.gold{color:var(--gold)}.pill{display:inline-flex;align-items:center;gap:5px;border-radius:7px;padding:4px 7px;background:#203b37;color:var(--green);font-size:11px;font-weight:750}.pill.down{background:#402432;color:var(--red)}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.search{background:#0b1322;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:11px 13px;min-width:220px;outline:none}.search:focus{border-color:var(--blue)}.table-shell{background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:0;table-layout:fixed}th:nth-child(1),td:nth-child(1){width:28px}th:nth-child(2),td:nth-child(2){width:25%}th:nth-child(3),td:nth-child(3){width:15%}th:nth-child(4),td:nth-child(4){width:17%}th:nth-child(5),td:nth-child(5){width:16%}th:nth-child(6),td:nth-child(6){width:12%}th:nth-child(7),td:nth-child(7){width:15%}thead{background:#0d1525}th{padding:8px 3px;text-align:right;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px;white-space:nowrap;font-weight:750;border-bottom:1px solid var(--line)}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}td{padding:8px 2px;border-bottom:1px solid #202c42;text-align:right;white-space:nowrap;font-size:13px}tbody tr:hover{background:#ffffff05}tbody tr:last-child td{border-bottom:0}.coin{display:flex;align-items:center;gap:5px;min-width:0}.coin img{width:25px;height:25px;border-radius:50%;background:#fff}.coin-name{font-weight:750}.symbol{color:var(--muted);font-size:11px;margin-left:5px;text-transform:uppercase}.rank{color:var(--muted);width:30px;display:inline-block}.empty{padding:36px;text-align:center;color:var(--muted)}.notice{margin-top:14px;padding:12px 14px;border-radius:11px;background:#111c30;border:1px solid #293854;color:var(--muted);font-size:12px}.error{display:none;margin:12px 0;padding:12px 14px;border:1px solid #653747;background:#2a1822;color:#ffb3c0;border-radius:10px}.footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin-top:16px}.skeleton{color:#66758f}.sort{cursor:pointer}.sort:hover{color:var(--text)}.coin-row{cursor:pointer}.coin-row:hover{background:#1b2b45!important;outline:1px solid #506da3}
+
+.view-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.map-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:16px 0}.periods{display:flex;gap:6px;flex-wrap:wrap}.period-btn{border:1px solid #2b3b55;background:#111b2d;color:#aebbd1;border-radius:8px;padding:9px 13px;font-weight:750;cursor:pointer}.period-btn.active{background:#e9f0ff;color:#10182a;border-color:#e9f0ff}.map-meta{color:var(--muted);font-size:12px}.treemap{position:relative;display:block;gap:3px;align-content:stretch;background:#070b13;border:1px solid #26344a;border-radius:12px;padding:4px;min-height:540px;overflow:hidden}.tree-tile{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;min-height:0;overflow:hidden;border:0;border-radius:2px;color:#fff;text-align:center;cursor:pointer;padding:5px;transition:filter .12s,transform .12s}.tree-tile:hover{filter:brightness(1.13);z-index:2;outline:2px solid #fff9}.tree-symbol{font-size:clamp(11px,1.25vw,19px);font-weight:850;letter-spacing:-.3px;line-height:1.2}.tree-price{font-size:clamp(9px,.85vw,12px);opacity:.92;margin-top:4px}.tree-change{font-size:clamp(10px,1vw,14px);font-weight:750;margin-top:2px}.tree-tile.small .tree-price{display:none}.tree-tile.tiny .tree-price,.tree-tile.tiny .tree-change{display:none}.tree-tile.tiny .tree-symbol{font-size:10px}.map-legend{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:11px}.legend-gradient{height:8px;width:105px;border-radius:5px;background:linear-gradient(90deg,#a52d39,#5a2834,#2a433c,#16764b)}.map-info{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 0;color:var(--muted);font-size:11px}.view-hidden{display:none!important}
+@media(max-width:650px){.treemap{height:calc(100vh - 250px);min-height:520px;gap:2px;padding:3px}.tree-tile{min-height:0;padding:3px}.tree-symbol{font-size:12px}.tree-price{font-size:9px}.tree-change{font-size:10px}.period-btn{padding:8px 10px;font-size:12px}.map-toolbar{align-items:flex-start}.map-meta{width:100%}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:20px 14px 36px}.top{align-items:flex-start}.brand h1{font-size:19px}}@media(max-width:520px){table{min-width:0;table-layout:fixed}th{padding:6px 2px;font-size:8px;letter-spacing:0}td{padding:6px 2px;font-size:10px}.coin{min-width:0;gap:3px}.coin img{width:16px;height:16px}.symbol{margin-left:1px;font-size:9px}.top{flex-direction:column}.actions{width:100%;justify-content:space-between}.grid{gap:10px}.card{padding:14px}.value{font-size:23px}.mini-grid{gap:10px}.mini-card .value{font-size:20px}.search{min-width:0;flex:1;width:100%}.section-head{align-items:flex-start;flex-direction:column}.toolbar{width:100%}}
+
+/* Kullanıcıya özel sayfa düzeni */
+.prefs-btn{border:1px solid #354464;color:var(--text);background:#17233a;border-radius:10px;padding:10px 12px;font-weight:700;cursor:pointer}.prefs-backdrop{position:fixed;inset:0;z-index:1000;background:#030711c9;display:none;align-items:center;justify-content:center;padding:16px}.prefs-backdrop.open{display:flex}.prefs-panel{width:min(100%,520px);max-height:90vh;overflow:auto;background:#101a2c;border:1px solid #30415f;border-radius:18px;padding:20px;box-shadow:0 25px 80px #0009}.prefs-panel h2{margin:0 0 6px;font-size:20px}.prefs-muted{color:var(--muted);font-size:12px;margin:0 0 18px}.prefs-row{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #26344b}.prefs-row:last-child{border-bottom:0}.prefs-name{flex:1;min-width:0;font-weight:700}.prefs-sub{font-size:11px;color:var(--muted);font-weight:400}.prefs-move{display:flex;gap:6px}.prefs-move button,.prefs-close{border:1px solid #354464;background:#192741;color:var(--text);border-radius:8px;padding:8px 11px;cursor:pointer}.prefs-move button:disabled{opacity:.3;cursor:default}.prefs-home{display:flex;align-items:center;gap:9px;padding:10px 0}.prefs-home input{accent-color:#7d9cff;width:17px;height:17px}.prefs-actions{display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap;margin-top:18px}.prefs-actions .btn{flex:1}.prefs-hint{background:#0b1424;border:1px solid #26344b;border-radius:10px;padding:10px;color:var(--muted);font-size:11px;margin-top:12px}
+</style><style id="vcrypto-theme-overrides">
+/* Unified, accessible theme controls */
+.theme-btn,.prefs-btn{width:42px;height:42px;min-width:42px;display:inline-grid;place-items:center;padding:0!important;line-height:1;border:1px solid var(--line,#354464);color:var(--t,var(--text,#edf4ff));background:var(--p2,#17233a);border-radius:12px;cursor:pointer;flex:0 0 42px;transition:background .18s,border-color .18s,transform .18s}
+.theme-btn svg{display:block}
+.theme-btn:hover,.prefs-btn:hover{border-color:#7192c9;transform:translateY(-1px)}
+.theme-btn:focus-visible,.prefs-btn:focus-visible{outline:3px solid #7da7ff;outline-offset:2px}
+body.light-mode{color-scheme:light!important;background:#f3f6fb!important;color:#1b2a41!important}
+body.light-mode .wrap,body.light-mode .app{background:transparent!important}
+body.light-mode .brand h1,body.light-mode h1,body.light-mode h2,body.light-mode h3,body.light-mode h4,body.light-mode strong,body.light-mode label,body.light-mode th,body.light-mode td{color:#1b2a41}
+body.light-mode .brand p,body.light-mode .sub,body.light-mode .status,body.light-mode .updated,body.light-mode .footer,body.light-mode .section-head p,body.light-mode .map-meta,body.light-mode .map-info,body.light-mode .source,body.light-mode .time,body.light-mode .article p,body.light-mode .prefs-muted,body.light-mode .prefs-sub,body.light-mode .notice,body.light-mode .muted,body.light-mode .note,body.light-mode .hint,body.light-mode .adesc,body.light-mode .label{color:#596b83!important}
+body.light-mode .card,body.light-mode .table-shell,body.light-mode .article,body.light-mode .hero,body.light-mode .notice,body.light-mode .empty,body.light-mode .prefs-panel,body.light-mode .prefs-hint{background:#fff!important;border-color:#d8e1ed!important;color:#1b2a41!important;box-shadow:0 5px 18px #24344b0b}
+body.light-mode .btn,body.light-mode .period,body.light-mode .period-btn,body.light-mode .prefs-btn,body.light-mode .theme-btn,body.light-mode .refresh-btn,body.light-mode .prefs-close,body.light-mode .prefs-move button,body.light-mode .chip{background:#fff!important;color:#263a55!important;border-color:#cbd7e6!important}
+body.light-mode .btn.active,body.light-mode .period.active,body.light-mode .period-btn.active,body.light-mode .chip.active{background:#e3ecff!important;color:#183b73!important;border-color:#a9c2f7!important}
+body.light-mode .search,body.light-mode input,body.light-mode select,body.light-mode textarea{background:#fff!important;color:#1b2a41!important;border-color:#cbd7e6!important}
+body.light-mode thead,body.light-mode th{background:#edf2f8!important;color:#526178!important;border-color:#d7dfeb!important}
+body.light-mode td,body.light-mode .prefs-row{border-color:#e0e6ef!important}
+body.light-mode tbody tr:hover{background:#edf3fb!important}
+body.light-mode .prefs-backdrop{background:#24344b77!important}
+body.light-mode .prefs-panel{box-shadow:0 25px 80px #24344b22!important}
+body.light-mode .period-btn{color:#33435a!important}
+/* Technical analysis cards and controls need their own light palette. */
+body.light-mode .panel,body.light-mode .metric,body.light-mode .acard,body.light-mode .indicator-card,body.light-mode .indicator-empty,body.light-mode .liq-empty,body.light-mode .prefs-panel,body.light-mode .prefs-hint{background:#fff!important;border-color:#d7e0eb!important;color:#1b2a41!important;box-shadow:0 4px 16px #1c35500a}
+body.light-mode .coin{color:#263a55!important}
+body.light-mode .coin.active,body.light-mode .coin:hover{background:#e8f0fc!important;border-color:#c5d7f1!important}
+body.light-mode .period,body.light-mode .tab{background:#fff!important;color:#40536d!important;border-color:#d1dce9!important}
+body.light-mode .period.active{background:#c8f5e8!important;color:#075d4d!important;border-color:#8be2cc!important}
+body.light-mode .tab.active{background:#d8f5ed!important;color:#08604e!important;border-color:#8bdac8!important}
+body.light-mode .acard.positive{background:linear-gradient(145deg,#e5f8f1,#fff 75%)!important;border-color:#9bdcc5!important}
+body.light-mode .acard.negative{background:linear-gradient(145deg,#fff0f2,#fff 75%)!important;border-color:#efb2bd!important}
+body.light-mode .acard.positive .avalue,body.light-mode .acard.positive .atitle{color:#08785b!important}
+body.light-mode .acard.negative .avalue,body.light-mode .acard.negative .atitle{color:#b42342!important}
+body.light-mode .ring:before{background:#fff!important}
+body.light-mode .liq-row{background:#f4f7fb!important}
+body.light-mode .liq-price{color:#263a55!important}
+body.light-mode .liq-track{background:#e4eaf2!important}
+body.light-mode .liq-row.current{background:#fff7dc!important;outline-color:#d7a925!important}
+body.light-mode .liq-row.current .liq-price,body.light-mode .liq-current-line{color:#855b00!important}
+body.light-mode .error{color:#b42342!important}
+@media(max-width:740px){.theme-btn,.prefs-btn{width:40px;height:40px;min-width:40px;flex-basis:40px}}
+</style>
+
+<style id="theme-logo-toggle-style">.theme-logo-toggle{cursor:pointer;user-select:none;transition:transform .18s,filter .18s;outline-offset:3px}.theme-logo-toggle:hover{transform:translateY(-1px);filter:brightness(1.12)}.theme-logo-toggle:focus-visible{outline:3px solid #7da7ff}</style>
+
+<style id="vcrypto-readable-light-theme">
+/* Contrast-first light mode, shared by every page */
+body.light-mode{background:#eef2f7!important;color:#17263b!important;color-scheme:light!important}
+body.light-mode .wrap,body.light-mode .app{background:transparent!important}
+body.light-mode p,body.light-mode li,body.light-mode td,body.light-mode .value,body.light-mode .coin-name,body.light-mode .atitle,body.light-mode .avalue,body.light-mode .article h3,body.light-mode .hero h2{color:#17263b}
+body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-mode .hint,body.light-mode .note,body.light-mode .foot,body.light-mode .footer,body.light-mode .updated,body.light-mode .map-meta,body.light-mode .map-info,body.light-mode .section-head p,body.light-mode .card-label,body.light-mode .label,body.light-mode .adesc,body.light-mode .prefs-muted,body.light-mode .prefs-sub,body.light-mode .source,body.light-mode .time,body.light-mode .meta,body.light-mode .loading,body.light-mode .liq-legend,body.light-mode .liq-axis{color:#465873!important}
+body.light-mode .panel,body.light-mode .card,body.light-mode .metric,body.light-mode .acard,body.light-mode .indicator-card,body.light-mode .table-shell,body.light-mode .article,body.light-mode .hero,body.light-mode .notice,body.light-mode .empty,body.light-mode .indicator-empty,body.light-mode .liq-empty,body.light-mode .prefs-panel,body.light-mode .prefs-hint{background:#fff!important;background-image:none!important;border-color:#cbd5e1!important;color:#17263b!important;box-shadow:0 4px 16px #17263b0d!important}
+body.light-mode .hero p,body.light-mode .article p{color:#465873!important}
+body.light-mode .btn,body.light-mode .period,body.light-mode .period-btn,body.light-mode .prefs-btn,body.light-mode .refresh-btn,body.light-mode .prefs-close,body.light-mode .prefs-move button,body.light-mode .chip,body.light-mode .tab{background:#fff!important;color:#263a55!important;border-color:#bac8da!important}
+body.light-mode .btn.active,body.light-mode .period.active,body.light-mode .period-btn.active,body.light-mode .chip.active,body.light-mode .tab.active{background:#dce8fb!important;color:#153d78!important;border-color:#86a9e8!important}
+body.light-mode input,body.light-mode select,body.light-mode textarea,body.light-mode .search{background:#fff!important;color:#17263b!important;border-color:#b8c6d8!important}
+body.light-mode input::placeholder,body.light-mode textarea::placeholder{color:#65758b!important;opacity:1!important}
+body.light-mode th,body.light-mode thead{background:#e7edf5!important;color:#34445c!important;border-color:#cbd5e1!important}
+body.light-mode td,body.light-mode .prefs-row{border-color:#dbe3ed!important}
+body.light-mode tbody tr:hover,body.light-mode .coin.active,body.light-mode .coin:hover{background:#eaf1fa!important}
+body.light-mode .source-link,body.light-mode .read,body.light-mode a:not(.btn):not(.period){color:#174ea6!important}
+body.light-mode .tag{background:#e2ebfb!important;color:#17427d!important}
+body.light-mode .tag.macro{background:#fff0c9!important;color:#754b00!important}
+body.light-mode .tag.energy{background:#ffead9!important;color:#7a3708!important}
+body.light-mode .tag.jobs{background:#dff4fa!important;color:#15566a!important}
+body.light-mode .tag.fed{background:#f0e4ff!important;color:#60318d!important}
+body.light-mode .prefs-backdrop{background:#17263b70!important}
+body.light-mode .prefs-btn{background:#fff!important;color:#263a55!important;border-color:#bac8da!important}
+body.light-mode .error{color:#a31332!important;background:#fff0f2!important;border-color:#e8aab6!important}
+body.light-mode .period.active{background:#d5f5e9!important;color:#075d4d!important;border-color:#7dd9bd!important}
+body.light-mode .tab.active{background:#d5f5e9!important;color:#075d4d!important;border-color:#7dd9bd!important}
+body.light-mode .liq-row{background:#f3f6fa!important}
+body.light-mode .liq-price{color:#263a55!important}
+body.light-mode .liq-track{background:#e1e7ef!important}
+body.light-mode .liq-row.current{background:#fff4d2!important;outline-color:#c69a19!important}
+body.light-mode .liq-row.current .liq-price,body.light-mode .liq-current-line{color:#704c00!important}
+body.light-mode .green,body.light-mode .g{color:#087b54!important}
+body.light-mode .red,body.light-mode .r{color:#bd263e!important}
+body.light-mode .gold{color:#855b00!important}
+body.light-mode .pill{background:#e1f7ed!important;color:#08785b!important;border-color:#9dddc4!important}
+body.light-mode .pill.down{background:#ffebee!important;color:#ad1e37!important;border-color:#f0b2bd!important}
+body.light-mode .map-legend,body.light-mode .rank,body.light-mode .symbol{color:#465873!important}
+body.light-mode .coin-row:hover{background:#eaf1fa!important;outline-color:#b6cbe7!important}
+body.light-mode .tag,body.light-mode .chip{font-weight:700}
+/* Identical, aligned settings control on all pages */
+.prefs-btn{width:42px!important;height:42px!important;min-width:42px!important;flex:0 0 42px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:0!important;border-radius:12px!important;line-height:1!important}
+.prefs-btn svg{width:19px;height:19px;display:block}
+.theme-logo-toggle{cursor:pointer;user-select:none;touch-action:manipulation}
+@media(max-width:740px){.prefs-btn{width:40px!important;height:40px!important;min-width:40px!important;flex-basis:40px!important}}
+</style>
+
+<style id="vcryptoscope-blue-accent-settings">
+/* Shared filled settings button + blue-accent light theme */
+.prefs-btn{background:#2457d6!important;color:#fff!important;border:1px solid #2457d6!important;box-shadow:0 3px 10px #2457d633!important;border-radius:12px!important;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s!important}
+.prefs-btn svg{width:21px!important;height:21px!important;display:block;fill:currentColor}
+.prefs-btn:hover{background:#1746b5!important;border-color:#1746b5!important;box-shadow:0 5px 14px #2457d64a!important;transform:translateY(-1px)}
+.prefs-btn:active{transform:translateY(0) scale(.97)}
+.prefs-btn:focus-visible{outline:3px solid #7eb0ff!important;outline-offset:3px}
+body.light-mode{background:#f3f7fd!important;color:#15243b!important;color-scheme:light!important}
+body.light-mode h1,body.light-mode h2,body.light-mode h3,body.light-mode h4,body.light-mode label,body.light-mode strong,body.light-mode b{color:#15243b!important}
+body.light-mode .btn.active,body.light-mode .period.active,body.light-mode .period-btn.active,body.light-mode .chip.active,body.light-mode .tab.active{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important;box-shadow:0 2px 7px #2457d62e!important}
+body.light-mode .nav a.active{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important}
+body.light-mode .prefs-btn{background:#2457d6!important;color:#fff!important;border-color:#2457d6!important}
+body.light-mode .source-link,body.light-mode .read,body.light-mode a:not(.btn):not(.period){color:#174ea6!important;text-decoration-color:#8db3f2}
+body.light-mode .panel,body.light-mode .card,body.light-mode .metric,body.light-mode .acard,body.light-mode .indicator-card,body.light-mode .table-shell,body.light-mode .article,body.light-mode .hero,body.light-mode .notice,body.light-mode .empty,body.light-mode .indicator-empty,body.light-mode .liq-empty{border-color:#c6d4e6!important}
+body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-mode .hint,body.light-mode .note,body.light-mode .foot,body.light-mode .footer,body.light-mode .updated,body.light-mode .map-meta,body.light-mode .map-info,body.light-mode .section-head p,body.light-mode .card-label,body.light-mode .adesc,body.light-mode .source,body.light-mode .time,body.light-mode .meta,body.light-mode .loading,body.light-mode .liq-legend,body.light-mode .liq-axis{color:#465873!important}
+</style>
+
+
+<style id="settings-far-right-all-pages">
+.top{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto!important;align-items:center!important;gap:14px!important}
+.top>.actions,.top>div[style*="display:flex"]{min-width:0;justify-content:flex-end}
+.top>.actions{flex-wrap:wrap}
+.top>.prefs-btn{justify-self:end!important;align-self:start!important}
+@media(max-width:740px){.top{grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:12px!important}.top>.brand{grid-column:1;grid-row:1;min-width:0}.top>.prefs-btn{grid-column:2;grid-row:1;justify-self:end!important}.top>.actions,.top>div[style*="display:flex"]{grid-column:1/-1;grid-row:2;width:100%;justify-content:flex-start;min-width:0}.top #pageNav{max-width:100%}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="top"><div class="brand"><div class="logo theme-logo-toggle" role="button" tabindex="0" onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme()}" aria-label="Gündüz/gece modunu değiştir" title="Gündüz/gece modunu değiştir"><svg width="44" height="44" role="img" aria-label="VCryptoScope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1ce0bd"/><stop offset="1" stop-color="#1879bc"/></linearGradient></defs><rect width="128" height="128" rx="28" fill="#08111f"/><rect x="8" y="8" width="112" height="112" rx="25" fill="url(#g)"/><path d="M34 32h60v12H71v52H57V44H34z" fill="#071421"/><path d="M25 68h16l8-12 10 24 11-18 7 6h26" fill="none" stroke="#edf4ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h1>VCryptoScope</h1><p>Global kripto para piyasası · USD</p></div></div><div class="actions"><div id="pageNav" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button class="btn active" id="mapTab" data-page="tree" onclick="showView('map')">▦ Ağaç Haritası</button><button class="btn" id="marketTab" data-page="list" onclick="showView('market')">☷ Coin Listesi</button><a class="btn" id="analysisNav" data-page="analysis" href="./analysis.html?nav=1">↗ Analiz</a><a class="btn" id="newsNav" data-page="news" href="./news.html?nav=1">▤ Piyasa Haberleri</a></div><span class="status"><span class="dot" id="statusDot"></span><span id="statusText">Veriler bekleniyor</span></span><button class="btn" id="refreshBtn" onclick="refreshData(true)">↻ Şimdi yenile</button></div><button class="prefs-btn" onclick="openPagePrefs()" aria-label="Ayarlar" title="Ayarlar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M19.14 12.94c.04-.31.06-.62.06-.94s-.02-.63-.07-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94l-.36-2.54A.49.49 0 0 0 13.88 2h-3.76a.49.49 0 0 0-.49.42L9.27 4.96c-.59.23-1.14.55-1.63.94l-2.39-.96a.5.5 0 0 0-.61.22L2.72 8.48a.5.5 0 0 0 .12.64l2.03 1.58a6.2 6.2 0 0 0 0 1.88l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.12.2.36.29.61.22l2.39-.96c.49.39 1.04.71 1.63.94l.36 2.54c.04.24.25.42.49.42h3.76c.24 0 .45-.18.49-.42l.36-2.54c.59-.23 1.14-.55 1.63-.94l2.39.96c.23.09.49-.01.61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.02-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7Z" clip-rule="evenodd"/></svg></button></header>
+<section id="mapView">
+ <div class="section-head"><div><p class="eyebrow">01 / Ağaç haritası</p><h2>Kripto ağaç haritası</h2></div></div>
+ <div class="map-toolbar"><div class="periods" role="group" aria-label="Performans dönemi"><button class="period-btn" data-period="1h" onclick="setMapPeriod('1h')">1 Saat</button><button class="period-btn active" data-period="24h" onclick="setMapPeriod('24h')">24 Saat</button><button class="period-btn" data-period="7d" onclick="setMapPeriod('7d')">7 Gün</button><button class="period-btn" data-period="30d" onclick="setMapPeriod('30d')">1 Ay</button></div><span class="map-meta" id="mapStatus">Piyasa verileri bekleniyor…</span></div>
+ <div id="treemap" class="treemap" aria-label="Kripto para piyasa ağaç haritası"><div class="empty">Gerçek piyasa verileri yükleniyor…</div></div>
+ <div class="map-info"><span id="mapCount">Piyasa değerine göre ilk 100 coin</span><span class="map-legend"><span>− düşüş</span><span class="legend-gradient"></span><span>yükseliş +</span></span></div>
+ <div class="notice">Renkler seçilen zaman aralığındaki fiyat değişimini, alan büyüklüğü piyasa değerini gösterir. Coin'e dokunarak analiz sayfasını açabilirsin. Veriler CoinGecko Public API'den gelir; API sınırları nedeniyle yenileme her istekte başarılı olmayabilir.</div>
+</section>
+<section id="marketView" class="view-hidden">
+<div class="section-head"><div><p class="eyebrow">02 / Coin listesi</p><h2>Kripto para listesi</h2><p>Tüm piyasa verileri ABD doları cinsindendir.</p></div></div>
+<section class="grid">
+ <article class="card"><div class="card-label"><span>Toplam piyasa değeri</span><span class="icon">◈</span></div><div class="value" id="totalCap">—</div><div class="sub">Global kripto piyasası</div></article>
+ <article class="card"><div class="card-label"><span>24 saatlik işlem hacmi</span><span class="icon">↔</span></div><div class="value" id="totalVolume">—</div><div class="sub">Son 24 saat</div></article>
+ <article class="card"><div class="card-label"><span>Toplam kripto para</span><span class="icon">◉</span></div><div class="value" id="coinCount">—</div><div class="sub">API'nin bildirdiği aktif kripto para sayısı</div></article>
+</section>
+<div class="section-head"><div><p class="eyebrow">02 / Piyasa yoğunlaşması</p><h2>En büyük coin grupları</h2><p>Piyasa değerine göre ilk coinlerin birleşik değeri.</p></div></div>
+<section class="mini-grid">
+ <article class="card mini-card"><div class="card-label"><span>İlk 3 coin piyasa değeri</span><span class="icon">▲</span></div><div class="value" id="top3">—</div><div class="sub" id="top3share">Toplam piyasa içindeki payı: —</div></article>
+ <article class="card mini-card"><div class="card-label"><span>İlk 10 coin piyasa değeri</span><span class="icon">◆</span></div><div class="value" id="top10">—</div><div class="sub" id="top10share">Toplam piyasa içindeki payı: —</div></article>
+ <article class="card mini-card"><div class="card-label"><span>İlk 20 coin piyasa değeri</span><span class="icon">▰</span></div><div class="value" id="top20">—</div><div class="sub" id="top20share">Toplam piyasa içindeki payı: —</div></article>
+ <article class="card mini-card"><div class="card-label"><span>24 saatlik ortalama değişim</span><span class="icon">％</span></div><div class="value" id="avgChange">—</div><div class="sub" id="avgNote">Piyasa değerine göre ilk 100 coin için basit ortalama</div></article>
+</section>
+<div id="errorBox" class="error" role="alert"></div>
+<div class="section-head"><div><p class="eyebrow">03 / Varlıklar</p><h2>Kripto para listesi</h2><p id="listCaption">Piyasa değerine göre ilk 250 coin gösterilir.</p></div><div class="toolbar"><input class="search" id="searchInput" type="search" placeholder="Coin veya sembol ara…" aria-label="Coin ara"></div></div>
+<section class="table-shell"><div class="table-scroll"><table><thead><tr><th class="sort" data-sort="market_cap_rank"># ↕</th><th>Kripto para</th><th class="sort" data-sort="current_price">Fiyat (USD) ↕</th><th class="sort" data-sort="market_cap">Piyasa değeri ↕</th><th class="sort" data-sort="total_volume">Toplam hacim (24s) ↕</th><th class="sort" data-sort="price_change_percentage_24h">Değişim (24s) ↕</th><th class="sort" data-sort="ath">ATH (USD) ↕</th></tr></thead><tbody id="coinRows"><tr><td colspan="7" class="empty">Piyasa verileri yükleniyor…</td></tr></tbody></table></div></section>
+<div class="notice">ⓘ Ortalama değişim, API'den alınan piyasa değerine göre ilk 100 coin içindeki 24 saatlik yüzde değişimlerin basit aritmetik ortalamasıdır; tüm piyasadaki her coin'in ortalaması değildir. İlk 3/10/20 toplamları da API'nin döndürdüğü ilk 100 coin içinden hesaplanır.</div>
+</section>
+<div class="footer"><span id="updatedAt">Son güncelleme: henüz yok</span><span>Veri sağlayıcı: CoinGecko Public API · Ağaç haritası: ilk 100 · Coin listesi: ilk 250 · Yenileme: 2 dakika</span></div>
+
+<div class="prefs-backdrop" id="prefsBackdrop" role="dialog" aria-modal="true" aria-labelledby="prefsTitle" onclick="if(event.target===this)closePagePrefs()"><section class="prefs-panel"><h2 id="prefsTitle">Sayfa düzeni</h2><p class="prefs-muted">Menüdeki sayfaların sırasını ve uygulama açıldığında gösterilecek ilk sayfayı seç.</p><div id="prefsOrder"></div><div style="height:1px;background:#26344b;margin:16px 0"></div><strong>Uygulama açıldığında</strong><div id="prefsHome"></div><div class="prefs-hint">Tercihler bu cihazın tarayıcısında saklanır. Aynı bağlantıyı başka cihazda açarsan ayarları yeniden seçmen gerekir.</div><div class="prefs-actions"><button class="btn" onclick="resetPagePrefs()">Varsayılana dön</button><button class="btn active" onclick="savePagePrefs()">Kaydet</button><button class="prefs-close" onclick="closePagePrefs()">Kapat</button></div></section></div>
+</main>
+<script>
+const API='https://api.coingecko.com/api/v3';const REFRESH_MS=120000;let coins=[];let sortKey='market_cap_rank';let sortDirection=1;let busy=false;
+const $=id=>document.getElementById(id);
+const PREFS_KEY='vcryptoscopePrefsV1';
+const PAGE_INFO={tree:{label:'Ağaç Haritası',desc:'Piyasa görünümü'},list:{label:'Coin Listesi',desc:'İlk 250 coin'},analysis:{label:'Analiz',desc:'Teknik analiz'},news:{label:'Piyasa Haberleri',desc:'Kripto, Fed, istihdam, petrol ve makroekonomi'}};
+const DEFAULT_PREFS={order:['tree','list','analysis','news'],home:'tree'};
+function readPagePrefs(){try{const x=JSON.parse(localStorage.getItem(PREFS_KEY)||'null');if(!x)return {...DEFAULT_PREFS,order:[...DEFAULT_PREFS.order]};const order=Array.isArray(x.order)?x.order.filter((v,i,a)=>PAGE_INFO[v]&&a.indexOf(v)===i):[];for(const k of DEFAULT_PREFS.order)if(!order.includes(k))order.push(k);return {order,home:PAGE_INFO[x.home]?x.home:'tree'}}catch(e){return {...DEFAULT_PREFS,order:[...DEFAULT_PREFS.order]}}}
+let pagePrefs=readPagePrefs();
+function applyPageOrder(){const nav=$('pageNav');if(nav){const nodes={tree:$('mapTab'),list:$('marketTab'),analysis:$('analysisNav'),news:$('newsNav')};pagePrefs.order.forEach(k=>nodes[k]&&nav.appendChild(nodes[k]));}}
+function openPagePrefs(){pagePrefs=readPagePrefs();renderPagePrefs();$('prefsBackdrop').classList.add('open');document.body.style.overflow='hidden'}
+function closePagePrefs(){$('prefsBackdrop').classList.remove('open');document.body.style.overflow=''}
+function renderPagePrefs(){const root=$('prefsOrder');root.innerHTML=pagePrefs.order.map((k,i)=>`<div class="prefs-row"><div class="prefs-name">${i+1}. ${PAGE_INFO[k].label}<div class="prefs-sub">${PAGE_INFO[k].desc}</div></div><div class="prefs-move"><button type="button" aria-label="Yukarı taşı" ${i===0?'disabled':''} onclick="movePagePref('${k}',-1)">↑</button><button type="button" aria-label="Aşağı taşı" ${i===pagePrefs.order.length-1?'disabled':''} onclick="movePagePref('${k}',1)">↓</button></div></div>`).join('');$('prefsHome').innerHTML=pagePrefs.order.map(k=>`<label class="prefs-home"><input type="radio" name="prefsHome" value="${k}" ${pagePrefs.home===k?'checked':''} onchange="pagePrefs.home=this.value"><span><strong>${PAGE_INFO[k].label}</strong><span class="prefs-sub" style="display:block">Açılış sayfası</span></span></label>`).join('')}
+function movePagePref(k,d){const i=pagePrefs.order.indexOf(k),j=i+d;if(j<0||j>=pagePrefs.order.length)return;[pagePrefs.order[i],pagePrefs.order[j]]=[pagePrefs.order[j],pagePrefs.order[i]];renderPagePrefs()}
+function savePagePrefs(){try{localStorage.setItem(PREFS_KEY,JSON.stringify(pagePrefs));applyPageOrder();closePagePrefs();}catch(e){alert('Tarayıcı ayarları kaydedemedi. Gizli sekme veya depolama kısıtlamasını kontrol et.')}}
+function resetPagePrefs(){pagePrefs={order:[...DEFAULT_PREFS.order],home:DEFAULT_PREFS.home};renderPagePrefs()}
+function maybeOpenPreferredHome(){const q=new URLSearchParams(location.search);if(q.has('view')||q.get('nav')==='1')return;if(pagePrefs.home==='analysis'){location.replace('./analysis.html?start=1');return;}if(pagePrefs.home==='news'){location.replace('./news.html?start=1');return;}if(pagePrefs.home==='list')showView('market');else showView('map')}
+applyPageOrder();
+function money(v){if(v===null||v===undefined||!Number.isFinite(Number(v)))return '—';v=Number(v);if(Math.abs(v)>=1e12)return '$'+(v/1e12).toLocaleString('en-US',{maximumFractionDigits:2})+'T';if(Math.abs(v)>=1e9)return '$'+(v/1e9).toLocaleString('en-US',{maximumFractionDigits:2})+'B';if(Math.abs(v)>=1e6)return '$'+(v/1e6).toLocaleString('en-US',{maximumFractionDigits:2})+'M';if(Math.abs(v)>=1e3)return '$'+(v/1e3).toLocaleString('en-US',{maximumFractionDigits:2})+'K';return '$'+v.toLocaleString('en-US',{maximumFractionDigits:8})}
+function price(v){if(v===null||v===undefined||!Number.isFinite(Number(v)))return '—';return '$'+Number(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:Number(v)<1?8:2})}
+function number(v){return Number(v||0).toLocaleString('en-US')}
+function percent(v){if(v===null||v===undefined||!Number.isFinite(Number(v)))return '—';return (v>0?'+':'')+Number(v).toFixed(2)+'%'}
+function sumCap(n){return coins.slice(0,n).reduce((s,c)=>s+(Number(c.market_cap)||0),0)}
+function share(v,total){return total>0?(v/total*100).toFixed(1)+'%':'—'}
+function setChange(elId,v){const el=$(elId);el.textContent=percent(v);el.classList.toggle('green',Number(v)>0);el.classList.toggle('red',Number(v)<0)}
+async function fetchJson(url){const r=await fetch(url,{headers:{accept:'application/json'}});if(!r.ok){let msg='HTTP '+r.status;if(r.status===429)msg='API istek limiti aşıldı (429). Biraz bekleyip yeniden deneyin.';throw new Error(msg)}return r.json()}
+async function refreshData(manual=false){if(busy)return;busy=true;const btn=$('refreshBtn');btn.disabled=true;btn.textContent='↻ Yükleniyor…';$('errorBox').style.display='none';$('statusText').textContent='Veriler alınıyor…';$('statusDot').classList.remove('live');try{
+ const [globalData,marketData]=await Promise.all([
+ fetchJson(API+'/global'),
+ fetchJson(API+'/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C30d')
+ ]);
+ const g=globalData.data||{};coins=Array.isArray(marketData)?marketData:[];coins.sort((a,b)=>(a.market_cap_rank||999999)-(b.market_cap_rank||999999));
+ $('totalCap').textContent=money(g.total_market_cap?.usd);$('totalVolume').textContent=money(g.total_volume?.usd);$('coinCount').textContent=number(g.active_cryptocurrencies);
+ const caps=[3,10,20];for(const n of caps){const s=sumCap(n);$('top'+n).textContent=money(s);$('top'+n+'share').textContent='Toplam piyasa içindeki payı: '+share(s,g.total_market_cap?.usd||0)}
+ const top100=coins.slice(0,100);const changes=top100.map(c=>c.price_change_percentage_24h_in_currency??c.price_change_percentage_24h).filter(v=>v!==null&&v!==undefined&&Number.isFinite(Number(v)));const avg=changes.length?changes.reduce((a,b)=>a+Number(b),0)/changes.length:null;setChange('avgChange',avg);$('avgNote').textContent='Piyasa değerine göre ilk 100 coin için basit ortalama';
+ $('updatedAt').textContent='Son güncelleme: '+new Date().toLocaleString('tr-TR');$('statusText').textContent='Canlı bağlantı';$('statusDot').classList.add('live');renderTable();renderTreeMap();
+ }catch(err){$('errorBox').style.display='block';$('errorBox').textContent='Veriler güncellenemedi: '+err.message+' Önceki tabloda veri varsa son başarılı güncellemeye aittir. Bağlantınızı kontrol edip tekrar deneyin.';$('statusText').textContent='Bağlantı sorunu';if(!coins.length)$('coinRows').innerHTML='<tr><td colspan="7" class="empty">Veriler alınamadı. İnternet bağlantınızı kontrol edip “Şimdi yenile” düğmesine basın.</td></tr>';}finally{busy=false;btn.disabled=false;btn.textContent='↻ Şimdi yenile'}}
+function renderTable(){const q=$('searchInput').value.trim().toLowerCase();const filtered=coins.filter(c=>(c.name||'').toLowerCase().includes(q)||(c.symbol||'').toLowerCase().includes(q));filtered.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];if(sortKey==='ath') {x=a.ath;y=b.ath}if(x==null)x=-Infinity;if(y==null)y=-Infinity;return (typeof x==='string'?x.localeCompare(y):x-y)*sortDirection});$('listCaption').textContent=filtered.length+' / '+coins.length+' coin gösteriliyor · piyasa değerine göre ilk 250 içinden · sıralama: '+(sortKey==='market_cap_rank'?'piyasa sırası':sortKey.replaceAll('_',' '));if(!filtered.length){$('coinRows').innerHTML='<tr><td colspan="7" class="empty">Aramana uygun coin bulunamadı.</td></tr>';return}const fmtVol=v=>money(v);$('coinRows').innerHTML=filtered.map(c=>{const change=c.price_change_percentage_24h_in_currency??c.price_change_percentage_24h;const ch=Number(change);const cls=Number.isFinite(ch)&&ch>0?'green':Number.isFinite(ch)&&ch<0?'red':'';const img=c.image?`<img src="${c.image}" alt="" loading="lazy" onerror="this.style.display='none'">`:'';return `<tr class="coin-row" tabindex="0" role="link" data-coin="${encodeURIComponent(c.id||'bitcoin')}" title="${escapeHtml(c.name||'Coin')} analizini aç"><td>${c.market_cap_rank??'—'}</td><td><div class="coin">${img}<div><span class="coin-name">${escapeHtml(c.name||'Bilinmiyor')}</span><span class="symbol">${escapeHtml((c.symbol||'').toUpperCase())}</span></div></div></td><td>${price(c.current_price)}</td><td>${money(c.market_cap)}</td><td>${fmtVol(c.total_volume)}</td><td class="${cls}">${percent(change)}</td><td>${price(c.ath)}</td></tr>`}).join('');document.querySelectorAll('.coin-row').forEach(row=>{const go=()=>location.href='analysis.html?coin='+row.dataset.coin;row.addEventListener('click',go);row.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})})}
+let mapPeriod='24h';
+function showView(which){const map=which==='map';$('mapView').classList.toggle('view-hidden',!map);$('marketView').classList.toggle('view-hidden',map);$('mapTab').classList.toggle('active',map);$('marketTab').classList.toggle('active',!map);if(map)renderTreeMap();window.scrollTo({top:0,behavior:'smooth'});}
+function setMapPeriod(p){mapPeriod=p;document.querySelectorAll('.period-btn').forEach(b=>b.classList.toggle('active',b.dataset.period===p));renderTreeMap();}
+function mapChange(c){const keys={'1h':['price_change_percentage_1h_in_currency','price_change_percentage_1h'],'24h':['price_change_percentage_24h_in_currency','price_change_percentage_24h'],'7d':['price_change_percentage_7d_in_currency','price_change_percentage_7d'],'30d':['price_change_percentage_30d_in_currency','price_change_percentage_30d']};for(const k of keys[mapPeriod]){if(c[k]!==undefined&&c[k]!==null&&Number.isFinite(Number(c[k])))return Number(c[k]);}return null;}
+function tileColor(v){if(v===null||!Number.isFinite(v))return '#343b48';const a=Math.min(1,Math.abs(v)/12);if(v>=0){const lo=[36,63,58],hi=[16,139,79];return 'rgb('+lo.map((x,i)=>Math.round(x+(hi[i]-x)*a)).join(',')+')'}const lo=[64,43,51],hi=[183,43,56];return 'rgb('+lo.map((x,i)=>Math.round(x+(hi[i]-x)*a)).join(',')+')'}
+function renderTreeMap(){
+ const el=$('treemap');
+ if(!coins.length){$('mapStatus').textContent='Veri bekleniyor';return;}
+ // Kök coinlerin alanı diğerlerini ezmesin diye piyasa değeri yumuşatılır.
+ // Böylece piyasa liderleri hâlâ daha büyük görünürken ilk 100 coin de seçilebilir kalır.
+ const data=coins.filter(c=>Number(c.market_cap)>0).slice().sort((a,b)=>(a.market_cap_rank||999999)-(b.market_cap_rank||999999)).slice(0,100).map(c=>({...c,_treeWeight:Math.pow(Number(c.market_cap),0.38)}));
+ if(!data.length)return;
+ const W=1000,H=620,rects=[];
+ function weightSum(items){return items.reduce((s,c)=>s+c._treeWeight,0)}
+ function split(items,x,y,w,h){
+  if(!items.length)return;
+  if(items.length===1){rects.push({c:items[0],x,y,w,h});return;}
+  const sum=weightSum(items);let acc=0,idx=0;
+  while(idx<items.length-1&&acc<sum/2){acc+=items[idx]._treeWeight;idx++;}
+  const a=items.slice(0,idx),b=items.slice(idx);if(!a.length||!b.length){rects.push({c:items[0],x,y,w,h});return;}
+  const aw=weightSum(a)/sum;
+  if(w>=h){const sw=w*aw;split(a,x,y,sw,h);split(b,x+sw,y,w-sw,h);}
+  else{const sh=h*aw;split(a,x,y,w,sh);split(b,x,y+sh,w,h-sh);}
+ }
+ split(data,0,0,W,H);
+ el.innerHTML=rects.map(r=>{
+  const c=r.c,change=mapChange(c),area=r.w*r.h,cls=area<1100?'tiny':area<5000?'small':'';
+  const symbol=(c.symbol||'').toUpperCase(),title=escapeHtml(c.name||symbol),pct=change===null?'Veri yok':percent(change),color=tileColor(change);
+  return `<button class="tree-tile ${cls}" style="left:${r.x/W*100}%;top:${r.y/H*100}%;width:calc(${r.w/W*100}% - 2px);height:calc(${r.h/H*100}% - 2px);background:${color}" data-id="${encodeURIComponent(c.id||'bitcoin')}" title="${title} · ${price(c.current_price)} · ${pct}" aria-label="${title}, ${pct}"><span class="tree-symbol">${escapeHtml(symbol)}</span><span class="tree-price">${price(c.current_price)}</span><span class="tree-change">${pct}</span></button>`
+ }).join('');
+ el.querySelectorAll('.tree-tile').forEach(b=>b.addEventListener('click',()=>location.href='analysis.html?coin='+b.dataset.id));
+ $('mapStatus').textContent='Güncel görünüm · '+new Date().toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit'});
+ $('mapCount').textContent=data.length+' coin · piyasa değerine göre dengelenmiş kutular';
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+$('searchInput').addEventListener('input',renderTable);document.querySelectorAll('th[data-sort]').forEach(th=>th.addEventListener('click',()=>{const key=th.dataset.sort;if(sortKey===key)sortDirection*=-1;else{sortKey=key;sortDirection=key==='market_cap_rank'?1:-1}renderTable()}));const initialParams=new URLSearchParams(location.search);if(initialParams.get('view')==='market')showView('market');else if(initialParams.get('view')==='tree')showView('map');else maybeOpenPreferredHome();refreshData();setInterval(()=>refreshData(false),REFRESH_MS);
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(err => console.warn('Service worker kaydedilemedi:', err))); }
+</script><script id="vcrypto-theme-script">
+(function(){
+ const KEY='vcryptoscopeThemeModeV1';
+ function applyTheme(mode){
+  const light=mode==='light';
+  document.body.classList.toggle('light-mode',light);
+  const logo=document.querySelector('.theme-logo-toggle');
+  if(logo){logo.title=light?'Gündüz modu açık · gece moduna geçmek için dokun':'Gece modu açık · gündüz moduna geçmek için dokun';logo.setAttribute('aria-label',logo.title);logo.setAttribute('aria-pressed',String(light));}
+  try{document.querySelector('meta[name="theme-color"]')?.setAttribute('content',light?'#f4f7fc':'#08111f');}catch(e){}
+  try{window.dispatchEvent(new CustomEvent('vcryptoscope-theme-change',{detail:{mode:light?'light':'dark'}}));}catch(e){}
+ }
+ window.toggleTheme=function(){let next=document.body.classList.contains('light-mode')?'dark':'light';try{localStorage.setItem(KEY,next)}catch(e){}applyTheme(next)};
+ let saved='dark';try{saved=localStorage.getItem(KEY)||'dark'}catch(e){}applyTheme(saved);
+})();
+</script>
+</body></html>
