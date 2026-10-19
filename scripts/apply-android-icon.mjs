@@ -35,7 +35,7 @@ let background;
 try { background = await readFile(backgroundPath, "utf8"); }
 catch { background = `<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <color name="ic_launcher_background">#102A56</color>\n</resources>\n`; }
 if (background.includes('name="ic_launcher_background"')) {
-  background = background.replace(/(<color\\s+name="ic_launcher_background"\\s*>)[\\s\\S]*?(<\\/color>)/, '$1#102A56$2');
+  background = background.replace(/(<color\s+name="ic_launcher_background"\s*>)[\s\S]*?(<\/color>)/, '$1#102A56$2');
 } else {
   background = background.replace(/<resources([^>]*)>/, (_, attrs) => `<resources${attrs}>\n    <color name="ic_launcher_background">#102A56</color>`);
 }
