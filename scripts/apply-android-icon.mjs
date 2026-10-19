@@ -30,12 +30,14 @@ const adaptive = (round = false) => `<?xml version="1.0" encoding="utf-8"?>
 await writeFile(`${root}/drawable/ic_launcher_foreground.xml`, foreground);
 await writeFile(`${root}/mipmap-anydpi-v26/ic_launcher.xml`, adaptive());
 await writeFile(`${root}/mipmap-anydpi-v26/ic_launcher_round.xml`, adaptive(true));
-const colorsPath = `${root}/values/colors.xml`;
-let colors;
-try { colors = await readFile(colorsPath, "utf8"); }
-catch { colors = `<?xml version="1.0" encoding="utf-8"?>\n<resources>\n</resources>\n`; }
-if (!colors.includes('name="ic_launcher_background"')) {
-  colors = colors.replace(/<resources([^>]*)>/, (_, attrs) => `<resources${attrs}>\n    <color name="ic_launcher_background">#102A56</color>`);
-  await writeFile(colorsPath, colors);
+const backgroundPath = `${root}/values/ic_launcher_background.xml`;
+let background;
+try { background = await readFile(backgroundPath, "utf8"); }
+catch { background = `<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <color name="ic_launcher_background">#102A56</color>\n</resources>\n`; }
+if (background.includes('name="ic_launcher_background"')) {
+  background = background.replace(/(<color\\s+name="ic_launcher_background"\\s*>)[\\s\\S]*?(<\\/color>)/, '$1#102A56$2');
+} else {
+  background = background.replace(/<resources([^>]*)>/, (_, attrs) => `<resources${attrs}>\n    <color name="ic_launcher_background">#102A56</color>`);
 }
+await writeFile(backgroundPath, background);
 console.log("Applied VCryptoScope adaptive launcher icon resources.");
