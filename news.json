@@ -1,14 +1,86 @@
 {
-  "updatedAt": "2026-10-19T08:02:17.362488+00:00",
+  "updatedAt": "2026-10-19T08:40:22.497499+00:00",
   "articles": [
+    {
+      "title": "Bitcoin Rebounds as Falling Yields, Oil Ease Mood - www.marketscreener.com",
+      "titleTr": "Bitcoin, Düşen Getiriler ve Petrol Rahatlama Ruh Haliyle Yükseliyor - www.marketscreener.com",
+      "summary": "Bitcoin Rebounds as Falling Yields, Oil Ease Mood www.marketscreener.com",
+      "summaryTr": "Bitcoin, Düşen Getiriler ve Petrol Rahatlama Ruh Haliyle Yükseliyor www.marketscreener.com",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOa0dVOEJLdGtiZDVmSUlQNHUzVHhMdHJpekZKRTBkT3cxX242MkRNei1fUWxZUzB2YkszZl84eWp6N3lLSDhkOTNWc0tjMlgwRzNPMkJlVzd4VUVkU2dNTThOS1k3akdHdnhYR3U1akI3TmNZNmtvUTRxX2wycUpvdHhuZ3dyZlQ5OW5xYmN2MWZtWDl3NUUyTnBIQ2pOeHRFLWdJ?oc=5",
+      "source": "Crypto",
+      "publishedAt": "2026-10-19T08:33:55+00:00",
+      "importance": "YÜKSEK",
+      "category": "Bitcoin",
+      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
+    },
+    {
+      "title": "JPMorgan Reportedly Expands JPM Coin to Ethereum for Institutional Clients - www.marketscreener.com",
+      "titleTr": "JPMorgan'ın Kurumsal Müşteriler için JPM Coin'i Ethereum'a Genişlettiği Bildirildi - www.marketscreener.com",
+      "summary": "JPMorgan Reportedly Expands JPM Coin to Ethereum for Institutional Clients www.marketscreener.com",
+      "summaryTr": "JPMorgan'ın Kurumsal Müşteriler için JPM Coin'i Ethereum'a Genişlettiği Bildirildi www.marketscreener.com",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNUxreDZ5U0ZMM2RJMXZnbDAtVzU1Z1lpZktEVFlIOHVIRVBGYU9pV05nbXVaaUFOcXNKNWl6czRmNTA0Z3ZtUHAybGRzV0EwNWNRdmpOcER6Yk5CbGFiNUotaFR3MjJMdWE2VXh2X19qZ0V3S29jcXpUUWFCMGtkcVdjY2JOTHZZR0dyb09DNmljS2Nsak90T0NRTUo2S0FOQlppNVVnNUtZSm53NUIwWGN5XzRNTFZBV3huZHptdzd2X1ROcHc?oc=5",
+      "source": "Crypto",
+      "publishedAt": "2026-10-19T08:29:41+00:00",
+      "importance": "YÜKSEK",
+      "category": "Ethereum",
+      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
+    },
+    {
+      "title": "JPMorgan brings deposit token to ethereum for institutional clients - The Edge Malaysia",
+      "titleTr": "JPMorgan, kurumsal müşteriler için Ethereum'a mevduat tokeni getiriyor - The Edge Malaysia",
+      "summary": "JPMorgan brings deposit token to ethereum for institutional clients The Edge Malaysia",
+      "summaryTr": "JPMorgan, kurumsal müşteriler için Ethereum'a mevduat tokenı getiriyor The Edge Malaysia",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBrMXg3TE1IUzNCNXJ5dk9laVdUX09HOXhXdmtIQW5jQUZ1ZHR5VkM2VTUyeGpSdWk2X0cwREFtT09iSjNIamZ1cG1IRFVnMWQ1?oc=5",
+      "source": "Crypto",
+      "publishedAt": "2026-10-19T08:12:12+00:00",
+      "importance": "YÜKSEK",
+      "category": "Ethereum",
+      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
+    },
+    {
+      "title": "Ethereum ETFs shed $1B in 3 weeks – Can ETH buyers prevent breakdown? - AMBCrypto",
+      "titleTr": "Ethereum ETF'leri 3 haftada 1 milyar dolar kaybetti - ETH alıcıları çöküşü önleyebilir mi? -AMBCrypto",
+      "summary": "Ethereum ETFs shed $1B in 3 weeks – Can ETH buyers prevent breakdown? AMBCrypto",
+      "summaryTr": "Ethereum ETF'leri 3 haftada 1 milyar dolar kaybetti - ETH alıcıları çöküşü önleyebilir mi? AMBCrypto",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQeFNoQi05cC1EMXpUTGFzQVM4dzNEaWNYSF9LRUxvbC15MlF1VWhkTXNueUNJQ1V1bXRhVlN4bHpWRlpub3JuTXZMcjlOd3RXeHl5X09HdGVPakFGV2tQYUdGWHpKUWFlZmk0ekVrODNSVXpJV1NZbjZ4M0RMWmM1UVlRWWVEcEtHb3I5Mks2TzNkUQ?oc=5",
+      "source": "Crypto",
+      "publishedAt": "2026-10-19T08:00:04+00:00",
+      "importance": "YÜKSEK",
+      "category": "Ethereum",
+      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
+    },
+    {
+      "title": "MARA Sends $82.8 Million in Bitcoin to Exchanges During a Shaky October - BeInCrypto",
+      "titleTr": "MARA, Sallantılı Ekim Sırasında Borsalara 82,8 Milyon Dolarlık Bitcoin Gönderdi - BeInCrypto",
+      "summary": "MARA Sends $82.8 Million in Bitcoin to Exchanges During a Shaky October BeInCrypto",
+      "summaryTr": "MARA, Sallantılı Ekim Sırasında Borsalara 82,8 Milyon Dolarlık Bitcoin Gönderdi BeInCrypto",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1hR3loN1hnWDd3d3h1UXY1NUV2Z29qcGlVYmpYN2ZfVHdFSE1fX1NWQ3dMU184OGkxRktCN1JXeVl6dkZzRGpPbGN2ZTU2T1R5Ni1NanBjczBiNEZzYzk5bXFyR0RJR0xHdVoteS11ek92c1lFNTNQZ0kwRQ?oc=5",
+      "source": "Crypto",
+      "publishedAt": "2026-10-19T08:00:00+00:00",
+      "importance": "YÜKSEK",
+      "category": "Bitcoin",
+      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
+    },
     {
       "title": "Bitcoin Open Interest Falls Below 365-Day Average as Spot Demand Weakens - bloomingbit",
       "titleTr": "Spot Talep Zayıfladıkça Bitcoin Açık Pozisyonları 365 Günlük Ortalamanın Altına Düşüyor - Bloomingbit",
       "summary": "Bitcoin Open Interest Falls Below 365-Day Average as Spot Demand Weakens bloomingbit",
-      "summaryTr": "Spot Talebi Zayıfladıkça Bitcoin Açık Pozisyonları 365 Günlük Ortalamanın Altına Düşüyor",
+      "summaryTr": "Bitcoin Açık Pozisyonları Spot Talebi Zayıfladıkça 365 Günlük Ortalamanın Altına Düşüyor",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1haEpjSS00NjNPdmppZ1E5NHhmSVZ1OXF5NjVIZG8yQjZhMFdfendlNm8xZ2ZrdnVTVTNEQWJESjFHZm1OdmlvT1pPdXNRNk5kaGNLUA?oc=5",
       "source": "Crypto",
       "publishedAt": "2026-10-19T07:55:44+00:00",
+      "importance": "YÜKSEK",
+      "category": "Bitcoin",
+      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
+    },
+    {
+      "title": "Bitcoin, Ether ETFs shed $549M as October ETH outflows near $1B - TradingView",
+      "titleTr": "Ekim ETH çıkışı 1 milyar dolara yaklaşırken Bitcoin ve Ether ETF'leri 549 milyon dolar düştü - TradingView",
+      "summary": "Bitcoin, Ether ETFs shed $549M as October ETH outflows near $1B TradingView",
+      "summaryTr": "Bitcoin ve Ether ETF'leri, Ekim ETH çıkışının 1 milyar dolara yaklaşmasıyla 549 milyon dolar kaybetti TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRzZ6Uk5mWUcyUXdSRlpudFR0TEt5NC1Kc1U5UGd6ZDNGUDF6SlotU3VYc0lhYXVGekZlVmNXYUN5Wm1WQkgyekl1Mlg3cm5hbEVzbEhKTFFsZ0l3M3Z0MTBteGdvMDlWSk95aVhVVWhVR3QzMHlFdnpvdUVKNi1NRGs0dE1JTjhNa09fT0VDc09wTTdrRHBndDZSQ1EwQVRSS1JPekx1QXRLbHcxakt4bjBfaUpUWHpYSHh5UVc1RWRZdw?oc=5",
+      "source": "Crypto",
+      "publishedAt": "2026-10-19T07:54:13+00:00",
       "importance": "YÜKSEK",
       "category": "Bitcoin",
       "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
@@ -110,22 +182,10 @@
       "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
     },
     {
-      "title": "Crypto Market Rallies as Bitcoin Reclaims $82,000, Ether Tops $2,400 - TradingKey",
-      "titleTr": "Bitcoin 82.000 Doları Geri Alırken Kripto Piyasası Yükseliyor, Ether 2.400 Doları Aştı - TradingKey",
-      "summary": "Crypto Market Rallies as Bitcoin Reclaims $82,000, Ether Tops $2,400 TradingKey",
-      "summaryTr": "Bitcoin 82.000 Doları Geri Alırken Kripto Piyasası Yükseliyor, Ether 2.400 Doları Geçiyor TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVWtHT3hFdzRNT1pXOGdKY2pVUDhBSWNVNmIzMndGenhqeXZ1SGRqdGRMc3plVkJXUTB3cnRqQVJVRGxhcS0tWXJWX0R5WTZ2RzdLMmh2S1ZCVm1TbEw3Y1FWUHk1TWcwSk9fOEU2ODl3eWp0MENOaF84MUZnbkZJRHdUc29yTUtTcms4ZWFLQjM4RHhzcE03ZUhkZHg?oc=5",
-      "source": "Crypto",
-      "publishedAt": "2026-10-19T07:23:49+00:00",
-      "importance": "YÜKSEK",
-      "category": "Bitcoin",
-      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
-    },
-    {
       "title": "WGMI’s Pivot: From Bitcoin Miner To AI Power Play (Upgrade) (NASDAQ:WGMI) - Seeking Alpha",
-      "titleTr": "WGMI'nin Özeti: Bitcoin Madencisinden Yapay Zeka Gücüne (Yükseltme) (Yükseltme) (NASDAQ:WGMI) - Alfa Arayışı",
+      "titleTr": "WGMI'nın Özeti: Bitcoin Madencisinden Yapay Zeka Gücüne (Yükseltme) (Yükseltme) (NASDAQ:WGMI) - Alfa Arayışı",
       "summary": "WGMI’s Pivot: From Bitcoin Miner To AI Power Play (Upgrade) (NASDAQ:WGMI) Seeking Alpha",
-      "summaryTr": "WGMI'nin Özeti: Bitcoin Madencisinden Yapay Zeka Gücüne (Yükseltme) (Yükseltme) (NASDAQ:WGMI) Alfa Arayışı",
+      "summaryTr": "WGMI'nin Pivotu: Bitcoin Madencisinden Yapay Zeka Power Play'e (Yükseltme) (NASDAQ:WGMI) Alfa Arayışı",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNFU0RkxPZEZPUkhYejJSZHZrdm4xdEU1eThySnlmUU04UDdCNDhNSzV0d25mUnhQaTRweWJYT0F0WG4yNnUwd243bEhUOXNVN1NMOVBWd2hjTnN5bFJ6YzFLRU8wYjctSzBYalVpSnN4V2liSUdPU2twblJUeXJhZnNnNnNfNXlqVy1fZWJ0R01IRkdwYVJtMHltRjY?oc=5",
       "source": "Crypto",
       "publishedAt": "2026-10-19T07:17:49+00:00",
@@ -267,9 +327,9 @@
     },
     {
       "title": "Bitcoin rises to near $83k amid some relief from falling oil prices - Investing.com",
-      "titleTr": "Düşen petrol fiyatlarının etkisiyle Bitcoin 83 bin dolara yükseldi - Investing.com",
+      "titleTr": "Düşen petrol fiyatlarının etkisiyle Bitcoin 83 bin dolara yaklaştı - Investing.com",
       "summary": "Bitcoin rises to near $83k amid some relief from falling oil prices Investing.com",
-      "summaryTr": "Bitcoin, düşen petrol fiyatlarından kaynaklanan rahatlamanın etkisiyle 83 bin dolara yaklaştı Investing.com",
+      "summaryTr": "Düşen petrol fiyatlarının etkisiyle Bitcoin 83 bin dolara yükseldi Investing.com",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTGVsWFlKT3RiT3lYbmYySHFqb3gzOW5NbmdFNE5nbXU2eGlPVjRoanhhaEp1d09zclptNHctRV9HQ2xnLWd2VVo0T01OZzU3OThsN19VSkoxSThwN1RqQzRpcHZ3cTdkbzZUWDhxSTdiYS1nRGs0aVVqU3QzZzhSVWF0T0dLR1N4bDNaUTc5RjVPRWdEc3JrZWxmVmpIM2tWVHczckJEVHFtTXItcllsblJEbVFmSUoyWDBkYW5TUFhRSVk?oc=5",
       "source": "Crypto",
       "publishedAt": "2026-10-19T06:33:20+00:00",
@@ -303,9 +363,9 @@
     },
     {
       "title": "Bitcoin whale moves $34 million in BTC it got in 2013 when coins traded at $131 - CoinDesk",
-      "titleTr": "Bitcoin balinası, 2013'te 131 dolardan işlem gördüğünde elde ettiği 34 milyon doları BTC'ye taşıdı - CoinDesk",
+      "titleTr": "Bitcoin balinası, 2013 yılında 131 dolardan işlem gördüğünde elde ettiği 34 milyon dolarlık BTC'yi taşıdı - CoinDesk",
       "summary": "Bitcoin whale moves $34 million in BTC it got in 2013 when coins traded at $131 CoinDesk",
-      "summaryTr": "Bitcoin balinası, 2013 yılında madeni paraların 131 dolardan işlem gördüğü 34 milyon dolarlık BTC'yi taşıdı CoinDesk",
+      "summaryTr": "Bitcoin balinası, 2013 yılında 131 dolardan işlem gören BTC'de 34 milyon doları taşıdı CoinDesk",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPcVZSc3AzamZnZTJIcHgtT2JvT01kRE1tU2dZMWt3M2R6U3JvczlHLU9tUGJYMVh6MVNhRmtfVUpMWnFuTlFCZjRDUnRSalotazJPUFFaam1HOElwbGhlR1JYczVwWElfRjhMenJHTzJwSDQxcm0wcjR3ckFSVC1zSTlPTkRVM01vXzhpdnlxazJicEprSXBLdWtZUERMajZURElXQ1YtY0RPWWtId2s1ZjBxcnF4dm9FNUx6Zmp4SDZ4cHVXbUE?oc=5",
       "source": "Crypto",
       "publishedAt": "2026-10-19T06:23:16+00:00",
@@ -317,7 +377,7 @@
       "title": "Bitcoin price $82,769: the level that decides - CryptoTicker",
       "titleTr": "Bitcoin fiyatı 82.769 Dolar: belirleyen seviye - CryptoTicker",
       "summary": "Bitcoin price $82,769: the level that decides CryptoTicker",
-      "summaryTr": "Bitcoin fiyatı 82.769$: CryptoTicker'ı belirleyen seviye",
+      "summaryTr": "Bitcoin fiyatı 82.769 $: CryptoTicker'ı belirleyen seviye",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNHl6V3NiOVc3clFDOE1YeTg3eVp0V1hhQVY0YUZRMGRpSVJ6eDVULUl6bFZIeUhrQUsyUldRUEFWSHZ5NnpzVGl3WjgwYnJHdkgtWHhyTGotVGJBZFk4eTdwa1NKLTZZZzIydjhZLXFXNkpyZ2RQUFhTb3JRTUNSWA?oc=5",
       "source": "Crypto",
       "publishedAt": "2026-10-19T06:22:18+00:00",
@@ -341,7 +401,7 @@
       "title": "The Altcoin Run Is Giving Back Ground Fast as Bitcoin Dominance Climbs - BeInCrypto",
       "titleTr": "Bitcoin Hakimiyeti Tırmanırken Altcoin Koşusu Hızla Zemin Kazanıyor - BeInCrypto",
       "summary": "The Altcoin Run Is Giving Back Ground Fast as Bitcoin Dominance Climbs BeInCrypto",
-      "summaryTr": "Bitcoin Hakimiyeti BeInCrypto'ya Tırmanırken Altcoin Koşusu Hızla Zemin Kazanıyor",
+      "summaryTr": "Bitcoin Hakimiyeti BeInCrypto'ya Tırmanırken Altcoin Koşusu Hızla Geri Dönüyor",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1iRUY0MUFCaUpHRTdDNVctZFJhWjlNU3BVMjU2amNCeGQzcGZ6T09BNDhVZC1mVjl4bnE4NUxLWWUwbm1US1ZqcmJmWlJnQ2J0WWJyYy1obFRwTUNtZGNRd0lpV1ZwLVM0TjRFSDc1VXVFcng0ekhRUQ?oc=5",
       "source": "Crypto",
       "publishedAt": "2026-10-19T06:00:00+00:00",
@@ -374,6 +434,18 @@
       "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
     },
     {
+      "title": "Bitcoin Cap at US$100,000 as Yields and Iran Conflict Stall Rally - Retail News Asia",
+      "titleTr": "Getiriler ve İran Anlaşmazlığının Durgunlaşmasıyla Bitcoin Limiti 100.000 ABD Dolarında - Retail News Asia",
+      "summary": "Bitcoin Cap at US$100,000 as Yields and Iran Conflict Stall Rally Retail News Asia",
+      "summaryTr": "Getirilerin ve İran Çatışmasının Durgunlaşmasıyla Bitcoin Limiti 100.000 ABD Dolarında Perakende Haberleri Asya",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORWJGM0ljNjhPdG1PdGQ5U2lJeW5QLWlOXzBWVlNjTHJ0bUhVSE1ESlRiOWZBcmtmUDBPaHFaVXpCek4tMDAyNjJ3TFlEQkRNaGFIQ1pNdXlUUXVWNVhiVExyUHlvYjJVRjhtcWN6aHItLUpEVU5zVkF1VVBQcXYycHNwa1JFajZlQU81UEdmOTg?oc=5",
+      "source": "Economy",
+      "publishedAt": "2026-10-19T05:38:33+00:00",
+      "importance": "YÜKSEK",
+      "category": "Bitcoin",
+      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
+    },
+    {
       "title": "Crypto.com and Novig sue Missouri to block sports prediction market crackdown - Crypto News",
       "titleTr": "Crypto.com ve Novig, spor tahmin piyasasına yönelik baskıları engellemek için Missouri'ye dava açtı - Kripto Haberleri",
       "summary": "Crypto.com and Novig sue Missouri to block sports prediction market crackdown Crypto News",
@@ -389,7 +461,7 @@
       "title": "Bitcoin Recovers to $82,500 as Improving China Data, Falling Oil Prices Revive Risk Appetite - BigGo Finance",
       "titleTr": "Çin Verilerindeki İyileşme ve Düşen Petrol Fiyatlarının Risk İştahını Canlandırmasıyla Bitcoin 82.500 Dolara Yükseldi - BigGo Finance",
       "summary": "Bitcoin Recovers to $82,500 as Improving China Data, Falling Oil Prices Revive Risk Appetite BigGo Finance",
-      "summaryTr": "Çin Verilerindeki İyileşme ve Düşen Petrol Fiyatlarının Risk İştahını Canlandırmasıyla Bitcoin 82.500 Dolara Yükseldi BigGo Finance",
+      "summaryTr": "Bitcoin, Çin Verilerindeki İyileşme ve Düşen Petrol Fiyatlarının Risk İştahını Canlandırmasıyla 82.500 Dolara Yükseldi BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5EZlA0dW0zMEZhZ3dteXFlUVlUTVZpN3AyZEYtOUpkdm5LVGRoLXZ6LWp2WDVzdTgyUnBUYnZyRFBSUFZhSjM1OTBiaGUyd3lqOS1zSjdIS3JmUmgyUVpwOHBheEVQUWZMZzJUWmZHYjZwMmZkSXc?oc=5",
       "source": "Economy",
       "publishedAt": "2026-10-19T05:25:00+00:00",
@@ -434,18 +506,6 @@
       "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
     },
     {
-      "title": "Cryptocurrency News: Glassnode Spots a Bitcoin Bottom Near $80K as Early Buyers Pile Into Pepeto - StreetInsider",
-      "titleTr": "Kripto Para Haberleri: Glassnode, Erken Alıcıların Pepeto'ya Toplanmasıyla Bitcoin'in 80 Bin Dolara Yakın Bir Dip Noktasını Tespit Ediyor - StreetInsider",
-      "summary": "Cryptocurrency News: Glassnode Spots a Bitcoin Bottom Near $80K as Early Buyers Pile Into Pepeto StreetInsider",
-      "summaryTr": "Kripto Para Haberleri: Glassnode, Erken Alıcılar Pepeto'ya Akınırken Bitcoin'in 80 Bin Dolara Yakın Bir Dip Noktasını Tespit Ediyor StreetInsider",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOcTNlLUJHM3h3QUJzdVZzV2VqWUZoeWtYcTdkODBfNElYMnRZZnFuNDNUWVZyY25nMVB6Q2pybkNZVWZRbldqOUN2WkhCRm1aTUlLQlVXdnpKT3lScDRiTWtpRUp6eDU0WWQ4YjZIRFZTSk9RX3NHRndBZVdHVDRUUnFtU0lKcXFaWERKVGFSQXF2QzQzbUMzRnZveHNPS2ZveG5HdlY5QnRwZld4eW1kdG9HOVkzLXYtRk5aN3BOaDdHMGNVWFZSQW5QXzJ4Q0pxVjR1aEtKNF9OYnRTam5GMWw1eDJtUEp4OWh5dEpoc1FFUQ?oc=5",
-      "source": "Crypto",
-      "publishedAt": "2026-10-19T04:27:05+00:00",
-      "importance": "YÜKSEK",
-      "category": "Bitcoin",
-      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
-    },
-    {
       "title": "Ethereum Falls Below $2,400, Breaks 50-Day Moving Average; October ETF Outflows Reach $955 Million - BigGo Finance",
       "titleTr": "Ethereum 2.400 Doların Altına Düşerek 50 Günlük Hareketli Ortalamayı Kırdı; Ekim ETF Çıkışları 955 Milyon Dolara Ulaştı - BigGo Finance",
       "summary": "Ethereum Falls Below $2,400, Breaks 50-Day Moving Average; October ETF Outflows Reach $955 Million BigGo Finance",
@@ -483,7 +543,7 @@
     },
     {
       "title": "Michael Saylor Says Bitcoin Bull Market Is Back, Sees Faster Financial-Sector Entry Over Next 1-2 Years - bloomingbit",
-      "titleTr": "Michael Saylor, Bitcoin Boğa Piyasasının Geri Döndüğünü, Önümüzdeki 1-2 Yıl İçinde Finans Sektörüne Daha Hızlı Giriş Göreceğini Söyledi - Bloomingbit",
+      "titleTr": "Michael Saylor, Bitcoin Boğa Piyasasının Geri Döndüğünü ve Önümüzdeki 1-2 Yıl İçinde Finans Sektörüne Daha Hızlı Giriş Göreceğini Söyledi - Bloomingbit",
       "summary": "Michael Saylor Says Bitcoin Bull Market Is Back, Sees Faster Financial-Sector Entry Over Next 1-2 Years bloomingbit",
       "summaryTr": "Michael Saylor, Bitcoin Boğa Piyasasının Geri Döndüğünü, Önümüzdeki 1-2 Yıl İçinde Finans Sektörüne Daha Hızlı Giriş Gördüğünü Söyledi",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1oeFZuWUFKcnQ2LWh1QzZaUGJEX3VfczVWNHZXbm5EYXJidndYUnlhejN1ZFU4Tk9OYUhldHpFakZPZ052NlFTRDFLUnBYMWpkazRrSw?oc=5",
@@ -539,66 +599,6 @@
       "publishedAt": "2026-10-19T02:21:24+00:00",
       "importance": "YÜKSEK",
       "category": "Ethereum",
-      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
-    },
-    {
-      "title": "Bitcoin Price Prediction: A $113K BTC Target Meets the Bigger Bet of AlphaPepe Overtaking DOGE by 2030 - StreetInsider",
-      "titleTr": "Bitcoin Fiyat Tahmini: 113 Bin Dolarlık BTC Hedefi, AlphaPepe'nin 2030'a Kadar DOGE'yi Geçmesiyle İlgili Daha Büyük Bahsi Karşılıyor - StreetInsider",
-      "summary": "Bitcoin Price Prediction: A $113K BTC Target Meets the Bigger Bet of AlphaPepe Overtaking DOGE by 2030 StreetInsider",
-      "summaryTr": "Bitcoin Fiyat Tahmini: 113 Bin Dolarlık BTC Hedefi, AlphaPepe'nin 2030'a Kadar DOGE'yi Geçmesiyle İlgili Daha Büyük Bahsi Karşılıyor StreetInsider",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPVUpnLUpEQXdkSXZOQWJNUGxpb3Z4S3lEWHA0d1dUU0RpcEZXZTJTNHpZeFlHREE3NFV4bW1Nb0pWVlZ0dzAxbmU1VFVnV1dnLXB1blNBWmw3R2dqSzg3QTFWUnAtTEIxYXc5RnRrTG0wOWh3UEJNM1lRa29BWXZFRGMxcXRtNzVZaUdZQklmSUlXVVFiU05yclA4OUJrcnFWUHVfWmFNOHJ1VEZNQlJybXEtSkFTZ2ppa0pLdTlRNkZydWdERTFPTUZsNHVkOC1FWDN3TFE5SHFOTUNsRm1BbDNWeWdoU3RNb09kZC1NYl9ycEVRYnNQR3l3?oc=5",
-      "source": "Crypto",
-      "publishedAt": "2026-10-19T01:57:24+00:00",
-      "importance": "YÜKSEK",
-      "category": "Bitcoin",
-      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
-    },
-    {
-      "title": "Stanford FCU, Banks Win Dismissal Of Lawsuit Over Nearly $570,000 Cryptocurrency Scam - CU Today",
-      "titleTr": "Stanford FCU ve Bankalar Yaklaşık 570.000 Dolarlık Kripto Para Dolandırıcılığı Konusunda Açılan Davayı Reddetti - CU Today",
-      "summary": "Stanford FCU, Banks Win Dismissal Of Lawsuit Over Nearly $570,000 Cryptocurrency Scam CU Today",
-      "summaryTr": "Stanford FCU, Bankalar Bugün Yaklaşık 570.000 Dolarlık Kripto Para Dolandırıcılığı Konusunda Açılan Davayı Reddetti CU",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQLUZDTmdKaEpBVy1qLUM5VXJiRnBBTDhoUVd2bUE3WXgzQUV2T09pdDhWeC1zTjBJdG16S2p4dTVfd0RCNm01ZE5FQ1AwckNTTjdKRHY0WlNXQlJBTkU4Rkstdk5TSGpaTDNMb1A5WEdxN2YxdkVKalZ5bmVuLTVpTkRKVUJyVFJGV0M2TUo1Umx4OFNsV3RMOWpjeWRtMnVUbzVGVmdDYm4tMDhZZTk0OHA3WUJ6dEJkUVNzOA?oc=5",
-      "source": "Crypto",
-      "publishedAt": "2026-10-19T01:39:35+00:00",
-      "importance": "YÜKSEK",
-      "category": "Regülasyon",
-      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
-    },
-    {
-      "title": "$Bitcoin (BTC.CC)$ Not Yet - Moomoo",
-      "titleTr": "$Bitcoin (BTC.CC)$ Henüz Değil - Moomoo",
-      "summary": "$Bitcoin (BTC.CC)$ Not Yet Moomoo",
-      "summaryTr": "$Bitcoin (BTC.CC)$ Henüz Değil Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQcVNhQ3FaUV9lZm1YTUFFc0pZc3AyQ2d2YXhtNUJjWnlyWFg5a0JGZFpVVURyM19sbVFXMDVwUU83TFdhdWFSWEU5U0ZZQm5ydmx3ZTVubUlnMS1CR1Q5dDM1SExJUG9MdVc0MWZ6T2JNNDRiTXAwaW52MktVSzVzdUt3?oc=5",
-      "source": "Crypto",
-      "publishedAt": "2026-10-19T01:30:08+00:00",
-      "importance": "YÜKSEK",
-      "category": "Bitcoin",
-      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
-    },
-    {
-      "title": "Strive Is Paying 15% to Buy Bitcoin While Strategy Buys Back Its 12% Stock - Memeburn",
-      "titleTr": "Strive, Bitcoin Satın Almak İçin Yüzde 15 Öderken, Strateji Yüzde 12 Hissesini Geri Aldı - Memeburn",
-      "summary": "Strive Is Paying 15% to Buy Bitcoin While Strategy Buys Back Its 12% Stock Memeburn",
-      "summaryTr": "Strive, Bitcoin Satın Almak İçin Yüzde 15 Öderken, Strateji Yüzde 12'lik Hissesini Geri Aldı",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMFR6R0lBa0UwTlZRakdqMUVPN0hXSnZwSkY1T3MxSlRWd29sRjZtNWJzNHhESXJVSnVUcTVoSHhvQ2pWUnRwRHE0cGxKdEhCeTdJNU5sWmU1Z25UTEZZQkkwMlo3c1IyaXJmSHRfQmtUbTFVSUdCYklsam9laXhqRFdWY3VhR000WmFHSEgtNHhmNmRnemVrMmFR?oc=5",
-      "source": "Crypto",
-      "publishedAt": "2026-10-19T01:14:26+00:00",
-      "importance": "YÜKSEK",
-      "category": "Bitcoin",
-      "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
-    },
-    {
-      "title": "Bitcoin Holds Near $81,000 as Digital Assets Buck AI Bubble Jitters - BigGo Finance",
-      "titleTr": "Bitcoin, Dijital Varlıkların Yapay Zekada Baloncuklarla Sarsılmasıyla 81.000 Dolara Yakın - BigGo Finance",
-      "summary": "Bitcoin Holds Near $81,000 as Digital Assets Buck AI Bubble Jitters BigGo Finance",
-      "summaryTr": "Dijital Varlıklar Buck AI Balonu Sarsılırken Bitcoin 81.000 Dolar Yakınında Duruyor BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ZWjZPQnpseEpsRHZEZ3RZSmV3QjhubWZtbDdpdG5sa3oydDkyUW9jU00yLUJpS0Q4bnB5ZnpZc1ozaGswdUJyNENWTS1Vdko3R0ZzVW13OEl4TVBPOWRJRlVhcGpNU3Bwc2RoWVVhbWUzYzl3SkE?oc=5",
-      "source": "Crypto",
-      "publishedAt": "2026-10-19T01:05:00+00:00",
-      "importance": "YÜKSEK",
-      "category": "Bitcoin",
       "marketImpactTr": "Piyasa oynaklığını artırabilecek önemli gelişme."
     }
   ]
