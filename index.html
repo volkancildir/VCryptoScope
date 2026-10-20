@@ -648,15 +648,18 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 </style>
 
 <style id="vcs-mobile-screen-fill-fix">
-/* Responsive app shell: let the market card use the actual leftover screen height,
-   instead of guessing it with a fixed viewport-height subtraction. */
+/* Give the mobile shell a definite viewport height so flex can allocate real leftover space. */
 @media (max-width: 740px) {
+  html, body { height: 100%; }
+  body { min-height: 100%; overflow-x: hidden; }
   body > main.wrap {
     display: flex !important;
     flex-direction: column !important;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 0 !important;
     padding-bottom: calc(66px + env(safe-area-inset-bottom)) !important;
+    overflow: visible !important;
   }
   body.vcs-mobile-app > main.wrap {
     padding-bottom: calc(66px + env(safe-area-inset-bottom)) !important;
@@ -667,34 +670,36 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
   }
   body > main.wrap > #mapView {
     display: flex !important;
-    flex: 1 0 auto !important;
+    flex: 1 1 0% !important;
     flex-direction: column !important;
     min-height: 0 !important;
+    overflow: hidden !important;
   }
   #mapView > .vcs-mobile-overview {
     flex: 0 0 auto !important;
   }
   #mapView > .vcs-mobile-movers {
     display: flex !important;
-    flex: 1 0 auto !important;
+    flex: 1 1 0% !important;
     flex-direction: column !important;
     min-height: 0 !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 0 !important;
+    overflow: hidden !important;
   }
   #vcsMobileMovers {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    min-height: 0;
+    display: flex !important;
+    flex: 1 1 0% !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
   }
   #vcsMobileMovers > .vcs-mobile-mover {
-    flex: 1 1 0;
-    min-height: 58px;
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
   }
   #vcsMobileMovers > .sub {
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
+    flex: 1 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
   }
   #vcs-mobile-bottom-nav {
     bottom: 0 !important;
