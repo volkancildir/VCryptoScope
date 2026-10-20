@@ -10,6 +10,12 @@
     </linearGradient>
   </defs>
   <rect x="3" y="3" width="122" height="122" rx="29" fill="url(#bg)" stroke="#24445a" stroke-width="2"/>
-  <path d="M23 29 L49 91 L72 50 L91 67 L108 30" fill="none" stroke="url(#teal)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M91 30 H108 V47" fill="none" stroke="#51f4d0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Complete, symmetrical V -->
+  <path d="M23 28 L64 101 L105 28" fill="none" stroke="url(#teal)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- The line leaves the right arm, dips once, then rises past the V -->
+  <path d="M105 28 L91 48 L113 13" fill="none" stroke="#51f4d0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M98 15 L113 13 L112 28" fill="none" stroke="#51f4d0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="101" r="4" fill="#eaffff"/>
+  <circle cx="105" cy="28" r="3.5" fill="#eaffff"/>
+  <circle cx="91" cy="48" r="3.5" fill="#eaffff"/>
 </svg>
