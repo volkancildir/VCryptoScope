@@ -35,7 +35,7 @@ img, canvas, video, svg { max-width: 100%; }
     height: auto !important;
     min-height: 100dvh !important;
     margin: 0 !important;
-    padding: 12px 12px calc(82px + env(safe-area-inset-bottom)) !important;
+    padding: 0 0 calc(82px + env(safe-area-inset-bottom)) !important;
     overflow: visible !important;
     box-sizing: border-box !important;
   }
@@ -285,8 +285,8 @@ img, canvas, video, svg { max-width: 100%; }
 @media screen and (max-width: 380px) {
   body > main.wrap, body > main.app, body > main.container,
   body > .wrap, body > .app, body > .container {
-    padding-left: 9px !important;
-    padding-right: 9px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   #vcs-mobile-bottom-nav { padding-left: 3px !important; padding-right: 3px !important; }
   #vcs-mobile-bottom-nav .vcs-label { font-size: 8.5px !important; }
