@@ -1,4 +1,4 @@
-const CACHE_NAME = "vcryptoscope-v45";
+const CACHE_NAME = "vcryptoscope-v46";
 
 const APP_FILES = [
   "./",
