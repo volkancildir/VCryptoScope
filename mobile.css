@@ -780,5 +780,5 @@
     text-overflow: clip !important;
     box-sizing: border-box !important;
   }
-  body.vcs-mobile-app { padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important; }
+  body.vcs-mobile-app { padding-bottom: 0 !important; }
 }
