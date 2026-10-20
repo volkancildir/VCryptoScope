@@ -4,7 +4,7 @@
 html { width: 100%; max-width: 100%; }
 *, *::before, *::after { box-sizing: border-box; }
 img, canvas, video, svg { max-width: 100%; }
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 740px) and (hover: none) and (pointer: coarse) {
   html, body {
     width: 100% !important;
     max-width: 100% !important;
@@ -282,7 +282,7 @@ img, canvas, video, svg { max-width: 100%; }
   }
   body.vcs-mobile-app { padding-bottom: 0 !important; }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 380px) and (hover: none) and (pointer: coarse) {
   body > main.wrap, body > main.app, body > main.container,
   body > .wrap, body > .app, body > .container {
     padding-left: 9px !important;
