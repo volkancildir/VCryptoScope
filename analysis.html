@@ -187,6 +187,31 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
  #vcs-mobile-bottom-nav .vcs-label{display:block!important;max-width:100%;font-size:10px!important;line-height:1.1!important}
  #vcs-mobile-bottom-nav .vcs-active{color:#35dccb!important;background:rgba(42,215,198,.12)!important;border-color:rgba(42,215,198,.2)!important}
  #vcs-mobile-bottom-nav .vcs-active svg{color:#35dccb!important}
+
+ #vcs-mobile-bottom-nav{
+  display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  align-items:stretch!important;justify-items:stretch!important;
+ }
+ #vcs-mobile-bottom-nav>a,#vcs-mobile-bottom-nav>button{
+  display:flex!important;flex:initial!important;flex-direction:column!important;
+  align-items:center!important;justify-content:center!important;
+  justify-self:stretch!important;align-self:stretch!important;
+  width:100%!important;min-width:0!important;max-width:none!important;
+  height:58px!important;min-height:58px!important;max-height:58px!important;
+  padding:5px 0!important;margin:0!important;gap:5px!important;
+  box-sizing:border-box!important;text-align:center!important;
+ }
+ #vcs-mobile-bottom-nav>a>svg,#vcs-mobile-bottom-nav>button>svg{
+  display:block!important;position:static!important;float:none!important;
+  width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;
+  margin:0 auto!important;transform:none!important;flex:0 0 20px!important;
+ }
+ #vcs-mobile-bottom-nav .vcs-label{
+  display:block!important;width:100%!important;max-width:100%!important;
+  margin:0!important;padding:0!important;text-align:center!important;
+  line-height:12px!important;font-size:10px!important;white-space:nowrap!important;
+  overflow:hidden!important;text-overflow:clip!important;box-sizing:border-box!important;
+ }
 }
 </style>
 </head><body><div class="app">
