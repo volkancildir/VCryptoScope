@@ -61,6 +61,30 @@ button{cursor:pointer}
 @media(max-width:700px){.brand .logo{width:52px!important;height:52px!important;min-width:52px!important;flex-basis:52px!important}.brand h1{font-size:23px!important}.site-nav a,#pageNav a{min-height:38px!important}}
 </style>
 
+
+<style id="vcrypto-header-nav-alignment-v2">
+/* Keep the brand and every page-navigation icon/label aligned consistently */
+.brand{display:flex!important;align-items:center!important;gap:10px!important}
+.brand .logo{display:flex!important;align-items:center!important;justify-content:center!important;align-self:center!important;flex-shrink:0!important}
+.brand .logo img{display:block!important;object-fit:contain!important;margin:0!important;vertical-align:middle!important}
+.brand>div:last-child{display:flex!important;flex-direction:column!important;justify-content:center!important;align-self:center!important;min-width:0}
+.brand h1{margin:0!important;line-height:1.2!important}
+.brand p{margin:3px 0 0!important;line-height:1.35!important}
+.site-nav>a,.site-nav>button,#pageNav>a,#pageNav>button{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ gap:7px!important;box-sizing:border-box!important;vertical-align:middle!important;
+ line-height:1.25!important;text-align:center!important
+}
+.site-nav>a svg,.site-nav>button svg,#pageNav>a svg,#pageNav>button svg{
+ display:block!important;width:16px!important;height:16px!important;min-width:16px!important;
+ flex:0 0 16px!important;margin:0!important;position:static!important;transform:none!important;
+ vertical-align:middle!important
+}
+@media(max-width:700px){
+ .site-nav>a,.site-nav>button,#pageNav>a,#pageNav>button{min-height:38px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="container">
