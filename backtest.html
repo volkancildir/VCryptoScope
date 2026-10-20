@@ -331,7 +331,18 @@ a{color:var(--blue);text-decoration:none}.nav{display:flex;gap:8px;flex-wrap:wra
   #vcs-mobile-bottom-nav{left:6px!important;right:6px!important;padding:4px!important}
 }
 </style>
-<link rel="stylesheet" href="./mobile.css?v=3">
+<link rel="stylesheet" href="./mobile.css?v=4">
+
+<style id="vcs-mobile-bottom-nav-final-fix">
+@media (max-width:740px),(display-mode:standalone){
+ body #vcs-mobile-bottom-nav{position:fixed!important;display:grid!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;max-width:none!important;margin:0!important;transform:none!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:2px!important;padding:6px 4px calc(6px + env(safe-area-inset-bottom))!important;border-left:0!important;border-right:0!important;border-bottom:0!important;border-radius:14px 14px 0 0!important;box-sizing:border-box!important;}
+ body #vcs-mobile-bottom-nav>a,body #vcs-mobile-bottom-nav>button{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;justify-self:stretch!important;width:100%!important;min-width:0!important;max-width:none!important;height:54px!important;min-height:54px!important;max-height:54px!important;margin:0!important;padding:4px 0!important;gap:4px!important;box-sizing:border-box!important;}
+ body #vcs-mobile-bottom-nav>a>svg,body #vcs-mobile-bottom-nav>button>svg{display:block!important;position:static!important;width:19px!important;height:19px!important;min-width:19px!important;min-height:19px!important;flex:0 0 19px!important;margin:0!important;}
+ body #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0!important;text-align:center!important;font-size:9px!important;line-height:11px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important;box-sizing:border-box!important;}
+ body.vcs-mobile-app{padding-bottom:calc(76px + env(safe-area-inset-bottom))!important;}
+}
+</style>
+
 </head><body>
 <div class="wrap">
 <header class="top"><div class="brand"><div class="logo"><img src="icon.svg?v=8" alt="VCryptoScope"></div><div><h1>VCryptoScope</h1><p>Otomatik piyasa tarayıcı</p></div></div><nav class="site-nav" aria-label="Ana gezinme">
