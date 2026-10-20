@@ -1,7 +1,31 @@
 {
-  "updatedAt": "2026-10-20T05:17:14.799479+00:00",
+  "updatedAt": "2026-10-20T05:52:42.722843+00:00",
   "count": 72,
   "articles": [
+    {
+      "title": "24 Hour Crypto Recap: Here’s What Happened in the Market - Coin Edition",
+      "summary": "24 Hour Crypto Recap: Here’s What Happened in the Market Coin Edition",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcVdQZHBiNjJqQjlmWnJ0MWpWblZteEpCc1BDREZMcUFYQ2NuNjRrbFJmZjhKZExkY1h4S3M0XzJLRUJKVUJ0MWpiZ3JtWHdKS3k5RFEyR3Fmcnk2UDdjdEZhdnRsTnc3dUh5Z1lXMmpFV3lHTWs0ZFV0eW1KZVZuWWpTS2pkNWpPWVE?oc=5",
+      "source": "Coin Edition",
+      "publishedAt": "2026-10-20T05:18:02+00:00",
+      "category": "Regülasyon",
+      "titleTr": "24 Saatlik Kripto Özeti: İşte Piyasada Olanlar - Coin Sürümü",
+      "summaryTr": "24 Saat Kripto Özeti: İşte Market Coin Sürümünde Olanlar",
+      "importance": "Normal",
+      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
+    },
+    {
+      "title": "Gas Prices Could Finally Fall Below $4 Before 2027 - South Florida Reporter",
+      "summary": "Gas Prices Could Finally Fall Below $4 Before 2027 South Florida Reporter",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVGswaC1qeUo2S0RTQjdrbVY2U3IzTVdHbEdSVDZ2TmE5cVhrSk9GaFRBYXp0dDdEeGY0SWdKTU44NnJ6LVE3Rnl1WDl6MnRvalc3UE1HbE0wcmluR3VrVld2WXdCVUdPMEVfUy1SUVBtQzdxaFNxQy1XMzM3SXFHTUo0eS1MMF9CTk1R?oc=5",
+      "source": "South Florida Reporter",
+      "publishedAt": "2026-10-20T05:13:49+00:00",
+      "category": "Petrol & Enerji",
+      "titleTr": "Benzin Fiyatları 2027'den Önce Sonunda 4 Doların Altına Düşebilir - Güney Florida Muhabiri",
+      "summaryTr": "Benzin Fiyatları 2027'den Önce Sonunda 4 Doların Altına Düşebilir Güney Florida Muhabiri",
+      "importance": "Normal",
+      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+    },
     {
       "title": "BlackRock Builds A Bitcoin ETF With A Ceiling On Gains And A Floor On Losses - Yellow.com",
       "summary": "BlackRock Builds A Bitcoin ETF With A Ceiling On Gains And A Floor On Losses Yellow.com",
@@ -10,7 +34,7 @@
       "publishedAt": "2026-10-20T04:56:15+00:00",
       "category": "Kripto",
       "titleTr": "BlackRock, Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor - Yellow.com",
-      "summaryTr": "BlackRock, Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor Yellow.com",
+      "summaryTr": "BlackRock Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor Yellow.com",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -27,14 +51,26 @@
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
+      "title": "Rare Divergence Between Oil Prices and U.S. Treasury Yields: Is the Bond Market Betting on Fed Policy Missteps? - 富途牛牛",
+      "summary": "Rare Divergence Between Oil Prices and U.S. Treasury Yields: Is the Bond Market Betting on Fed Policy Missteps? 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbndaYV9Hc3kyaWx2VDR6dFJ6Vm9iR1VnZEdLY19KT21UUDJvQi1DbTF6TkZFd2tTMVhxS0J5SmxYNEtqRVdTQi1WcVpsblRFT1h4MzZqR1NVcFhVdHFueEQyanFqNWN1Z2NYSkxoNkdyNGhXeHVkUmtZUUlZNkdvSm9QZDFvOWRWSk5fN2tMUllFbTE4aXV2SFhqMTdvVHZkU1FLV01R?oc=5",
+      "source": "富途牛牛",
+      "publishedAt": "2026-10-20T04:33:49+00:00",
+      "category": "Fed & Faiz",
+      "titleTr": "Petrol Fiyatları ile ABD Hazine Getirileri Arasında Nadir Farklılaşma: Tahvil Piyasası Fed Politikasının Yanlış Adımlarına mı Bahse Giriyor? - 富途牛牛",
+      "summaryTr": "Petrol Fiyatları ile ABD Hazine Getirileri Arasında Nadir Farklılaşma: Tahvil Piyasası Fed Politikasının Yanlış Adımlarına mı Bahse Giriyor? 富途牛牛",
+      "importance": "Yüksek",
+      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
+    },
+    {
       "title": "Oil Pushes to $110 a Barrel While Treasury Yields Post Biggest Weekly Drop in Six Months — What Is the Bond Market Betting On? - BigGo Finance",
       "summary": "Oil Pushes to $110 a Barrel While Treasury Yields Post Biggest Weekly Drop in Six Months — What Is the Bond Market Betting On? BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE14eVctc2JjTzFTNENxRl83Y21EczRKRzkzMmlhMWY1SnVZakcxMUxITFA4dG1hT3ljS0Nya2h3dnJkZllINzlyTG5wNDNWcG00ZV9CbjBlb2d5ekwyOV9WbGk2Q2ZnWUVudG5UaVlPN1Vmak5lN3c?oc=5",
       "source": "BigGo Finance",
       "publishedAt": "2026-10-20T04:25:00+00:00",
       "category": "Fed & Faiz",
-      "titleTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Ne Üzerine Bahis Yapıyor? - BigGo Finans",
-      "summaryTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Ne Üzerine Bahis Yapıyor? BigGo Finans",
+      "titleTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Neye Bahis Yapıyor? - BigGo Finans",
+      "summaryTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Neye Bahis Yapıyor? BigGo Finans",
       "importance": "Orta",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -111,18 +147,6 @@
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
     {
-      "title": "Sam Stovall says history is key to what happens to the S&P 500 next year - Yahoo Finance",
-      "summary": "Sam Stovall says history is key to what happens to the S&P 500 next year Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUTd3N04xSmxGbWpFMll3WG9ncllRcGpaWi1KT1VGUDRCazFDdTJUUGlXS0ZRUDU5SFVkbVNPbGhXMm90eVZCZnNjR3UzWE9KTzQ1T2VGaXNOdjZnZVQzNXRORFVmS2hnQTNOLTkwNGdZTUxjRWluMDRpODdUVmZQTDhBdW16bHk0dmlFdTB6SEtORnFKSUJERA?oc=5",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-10-20T03:17:00+00:00",
-      "category": "Fed & Faiz",
-      "titleTr": "Sam Stovall, gelecek yıl S&P 500'e ne olacağının anahtarının geçmiş olduğunu söylüyor - Yahoo Finance",
-      "summaryTr": "Sam Stovall, gelecek yıl S&P 500'e ne olacağının anahtarının geçmiş olduğunu söylüyor Yahoo Finance",
-      "importance": "Orta",
-      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
-    },
-    {
       "title": "Oil Price Forecast: Brent Nears $110 as Middle East Supply Risks Persist - FXEmpire",
       "summary": "Oil Price Forecast: Brent Nears $110 as Middle East Supply Risks Persist FXEmpire",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSnlEM3c3b1J4ckYwRjZiT0c2bFo0QlAwTmdXb1k1dkFVYlpkTElZMi1TVkozVGc5azlRQ2VhNFo2OTV5RW05VnZKd2RoYVBOMzZESk8tUWJKTTNHRnZPOTQ1NVltZ19zQ0UwYmVzZHpsOEQ4MUdhU0hqc1c4YnI1UU9uZUNBUjRkWk9UU0ZrYmZDejJUOHNEVlYtSVUzVWhyNzMxdFdsMkRUUmlrUkx1dXR3WWU2dGQ1UUxtRlJn?oc=5",
@@ -183,6 +207,18 @@
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
     {
+      "title": "Gold slips as investors weigh Fed rate outlook - Business Recorder",
+      "summary": "Gold slips as investors weigh Fed rate outlook Business Recorder",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9OVUVuR29tT0RXY3NOTVJMU2czS0tGenJGMkV3djNTZmxDNTZPSTIzeHFCTEJXeVpfNC1QZGE5ejBURzZVNlF6ME5ZYURVeG5HVWNlSGV30gFWQVVfeXFMT05VRW5Hb21PRFdjc05NUkxTZzNLS0Z6ckYyRXd2M1NmbEM1Nk9JMjN4cUJMQld5Wl80LVBkYTl6MFRHNlU2UXowTllhRFV4bkdVY2VIZXc?oc=5",
+      "source": "Business Recorder",
+      "publishedAt": "2026-10-20T02:29:50+00:00",
+      "category": "Fed & Faiz",
+      "titleTr": "Altın, yatırımcıların Fed'in faiz görünümüne ağırlık vermesiyle kayıplarını sürdürüyor - Business Recorder",
+      "summaryTr": "Altın, yatırımcıların Fed'in faiz görünümüne ağırlık vermesiyle değer kaybediyor",
+      "importance": "Yüksek",
+      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
+    },
+    {
       "title": "Oil Price Today (October 20): Crude oil nears $110 again as fresh attacks outweigh easing Russian sanctions. What are experts saying? - The Economic Times",
       "summary": "Oil Price Today (October 20): Crude oil nears $110 again as fresh attacks outweigh easing Russian sanctions. What are experts saying? The Economic Times",
       "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxNc292dWlpQUwtaDRrSUlaODhGd3ZrS29HV2N3ZHRkU3g4ckZNd1BPR2RKbTZsa3lhWURwcnh1bmFIb2EzcFB1UW5UNmRvV2NJZXZYMThlT2dWamJ3WWVOMll1OXpDdnlxR3lySXFqeDdZOUM0ME9CdU1Sd1BpaG9nYTBtNk9PZnZibVV0T3pLaDREdEpwN1dZVkdNWXVVTTlDd0lhTDBWdmNGYXl1UGVHWWkzSGZIb3ZlRmREV24ySjFoWERvS1Z2Wi1IZVBQVlFQQndNOTJJaVdmQ3VNdGJVTEl2djRXTDRkaHQ5OGJyUE5LSjQxbFkwb3BDSnZ4T2pxUGotZmpqTlBGSk4wUGVuYVhHMXY5RDYwOVFlXzl4UlI3OFMzVUcyUV9uQTNySUU?oc=5",
@@ -201,21 +237,33 @@
       "source": "The Economic Times",
       "publishedAt": "2026-10-20T02:20:00+00:00",
       "category": "Petrol & Enerji",
-      "titleTr": "Bugün Petrol Fiyatı (20 Ekim): Yeni saldırıların Rus yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı - The Economic Times",
-      "summaryTr": "Bugünkü Petrol Fiyatı (20 Ekim): Yeni saldırıların Rusya'nın yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı The Economic Times",
+      "titleTr": "Bugünkü Petrol Fiyatı (20 Ekim): Yeni saldırıların Rus yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı - The Economic Times",
+      "summaryTr": "Bugün Petrol Fiyatı (20 Ekim): Yeni saldırıların Rusya'nın yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı The Economic Times",
       "importance": "Yüksek",
       "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
-      "title": "Oil prices ease as Russia sanctions relief offsets Gulf supply risks - Business Standard",
-      "summary": "Oil prices ease as Russia sanctions relief offsets Gulf supply risks Business Standard",
+      "title": "Brent crude holds near 5-month high as W Asia tensions stoke supply fears - Business Standard",
+      "summary": "Brent crude holds near 5-month high as W Asia tensions stoke supply fears Business Standard",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPMndsZW1zMFBDV3RzTU1fb3lDSWo3RWtKSFg4enBhTHNmOWJlblNFbnF0TkdBQkdFQkhBQU5uZFE5Z1BfaHNvOHRTRWdkMHEwUEZMWDNQWkJmdnNyQy0yc2R3dUhIUkV2NmJNLXl1QzhOREFad2gtekhVRnpLY25fb3ZUWWJmVUp2cHhDTjdpVi1FNTNLU0pkaGExZ1RmMk55elNqUFJka19FSHowSVlkeVhFbk1HMVZRZEdGeWx3R1dkbUo1R1VObWRZb3p3WWh1VEpNcjNYNWctd9IB3wFBVV95cUxNVlphOEdqR2IzTDladWxDNWZCVVN6WUhKeUFWaUtKQTdQcHJ4bFlBZmNKNTlQS1A5bXZ5a1dHZTlmWjZzNHBlY253blZmaUJOODBzQ2Z2Qi1BeVFVSVU4ZHR1SG9SbVlfblZGYmxzZnR5NHIydGdnb3JxV3ltZURobTZPWjBQSzBxXzhaUnRsREdHZXB1cWpaYlNUTExOS1lWNjIwSjNSWi1DaXc0TThpVnZjQVZuN1VrQXlkenFFUUsyOFFfV0FOZW14QlNVVVpxT0FLaXhHZ3c5dEE0OVg0?oc=5",
       "source": "Business Standard",
       "publishedAt": "2026-10-20T02:19:23+00:00",
       "category": "Petrol & Enerji",
-      "titleTr": "Rusya'nın yaptırımların hafifletilmesinin Körfez'deki arz risklerini dengelemesiyle petrol fiyatları düştü - Business Standard",
-      "summaryTr": "Petrol fiyatları, Rusya'nın yaptırımların hafifletilmesinin Körfez'deki arz risklerini dengelemesiyle geriledi İş Standardı",
-      "importance": "Yüksek",
+      "titleTr": "Brent ham petrolü, Batı Asya'daki gerilimlerin arz korkularını artırmasıyla 5 ayın en yüksek seviyesinde seyrediyor - Business Standard",
+      "summaryTr": "Brent ham petrolü, Batı Asya'daki gerilimlerin arz korkularını artırmasıyla 5 ayın en yüksek seviyesinde seyrediyor Business Standard",
+      "importance": "Orta",
+      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+    },
+    {
+      "title": "Oil prices today, October 20th: Brent falls from a 5-month high, but remains close to the $110 mark. - Vietnam.vn",
+      "summary": "Oil prices today, October 20th: Brent falls from a 5-month high, but remains close to the $110 mark. Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSW5sU2FHTERMSkZSTlc3Z1RvVUxBWlFxYldoRWFfRGNMZVBuYjdKWHdTbkFJNFkyUlNRQW5rMXhJcUpwYUwzRDl6bUV6c1VGY1VwcERGd21pUzk0YU0tUDB1ZWZtQXdTYXQzN091dTFURDBnYWgxaVFPaTF3dWxwTURSUTBCdThBbDhNWEk2LS14V1FQWTZiOEtuNjQ1TGFGNUpn?oc=5",
+      "source": "Vietnam.vn",
+      "publishedAt": "2026-10-20T02:13:08+00:00",
+      "category": "Petrol & Enerji",
+      "titleTr": "Petrol fiyatları bugün, 20 Ekim: Brent 5 ayın en yüksek seviyesinden düşüyor ancak 110 dolar seviyesinin yakınında kalmayı sürdürüyor. - Vietnam.vn",
+      "summaryTr": "Petrol fiyatları bugün, 20 Ekim: Brent 5 ayın en yüksek seviyesinden düşüyor ancak 110 dolar seviyesinin yakınında kalmayı sürdürüyor. Vietnam.vn",
+      "importance": "Orta",
       "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
@@ -273,8 +321,8 @@
       "source": "TradingNEWS",
       "publishedAt": "2026-10-20T01:51:56+00:00",
       "category": "Kripto",
-      "titleTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı - TradingNEWS",
-      "summaryTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı",
+      "titleTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ederken, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı - TradingNEWS",
+      "summaryTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim İtfaları 617 Milyon Dolara Ulaştı",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -285,7 +333,7 @@
       "source": "CNBC TV18",
       "publishedAt": "2026-10-20T01:50:02+00:00",
       "category": "Fed & Faiz",
-      "titleTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düştü - CNBC TV18",
+      "titleTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düşüyor - CNBC TV18",
       "summaryTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düştü CNBC TV18",
       "importance": "Yüksek",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
@@ -310,7 +358,7 @@
       "publishedAt": "2026-10-20T01:37:00+00:00",
       "category": "Fed & Faiz",
       "titleTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerinde baskı oluşturmasıyla düşüşünü sürdürüyor - TradingView",
-      "summaryTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerindeki baskısıyla düşüşünü sürdürüyor TradingView",
+      "summaryTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerinde baskı oluşturmasıyla düşüşünü sürdürüyor TradingView",
       "importance": "Yüksek",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -322,7 +370,7 @@
       "publishedAt": "2026-10-20T01:35:12+00:00",
       "category": "Fed & Faiz",
       "titleTr": "Yeni Zelanda Doları, PBOC'nin Kredi Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor - FXStreet",
-      "summaryTr": "Yeni Zelanda Doları, PBOC'nin Kredi Prime Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor FXStreet",
+      "summaryTr": "Yeni Zelanda Doları, PBOC'nin Kredi Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor FXStreet",
       "importance": "Orta",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -337,18 +385,6 @@
       "summaryTr": "Pump.fun, 8 özel şirket için token ekliyor, e...",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
-    },
-    {
-      "title": "Gold inches up on softer dollar as investors assess Fed rate outlook - Reuters",
-      "summary": "Gold inches up on softer dollar as investors assess Fed rate outlook Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOLVJCYm9CRFhWY01aUkRqYnVXb0RzRC1RUnhfOEFicHItalFBMnRMc0ZjcWRVcGNnZVg3ZXQ3WXNXeUZLN183enN0NFAtdmxuUHJhRU5jOHlQbTg1TldhNVdtbF9IWU1GZ1BfOEZvTnJpUEhGTE5xUkRSbl9FZVR4NlFJMEE2V1VYZ1hVRzk3SmpJMi1qelE?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-10-20T01:33:00+00:00",
-      "category": "Fed & Faiz",
-      "titleTr": "Altın, yatırımcıların Fed'in faiz görünümünü değerlendirmesiyle zayıflayan dolar karşısında biraz yükseldi - Reuters",
-      "summaryTr": "Altın, yatırımcıların Fed'in faiz görünümünü değerlendirmesiyle zayıflayan dolar karşısında biraz yükseldi Reuters",
-      "importance": "Yüksek",
-      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
     {
       "title": "Stock market holiday today on October 20: BSE, NSE to remain closed for Dussehra - TradingView",
@@ -411,6 +447,18 @@
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
+      "title": "SEC and CFTC Signal Swift Crypto Rulemaking After CLARITY Act Fails - CoinMarketCap",
+      "summary": "SEC and CFTC Signal Swift Crypto Rulemaking After CLARITY Act Fails CoinMarketCap",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVkRoS3BXcWtrTjYyY0Y5d2VoX0JkTEtfZUxRVlFQWU5lOEoyTVdFVjM4UUhaWUhDNjBkckl6TXN1S3M0Q09wZjM3ZDlxeXpLZFlRRlp6d09OMGlqakR1U25VeUw1cHh5TXYwbHNoYVRSQmlzWk5OWEZtQTZyQnV4SllGV0pFV3VnSlVsYVRrMkN5WE9ZUHo1SkZveFp4ckpTdUxYVlQyZF94eVpGaEE?oc=5",
+      "source": "CoinMarketCap",
+      "publishedAt": "2026-10-20T01:08:33+00:00",
+      "category": "Regülasyon",
+      "titleTr": "SEC ve CFTC, CLARITY Yasası Başarısız Olduğunda Kripto Kurallarının Hızlıca Oluşturulacağına Sinyal Verdi - CoinMarketCap",
+      "summaryTr": "SEC ve CFTC, CLARITY Yasasının Başarısız Olması Sonrası Hızlı Kripto Kuralları Oluşturma Sinyali CoinMarketCap",
+      "importance": "Normal",
+      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
+    },
+    {
       "title": "Fuel prices today, October 20th: World oil prices rise, domestic prices remain under significant pressure. - Vietnam.vn",
       "summary": "Fuel prices today, October 20th: World oil prices rise, domestic prices remain under significant pressure. Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORm5ESThUVUJ6Nml3Slo0dnFEenJiXzYtZ2lpeU9iLUFVSHc4LTkyZkhmU2Fmb1RpQXVOdEd5OHJfU0dUNWtwT1hvMlJuZFBudVpQUXhBZlpFMEVBOEdqR3BxMlpuZjJDNi1Ic1hjbEJBNzkyT2lyQWZXOXZQcEp3UEZhanJzWGd2QlVNTTdVVlQ0NklRcHh5dFptX2MwdW5ldnc?oc=5",
@@ -454,7 +502,7 @@
       "publishedAt": "2026-10-20T00:44:50+00:00",
       "category": "Küresel Piyasalar",
       "titleTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odakta - Stocktwits",
-      "summaryTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odakta",
+      "summaryTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odak Noktasında",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
@@ -490,21 +538,9 @@
       "publishedAt": "2026-10-20T00:00:29+00:00",
       "category": "Regülasyon",
       "titleTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkım ve Hapisle Karşı Karşıya Bırakabilir - Dubai'de Gözaltına Alındı",
-      "summaryTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkımla Karşı Karşıya Bırakabilir ve Dubai'de Hapis Cezasına çarptırılabilir",
+      "summaryTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkımla Karşı Karşıya Bırakabilir ve Dubai'de Hapis Cezasına Gözaltına Alınabilir",
       "importance": "Normal",
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
-      "title": "Crude closes mixed after Houthis claim more attacks on Saudi airports, oil facilities - TradingView",
-      "summary": "Crude closes mixed after Houthis claim more attacks on Saudi airports, oil facilities TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPVkkzYmtFTkdNUFBjcEc3VTJ0QlN3aWoxUTRSZklTMnZmeXJWUk13S0RCQTRqcTFBZ0JneHhrUktJbnpENXh4TExnaUJIMjEyWUh6ZnZGRWtTaVduUFNfaktEbGxiaHN4c1FWZDNPZ2thclpxRW9ZWG9ibExvalRyRnF4SENCRTgyc2xUYTVKM2RwMGI2czJQeFNGdTNYdW52bkJVYWI1eHR3eE1QNThlNWJLS0NtaWNwNVFfWFNCbDc4eXFVV292UGZoSXFLZVZUTHd0eWIyOFAtdHFVUWlSRw?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T23:55:33+00:00",
-      "category": "Petrol & Enerji",
-      "titleTr": "Husilerin Suudi havalimanlarına ve petrol tesislerine daha fazla saldırı düzenlediğini iddia etmesinin ardından ham petrol karışık kapandı - TradingView",
-      "summaryTr": "Husilerin Suudi havalimanlarına ve petrol tesislerine daha fazla saldırı düzenlediğini iddia etmesinin ardından ham petrol karışık kapandı TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
       "title": "Illinoisans receive over $750,000 in refunds thanks to crypto regulations - WAND",
@@ -525,22 +561,22 @@
       "source": "Reuters",
       "publishedAt": "2026-10-19T23:31:42+00:00",
       "category": "Küresel Piyasalar",
-      "titleTr": "Nasdaq, çip ve yapay zeka bağlantılı hisse senetlerinin toparlanmasıyla tırmanıyor - Reuters",
+      "titleTr": "Nasdaq, çip ve yapay zeka bağlantılı hisselerin toparlanmasıyla tırmanıyor - Reuters",
       "summaryTr": "Nasdaq, çip ve yapay zeka bağlantılı hisselerin toparlanmasıyla tırmanıyor Reuters",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
-      "title": "Brent Steadies as Traders Monitor Mideast Flows - TradingView",
-      "summary": "Brent Steadies as Traders Monitor Mideast Flows TradingView",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMFlOSmNRR0pPVW5xYVlVeGUyc3hmNTFjSVE1RFpHaktKUGttaWY5UWpINHFsTXIwcGZKNVdwU3ZDRWlfZUJOWFlSVlZLT2w1UW50Tl9BMGpybTZRSGVrUTM0VjJVMFJMZG5keXhZRGdTQy1zbG9veG9XdTlNLVFaVWIybGZfbFd3MGhhSnNNVl9HQWFHR3JyUWFaOEhjZU0?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T23:31:08+00:00",
-      "category": "Petrol & Enerji",
-      "titleTr": "Yatırımcıların Orta Doğu Akışlarını İzlemesiyle Brent Durgunlaşıyor - TradingView",
-      "summaryTr": "Yatırımcılar Orta Doğu Akışlarını Takip Ederken Brent Dengesini koruyor TradingView",
-      "importance": "Orta",
-      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+      "title": "Searching for the Next Big Crypto? Solana and Tron Struggle as - openPR.com",
+      "summary": "Searching for the Next Big Crypto? Solana and Tron Struggle as openPR.com",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOc2pIZk94T0pudTBzTzg0UWxSS2NrdU02bzZ0clJReWpaT2wyTl8yVWY1cFdWcG4zXzVvZUQzVF82ZWtoWGRUWnZQT2o4LUVfMzNDNWxuMzNZYVl4Ym1HZDlmWkYzeU9mc2hOV015UzBoMnFtZlF5WHRvMEJ1X3ZVNXptcVIxOENVbE9Hc3FzaXphb1NYQVVlek5NTThVdw?oc=5",
+      "source": "openPR.com",
+      "publishedAt": "2026-10-19T23:18:31+00:00",
+      "category": "Kripto",
+      "titleTr": "Bir Sonraki Büyük Kripto'yu mu Arıyorsunuz? Solana ve Tron Mücadelesi - openPR.com",
+      "summaryTr": "Bir Sonraki Büyük Kripto'yu mu Arıyorsunuz? openPR.com olarak Solana ve Tron Mücadelesi",
+      "importance": "Normal",
+      "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
     {
       "title": "China says ready to address each other's concerns after Sitharaman flags trade barriers - The Economic Times",
@@ -573,7 +609,7 @@
       "source": "SBS 뉴스",
       "publishedAt": "2026-10-19T22:52:49+00:00",
       "category": "Küresel Piyasalar",
-      "titleTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisse Senetlerinde Pazarlık Avcılığı Teknolojinin Yükselişine Öncülük Ediyor - SBS",
+      "titleTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisselerinde Pazarlık Avcılığı Teknolojinin Yükselişine Öncülük Ediyor - SBS",
       "summaryTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisse Senetlerinde Pazarlık Avcılığı, Teknolojinin Yükselişine Öncülük Ediyor SBS",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
@@ -585,20 +621,8 @@
       "source": "Coinfomania",
       "publishedAt": "2026-10-19T22:44:51+00:00",
       "category": "Kripto",
-      "titleTr": "Solana, Geliştiriciler için Geliştirilmiş JavaScript SDK v3'ü Açıkladı - Coinfomania",
+      "titleTr": "Solana, Geliştiriciler için Gelişmiş JavaScript SDK v3'ü Açıkladı - Coinfomania",
       "summaryTr": "Solana, Geliştiriciler için Geliştirilmiş JavaScript SDK v3'ü Açıkladı Coinfomania",
-      "importance": "Normal",
-      "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
-    },
-    {
-      "title": "Altcoins suffer their worst weekend since April – Is Bitcoin taking over? - AMBCrypto",
-      "summary": "Altcoins suffer their worst weekend since April – Is Bitcoin taking over? AMBCrypto",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcnZQQXpWb1JvU2pEdlRraGFHdkRSRlZVU0R3WVFLN2NvWU1MUGVfRnp2WURQV09oWldBb1FzelItanBWZ1VON3pWZTlLQlptcXo5NGp1ZHRJTE9BU2V2QTVNc3lWdWNGNFVvSTFPQ0Jkdm91UUdqX3l0TGI5b1Q2Zjg0b240ZXFwMTctSGhFRUpjVjlIdU1rbg?oc=5",
-      "source": "AMBCrypto",
-      "publishedAt": "2026-10-19T22:00:38+00:00",
-      "category": "Kripto",
-      "titleTr": "Altcoinler Nisan ayından bu yana en kötü hafta sonunu yaşıyor – Bitcoin mi devralıyor? -AMBCrypto",
-      "summaryTr": "Altcoinler Nisan ayından bu yana en kötü hafta sonunu yaşıyor – Bitcoin mi devralıyor? AMBCrypto",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -645,8 +669,8 @@
       "source": "TradingView",
       "publishedAt": "2026-10-19T21:00:00+00:00",
       "category": "Regülasyon",
-      "titleTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Baskılarla Karşı Karşıya - TradingView",
-      "summaryTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Bir Baskıyla Karşı Karşıya TradingView",
+      "titleTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Bir Baskıyla Karşı Karşıya - TradingView",
+      "summaryTr": "Güney Kore Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Baskılarla Karşı Karşıya TradingView",
       "importance": "Normal",
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
@@ -663,30 +687,6 @@
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
     {
-      "title": "Nuveen Variable Rate Preferred & Income Fund to use Cayman subsidiaries for Regulation S and TEFRA bond exposure - TradingView",
-      "summary": "Nuveen Variable Rate Preferred & Income Fund to use Cayman subsidiaries for Regulation S and TEFRA bond exposure TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQYjVOc1M3b1ByUlF4YnJLaGJpV2hrRHdzVWs4T2p5R2EwQ21UU1M4Vjh3NDRibVNocnpNb200bm5SWlRqRHFHcUtfclJLZ29wanJQUmUxVmNaYnhrdUxLRWQybm9FOEtNV1NBR05fdVBHd0QwQlVEOFlXTmxmVUNXNDZTekJUcUFBdzc4VHBhRnF6eXNMTTNLQlc2alRUOFU3X0NjdUFEU0NLclk0OTBVd0lHRjUzTzBhdmlYWWdxQWNNUDNIYWgwZi1peXJEVlpEckk5TEtLdHMwaFRYYnlCTGl1WlpUOTFHYVNYUmFyMmpGRHpEdUFUSTh1anlBNlZvQnc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T20:53:00+00:00",
-      "category": "Regülasyon",
-      "titleTr": "Nuveen Değişken Oranlı Tercih Edilen ve Gelir Fonu, Regülasyon S ve TEFRA tahvil riski için Cayman iştiraklerini kullanacak - TradingView",
-      "summaryTr": "Nuveen Değişken Oranlı Tercih Edilen ve Gelir Fonu, Regülasyon S ve TEFRA tahvil riski için Cayman iştiraklerini kullanacak TradingView",
-      "importance": "Orta",
-      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
-      "title": "AES secures EU and New York approvals for Horizon merger, closing still subject to conditions - TradingView",
-      "summary": "AES secures EU and New York approvals for Horizon merger, closing still subject to conditions TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOSlFaSVZQNzVoTnhRSkh6d2pDUzg0SmpObXVmZEV4d19HbENPZkJ1ZEcyY0tvS2FVUXl4Tl9zMmV2STVaU01ESjdLd2NSMlFrQ1FiNG5xamx2elZ4cW8xVVBuTTJwSF8yelVhcWF3dXVfaXoxb25CT1NmVWFuRjNNUEFyQ25PQlA4VEpfXzVUaU5DNk1MVmRHNHBYWVhMY00xMk5QLVE1d2h2TW9aaS1ZRFAxUXNBaUQwMEU1RndvU3p6NnpqQ2IwTDVEalZqQnhVSHRSdFRiRVloS3ZuUzhLaThTNW55WVR5SWc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T20:53:00+00:00",
-      "category": "Regülasyon",
-      "titleTr": "AES, Horizon birleşmesi için AB ve New York onaylarını aldı ve hala koşullara bağlı olarak kapanıyor - TradingView",
-      "summaryTr": "AES, Horizon birleşmesi için AB ve New York onaylarını aldı ve hâlâ koşullara bağlı olarak kapanıyor TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
       "title": "AGNC Investment Corp reports Q3 2026 comprehensive loss of $1.28/share, TNBV $7.13 - TradingView",
       "summary": "AGNC Investment Corp reports Q3 2026 comprehensive loss of $1.28/share, TNBV $7.13 TradingView",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNd0lyX0NSbnhCMndBTkU1SjJFTS1meUtNV3d1bi15SnBoR0paS0k2TUIyUG5ISVJrb3A5ckFTaENEM0pTcHJ1U1NRNUZaOXN4VE1jRDlucUVVYXA5aHA3WHN3QTlYYzcxdDBrWERlaTBsWEtDYkc4cVlJUjJYY09LU3ZsZktqaVRQRU1zUlQ2N2lsSUdUX0ZCME9fMnV0TWs1R2dyMnpOaXhzZ21qNHFMUF9uc0ZxYVJzTWFZMVJmR0RQdi12RnlBUl9fZ1VKOHhnX3pubjFDd18?oc=5",
@@ -694,7 +694,7 @@
       "publishedAt": "2026-10-19T20:13:00+00:00",
       "category": "Küresel Piyasalar",
       "titleTr": "AGNC Investment Corp, 2026 yılının üçüncü çeyreğinde hisse başına 1,28 $, TNBV ise 7,13 $ kapsamlı zarar bildirdi - TradingView",
-      "summaryTr": "AGNC Investment Corp, 2026 yılının 3. çeyreğinde hisse başına 1,28 ABD Doları, TNBV ise 7,13 ABD Doları tutarında kapsamlı zarar bildirdi TradingView",
+      "summaryTr": "AGNC Investment Corp, 2026 yılının 3. çeyreğinde hisse başına 1,28 ABD doları, TNBV ise 7,13 ABD doları tutarında kapsamlı zarar bildirdi TradingView",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
@@ -705,10 +705,22 @@
       "source": "Vermilion County First",
       "publishedAt": "2026-10-19T18:45:05+00:00",
       "category": "İstihdam & Enflasyon",
-      "titleTr": "İşsizlik Oranı Üst Üste Üçüncü Ayda Düştü - İlk Önce Vermilion İlçesi",
-      "summaryTr": "İşsizlik Oranı Üst Üste Üç Ay Boyunca Düştü Vermilion County Birinci",
+      "titleTr": "İşsizlik Oranı Üst Üste Üçüncü Ayda Düştü - Vermilion İlçesi Birinci",
+      "summaryTr": "İşsizlik Oranı Art arda Üçüncü Ayda Düştü Vermilion County Birinci",
       "importance": "Yüksek",
       "marketImpactTr": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir."
+    },
+    {
+      "title": "J.P. Morgan Releases 2027 Long-Term Capital Market Assumptions Projecting 7.0% Return for 60/40 Portfolio Over 10-15 Years - TradingView",
+      "summary": "J.P. Morgan Releases 2027 Long-Term Capital Market Assumptions Projecting 7.0% Return for 60/40 Portfolio Over 10-15 Years TradingView",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOU29RQjRYZmRQelA5RVlmSDVnbk1VX3BheXUwczZ0NWkwVmpEUFNWR2ZaZTllRm0wR2J5ZjFzWElJME9zVF81OFhoWG43SWlPWHE2LWpuREtJS21GRGVVRUM5NTJaSVNSajZtY0EzOHI1Q1J3RGl0MFdiQWx1cjAyZF92M183NFF4c21WaTctSml1S2lGRU9VNFBfLWZKY01RVWc3WU5OMXZFaWk3dW9lUThDRS1jLWRJZC1Lb2ZEV0dwaXhfN05WR0NhclpVWnlMSXl2RXFOcHVxTFA3VmV4a2RIRFkyNWxjWWtGeUdTMG1QdnNXN3F0b0tYQmZxWmJXOWpOREdyRmRaVHdielE?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-10-19T16:00:00+00:00",
+      "category": "Küresel Piyasalar",
+      "titleTr": "J.P. Morgan, 10-15 Yıl İçinde 60/40 Portföyünün %7,0 Getiri Öngörülen 2027 Uzun Vadeli Sermaye Piyasası Varsayımlarını Açıkladı - TradingView",
+      "summaryTr": "J.P. Morgan, 10-15 Yılda 60/40 Portföy İçin %7,0 Getiri Öngörülen 2027 Uzun Vadeli Sermaye Piyasası Varsayımlarını Açıkladı TradingView",
+      "importance": "Normal",
+      "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
       "title": "Nasdaq 100 and DAX outlook: Global stocks likely to stay under pressure for a while - FOREX.com",
@@ -769,18 +781,6 @@
       "summaryTr": "Hassett, TÜFE Verilerinin Enflasyonun 'Biraz Çalışmaya' İhtiyaç Duyduğunu Gösterdiğini Söyledi Yahoo Finance",
       "importance": "Yüksek",
       "marketImpactTr": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir."
-    },
-    {
-      "title": "FM Sitharaman flags global capital moving towards US, AI-linked markets as a 'concern' for India in 2027 - TradingView",
-      "summary": "FM Sitharaman flags global capital moving towards US, AI-linked markets as a 'concern' for India in 2027 TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNQzZIRlN2WjZsVmpIaTFwVGVxLXY1dU9zcGZuSjdETUF0NThBTFo3MVZ2VWhpTDlwdWMzNEEzcnBCaXgxRnZqb1hsRUhGcG9jSG9xVVhrVFYwcHRraDdHYWpmSFoweW81LVBFME1rMzdQY0RvUzZaTzhrbllCZW9PNXA2aWoxWGRGcjcxaVpyUUxneW9WMXVfVTZydjlrdEs1QlIxaEZENnFYVG5aNGM3TmYxRmtMbUNfMUdtcUNocWxMTXJmVEV3aUtwWDBpcW5RLVdqcENVZWRqaVpBT3ljeHZ5a3dDTXdvRTRCOEZOaw?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T13:50:47+00:00",
-      "category": "Küresel Piyasalar",
-      "titleTr": "FM Sitharaman, küresel sermayenin ABD ve yapay zeka bağlantılı pazarlara yönelmesini 2027'de Hindistan için bir 'endişe' olarak işaretledi - TradingView",
-      "summaryTr": "FM Sitharaman, 2027'de küresel sermayenin ABD ve yapay zeka bağlantılı pazarlara yönelmesini Hindistan için bir 'endişe' olarak işaretledi TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
       "title": "Canada's annual inflation rate rose to 3.1% in September - Reuters",
@@ -869,6 +869,30 @@
   ],
   "news": [
     {
+      "title": "24 Hour Crypto Recap: Here’s What Happened in the Market - Coin Edition",
+      "summary": "24 Hour Crypto Recap: Here’s What Happened in the Market Coin Edition",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcVdQZHBiNjJqQjlmWnJ0MWpWblZteEpCc1BDREZMcUFYQ2NuNjRrbFJmZjhKZExkY1h4S3M0XzJLRUJKVUJ0MWpiZ3JtWHdKS3k5RFEyR3Fmcnk2UDdjdEZhdnRsTnc3dUh5Z1lXMmpFV3lHTWs0ZFV0eW1KZVZuWWpTS2pkNWpPWVE?oc=5",
+      "source": "Coin Edition",
+      "publishedAt": "2026-10-20T05:18:02+00:00",
+      "category": "Regülasyon",
+      "titleTr": "24 Saatlik Kripto Özeti: İşte Piyasada Olanlar - Coin Sürümü",
+      "summaryTr": "24 Saat Kripto Özeti: İşte Market Coin Sürümünde Olanlar",
+      "importance": "Normal",
+      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
+    },
+    {
+      "title": "Gas Prices Could Finally Fall Below $4 Before 2027 - South Florida Reporter",
+      "summary": "Gas Prices Could Finally Fall Below $4 Before 2027 South Florida Reporter",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVGswaC1qeUo2S0RTQjdrbVY2U3IzTVdHbEdSVDZ2TmE5cVhrSk9GaFRBYXp0dDdEeGY0SWdKTU44NnJ6LVE3Rnl1WDl6MnRvalc3UE1HbE0wcmluR3VrVld2WXdCVUdPMEVfUy1SUVBtQzdxaFNxQy1XMzM3SXFHTUo0eS1MMF9CTk1R?oc=5",
+      "source": "South Florida Reporter",
+      "publishedAt": "2026-10-20T05:13:49+00:00",
+      "category": "Petrol & Enerji",
+      "titleTr": "Benzin Fiyatları 2027'den Önce Sonunda 4 Doların Altına Düşebilir - Güney Florida Muhabiri",
+      "summaryTr": "Benzin Fiyatları 2027'den Önce Sonunda 4 Doların Altına Düşebilir Güney Florida Muhabiri",
+      "importance": "Normal",
+      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+    },
+    {
       "title": "BlackRock Builds A Bitcoin ETF With A Ceiling On Gains And A Floor On Losses - Yellow.com",
       "summary": "BlackRock Builds A Bitcoin ETF With A Ceiling On Gains And A Floor On Losses Yellow.com",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1uc3dkSl9TbGJYWXhlVDUyc3QyWldhcFdZUUNHNDBxMVhGLUZoM3FFNGpaY3JKcFJJcU1tVnFuRXY1SUExeEQyblBNR1gta0lMNWV1TTYtTkFOTTZpWkV4WllzWUptdjA3MHc2RFdoclo3NFU?oc=5",
@@ -876,7 +900,7 @@
       "publishedAt": "2026-10-20T04:56:15+00:00",
       "category": "Kripto",
       "titleTr": "BlackRock, Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor - Yellow.com",
-      "summaryTr": "BlackRock, Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor Yellow.com",
+      "summaryTr": "BlackRock Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor Yellow.com",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -893,14 +917,26 @@
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
+      "title": "Rare Divergence Between Oil Prices and U.S. Treasury Yields: Is the Bond Market Betting on Fed Policy Missteps? - 富途牛牛",
+      "summary": "Rare Divergence Between Oil Prices and U.S. Treasury Yields: Is the Bond Market Betting on Fed Policy Missteps? 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbndaYV9Hc3kyaWx2VDR6dFJ6Vm9iR1VnZEdLY19KT21UUDJvQi1DbTF6TkZFd2tTMVhxS0J5SmxYNEtqRVdTQi1WcVpsblRFT1h4MzZqR1NVcFhVdHFueEQyanFqNWN1Z2NYSkxoNkdyNGhXeHVkUmtZUUlZNkdvSm9QZDFvOWRWSk5fN2tMUllFbTE4aXV2SFhqMTdvVHZkU1FLV01R?oc=5",
+      "source": "富途牛牛",
+      "publishedAt": "2026-10-20T04:33:49+00:00",
+      "category": "Fed & Faiz",
+      "titleTr": "Petrol Fiyatları ile ABD Hazine Getirileri Arasında Nadir Farklılaşma: Tahvil Piyasası Fed Politikasının Yanlış Adımlarına mı Bahse Giriyor? - 富途牛牛",
+      "summaryTr": "Petrol Fiyatları ile ABD Hazine Getirileri Arasında Nadir Farklılaşma: Tahvil Piyasası Fed Politikasının Yanlış Adımlarına mı Bahse Giriyor? 富途牛牛",
+      "importance": "Yüksek",
+      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
+    },
+    {
       "title": "Oil Pushes to $110 a Barrel While Treasury Yields Post Biggest Weekly Drop in Six Months — What Is the Bond Market Betting On? - BigGo Finance",
       "summary": "Oil Pushes to $110 a Barrel While Treasury Yields Post Biggest Weekly Drop in Six Months — What Is the Bond Market Betting On? BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE14eVctc2JjTzFTNENxRl83Y21EczRKRzkzMmlhMWY1SnVZakcxMUxITFA4dG1hT3ljS0Nya2h3dnJkZllINzlyTG5wNDNWcG00ZV9CbjBlb2d5ekwyOV9WbGk2Q2ZnWUVudG5UaVlPN1Vmak5lN3c?oc=5",
       "source": "BigGo Finance",
       "publishedAt": "2026-10-20T04:25:00+00:00",
       "category": "Fed & Faiz",
-      "titleTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Ne Üzerine Bahis Yapıyor? - BigGo Finans",
-      "summaryTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Ne Üzerine Bahis Yapıyor? BigGo Finans",
+      "titleTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Neye Bahis Yapıyor? - BigGo Finans",
+      "summaryTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Neye Bahis Yapıyor? BigGo Finans",
       "importance": "Orta",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -977,18 +1013,6 @@
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
     {
-      "title": "Sam Stovall says history is key to what happens to the S&P 500 next year - Yahoo Finance",
-      "summary": "Sam Stovall says history is key to what happens to the S&P 500 next year Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUTd3N04xSmxGbWpFMll3WG9ncllRcGpaWi1KT1VGUDRCazFDdTJUUGlXS0ZRUDU5SFVkbVNPbGhXMm90eVZCZnNjR3UzWE9KTzQ1T2VGaXNOdjZnZVQzNXRORFVmS2hnQTNOLTkwNGdZTUxjRWluMDRpODdUVmZQTDhBdW16bHk0dmlFdTB6SEtORnFKSUJERA?oc=5",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-10-20T03:17:00+00:00",
-      "category": "Fed & Faiz",
-      "titleTr": "Sam Stovall, gelecek yıl S&P 500'e ne olacağının anahtarının geçmiş olduğunu söylüyor - Yahoo Finance",
-      "summaryTr": "Sam Stovall, gelecek yıl S&P 500'e ne olacağının anahtarının geçmiş olduğunu söylüyor Yahoo Finance",
-      "importance": "Orta",
-      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
-    },
-    {
       "title": "Oil Price Forecast: Brent Nears $110 as Middle East Supply Risks Persist - FXEmpire",
       "summary": "Oil Price Forecast: Brent Nears $110 as Middle East Supply Risks Persist FXEmpire",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSnlEM3c3b1J4ckYwRjZiT0c2bFo0QlAwTmdXb1k1dkFVYlpkTElZMi1TVkozVGc5azlRQ2VhNFo2OTV5RW05VnZKd2RoYVBOMzZESk8tUWJKTTNHRnZPOTQ1NVltZ19zQ0UwYmVzZHpsOEQ4MUdhU0hqc1c4YnI1UU9uZUNBUjRkWk9UU0ZrYmZDejJUOHNEVlYtSVUzVWhyNzMxdFdsMkRUUmlrUkx1dXR3WWU2dGQ1UUxtRlJn?oc=5",
@@ -1049,6 +1073,18 @@
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
     {
+      "title": "Gold slips as investors weigh Fed rate outlook - Business Recorder",
+      "summary": "Gold slips as investors weigh Fed rate outlook Business Recorder",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9OVUVuR29tT0RXY3NOTVJMU2czS0tGenJGMkV3djNTZmxDNTZPSTIzeHFCTEJXeVpfNC1QZGE5ejBURzZVNlF6ME5ZYURVeG5HVWNlSGV30gFWQVVfeXFMT05VRW5Hb21PRFdjc05NUkxTZzNLS0Z6ckYyRXd2M1NmbEM1Nk9JMjN4cUJMQld5Wl80LVBkYTl6MFRHNlU2UXowTllhRFV4bkdVY2VIZXc?oc=5",
+      "source": "Business Recorder",
+      "publishedAt": "2026-10-20T02:29:50+00:00",
+      "category": "Fed & Faiz",
+      "titleTr": "Altın, yatırımcıların Fed'in faiz görünümüne ağırlık vermesiyle kayıplarını sürdürüyor - Business Recorder",
+      "summaryTr": "Altın, yatırımcıların Fed'in faiz görünümüne ağırlık vermesiyle değer kaybediyor",
+      "importance": "Yüksek",
+      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
+    },
+    {
       "title": "Oil Price Today (October 20): Crude oil nears $110 again as fresh attacks outweigh easing Russian sanctions. What are experts saying? - The Economic Times",
       "summary": "Oil Price Today (October 20): Crude oil nears $110 again as fresh attacks outweigh easing Russian sanctions. What are experts saying? The Economic Times",
       "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxNc292dWlpQUwtaDRrSUlaODhGd3ZrS29HV2N3ZHRkU3g4ckZNd1BPR2RKbTZsa3lhWURwcnh1bmFIb2EzcFB1UW5UNmRvV2NJZXZYMThlT2dWamJ3WWVOMll1OXpDdnlxR3lySXFqeDdZOUM0ME9CdU1Sd1BpaG9nYTBtNk9PZnZibVV0T3pLaDREdEpwN1dZVkdNWXVVTTlDd0lhTDBWdmNGYXl1UGVHWWkzSGZIb3ZlRmREV24ySjFoWERvS1Z2Wi1IZVBQVlFQQndNOTJJaVdmQ3VNdGJVTEl2djRXTDRkaHQ5OGJyUE5LSjQxbFkwb3BDSnZ4T2pxUGotZmpqTlBGSk4wUGVuYVhHMXY5RDYwOVFlXzl4UlI3OFMzVUcyUV9uQTNySUU?oc=5",
@@ -1067,21 +1103,33 @@
       "source": "The Economic Times",
       "publishedAt": "2026-10-20T02:20:00+00:00",
       "category": "Petrol & Enerji",
-      "titleTr": "Bugün Petrol Fiyatı (20 Ekim): Yeni saldırıların Rus yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı - The Economic Times",
-      "summaryTr": "Bugünkü Petrol Fiyatı (20 Ekim): Yeni saldırıların Rusya'nın yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı The Economic Times",
+      "titleTr": "Bugünkü Petrol Fiyatı (20 Ekim): Yeni saldırıların Rus yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı - The Economic Times",
+      "summaryTr": "Bugün Petrol Fiyatı (20 Ekim): Yeni saldırıların Rusya'nın yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı The Economic Times",
       "importance": "Yüksek",
       "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
-      "title": "Oil prices ease as Russia sanctions relief offsets Gulf supply risks - Business Standard",
-      "summary": "Oil prices ease as Russia sanctions relief offsets Gulf supply risks Business Standard",
+      "title": "Brent crude holds near 5-month high as W Asia tensions stoke supply fears - Business Standard",
+      "summary": "Brent crude holds near 5-month high as W Asia tensions stoke supply fears Business Standard",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPMndsZW1zMFBDV3RzTU1fb3lDSWo3RWtKSFg4enBhTHNmOWJlblNFbnF0TkdBQkdFQkhBQU5uZFE5Z1BfaHNvOHRTRWdkMHEwUEZMWDNQWkJmdnNyQy0yc2R3dUhIUkV2NmJNLXl1QzhOREFad2gtekhVRnpLY25fb3ZUWWJmVUp2cHhDTjdpVi1FNTNLU0pkaGExZ1RmMk55elNqUFJka19FSHowSVlkeVhFbk1HMVZRZEdGeWx3R1dkbUo1R1VObWRZb3p3WWh1VEpNcjNYNWctd9IB3wFBVV95cUxNVlphOEdqR2IzTDladWxDNWZCVVN6WUhKeUFWaUtKQTdQcHJ4bFlBZmNKNTlQS1A5bXZ5a1dHZTlmWjZzNHBlY253blZmaUJOODBzQ2Z2Qi1BeVFVSVU4ZHR1SG9SbVlfblZGYmxzZnR5NHIydGdnb3JxV3ltZURobTZPWjBQSzBxXzhaUnRsREdHZXB1cWpaYlNUTExOS1lWNjIwSjNSWi1DaXc0TThpVnZjQVZuN1VrQXlkenFFUUsyOFFfV0FOZW14QlNVVVpxT0FLaXhHZ3c5dEE0OVg0?oc=5",
       "source": "Business Standard",
       "publishedAt": "2026-10-20T02:19:23+00:00",
       "category": "Petrol & Enerji",
-      "titleTr": "Rusya'nın yaptırımların hafifletilmesinin Körfez'deki arz risklerini dengelemesiyle petrol fiyatları düştü - Business Standard",
-      "summaryTr": "Petrol fiyatları, Rusya'nın yaptırımların hafifletilmesinin Körfez'deki arz risklerini dengelemesiyle geriledi İş Standardı",
-      "importance": "Yüksek",
+      "titleTr": "Brent ham petrolü, Batı Asya'daki gerilimlerin arz korkularını artırmasıyla 5 ayın en yüksek seviyesinde seyrediyor - Business Standard",
+      "summaryTr": "Brent ham petrolü, Batı Asya'daki gerilimlerin arz korkularını artırmasıyla 5 ayın en yüksek seviyesinde seyrediyor Business Standard",
+      "importance": "Orta",
+      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+    },
+    {
+      "title": "Oil prices today, October 20th: Brent falls from a 5-month high, but remains close to the $110 mark. - Vietnam.vn",
+      "summary": "Oil prices today, October 20th: Brent falls from a 5-month high, but remains close to the $110 mark. Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSW5sU2FHTERMSkZSTlc3Z1RvVUxBWlFxYldoRWFfRGNMZVBuYjdKWHdTbkFJNFkyUlNRQW5rMXhJcUpwYUwzRDl6bUV6c1VGY1VwcERGd21pUzk0YU0tUDB1ZWZtQXdTYXQzN091dTFURDBnYWgxaVFPaTF3dWxwTURSUTBCdThBbDhNWEk2LS14V1FQWTZiOEtuNjQ1TGFGNUpn?oc=5",
+      "source": "Vietnam.vn",
+      "publishedAt": "2026-10-20T02:13:08+00:00",
+      "category": "Petrol & Enerji",
+      "titleTr": "Petrol fiyatları bugün, 20 Ekim: Brent 5 ayın en yüksek seviyesinden düşüyor ancak 110 dolar seviyesinin yakınında kalmayı sürdürüyor. - Vietnam.vn",
+      "summaryTr": "Petrol fiyatları bugün, 20 Ekim: Brent 5 ayın en yüksek seviyesinden düşüyor ancak 110 dolar seviyesinin yakınında kalmayı sürdürüyor. Vietnam.vn",
+      "importance": "Orta",
       "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
@@ -1139,8 +1187,8 @@
       "source": "TradingNEWS",
       "publishedAt": "2026-10-20T01:51:56+00:00",
       "category": "Kripto",
-      "titleTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı - TradingNEWS",
-      "summaryTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı",
+      "titleTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ederken, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı - TradingNEWS",
+      "summaryTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim İtfaları 617 Milyon Dolara Ulaştı",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -1151,7 +1199,7 @@
       "source": "CNBC TV18",
       "publishedAt": "2026-10-20T01:50:02+00:00",
       "category": "Fed & Faiz",
-      "titleTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düştü - CNBC TV18",
+      "titleTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düşüyor - CNBC TV18",
       "summaryTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düştü CNBC TV18",
       "importance": "Yüksek",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
@@ -1176,7 +1224,7 @@
       "publishedAt": "2026-10-20T01:37:00+00:00",
       "category": "Fed & Faiz",
       "titleTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerinde baskı oluşturmasıyla düşüşünü sürdürüyor - TradingView",
-      "summaryTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerindeki baskısıyla düşüşünü sürdürüyor TradingView",
+      "summaryTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerinde baskı oluşturmasıyla düşüşünü sürdürüyor TradingView",
       "importance": "Yüksek",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -1188,7 +1236,7 @@
       "publishedAt": "2026-10-20T01:35:12+00:00",
       "category": "Fed & Faiz",
       "titleTr": "Yeni Zelanda Doları, PBOC'nin Kredi Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor - FXStreet",
-      "summaryTr": "Yeni Zelanda Doları, PBOC'nin Kredi Prime Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor FXStreet",
+      "summaryTr": "Yeni Zelanda Doları, PBOC'nin Kredi Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor FXStreet",
       "importance": "Orta",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -1203,18 +1251,6 @@
       "summaryTr": "Pump.fun, 8 özel şirket için token ekliyor, e...",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
-    },
-    {
-      "title": "Gold inches up on softer dollar as investors assess Fed rate outlook - Reuters",
-      "summary": "Gold inches up on softer dollar as investors assess Fed rate outlook Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOLVJCYm9CRFhWY01aUkRqYnVXb0RzRC1RUnhfOEFicHItalFBMnRMc0ZjcWRVcGNnZVg3ZXQ3WXNXeUZLN183enN0NFAtdmxuUHJhRU5jOHlQbTg1TldhNVdtbF9IWU1GZ1BfOEZvTnJpUEhGTE5xUkRSbl9FZVR4NlFJMEE2V1VYZ1hVRzk3SmpJMi1qelE?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-10-20T01:33:00+00:00",
-      "category": "Fed & Faiz",
-      "titleTr": "Altın, yatırımcıların Fed'in faiz görünümünü değerlendirmesiyle zayıflayan dolar karşısında biraz yükseldi - Reuters",
-      "summaryTr": "Altın, yatırımcıların Fed'in faiz görünümünü değerlendirmesiyle zayıflayan dolar karşısında biraz yükseldi Reuters",
-      "importance": "Yüksek",
-      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
     {
       "title": "Stock market holiday today on October 20: BSE, NSE to remain closed for Dussehra - TradingView",
@@ -1277,6 +1313,18 @@
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
+      "title": "SEC and CFTC Signal Swift Crypto Rulemaking After CLARITY Act Fails - CoinMarketCap",
+      "summary": "SEC and CFTC Signal Swift Crypto Rulemaking After CLARITY Act Fails CoinMarketCap",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVkRoS3BXcWtrTjYyY0Y5d2VoX0JkTEtfZUxRVlFQWU5lOEoyTVdFVjM4UUhaWUhDNjBkckl6TXN1S3M0Q09wZjM3ZDlxeXpLZFlRRlp6d09OMGlqakR1U25VeUw1cHh5TXYwbHNoYVRSQmlzWk5OWEZtQTZyQnV4SllGV0pFV3VnSlVsYVRrMkN5WE9ZUHo1SkZveFp4ckpTdUxYVlQyZF94eVpGaEE?oc=5",
+      "source": "CoinMarketCap",
+      "publishedAt": "2026-10-20T01:08:33+00:00",
+      "category": "Regülasyon",
+      "titleTr": "SEC ve CFTC, CLARITY Yasası Başarısız Olduğunda Kripto Kurallarının Hızlıca Oluşturulacağına Sinyal Verdi - CoinMarketCap",
+      "summaryTr": "SEC ve CFTC, CLARITY Yasasının Başarısız Olması Sonrası Hızlı Kripto Kuralları Oluşturma Sinyali CoinMarketCap",
+      "importance": "Normal",
+      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
+    },
+    {
       "title": "Fuel prices today, October 20th: World oil prices rise, domestic prices remain under significant pressure. - Vietnam.vn",
       "summary": "Fuel prices today, October 20th: World oil prices rise, domestic prices remain under significant pressure. Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORm5ESThUVUJ6Nml3Slo0dnFEenJiXzYtZ2lpeU9iLUFVSHc4LTkyZkhmU2Fmb1RpQXVOdEd5OHJfU0dUNWtwT1hvMlJuZFBudVpQUXhBZlpFMEVBOEdqR3BxMlpuZjJDNi1Ic1hjbEJBNzkyT2lyQWZXOXZQcEp3UEZhanJzWGd2QlVNTTdVVlQ0NklRcHh5dFptX2MwdW5ldnc?oc=5",
@@ -1320,7 +1368,7 @@
       "publishedAt": "2026-10-20T00:44:50+00:00",
       "category": "Küresel Piyasalar",
       "titleTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odakta - Stocktwits",
-      "summaryTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odakta",
+      "summaryTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odak Noktasında",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
@@ -1356,21 +1404,9 @@
       "publishedAt": "2026-10-20T00:00:29+00:00",
       "category": "Regülasyon",
       "titleTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkım ve Hapisle Karşı Karşıya Bırakabilir - Dubai'de Gözaltına Alındı",
-      "summaryTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkımla Karşı Karşıya Bırakabilir ve Dubai'de Hapis Cezasına çarptırılabilir",
+      "summaryTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkımla Karşı Karşıya Bırakabilir ve Dubai'de Hapis Cezasına Gözaltına Alınabilir",
       "importance": "Normal",
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
-      "title": "Crude closes mixed after Houthis claim more attacks on Saudi airports, oil facilities - TradingView",
-      "summary": "Crude closes mixed after Houthis claim more attacks on Saudi airports, oil facilities TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPVkkzYmtFTkdNUFBjcEc3VTJ0QlN3aWoxUTRSZklTMnZmeXJWUk13S0RCQTRqcTFBZ0JneHhrUktJbnpENXh4TExnaUJIMjEyWUh6ZnZGRWtTaVduUFNfaktEbGxiaHN4c1FWZDNPZ2thclpxRW9ZWG9ibExvalRyRnF4SENCRTgyc2xUYTVKM2RwMGI2czJQeFNGdTNYdW52bkJVYWI1eHR3eE1QNThlNWJLS0NtaWNwNVFfWFNCbDc4eXFVV292UGZoSXFLZVZUTHd0eWIyOFAtdHFVUWlSRw?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T23:55:33+00:00",
-      "category": "Petrol & Enerji",
-      "titleTr": "Husilerin Suudi havalimanlarına ve petrol tesislerine daha fazla saldırı düzenlediğini iddia etmesinin ardından ham petrol karışık kapandı - TradingView",
-      "summaryTr": "Husilerin Suudi havalimanlarına ve petrol tesislerine daha fazla saldırı düzenlediğini iddia etmesinin ardından ham petrol karışık kapandı TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
       "title": "Illinoisans receive over $750,000 in refunds thanks to crypto regulations - WAND",
@@ -1391,22 +1427,22 @@
       "source": "Reuters",
       "publishedAt": "2026-10-19T23:31:42+00:00",
       "category": "Küresel Piyasalar",
-      "titleTr": "Nasdaq, çip ve yapay zeka bağlantılı hisse senetlerinin toparlanmasıyla tırmanıyor - Reuters",
+      "titleTr": "Nasdaq, çip ve yapay zeka bağlantılı hisselerin toparlanmasıyla tırmanıyor - Reuters",
       "summaryTr": "Nasdaq, çip ve yapay zeka bağlantılı hisselerin toparlanmasıyla tırmanıyor Reuters",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
-      "title": "Brent Steadies as Traders Monitor Mideast Flows - TradingView",
-      "summary": "Brent Steadies as Traders Monitor Mideast Flows TradingView",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMFlOSmNRR0pPVW5xYVlVeGUyc3hmNTFjSVE1RFpHaktKUGttaWY5UWpINHFsTXIwcGZKNVdwU3ZDRWlfZUJOWFlSVlZLT2w1UW50Tl9BMGpybTZRSGVrUTM0VjJVMFJMZG5keXhZRGdTQy1zbG9veG9XdTlNLVFaVWIybGZfbFd3MGhhSnNNVl9HQWFHR3JyUWFaOEhjZU0?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T23:31:08+00:00",
-      "category": "Petrol & Enerji",
-      "titleTr": "Yatırımcıların Orta Doğu Akışlarını İzlemesiyle Brent Durgunlaşıyor - TradingView",
-      "summaryTr": "Yatırımcılar Orta Doğu Akışlarını Takip Ederken Brent Dengesini koruyor TradingView",
-      "importance": "Orta",
-      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+      "title": "Searching for the Next Big Crypto? Solana and Tron Struggle as - openPR.com",
+      "summary": "Searching for the Next Big Crypto? Solana and Tron Struggle as openPR.com",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOc2pIZk94T0pudTBzTzg0UWxSS2NrdU02bzZ0clJReWpaT2wyTl8yVWY1cFdWcG4zXzVvZUQzVF82ZWtoWGRUWnZQT2o4LUVfMzNDNWxuMzNZYVl4Ym1HZDlmWkYzeU9mc2hOV015UzBoMnFtZlF5WHRvMEJ1X3ZVNXptcVIxOENVbE9Hc3FzaXphb1NYQVVlek5NTThVdw?oc=5",
+      "source": "openPR.com",
+      "publishedAt": "2026-10-19T23:18:31+00:00",
+      "category": "Kripto",
+      "titleTr": "Bir Sonraki Büyük Kripto'yu mu Arıyorsunuz? Solana ve Tron Mücadelesi - openPR.com",
+      "summaryTr": "Bir Sonraki Büyük Kripto'yu mu Arıyorsunuz? openPR.com olarak Solana ve Tron Mücadelesi",
+      "importance": "Normal",
+      "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
     {
       "title": "China says ready to address each other's concerns after Sitharaman flags trade barriers - The Economic Times",
@@ -1439,7 +1475,7 @@
       "source": "SBS 뉴스",
       "publishedAt": "2026-10-19T22:52:49+00:00",
       "category": "Küresel Piyasalar",
-      "titleTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisse Senetlerinde Pazarlık Avcılığı Teknolojinin Yükselişine Öncülük Ediyor - SBS",
+      "titleTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisselerinde Pazarlık Avcılığı Teknolojinin Yükselişine Öncülük Ediyor - SBS",
       "summaryTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisse Senetlerinde Pazarlık Avcılığı, Teknolojinin Yükselişine Öncülük Ediyor SBS",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
@@ -1451,20 +1487,8 @@
       "source": "Coinfomania",
       "publishedAt": "2026-10-19T22:44:51+00:00",
       "category": "Kripto",
-      "titleTr": "Solana, Geliştiriciler için Geliştirilmiş JavaScript SDK v3'ü Açıkladı - Coinfomania",
+      "titleTr": "Solana, Geliştiriciler için Gelişmiş JavaScript SDK v3'ü Açıkladı - Coinfomania",
       "summaryTr": "Solana, Geliştiriciler için Geliştirilmiş JavaScript SDK v3'ü Açıkladı Coinfomania",
-      "importance": "Normal",
-      "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
-    },
-    {
-      "title": "Altcoins suffer their worst weekend since April – Is Bitcoin taking over? - AMBCrypto",
-      "summary": "Altcoins suffer their worst weekend since April – Is Bitcoin taking over? AMBCrypto",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcnZQQXpWb1JvU2pEdlRraGFHdkRSRlZVU0R3WVFLN2NvWU1MUGVfRnp2WURQV09oWldBb1FzelItanBWZ1VON3pWZTlLQlptcXo5NGp1ZHRJTE9BU2V2QTVNc3lWdWNGNFVvSTFPQ0Jkdm91UUdqX3l0TGI5b1Q2Zjg0b240ZXFwMTctSGhFRUpjVjlIdU1rbg?oc=5",
-      "source": "AMBCrypto",
-      "publishedAt": "2026-10-19T22:00:38+00:00",
-      "category": "Kripto",
-      "titleTr": "Altcoinler Nisan ayından bu yana en kötü hafta sonunu yaşıyor – Bitcoin mi devralıyor? -AMBCrypto",
-      "summaryTr": "Altcoinler Nisan ayından bu yana en kötü hafta sonunu yaşıyor – Bitcoin mi devralıyor? AMBCrypto",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -1511,8 +1535,8 @@
       "source": "TradingView",
       "publishedAt": "2026-10-19T21:00:00+00:00",
       "category": "Regülasyon",
-      "titleTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Baskılarla Karşı Karşıya - TradingView",
-      "summaryTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Bir Baskıyla Karşı Karşıya TradingView",
+      "titleTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Bir Baskıyla Karşı Karşıya - TradingView",
+      "summaryTr": "Güney Kore Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Baskılarla Karşı Karşıya TradingView",
       "importance": "Normal",
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
@@ -1529,30 +1553,6 @@
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
     {
-      "title": "Nuveen Variable Rate Preferred & Income Fund to use Cayman subsidiaries for Regulation S and TEFRA bond exposure - TradingView",
-      "summary": "Nuveen Variable Rate Preferred & Income Fund to use Cayman subsidiaries for Regulation S and TEFRA bond exposure TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQYjVOc1M3b1ByUlF4YnJLaGJpV2hrRHdzVWs4T2p5R2EwQ21UU1M4Vjh3NDRibVNocnpNb200bm5SWlRqRHFHcUtfclJLZ29wanJQUmUxVmNaYnhrdUxLRWQybm9FOEtNV1NBR05fdVBHd0QwQlVEOFlXTmxmVUNXNDZTekJUcUFBdzc4VHBhRnF6eXNMTTNLQlc2alRUOFU3X0NjdUFEU0NLclk0OTBVd0lHRjUzTzBhdmlYWWdxQWNNUDNIYWgwZi1peXJEVlpEckk5TEtLdHMwaFRYYnlCTGl1WlpUOTFHYVNYUmFyMmpGRHpEdUFUSTh1anlBNlZvQnc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T20:53:00+00:00",
-      "category": "Regülasyon",
-      "titleTr": "Nuveen Değişken Oranlı Tercih Edilen ve Gelir Fonu, Regülasyon S ve TEFRA tahvil riski için Cayman iştiraklerini kullanacak - TradingView",
-      "summaryTr": "Nuveen Değişken Oranlı Tercih Edilen ve Gelir Fonu, Regülasyon S ve TEFRA tahvil riski için Cayman iştiraklerini kullanacak TradingView",
-      "importance": "Orta",
-      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
-      "title": "AES secures EU and New York approvals for Horizon merger, closing still subject to conditions - TradingView",
-      "summary": "AES secures EU and New York approvals for Horizon merger, closing still subject to conditions TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOSlFaSVZQNzVoTnhRSkh6d2pDUzg0SmpObXVmZEV4d19HbENPZkJ1ZEcyY0tvS2FVUXl4Tl9zMmV2STVaU01ESjdLd2NSMlFrQ1FiNG5xamx2elZ4cW8xVVBuTTJwSF8yelVhcWF3dXVfaXoxb25CT1NmVWFuRjNNUEFyQ25PQlA4VEpfXzVUaU5DNk1MVmRHNHBYWVhMY00xMk5QLVE1d2h2TW9aaS1ZRFAxUXNBaUQwMEU1RndvU3p6NnpqQ2IwTDVEalZqQnhVSHRSdFRiRVloS3ZuUzhLaThTNW55WVR5SWc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T20:53:00+00:00",
-      "category": "Regülasyon",
-      "titleTr": "AES, Horizon birleşmesi için AB ve New York onaylarını aldı ve hala koşullara bağlı olarak kapanıyor - TradingView",
-      "summaryTr": "AES, Horizon birleşmesi için AB ve New York onaylarını aldı ve hâlâ koşullara bağlı olarak kapanıyor TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
       "title": "AGNC Investment Corp reports Q3 2026 comprehensive loss of $1.28/share, TNBV $7.13 - TradingView",
       "summary": "AGNC Investment Corp reports Q3 2026 comprehensive loss of $1.28/share, TNBV $7.13 TradingView",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNd0lyX0NSbnhCMndBTkU1SjJFTS1meUtNV3d1bi15SnBoR0paS0k2TUIyUG5ISVJrb3A5ckFTaENEM0pTcHJ1U1NRNUZaOXN4VE1jRDlucUVVYXA5aHA3WHN3QTlYYzcxdDBrWERlaTBsWEtDYkc4cVlJUjJYY09LU3ZsZktqaVRQRU1zUlQ2N2lsSUdUX0ZCME9fMnV0TWs1R2dyMnpOaXhzZ21qNHFMUF9uc0ZxYVJzTWFZMVJmR0RQdi12RnlBUl9fZ1VKOHhnX3pubjFDd18?oc=5",
@@ -1560,7 +1560,7 @@
       "publishedAt": "2026-10-19T20:13:00+00:00",
       "category": "Küresel Piyasalar",
       "titleTr": "AGNC Investment Corp, 2026 yılının üçüncü çeyreğinde hisse başına 1,28 $, TNBV ise 7,13 $ kapsamlı zarar bildirdi - TradingView",
-      "summaryTr": "AGNC Investment Corp, 2026 yılının 3. çeyreğinde hisse başına 1,28 ABD Doları, TNBV ise 7,13 ABD Doları tutarında kapsamlı zarar bildirdi TradingView",
+      "summaryTr": "AGNC Investment Corp, 2026 yılının 3. çeyreğinde hisse başına 1,28 ABD doları, TNBV ise 7,13 ABD doları tutarında kapsamlı zarar bildirdi TradingView",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
@@ -1571,10 +1571,22 @@
       "source": "Vermilion County First",
       "publishedAt": "2026-10-19T18:45:05+00:00",
       "category": "İstihdam & Enflasyon",
-      "titleTr": "İşsizlik Oranı Üst Üste Üçüncü Ayda Düştü - İlk Önce Vermilion İlçesi",
-      "summaryTr": "İşsizlik Oranı Üst Üste Üç Ay Boyunca Düştü Vermilion County Birinci",
+      "titleTr": "İşsizlik Oranı Üst Üste Üçüncü Ayda Düştü - Vermilion İlçesi Birinci",
+      "summaryTr": "İşsizlik Oranı Art arda Üçüncü Ayda Düştü Vermilion County Birinci",
       "importance": "Yüksek",
       "marketImpactTr": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir."
+    },
+    {
+      "title": "J.P. Morgan Releases 2027 Long-Term Capital Market Assumptions Projecting 7.0% Return for 60/40 Portfolio Over 10-15 Years - TradingView",
+      "summary": "J.P. Morgan Releases 2027 Long-Term Capital Market Assumptions Projecting 7.0% Return for 60/40 Portfolio Over 10-15 Years TradingView",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOU29RQjRYZmRQelA5RVlmSDVnbk1VX3BheXUwczZ0NWkwVmpEUFNWR2ZaZTllRm0wR2J5ZjFzWElJME9zVF81OFhoWG43SWlPWHE2LWpuREtJS21GRGVVRUM5NTJaSVNSajZtY0EzOHI1Q1J3RGl0MFdiQWx1cjAyZF92M183NFF4c21WaTctSml1S2lGRU9VNFBfLWZKY01RVWc3WU5OMXZFaWk3dW9lUThDRS1jLWRJZC1Lb2ZEV0dwaXhfN05WR0NhclpVWnlMSXl2RXFOcHVxTFA3VmV4a2RIRFkyNWxjWWtGeUdTMG1QdnNXN3F0b0tYQmZxWmJXOWpOREdyRmRaVHdielE?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-10-19T16:00:00+00:00",
+      "category": "Küresel Piyasalar",
+      "titleTr": "J.P. Morgan, 10-15 Yıl İçinde 60/40 Portföyünün %7,0 Getiri Öngörülen 2027 Uzun Vadeli Sermaye Piyasası Varsayımlarını Açıkladı - TradingView",
+      "summaryTr": "J.P. Morgan, 10-15 Yılda 60/40 Portföy İçin %7,0 Getiri Öngörülen 2027 Uzun Vadeli Sermaye Piyasası Varsayımlarını Açıkladı TradingView",
+      "importance": "Normal",
+      "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
       "title": "Nasdaq 100 and DAX outlook: Global stocks likely to stay under pressure for a while - FOREX.com",
@@ -1635,18 +1647,6 @@
       "summaryTr": "Hassett, TÜFE Verilerinin Enflasyonun 'Biraz Çalışmaya' İhtiyaç Duyduğunu Gösterdiğini Söyledi Yahoo Finance",
       "importance": "Yüksek",
       "marketImpactTr": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir."
-    },
-    {
-      "title": "FM Sitharaman flags global capital moving towards US, AI-linked markets as a 'concern' for India in 2027 - TradingView",
-      "summary": "FM Sitharaman flags global capital moving towards US, AI-linked markets as a 'concern' for India in 2027 TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNQzZIRlN2WjZsVmpIaTFwVGVxLXY1dU9zcGZuSjdETUF0NThBTFo3MVZ2VWhpTDlwdWMzNEEzcnBCaXgxRnZqb1hsRUhGcG9jSG9xVVhrVFYwcHRraDdHYWpmSFoweW81LVBFME1rMzdQY0RvUzZaTzhrbllCZW9PNXA2aWoxWGRGcjcxaVpyUUxneW9WMXVfVTZydjlrdEs1QlIxaEZENnFYVG5aNGM3TmYxRmtMbUNfMUdtcUNocWxMTXJmVEV3aUtwWDBpcW5RLVdqcENVZWRqaVpBT3ljeHZ5a3dDTXdvRTRCOEZOaw?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T13:50:47+00:00",
-      "category": "Küresel Piyasalar",
-      "titleTr": "FM Sitharaman, küresel sermayenin ABD ve yapay zeka bağlantılı pazarlara yönelmesini 2027'de Hindistan için bir 'endişe' olarak işaretledi - TradingView",
-      "summaryTr": "FM Sitharaman, 2027'de küresel sermayenin ABD ve yapay zeka bağlantılı pazarlara yönelmesini Hindistan için bir 'endişe' olarak işaretledi TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
       "title": "Canada's annual inflation rate rose to 3.1% in September - Reuters",
@@ -1735,6 +1735,30 @@
   ],
   "items": [
     {
+      "title": "24 Hour Crypto Recap: Here’s What Happened in the Market - Coin Edition",
+      "summary": "24 Hour Crypto Recap: Here’s What Happened in the Market Coin Edition",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcVdQZHBiNjJqQjlmWnJ0MWpWblZteEpCc1BDREZMcUFYQ2NuNjRrbFJmZjhKZExkY1h4S3M0XzJLRUJKVUJ0MWpiZ3JtWHdKS3k5RFEyR3Fmcnk2UDdjdEZhdnRsTnc3dUh5Z1lXMmpFV3lHTWs0ZFV0eW1KZVZuWWpTS2pkNWpPWVE?oc=5",
+      "source": "Coin Edition",
+      "publishedAt": "2026-10-20T05:18:02+00:00",
+      "category": "Regülasyon",
+      "titleTr": "24 Saatlik Kripto Özeti: İşte Piyasada Olanlar - Coin Sürümü",
+      "summaryTr": "24 Saat Kripto Özeti: İşte Market Coin Sürümünde Olanlar",
+      "importance": "Normal",
+      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
+    },
+    {
+      "title": "Gas Prices Could Finally Fall Below $4 Before 2027 - South Florida Reporter",
+      "summary": "Gas Prices Could Finally Fall Below $4 Before 2027 South Florida Reporter",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVGswaC1qeUo2S0RTQjdrbVY2U3IzTVdHbEdSVDZ2TmE5cVhrSk9GaFRBYXp0dDdEeGY0SWdKTU44NnJ6LVE3Rnl1WDl6MnRvalc3UE1HbE0wcmluR3VrVld2WXdCVUdPMEVfUy1SUVBtQzdxaFNxQy1XMzM3SXFHTUo0eS1MMF9CTk1R?oc=5",
+      "source": "South Florida Reporter",
+      "publishedAt": "2026-10-20T05:13:49+00:00",
+      "category": "Petrol & Enerji",
+      "titleTr": "Benzin Fiyatları 2027'den Önce Sonunda 4 Doların Altına Düşebilir - Güney Florida Muhabiri",
+      "summaryTr": "Benzin Fiyatları 2027'den Önce Sonunda 4 Doların Altına Düşebilir Güney Florida Muhabiri",
+      "importance": "Normal",
+      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+    },
+    {
       "title": "BlackRock Builds A Bitcoin ETF With A Ceiling On Gains And A Floor On Losses - Yellow.com",
       "summary": "BlackRock Builds A Bitcoin ETF With A Ceiling On Gains And A Floor On Losses Yellow.com",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1uc3dkSl9TbGJYWXhlVDUyc3QyWldhcFdZUUNHNDBxMVhGLUZoM3FFNGpaY3JKcFJJcU1tVnFuRXY1SUExeEQyblBNR1gta0lMNWV1TTYtTkFOTTZpWkV4WllzWUptdjA3MHc2RFdoclo3NFU?oc=5",
@@ -1742,7 +1766,7 @@
       "publishedAt": "2026-10-20T04:56:15+00:00",
       "category": "Kripto",
       "titleTr": "BlackRock, Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor - Yellow.com",
-      "summaryTr": "BlackRock, Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor Yellow.com",
+      "summaryTr": "BlackRock Kazançlarda Tavan ve Kayıplarda Taban Olan Bir Bitcoin ETF Oluşturuyor Yellow.com",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -1759,14 +1783,26 @@
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
+      "title": "Rare Divergence Between Oil Prices and U.S. Treasury Yields: Is the Bond Market Betting on Fed Policy Missteps? - 富途牛牛",
+      "summary": "Rare Divergence Between Oil Prices and U.S. Treasury Yields: Is the Bond Market Betting on Fed Policy Missteps? 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbndaYV9Hc3kyaWx2VDR6dFJ6Vm9iR1VnZEdLY19KT21UUDJvQi1DbTF6TkZFd2tTMVhxS0J5SmxYNEtqRVdTQi1WcVpsblRFT1h4MzZqR1NVcFhVdHFueEQyanFqNWN1Z2NYSkxoNkdyNGhXeHVkUmtZUUlZNkdvSm9QZDFvOWRWSk5fN2tMUllFbTE4aXV2SFhqMTdvVHZkU1FLV01R?oc=5",
+      "source": "富途牛牛",
+      "publishedAt": "2026-10-20T04:33:49+00:00",
+      "category": "Fed & Faiz",
+      "titleTr": "Petrol Fiyatları ile ABD Hazine Getirileri Arasında Nadir Farklılaşma: Tahvil Piyasası Fed Politikasının Yanlış Adımlarına mı Bahse Giriyor? - 富途牛牛",
+      "summaryTr": "Petrol Fiyatları ile ABD Hazine Getirileri Arasında Nadir Farklılaşma: Tahvil Piyasası Fed Politikasının Yanlış Adımlarına mı Bahse Giriyor? 富途牛牛",
+      "importance": "Yüksek",
+      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
+    },
+    {
       "title": "Oil Pushes to $110 a Barrel While Treasury Yields Post Biggest Weekly Drop in Six Months — What Is the Bond Market Betting On? - BigGo Finance",
       "summary": "Oil Pushes to $110 a Barrel While Treasury Yields Post Biggest Weekly Drop in Six Months — What Is the Bond Market Betting On? BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE14eVctc2JjTzFTNENxRl83Y21EczRKRzkzMmlhMWY1SnVZakcxMUxITFA4dG1hT3ljS0Nya2h3dnJkZllINzlyTG5wNDNWcG00ZV9CbjBlb2d5ekwyOV9WbGk2Q2ZnWUVudG5UaVlPN1Vmak5lN3c?oc=5",
       "source": "BigGo Finance",
       "publishedAt": "2026-10-20T04:25:00+00:00",
       "category": "Fed & Faiz",
-      "titleTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Ne Üzerine Bahis Yapıyor? - BigGo Finans",
-      "summaryTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Ne Üzerine Bahis Yapıyor? BigGo Finans",
+      "titleTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Neye Bahis Yapıyor? - BigGo Finans",
+      "summaryTr": "Petrol Varil Başına 110 Dolara Yükselirken, Hazine Verimleri Altı Ayın En Büyük Haftalık Düşüşünü Kaydediyor — Tahvil Piyasası Neye Bahis Yapıyor? BigGo Finans",
       "importance": "Orta",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -1843,18 +1879,6 @@
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
     {
-      "title": "Sam Stovall says history is key to what happens to the S&P 500 next year - Yahoo Finance",
-      "summary": "Sam Stovall says history is key to what happens to the S&P 500 next year Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUTd3N04xSmxGbWpFMll3WG9ncllRcGpaWi1KT1VGUDRCazFDdTJUUGlXS0ZRUDU5SFVkbVNPbGhXMm90eVZCZnNjR3UzWE9KTzQ1T2VGaXNOdjZnZVQzNXRORFVmS2hnQTNOLTkwNGdZTUxjRWluMDRpODdUVmZQTDhBdW16bHk0dmlFdTB6SEtORnFKSUJERA?oc=5",
-      "source": "Yahoo Finance",
-      "publishedAt": "2026-10-20T03:17:00+00:00",
-      "category": "Fed & Faiz",
-      "titleTr": "Sam Stovall, gelecek yıl S&P 500'e ne olacağının anahtarının geçmiş olduğunu söylüyor - Yahoo Finance",
-      "summaryTr": "Sam Stovall, gelecek yıl S&P 500'e ne olacağının anahtarının geçmiş olduğunu söylüyor Yahoo Finance",
-      "importance": "Orta",
-      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
-    },
-    {
       "title": "Oil Price Forecast: Brent Nears $110 as Middle East Supply Risks Persist - FXEmpire",
       "summary": "Oil Price Forecast: Brent Nears $110 as Middle East Supply Risks Persist FXEmpire",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSnlEM3c3b1J4ckYwRjZiT0c2bFo0QlAwTmdXb1k1dkFVYlpkTElZMi1TVkozVGc5azlRQ2VhNFo2OTV5RW05VnZKd2RoYVBOMzZESk8tUWJKTTNHRnZPOTQ1NVltZ19zQ0UwYmVzZHpsOEQ4MUdhU0hqc1c4YnI1UU9uZUNBUjRkWk9UU0ZrYmZDejJUOHNEVlYtSVUzVWhyNzMxdFdsMkRUUmlrUkx1dXR3WWU2dGQ1UUxtRlJn?oc=5",
@@ -1915,6 +1939,18 @@
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
     {
+      "title": "Gold slips as investors weigh Fed rate outlook - Business Recorder",
+      "summary": "Gold slips as investors weigh Fed rate outlook Business Recorder",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9OVUVuR29tT0RXY3NOTVJMU2czS0tGenJGMkV3djNTZmxDNTZPSTIzeHFCTEJXeVpfNC1QZGE5ejBURzZVNlF6ME5ZYURVeG5HVWNlSGV30gFWQVVfeXFMT05VRW5Hb21PRFdjc05NUkxTZzNLS0Z6ckYyRXd2M1NmbEM1Nk9JMjN4cUJMQld5Wl80LVBkYTl6MFRHNlU2UXowTllhRFV4bkdVY2VIZXc?oc=5",
+      "source": "Business Recorder",
+      "publishedAt": "2026-10-20T02:29:50+00:00",
+      "category": "Fed & Faiz",
+      "titleTr": "Altın, yatırımcıların Fed'in faiz görünümüne ağırlık vermesiyle kayıplarını sürdürüyor - Business Recorder",
+      "summaryTr": "Altın, yatırımcıların Fed'in faiz görünümüne ağırlık vermesiyle değer kaybediyor",
+      "importance": "Yüksek",
+      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
+    },
+    {
       "title": "Oil Price Today (October 20): Crude oil nears $110 again as fresh attacks outweigh easing Russian sanctions. What are experts saying? - The Economic Times",
       "summary": "Oil Price Today (October 20): Crude oil nears $110 again as fresh attacks outweigh easing Russian sanctions. What are experts saying? The Economic Times",
       "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxNc292dWlpQUwtaDRrSUlaODhGd3ZrS29HV2N3ZHRkU3g4ckZNd1BPR2RKbTZsa3lhWURwcnh1bmFIb2EzcFB1UW5UNmRvV2NJZXZYMThlT2dWamJ3WWVOMll1OXpDdnlxR3lySXFqeDdZOUM0ME9CdU1Sd1BpaG9nYTBtNk9PZnZibVV0T3pLaDREdEpwN1dZVkdNWXVVTTlDd0lhTDBWdmNGYXl1UGVHWWkzSGZIb3ZlRmREV24ySjFoWERvS1Z2Wi1IZVBQVlFQQndNOTJJaVdmQ3VNdGJVTEl2djRXTDRkaHQ5OGJyUE5LSjQxbFkwb3BDSnZ4T2pxUGotZmpqTlBGSk4wUGVuYVhHMXY5RDYwOVFlXzl4UlI3OFMzVUcyUV9uQTNySUU?oc=5",
@@ -1933,21 +1969,33 @@
       "source": "The Economic Times",
       "publishedAt": "2026-10-20T02:20:00+00:00",
       "category": "Petrol & Enerji",
-      "titleTr": "Bugün Petrol Fiyatı (20 Ekim): Yeni saldırıların Rus yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı - The Economic Times",
-      "summaryTr": "Bugünkü Petrol Fiyatı (20 Ekim): Yeni saldırıların Rusya'nın yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı The Economic Times",
+      "titleTr": "Bugünkü Petrol Fiyatı (20 Ekim): Yeni saldırıların Rus yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı - The Economic Times",
+      "summaryTr": "Bugün Petrol Fiyatı (20 Ekim): Yeni saldırıların Rusya'nın yaptırımlarının hafifletilmesine ağır basmasıyla ham petrol yeniden 110 dolara yaklaştı The Economic Times",
       "importance": "Yüksek",
       "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
-      "title": "Oil prices ease as Russia sanctions relief offsets Gulf supply risks - Business Standard",
-      "summary": "Oil prices ease as Russia sanctions relief offsets Gulf supply risks Business Standard",
+      "title": "Brent crude holds near 5-month high as W Asia tensions stoke supply fears - Business Standard",
+      "summary": "Brent crude holds near 5-month high as W Asia tensions stoke supply fears Business Standard",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPMndsZW1zMFBDV3RzTU1fb3lDSWo3RWtKSFg4enBhTHNmOWJlblNFbnF0TkdBQkdFQkhBQU5uZFE5Z1BfaHNvOHRTRWdkMHEwUEZMWDNQWkJmdnNyQy0yc2R3dUhIUkV2NmJNLXl1QzhOREFad2gtekhVRnpLY25fb3ZUWWJmVUp2cHhDTjdpVi1FNTNLU0pkaGExZ1RmMk55elNqUFJka19FSHowSVlkeVhFbk1HMVZRZEdGeWx3R1dkbUo1R1VObWRZb3p3WWh1VEpNcjNYNWctd9IB3wFBVV95cUxNVlphOEdqR2IzTDladWxDNWZCVVN6WUhKeUFWaUtKQTdQcHJ4bFlBZmNKNTlQS1A5bXZ5a1dHZTlmWjZzNHBlY253blZmaUJOODBzQ2Z2Qi1BeVFVSVU4ZHR1SG9SbVlfblZGYmxzZnR5NHIydGdnb3JxV3ltZURobTZPWjBQSzBxXzhaUnRsREdHZXB1cWpaYlNUTExOS1lWNjIwSjNSWi1DaXc0TThpVnZjQVZuN1VrQXlkenFFUUsyOFFfV0FOZW14QlNVVVpxT0FLaXhHZ3c5dEE0OVg0?oc=5",
       "source": "Business Standard",
       "publishedAt": "2026-10-20T02:19:23+00:00",
       "category": "Petrol & Enerji",
-      "titleTr": "Rusya'nın yaptırımların hafifletilmesinin Körfez'deki arz risklerini dengelemesiyle petrol fiyatları düştü - Business Standard",
-      "summaryTr": "Petrol fiyatları, Rusya'nın yaptırımların hafifletilmesinin Körfez'deki arz risklerini dengelemesiyle geriledi İş Standardı",
-      "importance": "Yüksek",
+      "titleTr": "Brent ham petrolü, Batı Asya'daki gerilimlerin arz korkularını artırmasıyla 5 ayın en yüksek seviyesinde seyrediyor - Business Standard",
+      "summaryTr": "Brent ham petrolü, Batı Asya'daki gerilimlerin arz korkularını artırmasıyla 5 ayın en yüksek seviyesinde seyrediyor Business Standard",
+      "importance": "Orta",
+      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+    },
+    {
+      "title": "Oil prices today, October 20th: Brent falls from a 5-month high, but remains close to the $110 mark. - Vietnam.vn",
+      "summary": "Oil prices today, October 20th: Brent falls from a 5-month high, but remains close to the $110 mark. Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSW5sU2FHTERMSkZSTlc3Z1RvVUxBWlFxYldoRWFfRGNMZVBuYjdKWHdTbkFJNFkyUlNRQW5rMXhJcUpwYUwzRDl6bUV6c1VGY1VwcERGd21pUzk0YU0tUDB1ZWZtQXdTYXQzN091dTFURDBnYWgxaVFPaTF3dWxwTURSUTBCdThBbDhNWEk2LS14V1FQWTZiOEtuNjQ1TGFGNUpn?oc=5",
+      "source": "Vietnam.vn",
+      "publishedAt": "2026-10-20T02:13:08+00:00",
+      "category": "Petrol & Enerji",
+      "titleTr": "Petrol fiyatları bugün, 20 Ekim: Brent 5 ayın en yüksek seviyesinden düşüyor ancak 110 dolar seviyesinin yakınında kalmayı sürdürüyor. - Vietnam.vn",
+      "summaryTr": "Petrol fiyatları bugün, 20 Ekim: Brent 5 ayın en yüksek seviyesinden düşüyor ancak 110 dolar seviyesinin yakınında kalmayı sürdürüyor. Vietnam.vn",
+      "importance": "Orta",
       "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
@@ -2005,8 +2053,8 @@
       "source": "TradingNEWS",
       "publishedAt": "2026-10-20T01:51:56+00:00",
       "category": "Kripto",
-      "titleTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı - TradingNEWS",
-      "summaryTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı",
+      "titleTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ederken, Ekim Ayı Ödemeleri 617 Milyon Dolara Ulaştı - TradingNEWS",
+      "summaryTr": "Bitcoin ETF Akışı — IBIT ETF Cuma Günü 82,4 Milyon Dolarlık Çıkışa Öncülük Ediyor, Ekim İtfaları 617 Milyon Dolara Ulaştı",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -2017,7 +2065,7 @@
       "source": "CNBC TV18",
       "publishedAt": "2026-10-20T01:50:02+00:00",
       "category": "Fed & Faiz",
-      "titleTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düştü - CNBC TV18",
+      "titleTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düşüyor - CNBC TV18",
       "summaryTr": "Yatırımcılar ABD Merkez Bankası Kararını Beklerken Asya Ticaretinde Altın Düştü CNBC TV18",
       "importance": "Yüksek",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
@@ -2042,7 +2090,7 @@
       "publishedAt": "2026-10-20T01:37:00+00:00",
       "category": "Fed & Faiz",
       "titleTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerinde baskı oluşturmasıyla düşüşünü sürdürüyor - TradingView",
-      "summaryTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerindeki baskısıyla düşüşünü sürdürüyor TradingView",
+      "summaryTr": "Altın, enerji kaynaklı enflasyonun faiz patikası üzerinde baskı oluşturmasıyla düşüşünü sürdürüyor TradingView",
       "importance": "Yüksek",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -2054,7 +2102,7 @@
       "publishedAt": "2026-10-20T01:35:12+00:00",
       "category": "Fed & Faiz",
       "titleTr": "Yeni Zelanda Doları, PBOC'nin Kredi Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor - FXStreet",
-      "summaryTr": "Yeni Zelanda Doları, PBOC'nin Kredi Prime Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor FXStreet",
+      "summaryTr": "Yeni Zelanda Doları, PBOC'nin Kredi Faiz Oranlarını sabit tutmasıyla 0,5650 seviyesi üzerinde istikrarlı seyrediyor FXStreet",
       "importance": "Orta",
       "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
@@ -2069,18 +2117,6 @@
       "summaryTr": "Pump.fun, 8 özel şirket için token ekliyor, e...",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
-    },
-    {
-      "title": "Gold inches up on softer dollar as investors assess Fed rate outlook - Reuters",
-      "summary": "Gold inches up on softer dollar as investors assess Fed rate outlook Reuters",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOLVJCYm9CRFhWY01aUkRqYnVXb0RzRC1RUnhfOEFicHItalFBMnRMc0ZjcWRVcGNnZVg3ZXQ3WXNXeUZLN183enN0NFAtdmxuUHJhRU5jOHlQbTg1TldhNVdtbF9IWU1GZ1BfOEZvTnJpUEhGTE5xUkRSbl9FZVR4NlFJMEE2V1VYZ1hVRzk3SmpJMi1qelE?oc=5",
-      "source": "Reuters",
-      "publishedAt": "2026-10-20T01:33:00+00:00",
-      "category": "Fed & Faiz",
-      "titleTr": "Altın, yatırımcıların Fed'in faiz görünümünü değerlendirmesiyle zayıflayan dolar karşısında biraz yükseldi - Reuters",
-      "summaryTr": "Altın, yatırımcıların Fed'in faiz görünümünü değerlendirmesiyle zayıflayan dolar karşısında biraz yükseldi Reuters",
-      "importance": "Yüksek",
-      "marketImpactTr": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir."
     },
     {
       "title": "Stock market holiday today on October 20: BSE, NSE to remain closed for Dussehra - TradingView",
@@ -2143,6 +2179,18 @@
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
+      "title": "SEC and CFTC Signal Swift Crypto Rulemaking After CLARITY Act Fails - CoinMarketCap",
+      "summary": "SEC and CFTC Signal Swift Crypto Rulemaking After CLARITY Act Fails CoinMarketCap",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVkRoS3BXcWtrTjYyY0Y5d2VoX0JkTEtfZUxRVlFQWU5lOEoyTVdFVjM4UUhaWUhDNjBkckl6TXN1S3M0Q09wZjM3ZDlxeXpLZFlRRlp6d09OMGlqakR1U25VeUw1cHh5TXYwbHNoYVRSQmlzWk5OWEZtQTZyQnV4SllGV0pFV3VnSlVsYVRrMkN5WE9ZUHo1SkZveFp4ckpTdUxYVlQyZF94eVpGaEE?oc=5",
+      "source": "CoinMarketCap",
+      "publishedAt": "2026-10-20T01:08:33+00:00",
+      "category": "Regülasyon",
+      "titleTr": "SEC ve CFTC, CLARITY Yasası Başarısız Olduğunda Kripto Kurallarının Hızlıca Oluşturulacağına Sinyal Verdi - CoinMarketCap",
+      "summaryTr": "SEC ve CFTC, CLARITY Yasasının Başarısız Olması Sonrası Hızlı Kripto Kuralları Oluşturma Sinyali CoinMarketCap",
+      "importance": "Normal",
+      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
+    },
+    {
       "title": "Fuel prices today, October 20th: World oil prices rise, domestic prices remain under significant pressure. - Vietnam.vn",
       "summary": "Fuel prices today, October 20th: World oil prices rise, domestic prices remain under significant pressure. Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORm5ESThUVUJ6Nml3Slo0dnFEenJiXzYtZ2lpeU9iLUFVSHc4LTkyZkhmU2Fmb1RpQXVOdEd5OHJfU0dUNWtwT1hvMlJuZFBudVpQUXhBZlpFMEVBOEdqR3BxMlpuZjJDNi1Ic1hjbEJBNzkyT2lyQWZXOXZQcEp3UEZhanJzWGd2QlVNTTdVVlQ0NklRcHh5dFptX2MwdW5ldnc?oc=5",
@@ -2186,7 +2234,7 @@
       "publishedAt": "2026-10-20T00:44:50+00:00",
       "category": "Küresel Piyasalar",
       "titleTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odakta - Stocktwits",
-      "summaryTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odakta",
+      "summaryTr": "Dow, S&P 500 ve Nasdaq Vadeli İşlemleri Neden Bir Gecede Kayıyor: SNDK, MSTR, NBIS, NKE Hisse Senetleri Odak Noktasında",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
@@ -2222,21 +2270,9 @@
       "publishedAt": "2026-10-20T00:00:29+00:00",
       "category": "Regülasyon",
       "titleTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkım ve Hapisle Karşı Karşıya Bırakabilir - Dubai'de Gözaltına Alındı",
-      "summaryTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkımla Karşı Karşıya Bırakabilir ve Dubai'de Hapis Cezasına çarptırılabilir",
+      "summaryTr": "Dubai'nin Kripto Tuzağı: Yeni Yasalar Teknoloji Girişimcilerini Mali Yıkımla Karşı Karşıya Bırakabilir ve Dubai'de Hapis Cezasına Gözaltına Alınabilir",
       "importance": "Normal",
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
-      "title": "Crude closes mixed after Houthis claim more attacks on Saudi airports, oil facilities - TradingView",
-      "summary": "Crude closes mixed after Houthis claim more attacks on Saudi airports, oil facilities TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPVkkzYmtFTkdNUFBjcEc3VTJ0QlN3aWoxUTRSZklTMnZmeXJWUk13S0RCQTRqcTFBZ0JneHhrUktJbnpENXh4TExnaUJIMjEyWUh6ZnZGRWtTaVduUFNfaktEbGxiaHN4c1FWZDNPZ2thclpxRW9ZWG9ibExvalRyRnF4SENCRTgyc2xUYTVKM2RwMGI2czJQeFNGdTNYdW52bkJVYWI1eHR3eE1QNThlNWJLS0NtaWNwNVFfWFNCbDc4eXFVV292UGZoSXFLZVZUTHd0eWIyOFAtdHFVUWlSRw?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T23:55:33+00:00",
-      "category": "Petrol & Enerji",
-      "titleTr": "Husilerin Suudi havalimanlarına ve petrol tesislerine daha fazla saldırı düzenlediğini iddia etmesinin ardından ham petrol karışık kapandı - TradingView",
-      "summaryTr": "Husilerin Suudi havalimanlarına ve petrol tesislerine daha fazla saldırı düzenlediğini iddia etmesinin ardından ham petrol karışık kapandı TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
     },
     {
       "title": "Illinoisans receive over $750,000 in refunds thanks to crypto regulations - WAND",
@@ -2257,22 +2293,22 @@
       "source": "Reuters",
       "publishedAt": "2026-10-19T23:31:42+00:00",
       "category": "Küresel Piyasalar",
-      "titleTr": "Nasdaq, çip ve yapay zeka bağlantılı hisse senetlerinin toparlanmasıyla tırmanıyor - Reuters",
+      "titleTr": "Nasdaq, çip ve yapay zeka bağlantılı hisselerin toparlanmasıyla tırmanıyor - Reuters",
       "summaryTr": "Nasdaq, çip ve yapay zeka bağlantılı hisselerin toparlanmasıyla tırmanıyor Reuters",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
-      "title": "Brent Steadies as Traders Monitor Mideast Flows - TradingView",
-      "summary": "Brent Steadies as Traders Monitor Mideast Flows TradingView",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMFlOSmNRR0pPVW5xYVlVeGUyc3hmNTFjSVE1RFpHaktKUGttaWY5UWpINHFsTXIwcGZKNVdwU3ZDRWlfZUJOWFlSVlZLT2w1UW50Tl9BMGpybTZRSGVrUTM0VjJVMFJMZG5keXhZRGdTQy1zbG9veG9XdTlNLVFaVWIybGZfbFd3MGhhSnNNVl9HQWFHR3JyUWFaOEhjZU0?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T23:31:08+00:00",
-      "category": "Petrol & Enerji",
-      "titleTr": "Yatırımcıların Orta Doğu Akışlarını İzlemesiyle Brent Durgunlaşıyor - TradingView",
-      "summaryTr": "Yatırımcılar Orta Doğu Akışlarını Takip Ederken Brent Dengesini koruyor TradingView",
-      "importance": "Orta",
-      "marketImpactTr": "Petrol fiyatları enflasyon beklentilerini, enerji şirketlerini ve küresel büyümeyi etkileyebilir."
+      "title": "Searching for the Next Big Crypto? Solana and Tron Struggle as - openPR.com",
+      "summary": "Searching for the Next Big Crypto? Solana and Tron Struggle as openPR.com",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOc2pIZk94T0pudTBzTzg0UWxSS2NrdU02bzZ0clJReWpaT2wyTl8yVWY1cFdWcG4zXzVvZUQzVF82ZWtoWGRUWnZQT2o4LUVfMzNDNWxuMzNZYVl4Ym1HZDlmWkYzeU9mc2hOV015UzBoMnFtZlF5WHRvMEJ1X3ZVNXptcVIxOENVbE9Hc3FzaXphb1NYQVVlek5NTThVdw?oc=5",
+      "source": "openPR.com",
+      "publishedAt": "2026-10-19T23:18:31+00:00",
+      "category": "Kripto",
+      "titleTr": "Bir Sonraki Büyük Kripto'yu mu Arıyorsunuz? Solana ve Tron Mücadelesi - openPR.com",
+      "summaryTr": "Bir Sonraki Büyük Kripto'yu mu Arıyorsunuz? openPR.com olarak Solana ve Tron Mücadelesi",
+      "importance": "Normal",
+      "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
     {
       "title": "China says ready to address each other's concerns after Sitharaman flags trade barriers - The Economic Times",
@@ -2305,7 +2341,7 @@
       "source": "SBS 뉴스",
       "publishedAt": "2026-10-19T22:52:49+00:00",
       "category": "Küresel Piyasalar",
-      "titleTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisse Senetlerinde Pazarlık Avcılığı Teknolojinin Yükselişine Öncülük Ediyor - SBS",
+      "titleTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisselerinde Pazarlık Avcılığı Teknolojinin Yükselişine Öncülük Ediyor - SBS",
       "summaryTr": "Küresel Piyasa Gözlemi: Yarı İletken ve Yapay Zeka Hisse Senetlerinde Pazarlık Avcılığı, Teknolojinin Yükselişine Öncülük Ediyor SBS",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
@@ -2317,20 +2353,8 @@
       "source": "Coinfomania",
       "publishedAt": "2026-10-19T22:44:51+00:00",
       "category": "Kripto",
-      "titleTr": "Solana, Geliştiriciler için Geliştirilmiş JavaScript SDK v3'ü Açıkladı - Coinfomania",
+      "titleTr": "Solana, Geliştiriciler için Gelişmiş JavaScript SDK v3'ü Açıkladı - Coinfomania",
       "summaryTr": "Solana, Geliştiriciler için Geliştirilmiş JavaScript SDK v3'ü Açıkladı Coinfomania",
-      "importance": "Normal",
-      "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
-    },
-    {
-      "title": "Altcoins suffer their worst weekend since April – Is Bitcoin taking over? - AMBCrypto",
-      "summary": "Altcoins suffer their worst weekend since April – Is Bitcoin taking over? AMBCrypto",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcnZQQXpWb1JvU2pEdlRraGFHdkRSRlZVU0R3WVFLN2NvWU1MUGVfRnp2WURQV09oWldBb1FzelItanBWZ1VON3pWZTlLQlptcXo5NGp1ZHRJTE9BU2V2QTVNc3lWdWNGNFVvSTFPQ0Jkdm91UUdqX3l0TGI5b1Q2Zjg0b240ZXFwMTctSGhFRUpjVjlIdU1rbg?oc=5",
-      "source": "AMBCrypto",
-      "publishedAt": "2026-10-19T22:00:38+00:00",
-      "category": "Kripto",
-      "titleTr": "Altcoinler Nisan ayından bu yana en kötü hafta sonunu yaşıyor – Bitcoin mi devralıyor? -AMBCrypto",
-      "summaryTr": "Altcoinler Nisan ayından bu yana en kötü hafta sonunu yaşıyor – Bitcoin mi devralıyor? AMBCrypto",
       "importance": "Normal",
       "marketImpactTr": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin."
     },
@@ -2377,8 +2401,8 @@
       "source": "TradingView",
       "publishedAt": "2026-10-19T21:00:00+00:00",
       "category": "Regülasyon",
-      "titleTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Baskılarla Karşı Karşıya - TradingView",
-      "summaryTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Bir Baskıyla Karşı Karşıya TradingView",
+      "titleTr": "Güney Kore, Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Bir Baskıyla Karşı Karşıya - TradingView",
+      "summaryTr": "Güney Kore Kripto'nun Vergi Artışını 2029'a Kadar Ertelemek İçin Yeni Baskılarla Karşı Karşıya TradingView",
       "importance": "Normal",
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
@@ -2395,30 +2419,6 @@
       "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
     },
     {
-      "title": "Nuveen Variable Rate Preferred & Income Fund to use Cayman subsidiaries for Regulation S and TEFRA bond exposure - TradingView",
-      "summary": "Nuveen Variable Rate Preferred & Income Fund to use Cayman subsidiaries for Regulation S and TEFRA bond exposure TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQYjVOc1M3b1ByUlF4YnJLaGJpV2hrRHdzVWs4T2p5R2EwQ21UU1M4Vjh3NDRibVNocnpNb200bm5SWlRqRHFHcUtfclJLZ29wanJQUmUxVmNaYnhrdUxLRWQybm9FOEtNV1NBR05fdVBHd0QwQlVEOFlXTmxmVUNXNDZTekJUcUFBdzc4VHBhRnF6eXNMTTNLQlc2alRUOFU3X0NjdUFEU0NLclk0OTBVd0lHRjUzTzBhdmlYWWdxQWNNUDNIYWgwZi1peXJEVlpEckk5TEtLdHMwaFRYYnlCTGl1WlpUOTFHYVNYUmFyMmpGRHpEdUFUSTh1anlBNlZvQnc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T20:53:00+00:00",
-      "category": "Regülasyon",
-      "titleTr": "Nuveen Değişken Oranlı Tercih Edilen ve Gelir Fonu, Regülasyon S ve TEFRA tahvil riski için Cayman iştiraklerini kullanacak - TradingView",
-      "summaryTr": "Nuveen Değişken Oranlı Tercih Edilen ve Gelir Fonu, Regülasyon S ve TEFRA tahvil riski için Cayman iştiraklerini kullanacak TradingView",
-      "importance": "Orta",
-      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
-      "title": "AES secures EU and New York approvals for Horizon merger, closing still subject to conditions - TradingView",
-      "summary": "AES secures EU and New York approvals for Horizon merger, closing still subject to conditions TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOSlFaSVZQNzVoTnhRSkh6d2pDUzg0SmpObXVmZEV4d19HbENPZkJ1ZEcyY0tvS2FVUXl4Tl9zMmV2STVaU01ESjdLd2NSMlFrQ1FiNG5xamx2elZ4cW8xVVBuTTJwSF8yelVhcWF3dXVfaXoxb25CT1NmVWFuRjNNUEFyQ25PQlA4VEpfXzVUaU5DNk1MVmRHNHBYWVhMY00xMk5QLVE1d2h2TW9aaS1ZRFAxUXNBaUQwMEU1RndvU3p6NnpqQ2IwTDVEalZqQnhVSHRSdFRiRVloS3ZuUzhLaThTNW55WVR5SWc?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T20:53:00+00:00",
-      "category": "Regülasyon",
-      "titleTr": "AES, Horizon birleşmesi için AB ve New York onaylarını aldı ve hala koşullara bağlı olarak kapanıyor - TradingView",
-      "summaryTr": "AES, Horizon birleşmesi için AB ve New York onaylarını aldı ve hâlâ koşullara bağlı olarak kapanıyor TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Düzenleyici kararlar kripto varlıklara erişimi ve kurumsal yatırımları etkileyebilir."
-    },
-    {
       "title": "AGNC Investment Corp reports Q3 2026 comprehensive loss of $1.28/share, TNBV $7.13 - TradingView",
       "summary": "AGNC Investment Corp reports Q3 2026 comprehensive loss of $1.28/share, TNBV $7.13 TradingView",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNd0lyX0NSbnhCMndBTkU1SjJFTS1meUtNV3d1bi15SnBoR0paS0k2TUIyUG5ISVJrb3A5ckFTaENEM0pTcHJ1U1NRNUZaOXN4VE1jRDlucUVVYXA5aHA3WHN3QTlYYzcxdDBrWERlaTBsWEtDYkc4cVlJUjJYY09LU3ZsZktqaVRQRU1zUlQ2N2lsSUdUX0ZCME9fMnV0TWs1R2dyMnpOaXhzZ21qNHFMUF9uc0ZxYVJzTWFZMVJmR0RQdi12RnlBUl9fZ1VKOHhnX3pubjFDd18?oc=5",
@@ -2426,7 +2426,7 @@
       "publishedAt": "2026-10-19T20:13:00+00:00",
       "category": "Küresel Piyasalar",
       "titleTr": "AGNC Investment Corp, 2026 yılının üçüncü çeyreğinde hisse başına 1,28 $, TNBV ise 7,13 $ kapsamlı zarar bildirdi - TradingView",
-      "summaryTr": "AGNC Investment Corp, 2026 yılının 3. çeyreğinde hisse başına 1,28 ABD Doları, TNBV ise 7,13 ABD Doları tutarında kapsamlı zarar bildirdi TradingView",
+      "summaryTr": "AGNC Investment Corp, 2026 yılının 3. çeyreğinde hisse başına 1,28 ABD doları, TNBV ise 7,13 ABD doları tutarında kapsamlı zarar bildirdi TradingView",
       "importance": "Normal",
       "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
@@ -2437,10 +2437,22 @@
       "source": "Vermilion County First",
       "publishedAt": "2026-10-19T18:45:05+00:00",
       "category": "İstihdam & Enflasyon",
-      "titleTr": "İşsizlik Oranı Üst Üste Üçüncü Ayda Düştü - İlk Önce Vermilion İlçesi",
-      "summaryTr": "İşsizlik Oranı Üst Üste Üç Ay Boyunca Düştü Vermilion County Birinci",
+      "titleTr": "İşsizlik Oranı Üst Üste Üçüncü Ayda Düştü - Vermilion İlçesi Birinci",
+      "summaryTr": "İşsizlik Oranı Art arda Üçüncü Ayda Düştü Vermilion County Birinci",
       "importance": "Yüksek",
       "marketImpactTr": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir."
+    },
+    {
+      "title": "J.P. Morgan Releases 2027 Long-Term Capital Market Assumptions Projecting 7.0% Return for 60/40 Portfolio Over 10-15 Years - TradingView",
+      "summary": "J.P. Morgan Releases 2027 Long-Term Capital Market Assumptions Projecting 7.0% Return for 60/40 Portfolio Over 10-15 Years TradingView",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOU29RQjRYZmRQelA5RVlmSDVnbk1VX3BheXUwczZ0NWkwVmpEUFNWR2ZaZTllRm0wR2J5ZjFzWElJME9zVF81OFhoWG43SWlPWHE2LWpuREtJS21GRGVVRUM5NTJaSVNSajZtY0EzOHI1Q1J3RGl0MFdiQWx1cjAyZF92M183NFF4c21WaTctSml1S2lGRU9VNFBfLWZKY01RVWc3WU5OMXZFaWk3dW9lUThDRS1jLWRJZC1Lb2ZEV0dwaXhfN05WR0NhclpVWnlMSXl2RXFOcHVxTFA3VmV4a2RIRFkyNWxjWWtGeUdTMG1QdnNXN3F0b0tYQmZxWmJXOWpOREdyRmRaVHdielE?oc=5",
+      "source": "TradingView",
+      "publishedAt": "2026-10-19T16:00:00+00:00",
+      "category": "Küresel Piyasalar",
+      "titleTr": "J.P. Morgan, 10-15 Yıl İçinde 60/40 Portföyünün %7,0 Getiri Öngörülen 2027 Uzun Vadeli Sermaye Piyasası Varsayımlarını Açıkladı - TradingView",
+      "summaryTr": "J.P. Morgan, 10-15 Yılda 60/40 Portföy İçin %7,0 Getiri Öngörülen 2027 Uzun Vadeli Sermaye Piyasası Varsayımlarını Açıkladı TradingView",
+      "importance": "Normal",
+      "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
       "title": "Nasdaq 100 and DAX outlook: Global stocks likely to stay under pressure for a while - FOREX.com",
@@ -2501,18 +2513,6 @@
       "summaryTr": "Hassett, TÜFE Verilerinin Enflasyonun 'Biraz Çalışmaya' İhtiyaç Duyduğunu Gösterdiğini Söyledi Yahoo Finance",
       "importance": "Yüksek",
       "marketImpactTr": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir."
-    },
-    {
-      "title": "FM Sitharaman flags global capital moving towards US, AI-linked markets as a 'concern' for India in 2027 - TradingView",
-      "summary": "FM Sitharaman flags global capital moving towards US, AI-linked markets as a 'concern' for India in 2027 TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNQzZIRlN2WjZsVmpIaTFwVGVxLXY1dU9zcGZuSjdETUF0NThBTFo3MVZ2VWhpTDlwdWMzNEEzcnBCaXgxRnZqb1hsRUhGcG9jSG9xVVhrVFYwcHRraDdHYWpmSFoweW81LVBFME1rMzdQY0RvUzZaTzhrbllCZW9PNXA2aWoxWGRGcjcxaVpyUUxneW9WMXVfVTZydjlrdEs1QlIxaEZENnFYVG5aNGM3TmYxRmtMbUNfMUdtcUNocWxMTXJmVEV3aUtwWDBpcW5RLVdqcENVZWRqaVpBT3ljeHZ5a3dDTXdvRTRCOEZOaw?oc=5",
-      "source": "TradingView",
-      "publishedAt": "2026-10-19T13:50:47+00:00",
-      "category": "Küresel Piyasalar",
-      "titleTr": "FM Sitharaman, küresel sermayenin ABD ve yapay zeka bağlantılı pazarlara yönelmesini 2027'de Hindistan için bir 'endişe' olarak işaretledi - TradingView",
-      "summaryTr": "FM Sitharaman, 2027'de küresel sermayenin ABD ve yapay zeka bağlantılı pazarlara yönelmesini Hindistan için bir 'endişe' olarak işaretledi TradingView",
-      "importance": "Normal",
-      "marketImpactTr": "Dolar, tahvil getirileri ve küresel risk iştahındaki değişimler farklı piyasalara yansıyabilir."
     },
     {
       "title": "Canada's annual inflation rate rose to 3.1% in September - Reuters",
