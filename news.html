@@ -88,7 +88,7 @@ button{cursor:pointer}
 
 <style id="vcs-mobile-app-redesign-v1">
 /* VCryptoScope mobile-first app layout */
-@media (max-width:740px){
+@media (max-width:740px) and (hover: none) and (pointer: coarse){
   :root{color-scheme:dark}
   html{width:100%;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;scroll-padding-top:12px}
   body{width:100%;max-width:100%;min-width:0;margin:0!important;padding:0!important;overflow-x:hidden!important;font-size:14px;line-height:1.45}
@@ -162,7 +162,7 @@ button{cursor:pointer}
   #vcs-mobile-bottom-nav .vcs-active{color:#35dccb!important;background:rgba(42,215,198,.12)!important;border-color:rgba(42,215,198,.18)!important}
   body.vcs-mobile-app{padding-bottom:0!important}
 }
-@media (max-width:380px){
+@media (max-width:380px) and (hover: none) and (pointer: coarse){
   .wrap,.app,.container,main.wrap,main.app{padding-left:10px!important;padding-right:10px!important}
   .mini-grid,.stats{gap:7px!important}
   .card,.panel,.metric,.acard,.news-card{padding:11px!important}
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <script id="vcs-mobile-bottom-nav-script">
 (function(){
   // Match navigation to the available viewport width, not device identity.
-  var mobile=window.matchMedia('(max-width: 740px)').matches;
+  var mobile=window.matchMedia('(max-width: 740px) and (hover: none) and (pointer: coarse)').matches;
   if(!mobile||document.getElementById('vcs-mobile-bottom-nav'))return;
   document.body.classList.add('vcs-mobile-app');
   var path=location.pathname.toLowerCase();
