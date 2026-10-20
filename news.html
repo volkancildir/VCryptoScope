@@ -3,7 +3,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="icon.svg?v=8">
 <title>VCryptoScope Haberleri</title>
 <style>
@@ -170,7 +170,7 @@ button{cursor:pointer}
   #vcs-mobile-bottom-nav{left:0!important;right:0!important;padding:4px!important}
 }
 </style>
-<link rel="stylesheet" href="./mobile.css?v=19">
+<link rel="stylesheet" href="./mobile.css?v=20">
 </head>
 <body>
 <div class="container">
@@ -275,9 +275,8 @@ document.addEventListener('DOMContentLoaded',function(){
 </script>
 <script id="vcs-mobile-bottom-nav-script">
 (function(){
-  var ua=navigator.userAgent||'';
-  var standalone=(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
-  var mobile=(window.matchMedia&&window.matchMedia('(max-width: 740px)').matches)||standalone||/Android|iPhone|iPad|iPod/i.test(ua);
+  // Match navigation to the available viewport width, not device identity.
+  var mobile=window.matchMedia('(max-width: 740px)').matches;
   if(!mobile||document.getElementById('vcs-mobile-bottom-nav'))return;
   document.body.classList.add('vcs-mobile-app');
   var path=location.pathname.toLowerCase();
