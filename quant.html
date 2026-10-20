@@ -2,128 +2,7 @@
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#08111f"><meta name="description" content="Kripto fırsat tarayıcı, parametre optimizasyonu ve walk-forward test"><link rel="manifest" href="./manifest.json"><title>VCryptoScope — Quant Tarayıcı</title>
 <style>
 :root{color-scheme:dark;--bg:#08111f;--p:#101d30;--p2:#0a1727;--line:#263850;--t:#edf4ff;--m:#91a4bf;--g:#21d6b0;--r:#ff647c;--y:#f6c85f;--b:#7d9cff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#12233b,#08111f 48%);font:14px/1.5 system-ui,Arial;color:var(--t)}.app{max-width:1200px;margin:auto;padding:16px 12px 36px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}.brand{display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#1ce0bd,#1879bc);display:grid;place-items:center;color:#071421;font-weight:900;font-size:22px}.brand h1{font-size:18px;margin:0}.brand p{font-size:11px;color:var(--m);margin:3px 0 0}.nav{display:flex;gap:6px;flex-wrap:wrap}.nav a,.btn{border:1px solid var(--line);border-radius:9px;background:#0a1727;color:var(--t);padding:8px 11px;text-decoration:none;font-size:12px}.nav .active{background:#163d37;border-color:#1b8c73;color:#68f0d0}.panel{background:linear-gradient(180deg,#111f32f2,#0e1a2bf2);border:1px solid var(--line);border-radius:15px;padding:14px;margin-bottom:12px}.muted,.note,.hint{color:var(--m)}.note{font-size:11px;line-height:1.55;margin-top:10px}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.select{background:#091524;border:1px solid var(--line);border-radius:9px;padding:10px;color:var(--t)}button{font:inherit;cursor:pointer}.btn{cursor:pointer}.btn:disabled{opacity:.5}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.metric{background:var(--p2);border:1px solid #20334b;border-radius:12px;padding:12px}.label{font-size:10px;color:var(--m)}.value{font-size:17px;font-weight:850;overflow-wrap:anywhere}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:760px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid #263850;font-size:12px;white-space:nowrap}th{color:var(--m);font-weight:600}tr:last-child td{border-bottom:0}.up{color:var(--g)}.down{color:var(--r)}.wait{color:var(--y)}.badge{display:inline-block;padding:3px 7px;border:1px solid #31506b;border-radius:30px;font-size:10px}.status{font-size:12px;color:var(--m)}.bar{height:7px;background:#23334b;border-radius:8px;overflow:hidden;margin-top:8px}.bar span{display:block;height:100%;background:var(--g);width:0}.error{color:#ff9aaa;font-size:12px}.sectiontitle{font-size:14px;margin:0 0 10px}.progress{height:5px;background:#20334b;border-radius:6px;overflow:hidden;margin-top:10px}.progress span{display:block;height:100%;background:var(--g);width:0;transition:width .2s}@media(max-width:650px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.app{padding:10px 8px}.panel{padding:11px}.value{font-size:15px}}
-</style><style id="vcs-mobile-alignment-final">
-/* One consistent mobile header layout; overrides older conflicting alignment patches. */
-@media (max-width:740px){
- html,body{max-width:100%!important;overflow-x:hidden!important}
- header.top,header.header{
-  display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;
-  grid-template-rows:auto auto!important;align-items:center!important;
-  gap:10px!important;width:100%!important;box-sizing:border-box!important
- }
- header.top>.brand,header.header>.brand{
-  grid-column:1!important;grid-row:1!important;display:flex!important;
-  flex-direction:row!important;align-items:center!important;gap:9px!important;
-  min-width:0!important;max-width:100%!important
- }
- header.top>.brand .logo,header.header>.brand .logo{
-  display:flex!important;align-items:center!important;justify-content:center!important;
-  flex:0 0 42px!important;width:42px!important;height:42px!important;
-  min-width:42px!important;min-height:42px!important;margin:0!important;padding:0!important
- }
- header.top>.brand .logo img,header.header>.brand .logo img{
-  display:block!important;width:100%!important;height:100%!important;
-  max-width:100%!important;max-height:100%!important;object-fit:contain!important;margin:0!important
- }
- header.top>.brand>div:last-child,header.header>.brand>div:last-child{min-width:0!important;overflow:hidden!important}
- header.top>.brand h1,header.header>.brand h1{
-  margin:0!important;font-size:clamp(17px,4.5vw,22px)!important;
-  line-height:1.2!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important
- }
- header.top>.brand p,header.header>.brand p{
-  margin:3px 0 0!important;font-size:11px!important;line-height:1.25!important;
-  white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important
- }
- header.top>.prefs-btn{grid-column:2!important;grid-row:1!important;justify-self:end!important;align-self:center!important}
- header.top>.actions,header.top>div[style*="display:flex"],header.top>nav.site-nav,
- header.header>.site-nav,header.top>.nav{
-  grid-column:1/-1!important;grid-row:2!important;min-width:0!important;
-  max-width:100%!important;box-sizing:border-box!important
- }
- /* These pages use the shared fixed bottom navigation on phones. */
- header.top #pageNav,header.top .site-nav,header.header .site-nav,.top .nav{display:none!important}
- header.top>.actions,header.top>div[style*="display:flex"]{
-  display:flex!important;flex-wrap:wrap!important;align-items:center!important;
-  justify-content:space-between!important;gap:8px!important;width:100%!important
- }
- header.top .status{flex:1 1 120px!important;min-width:0!important}
- header.top #refreshBtn,header.top #refreshAll{flex:0 0 auto!important;max-width:100%!important;white-space:nowrap!important}
- /* Quant has no generated bottom bar, so keep its own nav visible and scrollable. */
- header.top>.nav{
-  display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;
-  gap:7px!important;justify-content:flex-start!important;scrollbar-width:thin!important;
-  -webkit-overflow-scrolling:touch!important
- }
- header.top>.nav>a{flex:0 0 auto!important;white-space:nowrap!important}
- #vcs-mobile-bottom-nav{
-  left:0!important;right:0!important;width:100%!important;max-width:none!important;
-  margin:0 auto!important;transform:none!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
-  align-items:stretch!important;justify-items:stretch!important
- }
- #vcs-mobile-bottom-nav>a,#vcs-mobile-bottom-nav>button{
-  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
-  min-width:0!important;width:100%!important;max-width:none!important;height:58px!important;min-height:58px!important;
-  margin:0!important;padding:5px 0!important;box-sizing:border-box!important;gap:5px!important
- }
- #vcs-mobile-bottom-nav svg{display:block!important;flex:0 0 20px!important;width:20px!important;height:20px!important;margin:0!important}
- #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;margin:0!important;padding:0!important;text-align:center!important;white-space:nowrap!important;font-size:10px!important;line-height:12px!important}
- body.vcs-mobile-app{padding-bottom:0!important}
-}
-</style>
-
-<style id="vcs-mobile-brand-optical-align-v2">
-/* Actual fix: lock the logo and wordmark to the same centered 42px row on every page. */
-@media (max-width:740px){
-  header.top .brand, header.header .brand, .app header .brand, main header .brand{
-    display:grid!important;
-    grid-template-columns:42px minmax(0,1fr)!important;
-    grid-template-rows:minmax(42px,auto)!important;
-    align-items:center!important;
-    align-content:center!important;
-    justify-content:start!important;
-    column-gap:10px!important;
-    row-gap:0!important;
-    min-width:0!important;
-    min-height:42px!important;
-    max-width:100%!important;
-    flex-direction:initial!important;
-  }
-  header.top .brand>.logo, header.header .brand>.logo, .app header .brand>.logo, main header .brand>.logo{
-    grid-column:1!important;grid-row:1!important;
-    display:grid!important;place-items:center!important;
-    width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;
-    max-width:42px!important;max-height:42px!important;
-    margin:0!important;padding:0!important;align-self:center!important;
-    flex:none!important;transform:none!important;position:relative!important;top:0!important;
-  }
-  header.top .brand>.logo img, header.header .brand>.logo img, .app header .brand>.logo img, main header .brand>.logo img{
-    display:block!important;width:42px!important;height:42px!important;
-    min-width:42px!important;min-height:42px!important;max-width:42px!important;max-height:42px!important;
-    object-fit:contain!important;object-position:center!important;margin:0!important;padding:0!important;
-    vertical-align:middle!important;transform:none!important;
-  }
-  header.top .brand>div:not(.logo), header.header .brand>div:not(.logo), .app header .brand>div:not(.logo), main header .brand>div:not(.logo){
-    grid-column:2!important;grid-row:1!important;
-    display:flex!important;flex-direction:column!important;
-    justify-content:center!important;align-items:flex-start!important;
-    align-self:center!important;min-width:0!important;min-height:42px!important;
-    width:100%!important;max-width:100%!important;overflow:hidden!important;
-    margin:0!important;padding:0!important;gap:0!important;transform:none!important;
-  }
-  header.top .brand h1, header.header .brand h1, .app header .brand h1, main header .brand h1{
-    display:block!important;align-self:auto!important;width:100%!important;
-    margin:0!important;padding:0!important;line-height:22px!important;
-    white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
-  }
-  header.top .brand p, header.header .brand p, .app header .brand p, main header .brand p{
-    display:block!important;align-self:auto!important;width:100%!important;
-    margin:2px 0 0!important;padding:0!important;line-height:14px!important;
-    white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
-  }
-}
-</style>
-
-<style id="vcs-mobile-app-redesign-v1">
+</style><style id="vcs-mobile-app-redesign-v1">
 /* VCryptoScope mobile-first app layout */
 @media (max-width:740px){
   :root{color-scheme:dark}
@@ -207,43 +86,6 @@
   #vcs-mobile-bottom-nav{left:0!important;right:0!important;padding:4px!important}
 }
 </style>
-<style id="vcs-mobile-bottom-nav-final-fix">
-@media (max-width:740px),(display-mode:standalone){
- body #vcs-mobile-bottom-nav{position:fixed!important;display:grid!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;max-width:none!important;margin:0!important;transform:none!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:2px!important;padding:6px 4px calc(6px + env(safe-area-inset-bottom))!important;border-left:0!important;border-right:0!important;border-bottom:0!important;border-radius:14px 14px 0 0!important;box-sizing:border-box!important;}
- body #vcs-mobile-bottom-nav>a,body #vcs-mobile-bottom-nav>button{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;justify-self:stretch!important;width:100%!important;min-width:0!important;max-width:none!important;height:54px!important;min-height:54px!important;max-height:54px!important;margin:0!important;padding:4px 0!important;gap:4px!important;box-sizing:border-box!important;}
- body #vcs-mobile-bottom-nav>a>svg,body #vcs-mobile-bottom-nav>button>svg{display:block!important;position:static!important;width:19px!important;height:19px!important;min-width:19px!important;min-height:19px!important;flex:0 0 19px!important;margin:0!important;}
- body #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0!important;text-align:center!important;font-size:9px!important;line-height:11px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important;box-sizing:border-box!important;}
- body.vcs-mobile-app{padding-bottom:0!important;}
- body> .wrap,body> .app,body> .container,body> main.wrap,body> main.app,body> main.container{padding-bottom:calc(8px + env(safe-area-inset-bottom))!important;}
-}
-</style>
-<style id="vcs-mobile-layout-invariant-v2">
-@media (max-width:740px),(display-mode:standalone){
- body.vcs-mobile-app{padding-bottom:0!important;}
- body>.wrap,body>.app,body>.container,body>main.wrap,body>main.app,body>main.container{padding-bottom:calc(8px + env(safe-area-inset-bottom))!important;}
- body #vcs-mobile-bottom-nav{left:0!important;right:0!important;bottom:0!important;width:100%!important;max-width:none!important;margin:0!important;transform:none!important;}
-}
-</style>
-
-<style id="vcs-mobile-gap-final">
-/* Keep the mobile navigation anchored to the viewport; do not move it into document flow. */
-@media (max-width: 740px), (display-mode: standalone) {
-  body.vcs-mobile-app { padding-bottom: 0 !important; margin-bottom: 0 !important; }
-  body.vcs-mobile-app > main.wrap, body.vcs-mobile-app > main.app,
-  body.vcs-mobile-app > .wrap, body.vcs-mobile-app > .app, body.vcs-mobile-app > .container {
-    padding-bottom: calc(82px + env(safe-area-inset-bottom)) !important;
-    margin-bottom: 0 !important;
-  }
-  body #vcs-mobile-bottom-nav {
-    position: fixed !important; inset: auto 0 0 !important;
-    left: 0 !important; right: 0 !important; bottom: 0 !important;
-    width: 100% !important; max-width: none !important;
-    margin: 0 !important; transform: none !important;
-    border-radius: 16px 16px 0 0 !important;
-    box-sizing: border-box !important; z-index: 9999 !important;
-  }
-}
-</style>
 <link rel="stylesheet" href="./mobile.css?v=18">
 </head><body><main class="app">
 <header class="top"><div class="brand"><div class="logo">V</div><div><h1>VCryptoScope · Quant</h1><p>Fırsat tarayıcı · optimizasyon · test dışı örneklem</p></div></div><nav class="nav"><a href="./index.html?nav=1">Piyasa</a><a href="./analysis.html?nav=1">Teknik analiz</a><a href="./trade.html?nav=1">İşlem planı</a><a class="active" href="./quant.html">Quant tarayıcı</a><a href="./news.html?nav=1">Haberler</a></nav></header>
@@ -303,6 +145,7 @@ const params=new URLSearchParams(location.search);if(params.get('auto')==='1')ru
   ];
   var nav=document.createElement('nav');
   nav.id='vcs-mobile-bottom-nav';
+  nav.style.setProperty('--vcs-mobile-nav-count',String(items.length));
   nav.setAttribute('aria-label','Ana gezinme');
   items.forEach(function(item){
     var el=document.createElement('a');
