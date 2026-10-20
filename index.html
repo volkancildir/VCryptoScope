@@ -648,61 +648,83 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 </style>
 
 <style id="vcs-mobile-screen-fill-fix">
-/* Give the mobile shell a definite viewport height so flex can allocate real leftover space. */
+/* Mobile viewport: header + search stay fixed in the flow; market panel consumes the remaining height. */
 @media (max-width: 740px) {
-  html, body { height: 100%; }
-  body { min-height: 100%; overflow-x: hidden; }
+  html, body { width:100%; min-height:100%; overflow-x:hidden; }
+  body { margin:0; }
   body > main.wrap {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100vh !important;
-    height: 100dvh !important;
-    min-height: 0 !important;
-    padding-bottom: calc(66px + env(safe-area-inset-bottom)) !important;
-    overflow: visible !important;
-  }
-  body.vcs-mobile-app > main.wrap {
-    padding-bottom: calc(66px + env(safe-area-inset-bottom)) !important;
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    height:100vh !important;
+    height:100dvh !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:10px 12px calc(62px + env(safe-area-inset-bottom)) !important;
+    box-sizing:border-box !important;
+    overflow:hidden !important;
   }
   body > main.wrap > header.top,
   body > main.wrap > .vcs-mobile-search {
-    flex: 0 0 auto !important;
+    flex:0 0 auto !important;
   }
   body > main.wrap > #mapView {
-    display: flex !important;
-    flex: 1 1 0% !important;
-    flex-direction: column !important;
-    min-height: 0 !important;
-    overflow: hidden !important;
+    display:flex !important;
+    flex:1 1 0% !important;
+    flex-direction:column !important;
+    min-height:0 !important;
+    overflow:hidden !important;
   }
   #mapView > .vcs-mobile-overview {
-    flex: 0 0 auto !important;
+    order:0 !important;
+    flex:0 0 auto !important;
+    margin-bottom:10px !important;
+  }
+  /* Keep the tree-map control above the expandable panel, never below it. */
+  #mapView > #vcsMobileTreeToggle {
+    order:1 !important;
+    flex:0 0 auto !important;
+    margin:0 0 8px !important;
   }
   #mapView > .vcs-mobile-movers {
-    display: flex !important;
-    flex: 1 1 0% !important;
-    flex-direction: column !important;
-    min-height: 0 !important;
-    margin-bottom: 0 !important;
-    overflow: hidden !important;
+    order:2 !important;
+    display:flex !important;
+    flex:1 1 0% !important;
+    flex-direction:column !important;
+    min-height:0 !important;
+    margin:0 !important;
+    overflow:hidden !important;
+  }
+  #mapView > .vcs-treemap-heading,
+  #mapView > .vcs-treemap-details {
+    display:none !important;
   }
   #vcsMobileMovers {
-    display: flex !important;
-    flex: 1 1 0% !important;
-    flex-direction: column !important;
-    min-height: 0 !important;
+    display:flex !important;
+    flex:1 1 0% !important;
+    flex-direction:column !important;
+    min-height:0 !important;
   }
   #vcsMobileMovers > .vcs-mobile-mover {
-    flex: 1 1 0% !important;
-    min-height: 0 !important;
+    flex:1 1 0% !important;
+    min-height:0 !important;
   }
   #vcsMobileMovers > .sub {
-    flex: 1 1 auto !important;
-    display: flex !important;
-    align-items: center !important;
+    display:flex !important;
+    flex:1 1 auto !important;
+    align-items:center !important;
+  }
+  body > main.wrap > .footer {
+    display:none !important;
   }
   #vcs-mobile-bottom-nav {
-    bottom: 0 !important;
+    position:fixed !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    width:100% !important;
+    margin:0 !important;
+    z-index:2147483000 !important;
   }
 }
 </style>
