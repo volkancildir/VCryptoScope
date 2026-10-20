@@ -151,9 +151,9 @@ button{cursor:pointer}
  .brand .logo img,.brand .logo svg { display:block!important; width:100%!important; height:100%!important; object-fit:contain; }
  .brand h1 { min-width:0; overflow-wrap:anywhere; line-height:1.15!important; margin:0!important; }
  .top>.actions,.top>div[style*="display:flex"] { grid-column:1/-1!important; grid-row:2!important; width:100%!important; min-width:0!important; justify-content:flex-start!important; }
- #vcs-mobile-bottom-nav { left:8px!important; right:8px!important; width:auto!important; max-width:600px!important; margin-left:auto!important; margin-right:auto!important; transform:none!important; grid-template-columns:repeat(5,minmax(0,1fr))!important; align-items:stretch!important; justify-items:stretch!important; }
+ #vcs-mobile-bottom-nav { left:0!important; right:0!important; width:100%!important; max-width:none!important; margin-left:0!important; margin-right:0!important; transform:none!important; grid-template-columns:repeat(5,minmax(0,1fr))!important; align-items:stretch!important; justify-items:stretch!important; }
  #vcs-mobile-bottom-nav>a,#vcs-mobile-bottom-nav>button { display:flex!important; align-items:center!important; justify-content:center!important; justify-self:stretch!important; min-width:0!important; width:100%!important; max-width:none!important; padding:5px 0!important; margin:0!important; box-sizing:border-box!important; }
- #vcs-mobile-bottom-nav svg { display:block!important; flex:0 0 20px!important; width:20px!important; height:20px!important; margin:0 auto!important; }
+ #vcs-mobile-bottom-nav svg { display:block!important; flex:0 0 20px!important; width:20px!important; height:20px!important; margin:0!important; }
  #vcs-mobile-bottom-nav .vcs-label { display:block!important; width:100%!important; margin:0!important; text-align:center!important; white-space:nowrap!important; font-size:10px!important; line-height:12px!important; }
  body.vcs-mobile-app { padding-bottom:0!important; }
 }
@@ -212,7 +212,7 @@ button{cursor:pointer}
  }
  header.top>.nav>a{flex:0 0 auto!important;white-space:nowrap!important}
  #vcs-mobile-bottom-nav{
-  left:0!important;right:0!important;width:auto!important;max-width:600px!important;
+  left:0!important;right:0!important;width:100%!important;max-width:none!important;
   margin:0 auto!important;transform:none!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
   align-items:stretch!important;justify-items:stretch!important
  }
@@ -221,7 +221,7 @@ button{cursor:pointer}
   min-width:0!important;width:100%!important;max-width:none!important;height:58px!important;min-height:58px!important;
   margin:0!important;padding:5px 0!important;box-sizing:border-box!important;gap:5px!important
  }
- #vcs-mobile-bottom-nav svg{display:block!important;flex:0 0 20px!important;width:20px!important;height:20px!important;margin:0 auto!important}
+ #vcs-mobile-bottom-nav svg{display:block!important;flex:0 0 20px!important;width:20px!important;height:20px!important;margin:0!important}
  #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;margin:0!important;padding:0!important;text-align:center!important;white-space:nowrap!important;font-size:10px!important;line-height:12px!important}
  body.vcs-mobile-app{padding-bottom:0!important}
 }
