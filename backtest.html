@@ -351,6 +351,17 @@ a{color:var(--blue);text-decoration:none}.nav{display:flex;gap:8px;flex-wrap:wra
 }
 </style>
 
+<style id="vcs-mobile-gap-final">
+@media (max-width: 740px) {
+  body.vcs-mobile-app { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+  body > .wrap, body > .app, body > .container,
+  body > main.wrap, body > main.app, body > main.container,
+  .wrap, .app, .container, main.wrap, main.app, main.container {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+</style>
 </head><body>
 <div class="wrap">
 <header class="top"><div class="brand"><div class="logo"><img src="icon.svg?v=8" alt="VCryptoScope"></div><div><h1>VCryptoScope</h1><p>Otomatik piyasa tarayıcı</p></div></div><nav class="site-nav" aria-label="Ana gezinme">
