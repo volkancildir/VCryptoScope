@@ -166,7 +166,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 
 <style id="vcrypto-mobile-app-navigation">
 /* Mobile app-style navigation: desktop layout remains unchanged */
-@media (max-width:740px){
+@media (max-width:740px), (display-mode: standalone){
   body{padding-bottom:calc(102px + env(safe-area-inset-bottom))!important}
   html{scroll-padding-bottom:110px}
   #pageNav,.site-nav{
@@ -317,7 +317,7 @@ function renderTreeMap(){
 }
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 $('searchInput').addEventListener('input',renderTable);document.querySelectorAll('th[data-sort]').forEach(th=>th.addEventListener('click',()=>{const key=th.dataset.sort;if(sortKey===key)sortDirection*=-1;else{sortKey=key;sortDirection=key==='market_cap_rank'?1:-1}renderTable()}));const initialParams=new URLSearchParams(location.search);if(initialParams.get('view')==='market')showView('market');else if(initialParams.get('view')==='tree')showView('map');else maybeOpenPreferredHome();refreshData();setInterval(()=>refreshData(false),REFRESH_MS);
-if ('serviceWorker' in navigator && location.protocol.startsWith('http')) { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(err => console.warn('Service worker kaydedilemedi:', err))); }
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').then(reg => reg.update()).catch(err => console.warn('Service worker kaydedilemedi:', err))); }
 </script><script id="vcrypto-theme-script">
 (function(){
  const KEY='vcryptoscopeThemeModeV1';
