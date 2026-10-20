@@ -88,6 +88,17 @@ main{padding-top:18px}.screen{display:none;animation:screenIn .2s ease both}.scr
   .nav-icon{font-size:20px}
   .prototype-note{padding-bottom:10px}
 }
+/* Fix: stretch the active screen content down to the navigation dock instead of leaving an empty gap */
+@media(max-width:699px){
+  .app{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+  main{padding-bottom:0}
+  .screen.active{display:flex;flex-direction:column;min-height:calc(100dvh - 62px - 70px - env(safe-area-inset-bottom) - 18px)}
+  .screen.active > .panel:last-child{flex:1 0 auto}
+  .screen.active > .section-gap:last-child{flex:1 0 auto;display:flex;flex-direction:column}
+  .screen.active > .section-gap:last-child > .panel{flex:1 0 auto}
+  .prototype-note{margin-top:8px;padding-bottom:4px}
+  .bottom-nav{bottom:0}
+}
 @media(max-width:370px){
   .app{padding-left:11px;padding-right:11px}
   .topbar{margin:0 -11px;padding:0 11px}
