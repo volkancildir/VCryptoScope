@@ -2,7 +2,75 @@
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#08111f"><meta name="description" content="Kripto fırsat tarayıcı, parametre optimizasyonu ve walk-forward test"><link rel="manifest" href="./manifest.json"><title>VCryptoScope — Quant Tarayıcı</title>
 <style>
 :root{color-scheme:dark;--bg:#08111f;--p:#101d30;--p2:#0a1727;--line:#263850;--t:#edf4ff;--m:#91a4bf;--g:#21d6b0;--r:#ff647c;--y:#f6c85f;--b:#7d9cff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#12233b,#08111f 48%);font:14px/1.5 system-ui,Arial;color:var(--t)}.app{max-width:1200px;margin:auto;padding:16px 12px 36px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}.brand{display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#1ce0bd,#1879bc);display:grid;place-items:center;color:#071421;font-weight:900;font-size:22px}.brand h1{font-size:18px;margin:0}.brand p{font-size:11px;color:var(--m);margin:3px 0 0}.nav{display:flex;gap:6px;flex-wrap:wrap}.nav a,.btn{border:1px solid var(--line);border-radius:9px;background:#0a1727;color:var(--t);padding:8px 11px;text-decoration:none;font-size:12px}.nav .active{background:#163d37;border-color:#1b8c73;color:#68f0d0}.panel{background:linear-gradient(180deg,#111f32f2,#0e1a2bf2);border:1px solid var(--line);border-radius:15px;padding:14px;margin-bottom:12px}.muted,.note,.hint{color:var(--m)}.note{font-size:11px;line-height:1.55;margin-top:10px}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.select{background:#091524;border:1px solid var(--line);border-radius:9px;padding:10px;color:var(--t)}button{font:inherit;cursor:pointer}.btn{cursor:pointer}.btn:disabled{opacity:.5}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.metric{background:var(--p2);border:1px solid #20334b;border-radius:12px;padding:12px}.label{font-size:10px;color:var(--m)}.value{font-size:17px;font-weight:850;overflow-wrap:anywhere}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:760px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid #263850;font-size:12px;white-space:nowrap}th{color:var(--m);font-weight:600}tr:last-child td{border-bottom:0}.up{color:var(--g)}.down{color:var(--r)}.wait{color:var(--y)}.badge{display:inline-block;padding:3px 7px;border:1px solid #31506b;border-radius:30px;font-size:10px}.status{font-size:12px;color:var(--m)}.bar{height:7px;background:#23334b;border-radius:8px;overflow:hidden;margin-top:8px}.bar span{display:block;height:100%;background:var(--g);width:0}.error{color:#ff9aaa;font-size:12px}.sectiontitle{font-size:14px;margin:0 0 10px}.progress{height:5px;background:#20334b;border-radius:6px;overflow:hidden;margin-top:10px}.progress span{display:block;height:100%;background:var(--g);width:0;transition:width .2s}@media(max-width:650px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.app{padding:10px 8px}.panel{padding:11px}.value{font-size:15px}}
-</style></head><body><main class="app">
+</style><style id="vcs-mobile-alignment-final">
+/* One consistent mobile header layout; overrides older conflicting alignment patches. */
+@media (max-width:740px){
+ html,body{max-width:100%!important;overflow-x:hidden!important}
+ header.top,header.header{
+  display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;
+  grid-template-rows:auto auto!important;align-items:center!important;
+  gap:10px!important;width:100%!important;box-sizing:border-box!important
+ }
+ header.top>.brand,header.header>.brand{
+  grid-column:1!important;grid-row:1!important;display:flex!important;
+  flex-direction:row!important;align-items:center!important;gap:9px!important;
+  min-width:0!important;max-width:100%!important
+ }
+ header.top>.brand .logo,header.header>.brand .logo{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  flex:0 0 42px!important;width:42px!important;height:42px!important;
+  min-width:42px!important;min-height:42px!important;margin:0!important;padding:0!important
+ }
+ header.top>.brand .logo img,header.header>.brand .logo img{
+  display:block!important;width:100%!important;height:100%!important;
+  max-width:100%!important;max-height:100%!important;object-fit:contain!important;margin:0!important
+ }
+ header.top>.brand>div:last-child,header.header>.brand>div:last-child{min-width:0!important;overflow:hidden!important}
+ header.top>.brand h1,header.header>.brand h1{
+  margin:0!important;font-size:clamp(17px,4.5vw,22px)!important;
+  line-height:1.2!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important
+ }
+ header.top>.brand p,header.header>.brand p{
+  margin:3px 0 0!important;font-size:11px!important;line-height:1.25!important;
+  white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important
+ }
+ header.top>.prefs-btn{grid-column:2!important;grid-row:1!important;justify-self:end!important;align-self:center!important}
+ header.top>.actions,header.top>div[style*="display:flex"],header.top>nav.site-nav,
+ header.header>.site-nav,header.top>.nav{
+  grid-column:1/-1!important;grid-row:2!important;min-width:0!important;
+  max-width:100%!important;box-sizing:border-box!important
+ }
+ /* These pages use the shared fixed bottom navigation on phones. */
+ header.top #pageNav,header.top .site-nav,header.header .site-nav{display:none!important}
+ header.top>.actions,header.top>div[style*="display:flex"]{
+  display:flex!important;flex-wrap:wrap!important;align-items:center!important;
+  justify-content:space-between!important;gap:8px!important;width:100%!important
+ }
+ header.top .status{flex:1 1 120px!important;min-width:0!important}
+ header.top #refreshBtn,header.top #refreshAll{flex:0 0 auto!important;max-width:100%!important;white-space:nowrap!important}
+ /* Quant has no generated bottom bar, so keep its own nav visible and scrollable. */
+ header.top>.nav{
+  display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;
+  gap:7px!important;justify-content:flex-start!important;scrollbar-width:thin!important;
+  -webkit-overflow-scrolling:touch!important
+ }
+ header.top>.nav>a{flex:0 0 auto!important;white-space:nowrap!important}
+ #vcs-mobile-bottom-nav{
+  left:8px!important;right:8px!important;width:auto!important;max-width:600px!important;
+  margin:0 auto!important;transform:none!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  align-items:stretch!important;justify-items:stretch!important
+ }
+ #vcs-mobile-bottom-nav>a,#vcs-mobile-bottom-nav>button{
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  min-width:0!important;width:100%!important;max-width:none!important;height:58px!important;min-height:58px!important;
+  margin:0!important;padding:5px 0!important;box-sizing:border-box!important;gap:5px!important
+ }
+ #vcs-mobile-bottom-nav svg{display:block!important;flex:0 0 20px!important;width:20px!important;height:20px!important;margin:0 auto!important}
+ #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;margin:0!important;padding:0!important;text-align:center!important;white-space:nowrap!important;font-size:10px!important;line-height:12px!important}
+ body.vcs-mobile-app{padding-bottom:calc(100px + env(safe-area-inset-bottom))!important}
+}
+</style>
+</head><body><main class="app">
 <header class="top"><div class="brand"><div class="logo">V</div><div><h1>VCryptoScope · Quant</h1><p>Fırsat tarayıcı · optimizasyon · test dışı örneklem</p></div></div><nav class="nav"><a href="./index.html?nav=1">Piyasa</a><a href="./analysis.html?nav=1">Teknik analiz</a><a href="./trade.html?nav=1">İşlem planı</a><a class="active" href="./quant.html">Quant tarayıcı</a><a href="./news.html?nav=1">Haberler</a></nav></header>
 <section class="panel"><div class="controls"><label>Tarama kapsamı <select id="scope" class="select"><option value="20">İlk 20 USDT çifti</option><option value="35" selected>İlk 35 USDT çifti</option><option value="50">İlk 50 USDT çifti</option></select></label><label>Zaman dilimi <select id="tf" class="select"><option value="1h">1 saat</option><option value="4h" selected>4 saat</option><option value="1d">1 gün</option></select></label><button class="btn" id="scan">⟳ Piyasayı tara</button></div><div class="note">Likiditeye göre en yüksek hacimli Binance Spot USDT çiftleri taranır. Her coin için EMA/RSI/ATR parametreleri eğitim bölümünde ızgara aramasıyla seçilir; son %30 veri, optimizasyonda kullanılmayan walk-forward testidir. Ücret ve kayma varsayımları test hesabına dahildir. Bu, kâr garantisi değildir.</div><div class="progress"><span id="progress"></span></div><p class="status" id="status">Başlatmak için “Piyasayı tara” düğmesine bas.</p><p class="error" id="error"></p></section>
 <section class="panel"><h2 class="sectiontitle">Piyasa rejimi</h2><div class="stats"><div class="metric"><div class="label">BTC trendi</div><div class="value" id="btcTrend">—</div></div><div class="metric"><div class="label">Tarama kapsamı</div><div class="value" id="universe">—</div></div><div class="metric"><div class="label">Testi geçen strateji</div><div class="value" id="passing">—</div></div><div class="metric"><div class="label">Güncelleme</div><div class="value" id="updated">—</div></div></div></section>
