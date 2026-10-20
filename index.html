@@ -934,6 +934,18 @@ document.addEventListener('DOMContentLoaded',function(){
     el.innerHTML=icons[item.id]+'<span class="vcs-label">'+item.label+'</span>';
     if(item.id===active){el.className='vcs-active';el.setAttribute('aria-current','page');}
     if(item.id==='menu')el.addEventListener('click',function(){if(typeof window.openVcsTools==='function')window.openVcsTools()});
+    else if(isIndex&&(item.id==='market'||item.id==='coins'))el.addEventListener('click',function(e){
+      e.preventDefault();
+      var nextView=item.id==='coins'?'list':'map';
+      try{
+        var nextUrl=new URL(window.location.href);
+        nextUrl.searchParams.set('mobileView',nextView);
+        window.history.replaceState({},'',nextUrl.pathname+nextUrl.search+nextUrl.hash);
+      }catch(err){}
+      if(typeof window.showView==='function')window.showView(item.id==='coins'?'market':'map');
+      nav.querySelectorAll('a,button').forEach(function(node){node.classList.remove('vcs-active');node.removeAttribute('aria-current')});
+      el.classList.add('vcs-active');el.setAttribute('aria-current','page');
+    });
     nav.appendChild(el);
   });
   document.body.appendChild(nav);
