@@ -89,12 +89,12 @@ button{cursor:pointer}
 <style id="vcs-mobile-bottom-nav-style">
 #vcs-mobile-bottom-nav{display:none}
 @media(max-width:740px),(display-mode:standalone){
- body.vcs-mobile-app{padding-bottom:calc(100px + env(safe-area-inset-bottom))!important}
+ body.vcs-mobile-app{padding-bottom:0!important}
  #pageNav,.site-nav{display:none!important}
  #vcs-mobile-bottom-nav{
   position:fixed!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
-  left:10px!important;right:10px!important;bottom:calc(9px + env(safe-area-inset-bottom))!important;
-  width:auto!important;max-width:600px!important;margin:0 auto!important;transform:none!important;
+  left:0!important;right:0!important;bottom:calc(9px + env(safe-area-inset-bottom))!important;
+  width:auto!important;max-width:none!important;margin:0!important;transform:none!important;
   z-index:2147483000!important;gap:3px!important;padding:7px!important;box-sizing:border-box!important;
   border:1px solid rgba(123,151,183,.2)!important;border-radius:20px!important;
   background:rgba(8,15,29,.97)!important;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
@@ -155,7 +155,7 @@ button{cursor:pointer}
  #vcs-mobile-bottom-nav>a,#vcs-mobile-bottom-nav>button { display:flex!important; align-items:center!important; justify-content:center!important; justify-self:stretch!important; min-width:0!important; width:100%!important; max-width:none!important; padding:5px 0!important; margin:0!important; box-sizing:border-box!important; }
  #vcs-mobile-bottom-nav svg { display:block!important; flex:0 0 20px!important; width:20px!important; height:20px!important; margin:0 auto!important; }
  #vcs-mobile-bottom-nav .vcs-label { display:block!important; width:100%!important; margin:0!important; text-align:center!important; white-space:nowrap!important; font-size:10px!important; line-height:12px!important; }
- body.vcs-mobile-app { padding-bottom:calc(100px + env(safe-area-inset-bottom))!important; }
+ body.vcs-mobile-app { padding-bottom:0!important; }
 }
 </style>
 <style id="vcs-mobile-alignment-final">
@@ -212,7 +212,7 @@ button{cursor:pointer}
  }
  header.top>.nav>a{flex:0 0 auto!important;white-space:nowrap!important}
  #vcs-mobile-bottom-nav{
-  left:8px!important;right:8px!important;width:auto!important;max-width:600px!important;
+  left:0!important;right:0!important;width:auto!important;max-width:600px!important;
   margin:0 auto!important;transform:none!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
   align-items:stretch!important;justify-items:stretch!important
  }
@@ -223,7 +223,7 @@ button{cursor:pointer}
  }
  #vcs-mobile-bottom-nav svg{display:block!important;flex:0 0 20px!important;width:20px!important;height:20px!important;margin:0 auto!important}
  #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;margin:0!important;padding:0!important;text-align:center!important;white-space:nowrap!important;font-size:10px!important;line-height:12px!important}
- body.vcs-mobile-app{padding-bottom:calc(100px + env(safe-area-inset-bottom))!important}
+ body.vcs-mobile-app{padding-bottom:0!important}
 }
 </style>
 
@@ -285,7 +285,7 @@ button{cursor:pointer}
   :root{color-scheme:dark}
   html{width:100%;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;scroll-padding-top:12px}
   body{width:100%;max-width:100%;min-width:0;margin:0!important;padding:0!important;overflow-x:hidden!important;font-size:14px;line-height:1.45}
-  .wrap,.app,.container,main.wrap,main.app,.container{width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;padding:14px 13px calc(108px + env(safe-area-inset-bottom))!important;box-sizing:border-box!important}
+  .wrap,.app,.container,main.wrap,main.app,.container{width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;padding:14px 13px calc(68px + env(safe-area-inset-bottom))!important;box-sizing:border-box!important}
   header.top,header.header,.header{
     position:relative!important;top:auto!important;z-index:20!important;
     display:flex!important;flex-wrap:wrap!important;align-items:center!important;
@@ -337,8 +337,8 @@ button{cursor:pointer}
   .progress{max-width:100%!important}
   footer{max-width:100%!important;margin-top:18px!important}
   #vcs-mobile-bottom-nav{
-    position:fixed!important;left:10px!important;right:10px!important;bottom:calc(8px + env(safe-area-inset-bottom))!important;
-    z-index:2147483000!important;width:auto!important;max-width:520px!important;margin:0 auto!important;
+    position:fixed!important;left:0!important;right:0!important;bottom:calc(8px + env(safe-area-inset-bottom))!important;
+    z-index:2147483000!important;width:auto!important;max-width:none!important;margin:0!important;
     display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:3px!important;
     padding:6px!important;border:1px solid rgba(130,160,205,.22)!important;border-radius:19px!important;
     background:rgba(8,15,29,.96)!important;backdrop-filter:blur(20px)!important;-webkit-backdrop-filter:blur(20px)!important;
@@ -353,17 +353,17 @@ button{cursor:pointer}
   #vcs-mobile-bottom-nav svg{display:block!important;width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;flex:0 0 20px!important;margin:0!important}
   #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0 1px!important;text-align:center!important;white-space:nowrap!important;font-size:9px!important;line-height:11px!important;overflow:hidden!important}
   #vcs-mobile-bottom-nav .vcs-active{color:#35dccb!important;background:rgba(42,215,198,.12)!important;border-color:rgba(42,215,198,.18)!important}
-  body.vcs-mobile-app{padding-bottom:calc(100px + env(safe-area-inset-bottom))!important}
+  body.vcs-mobile-app{padding-bottom:0!important}
 }
 @media (max-width:380px){
   .wrap,.app,.container,main.wrap,main.app{padding-left:10px!important;padding-right:10px!important}
   .mini-grid,.stats{gap:7px!important}
   .card,.panel,.metric,.acard,.news-card{padding:11px!important}
   .brand h1{font-size:17px!important}
-  #vcs-mobile-bottom-nav{left:6px!important;right:6px!important;padding:4px!important}
+  #vcs-mobile-bottom-nav{left:0!important;right:0!important;padding:4px!important}
 }
 </style>
-<link rel="stylesheet" href="./mobile.css?v=4">
+<link rel="stylesheet" href="./mobile.css?v=13">
 
 <style id="vcs-mobile-bottom-nav-final-fix">
 @media (max-width:740px),(display-mode:standalone){
@@ -373,6 +373,13 @@ button{cursor:pointer}
  body #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0!important;text-align:center!important;font-size:9px!important;line-height:11px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important;box-sizing:border-box!important;}
  body.vcs-mobile-app{padding-bottom:0!important;}
  body> .wrap,body> .app,body> .container,body> main.wrap,body> main.app,body> main.container{padding-bottom:calc(68px + env(safe-area-inset-bottom))!important;}
+}
+</style>
+<style id="vcs-mobile-layout-invariant-v2">
+@media (max-width:740px),(display-mode:standalone){
+ body.vcs-mobile-app{padding-bottom:0!important;}
+ body>.wrap,body>.app,body>.container,body>main.wrap,body>main.app,body>main.container{padding-bottom:calc(68px + env(safe-area-inset-bottom))!important;}
+ body #vcs-mobile-bottom-nav{left:0!important;right:0!important;bottom:0!important;width:100%!important;max-width:none!important;margin:0!important;transform:none!important;}
 }
 </style>
 
