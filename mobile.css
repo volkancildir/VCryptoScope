@@ -4,7 +4,7 @@
 html { width: 100%; max-width: 100%; }
 *, *::before, *::after { box-sizing: border-box; }
 img, canvas, video, svg { max-width: 100%; }
-@media screen and (max-width: 740px), (display-mode: standalone) {
+@media screen and (max-width: 740px) {
   html, body {
     width: 100% !important;
     max-width: 100% !important;
