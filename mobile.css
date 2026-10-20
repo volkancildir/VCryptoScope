@@ -326,3 +326,272 @@
   #vcs-mobile-bottom-nav { left: 5px !important; right: 5px !important; padding: 4px !important; }
   #vcs-mobile-bottom-nav .vcs-label { font-size: 8px !important; }
 }
+
+
+/* FINAL MOBILE ALIGNMENT OVERRIDE v3 — loaded after legacy page-specific patches. */
+@media (max-width: 740px), (display-mode: standalone) {
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: clip !important;
+  }
+  body > main.wrap,
+  body > main.app,
+  body > .wrap,
+  body > .app,
+  body > .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 14px 12px calc(104px + env(safe-area-inset-bottom)) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Header: one predictable logo/title row, actions below it. */
+  body header.top,
+  body header.header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 42px !important;
+    grid-template-rows: auto auto !important;
+    align-items: center !important;
+    justify-content: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 0 16px !important;
+    padding: 2px 0 12px !important;
+    box-sizing: border-box !important;
+  }
+  body header.top > .brand,
+  body header.header > .brand {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    grid-template-rows: minmax(42px, auto) !important;
+    align-items: center !important;
+    justify-content: start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 42px !important;
+    margin: 0 !important;
+    flex: none !important;
+    box-sizing: border-box !important;
+  }
+  body header.top > .brand > .logo,
+  body header.header > .brand > .logo {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    display: grid !important;
+    place-items: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    max-width: 42px !important;
+    max-height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    align-self: center !important;
+    box-sizing: border-box !important;
+  }
+  body header.top > .brand > .logo img,
+  body header.header > .brand > .logo img,
+  body header.top > .brand > .logo svg,
+  body header.header > .brand > .logo svg {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body header.top > .brand > div:not(.logo),
+  body header.header > .brand > div:not(.logo) {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    gap: 0 !important;
+  }
+  body header.top > .brand h1,
+  body header.header > .brand h1 {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: clamp(16px, 4.5vw, 20px) !important;
+    line-height: 22px !important;
+    letter-spacing: -.3px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  body header.top > .brand p,
+  body header.header > .brand p {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 2px 0 0 !important;
+    padding: 0 !important;
+    font-size: 11px !important;
+    line-height: 14px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  /* Six destinations live in the fixed bottom bar, not duplicated in the header. */
+  body header.top > #pageNav,
+  body header.top > .site-nav,
+  body header.top > .nav,
+  body header.header > .site-nav,
+  body header.top #pageNav,
+  body header.top .site-nav,
+  body header.header .site-nav {
+    display: none !important;
+  }
+  body header.top > .actions,
+  body header.top > div[style*="display:flex"],
+  body header.header > .top-actions {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+  body header.top .status,
+  body header.header .status,
+  body header.header .updated {
+    flex: 1 1 120px !important;
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+  }
+  body header.top button,
+  body header.top .btn,
+  body header.header button,
+  body header.header .btn,
+  body header.top .theme-btn,
+  body header.top .prefs-btn {
+    min-height: 40px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Keep every fixed-nav item in the same six-column grid. */
+  body #vcs-mobile-bottom-nav {
+    position: fixed !important;
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    justify-items: stretch !important;
+    gap: 3px !important;
+    left: 6px !important;
+    right: 6px !important;
+    bottom: calc(7px + env(safe-area-inset-bottom)) !important;
+    width: auto !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
+    padding: 4px !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+  body #vcs-mobile-bottom-nav > a,
+  body #vcs-mobile-bottom-nav > button {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    justify-self: stretch !important;
+    align-self: stretch !important;
+    gap: 4px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: 52px !important;
+    min-height: 52px !important;
+    max-height: 52px !important;
+    margin: 0 !important;
+    padding: 2px 0 !important;
+    box-sizing: border-box !important;
+  }
+  body #vcs-mobile-bottom-nav > a > svg,
+  body #vcs-mobile-bottom-nav > button > svg {
+    display: block !important;
+    position: static !important;
+    flex: 0 0 18px !important;
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+  body #vcs-mobile-bottom-nav .vcs-label {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    font-size: 8px !important;
+    line-height: 10px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Prevent content and data tables from pushing the viewport sideways. */
+  body main, body section, body article, body .panel, body .card,
+  body .hero, body .metric, body .acard {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  body .tablewrap, body .table-scroll, body .table-shell, body .table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  body .tablewrap table, body .table-scroll table, body .table-wrap table {
+    width: max-content !important;
+    min-width: 650px !important;
+    max-width: none !important;
+    table-layout: auto !important;
+  }
+}
+@media (max-width: 380px) {
+  body > main.wrap, body > main.app, body > .wrap, body > .app, body > .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  body #vcs-mobile-bottom-nav { left: 4px !important; right: 4px !important; gap: 2px !important; }
+  body #vcs-mobile-bottom-nav .vcs-label { font-size: 7.5px !important; }
+}
