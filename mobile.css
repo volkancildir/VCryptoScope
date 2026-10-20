@@ -707,7 +707,7 @@
     flex-basis: 20px !important;
   }
   body.vcs-mobile-app {
-    padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important;
+    padding-bottom: 0 !important;
   }
 }
 @media (max-width: 360px) {
