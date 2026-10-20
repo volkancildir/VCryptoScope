@@ -226,6 +226,58 @@ button{cursor:pointer}
  body.vcs-mobile-app{padding-bottom:calc(100px + env(safe-area-inset-bottom))!important}
 }
 </style>
+
+<style id="vcs-mobile-brand-optical-align-v2">
+/* Actual fix: lock the logo and wordmark to the same centered 42px row on every page. */
+@media (max-width:740px){
+  header.top .brand, header.header .brand, .app header .brand, main header .brand{
+    display:grid!important;
+    grid-template-columns:42px minmax(0,1fr)!important;
+    grid-template-rows:minmax(42px,auto)!important;
+    align-items:center!important;
+    align-content:center!important;
+    justify-content:start!important;
+    column-gap:10px!important;
+    row-gap:0!important;
+    min-width:0!important;
+    min-height:42px!important;
+    max-width:100%!important;
+    flex-direction:initial!important;
+  }
+  header.top .brand>.logo, header.header .brand>.logo, .app header .brand>.logo, main header .brand>.logo{
+    grid-column:1!important;grid-row:1!important;
+    display:grid!important;place-items:center!important;
+    width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;
+    max-width:42px!important;max-height:42px!important;
+    margin:0!important;padding:0!important;align-self:center!important;
+    flex:none!important;transform:none!important;position:relative!important;top:0!important;
+  }
+  header.top .brand>.logo img, header.header .brand>.logo img, .app header .brand>.logo img, main header .brand>.logo img{
+    display:block!important;width:42px!important;height:42px!important;
+    min-width:42px!important;min-height:42px!important;max-width:42px!important;max-height:42px!important;
+    object-fit:contain!important;object-position:center!important;margin:0!important;padding:0!important;
+    vertical-align:middle!important;transform:none!important;
+  }
+  header.top .brand>div:not(.logo), header.header .brand>div:not(.logo), .app header .brand>div:not(.logo), main header .brand>div:not(.logo){
+    grid-column:2!important;grid-row:1!important;
+    display:flex!important;flex-direction:column!important;
+    justify-content:center!important;align-items:flex-start!important;
+    align-self:center!important;min-width:0!important;min-height:42px!important;
+    width:100%!important;max-width:100%!important;overflow:hidden!important;
+    margin:0!important;padding:0!important;gap:0!important;transform:none!important;
+  }
+  header.top .brand h1, header.header .brand h1, .app header .brand h1, main header .brand h1{
+    display:block!important;align-self:auto!important;width:100%!important;
+    margin:0!important;padding:0!important;line-height:22px!important;
+    white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
+  }
+  header.top .brand p, header.header .brand p, .app header .brand p, main header .brand p{
+    display:block!important;align-self:auto!important;width:100%!important;
+    margin:2px 0 0!important;padding:0!important;line-height:14px!important;
+    white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="container">
