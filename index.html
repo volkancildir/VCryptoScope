@@ -675,6 +675,20 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
     min-height:0 !important;
     overflow:hidden !important;
   }
+  /* The Coinler view must get its own scroll area inside the fixed mobile viewport. */
+  body > main.wrap > #marketView:not(.view-hidden) {
+    display:block !important;
+    flex:1 1 0% !important;
+    min-height:0 !important;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+    padding-bottom:12px !important;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+  body > main.wrap > #marketView:not(.view-hidden) > .section-head:first-child {
+    margin-top:8px !important;
+  }
   #mapView > .vcs-mobile-overview {
     order:0 !important;
     flex:0 0 auto !important;
