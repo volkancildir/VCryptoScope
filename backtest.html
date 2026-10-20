@@ -58,8 +58,8 @@ a{color:var(--blue);text-decoration:none}.nav{display:flex;gap:8px;flex-wrap:wra
 #vcs-mobile-bottom-nav{display:none}
 @media(max-width:740px),(display-mode:standalone){
  body.vcs-mobile-app{padding-bottom:calc(100px + env(safe-area-inset-bottom))!important}
- body.vcs-mobile-app #pageNav,body.vcs-mobile-app .site-nav{display:none!important}
- body.vcs-mobile-app #vcs-mobile-bottom-nav{
+ #pageNav,.site-nav{display:none!important}
+ #vcs-mobile-bottom-nav{
   position:fixed!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
   left:10px!important;right:10px!important;bottom:calc(9px + env(safe-area-inset-bottom))!important;
   width:auto!important;max-width:600px!important;margin:0 auto!important;transform:none!important;
