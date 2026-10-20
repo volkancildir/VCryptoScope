@@ -124,7 +124,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 .top>.actions,.top>div[style*="display:flex"]{min-width:0;justify-content:flex-end}
 .top>.actions{flex-wrap:wrap}
 .top>.prefs-btn{justify-self:end!important;align-self:start!important}
-@media (max-width:740px) and (hover: none) and (pointer: coarse){.top{grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:12px!important}.top>.brand{grid-column:1;grid-row:1;min-width:0}.top>.prefs-btn{grid-column:2;grid-row:1;justify-self:end!important}.top>.actions,.top>div[style*="display:flex"]{grid-column:1/-1;grid-row:2;width:100%;justify-content:flex-start;min-width:0}.top #pageNav{max-width:100%}}
+@media (max-width:740px){.top{grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:12px!important}.top>.brand{grid-column:1;grid-row:1;min-width:0}.top>.prefs-btn{grid-column:2;grid-row:1;justify-self:end!important}.top>.actions,.top>div[style*="display:flex"]{grid-column:1/-1;grid-row:2;width:100%;justify-content:flex-start;min-width:0}.top #pageNav{max-width:100%}}
 </style>
 
 <style id="vcrypto-alignment-fix">
@@ -166,7 +166,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 
 <style id="vcs-mobile-app-redesign-v1">
 /* VCryptoScope mobile-first app layout */
-@media (max-width:740px) and (hover: none) and (pointer: coarse){
+@media (max-width:740px){
   :root{color-scheme:dark}
   html{width:100%;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;scroll-padding-top:12px}
   body{width:100%;max-width:100%;min-width:0;margin:0!important;padding:0!important;overflow-x:hidden!important;font-size:14px;line-height:1.45}
@@ -240,7 +240,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
   #vcs-mobile-bottom-nav .vcs-active{color:#35dccb!important;background:rgba(42,215,198,.12)!important;border-color:rgba(42,215,198,.18)!important}
   body.vcs-mobile-app{padding-bottom:0!important}
 }
-@media (max-width:380px) and (hover: none) and (pointer: coarse){
+@media (max-width:380px){
   .wrap,.app,.container,main.wrap,main.app{padding-left:10px!important;padding-right:10px!important}
   .mini-grid,.stats{gap:7px!important}
   .card,.panel,.metric,.acard,.news-card{padding:11px!important}
@@ -250,7 +250,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 </style>
 <style id="vcs-mobile-app-redesign">
 :root{--vcs-teal:#27d7c3}
-@media (max-width:740px) and (hover: none) and (pointer: coarse){
+@media (max-width:740px){
  body{background:radial-gradient(ellipse at 50% -10%,#12334b 0,transparent 42%),#071321!important;color:#edf7ff}
  body>main.wrap,.wrap{padding:12px 12px calc(8px + env(safe-area-inset-bottom))!important}
  header.top{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:10px!important;margin:0 0 16px!important;padding:4px 0 13px!important;border-bottom:1px solid #20374a}
@@ -338,12 +338,12 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
  .vcs-tool-arrow{color:#8299ac;font-size:21px}
 }
 @media (min-width:741px), (hover: hover) and (pointer: fine){.vcs-mobile-overview,.vcs-mobile-movers{display:none!important}.vcs-tools-backdrop{display:none!important}}
-@media (max-width:370px) and (hover: none) and (pointer: coarse){.vcs-mobile-total{font-size:24px!important}.vcs-mobile-metric{padding:8px 6px!important}.vcs-mobile-metric strong{font-size:11px!important}.vcs-mobile-mover img,.vcs-mobile-mover-icon{width:29px;height:29px;flex-basis:29px}}
+@media (max-width:370px){.vcs-mobile-total{font-size:24px!important}.vcs-mobile-metric{padding:8px 6px!important}.vcs-mobile-metric strong{font-size:11px!important}.vcs-mobile-mover img,.vcs-mobile-mover-icon{width:29px;height:29px;flex-basis:29px}}
 </style>
 
 <style id="vcs-mobile-dashboard-final-pass">
 .vcs-mobile-tree-toggle{display:none}
-@media (max-width:740px) and (hover: none) and (pointer: coarse){
+@media (max-width:740px){
   .vcs-mobile-overview{margin:4px 0 14px!important}
   .vcs-mobile-movers{margin:0 0 16px!important}
   .vcs-mobile-movers-head{padding-bottom:10px!important}
@@ -359,7 +359,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 </style>
 
 <style id="vcs-binance-inspired-mobile-layout">
-@media (max-width:740px) and (hover: none) and (pointer: coarse){
+@media (max-width:740px){
   /* Exchange-app information hierarchy, using VCryptoScope's own navy/teal palette. */
   body{background:#080f1b!important}
   body>main.wrap,.wrap{padding:10px 12px calc(86px + env(safe-area-inset-bottom))!important}
@@ -398,7 +398,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 @media (min-width:741px), (hover: hover) and (pointer: fine){.vcs-mobile-search{display:none!important}}
 </style>
 
-<link rel="stylesheet" href="./mobile.css?v=24">
+<link rel="stylesheet" href="./mobile.css?v=25">
 
 <style id="vcs-binance-market-polish-v1">
 /* Exchange-style hierarchy: preserve existing data/features, compact coin rows. */
@@ -591,7 +591,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <script id="vcs-mobile-bottom-nav-script">
 (function(){
   // Match navigation to the available viewport width, not device identity.
-  var mobile=window.matchMedia('(max-width: 740px) and (hover: none) and (pointer: coarse)').matches;
+  var mobile=window.matchMedia('(max-width: 740px)').matches;
   if(!mobile||document.getElementById('vcs-mobile-bottom-nav'))return;
   document.body.classList.add('vcs-mobile-app');
   var path=location.pathname.toLowerCase();
