@@ -380,7 +380,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
   :root{color-scheme:dark}
   html{width:100%;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;scroll-padding-top:12px}
   body{width:100%;max-width:100%;min-width:0;margin:0!important;padding:0!important;overflow-x:hidden!important;font-size:14px;line-height:1.45}
-  .wrap,.app,.container,main.wrap,main.app,.container{width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;padding:14px 13px calc(54px + env(safe-area-inset-bottom))!important;box-sizing:border-box!important}
+  .wrap,.app,.container,main.wrap,main.app,.container{width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;padding:14px 13px calc(8px + env(safe-area-inset-bottom))!important;box-sizing:border-box!important}
   header.top,header.header,.header{
     position:relative!important;top:auto!important;z-index:20!important;
     display:flex!important;flex-wrap:wrap!important;align-items:center!important;
@@ -462,7 +462,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 :root{--vcs-teal:#27d7c3}
 @media(max-width:740px){
  body{background:radial-gradient(ellipse at 50% -10%,#12334b 0,transparent 42%),#071321!important;color:#edf7ff}
- body>main.wrap,.wrap{padding:12px 12px calc(54px + env(safe-area-inset-bottom))!important}
+ body>main.wrap,.wrap{padding:12px 12px calc(8px + env(safe-area-inset-bottom))!important}
  header.top{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:10px!important;margin:0 0 16px!important;padding:4px 0 13px!important;border-bottom:1px solid #20374a}
  header.top>.brand{grid-column:1;grid-row:1;gap:9px!important;min-width:0}
  header.top .brand .logo{width:42px!important;height:42px!important;min-width:42px!important;flex-basis:42px!important;border-radius:13px!important;box-shadow:0 5px 20px #20d6c322!important}
@@ -568,7 +568,7 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 }
 </style>
 
-<link rel="stylesheet" href="./mobile.css?v=14">
+<link rel="stylesheet" href="./mobile.css?v=15">
 
 <style id="vcs-mobile-bottom-nav-final-fix">
 @media (max-width:740px),(display-mode:standalone){
@@ -577,13 +577,13 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
  body #vcs-mobile-bottom-nav>a>svg,body #vcs-mobile-bottom-nav>button>svg{display:block!important;position:static!important;width:19px!important;height:19px!important;min-width:19px!important;min-height:19px!important;flex:0 0 19px!important;margin:0!important;}
  body #vcs-mobile-bottom-nav .vcs-label{display:block!important;width:100%!important;max-width:100%!important;margin:0!important;padding:0!important;text-align:center!important;font-size:9px!important;line-height:11px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important;box-sizing:border-box!important;}
  body.vcs-mobile-app{padding-bottom:0!important;}
- body> .wrap,body> .app,body> .container,body> main.wrap,body> main.app,body> main.container{padding-bottom:calc(54px + env(safe-area-inset-bottom))!important;}
+ body> .wrap,body> .app,body> .container,body> main.wrap,body> main.app,body> main.container{padding-bottom:calc(8px + env(safe-area-inset-bottom))!important;}
 }
 </style>
 <style id="vcs-mobile-layout-invariant-v2">
 @media (max-width:740px),(display-mode:standalone){
  body.vcs-mobile-app{padding-bottom:0!important;}
- body>.wrap,body>.app,body>.container,body>main.wrap,body>main.app,body>main.container{padding-bottom:calc(54px + env(safe-area-inset-bottom))!important;}
+ body>.wrap,body>.app,body>.container,body>main.wrap,body>main.app,body>main.container{padding-bottom:calc(8px + env(safe-area-inset-bottom))!important;}
  body #vcs-mobile-bottom-nav{left:0!important;right:0!important;bottom:0!important;width:100%!important;max-width:none!important;margin:0!important;transform:none!important;}
 }
 </style>
