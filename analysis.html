@@ -161,51 +161,31 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 }
 </style>
 
-<style id="vcrypto-mobile-app-navigation">
-/* Mobile app-style navigation: desktop layout remains unchanged */
-@media (max-width:740px), (display-mode: standalone){
-  body{padding-bottom:calc(102px + env(safe-area-inset-bottom))!important}
-  html{scroll-padding-bottom:110px}
-  #pageNav,.site-nav{
-    position:fixed!important;left:50%!important;right:auto!important;
-    bottom:calc(9px + env(safe-area-inset-bottom))!important;
-    transform:translateX(-50%)!important;width:calc(100% - 20px)!important;
-    max-width:600px!important;z-index:99999!important;
-    display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
-    align-items:stretch!important;justify-content:stretch!important;gap:3px!important;
-    flex-wrap:nowrap!important;padding:7px!important;box-sizing:border-box!important;
-    border:1px solid rgba(127,157,184,.22)!important;border-radius:19px!important;
-    background:rgba(7,17,31,.96)!important;
-    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-    box-shadow:0 8px 30px rgba(0,0,0,.34)!important
-  }
-  #pageNav>a,#pageNav>button,#pageNav>span,
-  .site-nav>a,.site-nav>button,.site-nav>span{
-    display:flex!important;flex-direction:column!important;align-items:center!important;
-    justify-content:center!important;gap:5px!important;min-width:0!important;width:auto!important;
-    min-height:57px!important;padding:6px 2px!important;margin:0!important;
-    border:1px solid transparent!important;border-radius:12px!important;
-    background:transparent!important;box-shadow:none!important;
-    color:#91a5ba!important;text-decoration:none!important;text-align:center!important;
-    font-size:10px!important;font-weight:500!important;line-height:1.12!important;
-    white-space:normal!important;overflow-wrap:anywhere!important;box-sizing:border-box!important
-  }
-  #pageNav>a svg,#pageNav>button svg,#pageNav>span svg,
-  .site-nav>a svg,.site-nav>button svg,.site-nav>span svg{
-    display:block!important;width:19px!important;height:19px!important;min-width:19px!important;
-    flex:0 0 19px!important;margin:0!important;position:static!important;transform:none!important
-  }
-  #pageNav .vcs-nav-label,.site-nav .vcs-nav-label{
-    display:block!important;max-width:100%!important;font-size:10px!important;
-    line-height:1.12!important;text-align:center!important
-  }
-  #pageNav>.active,#pageNav>[aria-current="page"],
-  .site-nav>.active,.site-nav>[aria-current="page"]{
-    color:#27dcc5!important;background:rgba(39,220,197,.12)!important;
-    border-color:rgba(39,220,197,.18)!important
-  }
-  #pageNav>.active svg,#pageNav>[aria-current="page"] svg,
-  .site-nav>.active svg,.site-nav>[aria-current="page"] svg{color:#27dcc5!important}
+<style id="vcs-mobile-bottom-nav-style">
+#vcs-mobile-bottom-nav{display:none}
+@media(max-width:740px),(display-mode:standalone){
+ body.vcs-mobile-app{padding-bottom:calc(100px + env(safe-area-inset-bottom))!important}
+ body.vcs-mobile-app #pageNav,body.vcs-mobile-app .site-nav{display:none!important}
+ body.vcs-mobile-app #vcs-mobile-bottom-nav{
+  position:fixed!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  left:10px!important;right:10px!important;bottom:calc(9px + env(safe-area-inset-bottom))!important;
+  width:auto!important;max-width:600px!important;margin:0 auto!important;transform:none!important;
+  z-index:2147483000!important;gap:3px!important;padding:7px!important;box-sizing:border-box!important;
+  border:1px solid rgba(123,151,183,.2)!important;border-radius:20px!important;
+  background:rgba(8,15,29,.97)!important;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  box-shadow:0 10px 35px rgba(0,0,0,.42)!important
+ }
+ #vcs-mobile-bottom-nav a,#vcs-mobile-bottom-nav button{
+  appearance:none!important;display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:center!important;gap:5px!important;min-width:0!important;width:100%!important;min-height:58px!important;
+  margin:0!important;padding:6px 1px!important;border:1px solid transparent!important;border-radius:13px!important;
+  background:transparent!important;color:#8d9db5!important;text-decoration:none!important;text-align:center!important;
+  font:500 10px/1.1 system-ui,-apple-system,sans-serif!important;white-space:normal!important;box-shadow:none!important
+ }
+ #vcs-mobile-bottom-nav svg{display:block!important;width:20px!important;height:20px!important;flex:0 0 20px!important;margin:0!important}
+ #vcs-mobile-bottom-nav .vcs-label{display:block!important;max-width:100%;font-size:10px!important;line-height:1.1!important}
+ #vcs-mobile-bottom-nav .vcs-active{color:#35dccb!important;background:rgba(42,215,198,.12)!important;border-color:rgba(42,215,198,.2)!important}
+ #vcs-mobile-bottom-nav .vcs-active svg{color:#35dccb!important}
 }
 </style>
 </head><body><div class="app">
@@ -381,5 +361,44 @@ document.addEventListener('DOMContentLoaded',function(){
     }catch(e){}
   });
 });
+</script>
+<script id="vcs-mobile-bottom-nav-script">
+(function(){
+ var ua=navigator.userAgent||'';
+ var standalone=(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
+ var mobile=(window.matchMedia&&window.matchMedia('(max-width: 740px)').matches)||standalone||/Android|iPhone|iPad|iPod/i.test(ua);
+ if(!mobile)return;
+ document.body.classList.add('vcs-mobile-app');
+ var path=location.pathname.toLowerCase();
+ var params=new URLSearchParams(location.search);
+ var isIndex=path.endsWith('/index.html')||path.endsWith('/VCryptoScope/'.toLowerCase())||path.endsWith('/');
+ var view=params.get('mobileView')||'map';
+ var icons={
+  market:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>',
+  coins:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="5"/><path d="M8 5v6M6 6.5h3M6 9.5h3"/><circle cx="15.5" cy="15.5" r="5"/><path d="M15.5 12.5v6M13.5 14h4M13.5 17h4"/></svg>',
+  analysis:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m6 15 4-5 4 3 6-8"/></svg>',
+  news:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v13H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 8h5v5H7zM15 8h3M15 11h3M7 16h11"/></svg>',
+  scanner:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5M7.5 10.5h6M10.5 7.5v6"/></svg>'
+ };
+ var active=isIndex?(view==='list'?'coins':'market'):path.endsWith('/analysis.html')?'analysis':path.endsWith('/news.html')?'news':path.endsWith('/backtest.html')?'scanner':'market';
+ var items=[
+  {id:'market',label:'Piyasa',href:'./index.html?mobileView=map'},
+  {id:'coins',label:'Coinler',href:'./index.html?mobileView=list'},
+  {id:'analysis',label:'Analiz',href:'./analysis.html'},
+  {id:'news',label:'Haberler',href:'./news.html'},
+  {id:'scanner',label:'Tarayıcı',href:'./backtest.html'}
+ ];
+ var nav=document.createElement('nav');nav.id='vcs-mobile-bottom-nav';nav.setAttribute('aria-label','Ana gezinme');
+ items.forEach(function(item){
+  var el=document.createElement('a');el.href=item.href;el.innerHTML=icons[item.id]+'<span class="vcs-label">'+item.label+'</span>';
+  if(item.id===active){el.className='vcs-active';el.setAttribute('aria-current','page')}
+  nav.appendChild(el);
+ });
+ document.body.appendChild(nav);
+ if(isIndex){
+  var applyView=function(){if(typeof window.showView==='function')window.showView(view==='list'?'market':'map')};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',applyView);else applyView();
+ }
+})();
 </script>
 </body></html>
