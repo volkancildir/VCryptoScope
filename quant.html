@@ -41,7 +41,7 @@
   max-width:100%!important;box-sizing:border-box!important
  }
  /* These pages use the shared fixed bottom navigation on phones. */
- header.top #pageNav,header.top .site-nav,header.header .site-nav{display:none!important}
+ header.top #pageNav,header.top .site-nav,header.header .site-nav,.top .nav{display:none!important}
  header.top>.actions,header.top>div[style*="display:flex"]{
   display:flex!important;flex-wrap:wrap!important;align-items:center!important;
   justify-content:space-between!important;gap:8px!important;width:100%!important
@@ -234,4 +234,26 @@ async function run(){if(running)return;running=true;$('scan').disabled=true;$('e
 $('scan').addEventListener('click',run);
 const params=new URLSearchParams(location.search);if(params.get('auto')==='1')run();
 })();
-</script></body></html>
+</script>
+<script id="vcs-quant-mobile-nav">
+(function(){
+ var mq=window.matchMedia('(max-width:740px)');
+ function mount(){
+  if(!mq.matches||document.getElementById('vcs-mobile-bottom-nav'))return;
+  document.body.classList.add('vcs-mobile-app');
+  var items=[
+   ['market','Piyasa','./index.html?view=tree&nav=1','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>'],
+   ['analysis','Analiz','./analysis.html?nav=1','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="m6 15 4-5 4 3 6-8"/></svg>'],
+   ['scanner','Tarayıcı','./backtest.html?nav=1','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5M7.5 10.5h6M10.5 7.5v6"/></svg>'],
+   ['quant','Quant','./quant.html','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16"/><path d="m7 15 3-4 3 2 5-7"/></svg>'],
+   ['news','Haberler','./news.html?nav=1','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h14a2 2 0 0 1 2 2v13H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 8h5v5H7zM15 8h3M15 11h3M7 16h11"/></svg>']
+  ];
+  var nav=document.createElement('nav');nav.id='vcs-mobile-bottom-nav';nav.setAttribute('aria-label','Ana gezinme');
+  items.forEach(function(x){var a=document.createElement('a');a.href=x[2];a.innerHTML=x[3]+'<span class="vcs-label">'+x[1]+'</span>';if(x[0]==='quant'){a.className='vcs-active';a.setAttribute('aria-current','page')}nav.appendChild(a)});
+  document.body.appendChild(nav);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
+ mq.addEventListener?mq.addEventListener('change',function(){if(mq.matches)mount()}):window.addEventListener('resize',mount);
+})();
+</script>
+</body></html>
