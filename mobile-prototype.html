@@ -31,6 +31,76 @@ main{padding-top:18px}.screen{display:none;animation:screenIn .2s ease both}.scr
 @media(min-width:700px){body{padding:20px 0}.app{min-height:calc(100vh - 40px);border:1px solid #1a3043;border-radius:28px;overflow:hidden;box-shadow:0 20px 90px #0006}.topbar{position:relative}.bottom-nav{bottom:18px}}
 @media(max-width:370px){.app{padding-left:12px;padding-right:12px}.panel{padding:13px}.metric-row{gap:5px}.metric{padding:8px}.metric-value{font-size:11px}.spark{display:none}.coin-row{gap:7px}.coin-icon{width:32px;height:32px;flex-basis:32px}.big-value{font-size:26px}.allocation{gap:12px}.donut{width:100px;height:100px;flex-basis:100px}.donut:before{inset:11px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* Binance-inspired full-screen mobile layout */
+@media(max-width:699px){
+  html,body{width:100%;min-height:100%;font-size:15px}
+  body{background:var(--bg);line-height:1.5}
+  .app{width:100%;max-width:none;min-height:100dvh;margin:0;padding:0 14px calc(82px + env(safe-area-inset-bottom))}
+  .topbar{height:62px;margin:0 -14px;padding:0 14px}
+  main{padding-top:18px}
+  .screen-heading{margin:5px 0 18px}
+  .h1{font-size:27px;letter-spacing:-.7px;line-height:1.16}
+  .sub{font-size:13px;line-height:1.45}
+  .eyebrow{font-size:10px;letter-spacing:1.35px}
+  .panel{width:100%;padding:17px;margin-bottom:13px;border-radius:17px}
+  .panel-title{font-size:14px}
+  .tiny{font-size:11px}
+  .big-value{font-size:32px;letter-spacing:-1px}
+  .metric-row{gap:8px}
+  .metric{padding:11px 9px}
+  .metric-label{font-size:10px;line-height:1.35}
+  .metric-value{font-size:13px;line-height:1.35}
+  .filter{font-size:12px;padding:9px 13px}
+  .search{height:48px;margin:13px 0}
+  .search input{font-size:14px}
+  .coin-row{gap:10px;padding:15px 0}
+  .coin-icon{width:38px;height:38px;flex-basis:38px;font-size:14px}
+  .coin-name{font-size:14px}
+  .coin-symbol{font-size:11px}
+  .coin-price{font-size:13px}
+  .coin-change{font-size:11px}
+  .spark{width:46px}
+  .section-gap{margin-top:24px}
+  .chart-price{font-size:29px}
+  .chart-svg{height:175px}
+  .stats-grid{gap:10px}
+  .stat-card{padding:14px}
+  .stat-label{font-size:11px}
+  .stat-value{font-size:15px}
+  .indicator{padding:14px 0}
+  .indicator-name{font-size:13px}
+  .indicator-note{font-size:11px}
+  .indicator-value{font-size:13px}
+  .plan-item{padding:15px 0}
+  .plan-name{font-size:13px}
+  .plan-desc{font-size:12px}
+  .menu-link{padding:15px 0}
+  .menu-title{font-size:13px}
+  .menu-desc{font-size:11px}
+  .bottom-nav{
+    left:0;right:0;bottom:0;transform:none;width:100%;
+    padding:8px 5px calc(8px + env(safe-area-inset-bottom));
+    gap:3px;border:0;border-top:1px solid #263d50;border-radius:16px 16px 0 0;
+    background:#081725f5;box-shadow:0 -8px 28px #0003;
+  }
+  .nav-item{min-height:56px;border-radius:12px;font-size:10px;gap:5px}
+  .nav-icon{font-size:20px}
+  .prototype-note{padding-bottom:10px}
+}
+@media(max-width:370px){
+  .app{padding-left:11px;padding-right:11px}
+  .topbar{margin:0 -11px;padding:0 11px}
+  .panel{padding:14px}
+  .metric-row{gap:5px}
+  .metric{padding:9px 6px}
+  .metric-value{font-size:11px}
+  .coin-row{gap:7px}
+  .spark{display:none}
+  .bottom-nav{padding-left:3px;padding-right:3px}
+  .nav-item{font-size:9px}
+}
+
 </style>
 </head>
 <body>
