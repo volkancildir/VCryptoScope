@@ -7,7 +7,6 @@ const APP_FILES = [
   "./backtest.html",
   "./news.html",
   "./quant.html",
-  "./trade.html",
   "./icon.svg?v=8",
   "./manifest.json"
 ];
