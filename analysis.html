@@ -477,33 +477,21 @@ body.light-mode .brand p,body.light-mode .sub,body.light-mode .muted,body.light-
 </style>
 
 <style id="vcs-mobile-gap-final">
-/* Mobile: keep the navigation in the page flow so it sits directly after the content,
-   instead of pinning it to the viewport and leaving a large visual gap above it. */
+/* Keep the mobile navigation anchored to the viewport; do not move it into document flow. */
 @media (max-width: 740px), (display-mode: standalone) {
-  body.vcs-mobile-app {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  body.vcs-mobile-app > main.wrap,
-  body.vcs-mobile-app > main.app,
-  body.vcs-mobile-app > .wrap,
-  body.vcs-mobile-app > .app,
-  body.vcs-mobile-app > .container {
-    padding-bottom: 0 !important;
+  body.vcs-mobile-app { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+  body.vcs-mobile-app > main.wrap, body.vcs-mobile-app > main.app,
+  body.vcs-mobile-app > .wrap, body.vcs-mobile-app > .app, body.vcs-mobile-app > .container {
+    padding-bottom: calc(82px + env(safe-area-inset-bottom)) !important;
     margin-bottom: 0 !important;
   }
   body #vcs-mobile-bottom-nav {
-    position: relative !important;
-    inset: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    right: auto !important;
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    transform: none !important;
-    border-radius: 14px 14px 0 0 !important;
-    box-sizing: border-box !important;
+    position: fixed !important; inset: auto 0 0 !important;
+    left: 0 !important; right: 0 !important; bottom: 0 !important;
+    width: 100% !important; max-width: none !important;
+    margin: 0 !important; transform: none !important;
+    border-radius: 16px 16px 0 0 !important;
+    box-sizing: border-box !important; z-index: 9999 !important;
   }
 }
 </style>
