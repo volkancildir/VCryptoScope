@@ -54,10 +54,57 @@ a{color:var(--blue);text-decoration:none}.nav{display:flex;gap:8px;flex-wrap:wra
 }
 </style>
 
+<style id="vcrypto-mobile-app-navigation">
+/* Mobile app-style navigation: desktop layout remains unchanged */
+@media (max-width:700px){
+  body{padding-bottom:calc(102px + env(safe-area-inset-bottom))!important}
+  html{scroll-padding-bottom:110px}
+  #pageNav,.site-nav{
+    position:fixed!important;left:50%!important;right:auto!important;
+    bottom:calc(9px + env(safe-area-inset-bottom))!important;
+    transform:translateX(-50%)!important;width:calc(100% - 20px)!important;
+    max-width:600px!important;z-index:99999!important;
+    display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    align-items:stretch!important;justify-content:stretch!important;gap:3px!important;
+    flex-wrap:nowrap!important;padding:7px!important;box-sizing:border-box!important;
+    border:1px solid rgba(127,157,184,.22)!important;border-radius:19px!important;
+    background:rgba(7,17,31,.96)!important;
+    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    box-shadow:0 8px 30px rgba(0,0,0,.34)!important
+  }
+  #pageNav>a,#pageNav>button,#pageNav>span,
+  .site-nav>a,.site-nav>button,.site-nav>span{
+    display:flex!important;flex-direction:column!important;align-items:center!important;
+    justify-content:center!important;gap:5px!important;min-width:0!important;width:auto!important;
+    min-height:57px!important;padding:6px 2px!important;margin:0!important;
+    border:1px solid transparent!important;border-radius:12px!important;
+    background:transparent!important;box-shadow:none!important;
+    color:#91a5ba!important;text-decoration:none!important;text-align:center!important;
+    font-size:10px!important;font-weight:500!important;line-height:1.12!important;
+    white-space:normal!important;overflow-wrap:anywhere!important;box-sizing:border-box!important
+  }
+  #pageNav>a svg,#pageNav>button svg,#pageNav>span svg,
+  .site-nav>a svg,.site-nav>button svg,.site-nav>span svg{
+    display:block!important;width:19px!important;height:19px!important;min-width:19px!important;
+    flex:0 0 19px!important;margin:0!important;position:static!important;transform:none!important
+  }
+  #pageNav .vcs-nav-label,.site-nav .vcs-nav-label{
+    display:block!important;max-width:100%!important;font-size:10px!important;
+    line-height:1.12!important;text-align:center!important
+  }
+  #pageNav>.active,#pageNav>[aria-current="page"],
+  .site-nav>.active,.site-nav>[aria-current="page"]{
+    color:#27dcc5!important;background:rgba(39,220,197,.12)!important;
+    border-color:rgba(39,220,197,.18)!important
+  }
+  #pageNav>.active svg,#pageNav>[aria-current="page"] svg,
+  .site-nav>.active svg,.site-nav>[aria-current="page"] svg{color:#27dcc5!important}
+}
+</style>
 </head><body>
 <div class="wrap">
 <header class="top"><div class="brand"><div class="logo"><img src="icon.svg?v=8" alt="VCryptoScope"></div><div><h1>VCryptoScope</h1><p>Otomatik piyasa tarayıcı</p></div></div><nav class="site-nav" aria-label="Ana gezinme">
-<a href="./index.html?view=tree&nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg>Ağaç Haritası</a><a href="./index.html?view=market&nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6h12M9 12h12M9 18h12"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg>Coin Listesi</a><a href="./analysis.html?nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m6 15 4-5 4 3 6-8"/></svg>Analiz</a><a href="./backtest.html?nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5M7.5 10.5h6M10.5 7.5v6"/></svg>Otomatik Tarayıcı</a><a href="./news.html?nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v13H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 8h5v5H7zM15 8h3M15 11h3M7 16h11"/></svg>Piyasa Haberleri</a>
+<a href="./index.html?view=tree&nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg><span class="vcs-nav-label">Piyasa</span></a><a href="./index.html?view=market&nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6h12M9 12h12M9 18h12"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg><span class="vcs-nav-label">Coin Listesi</span></a><a href="./analysis.html?nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m6 15 4-5 4 3 6-8"/></svg><span class="vcs-nav-label">Analiz</span></a><a href="./backtest.html?nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5M7.5 10.5h6M10.5 7.5v6"/></svg><span class="vcs-nav-label">Tarayıcı</span></a><a href="./news.html?nav=1"><svg aria-hidden="true" viewBox="0 0 24 24" style="width:16px;height:16px;flex-shrink:0;vertical-align:middle;margin-right:6px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v13H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 8h5v5H7zM15 8h3M15 11h3M7 16h11"/></svg><span class="vcs-nav-label">Haberler</span></a>
 </nav></header>
 <section class="hero"><div class="eyebrow">Market scanner · Historical validation</div><h2>Fırsatları sen tek tek arama.<br>Tarayıcı piyasayı tarasın.</h2><p>Binance Spot'ta işlem hacmi yüksek USDT paritelerini tarar, her coin için stratejiyi geçmiş veride seçer ve ayrı test döneminde sonuçlarını karşılaştırır. Sinyal tek başına alım talimatı değildir.</p></section>
 <section class="controls">
@@ -101,4 +148,16 @@ $("results").innerHTML=sorted.map(x=>{if(x.error)return '<tr><td><span class="sy
 }
 async function run(){const btn=$("scanBtn");btn.disabled=true;$("results").innerHTML='<tr><td colspan="9" class="empty">Piyasa verileri alınıyor…</td></tr>';$("status").textContent="Piyasa listesi alınıyor";$("progress").style.width="3%";["nScanned","nPositive","bestReturn","bestScore"].forEach(id=>$(id).textContent="—");try{const [tickers,info]=await Promise.all([getJson("https://data-api.binance.vision/api/v3/ticker/24hr"),getJson("https://data-api.binance.vision/api/v3/exchangeInfo")]);const valid=new Set(info.symbols.filter(s=>s.status==="TRADING"&&s.quoteAsset==="USDT"&&s.isSpotTradingAllowed).map(s=>s.symbol));const count=+$("count").value;const chosen=tickers.filter(t=>valid.has(t.symbol)&&!STABLE.has(t.symbol)&&!LEVERAGED.test(t.symbol)&&+t.lastPrice>0&&+t.quoteVolume>1000000).sort((a,b)=>+b.quoteVolume-+a.quoteVolume).slice(0,count);if(!chosen.length)throw new Error("Uygun USDT paritesi bulunamadı.");const out=[];let idx=0;const tf=$("tf").value,fee=+$("fee").value;const workers=Array.from({length:5},async()=>{while(idx<chosen.length){const j=idx++;$("status").textContent="Taranıyor: "+(j+1)+"/"+chosen.length+" · "+chosen[j].symbol;const r=await scanOne(chosen[j],tf,fee);if(r)out.push(r);$("progress").style.width=Math.round((idx/chosen.length)*100)+"%";}});await Promise.all(workers);render(out);$("updated").textContent="Son tarama: "+new Date().toLocaleString("tr-TR")+" · "+tf;$("status").textContent="Tarama tamamlandı · "+out.filter(x=>!x.error).length+" coin analiz edildi";if(!out.some(x=>!x.error))throw new Error("Coin verileri alınamadı. Biraz sonra tekrar dene.");}catch(e){$("status").textContent="Tarama tamamlanamadı";$("results").innerHTML='<tr><td colspan="9" class="empty error">'+(e.message||"Beklenmeyen hata")+'</td></tr>';}finally{btn.disabled=false;}}
 $("scanBtn").addEventListener("click",run);
-</script></body></html>
+</script><script id="vcrypto-mobile-nav-active-state">
+document.addEventListener('DOMContentLoaded',function(){
+  var current=window.location.pathname.split('/').pop()||'index.html';
+  if(current==='index.html') return;
+  document.querySelectorAll('#pageNav>a,.site-nav>a').forEach(function(link){
+    try{
+      var target=new URL(link.getAttribute('href'),window.location.href).pathname.split('/').pop();
+      if(target===current){link.classList.add('active');link.setAttribute('aria-current','page');}
+    }catch(e){}
+  });
+});
+</script>
+</body></html>
