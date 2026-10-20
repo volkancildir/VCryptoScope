@@ -106,6 +106,26 @@ a{color:var(--blue);text-decoration:none}.nav{display:flex;gap:8px;flex-wrap:wra
  }
 }
 </style>
+
+<style id="vcs-mobile-alignment-hotfix">
+/* Mobile alignment: keep the brand on one line and make navigation controls share a stable grid. */
+@media (max-width:740px), (display-mode:standalone) {
+ html,body { max-width:100%; overflow-x:hidden; }
+ .top,.header { width:100%; min-width:0; gap:10px!important; }
+ .top { display:grid!important; grid-template-columns:minmax(0,1fr) auto!important; align-items:center!important; }
+ .header { display:flex!important; flex-wrap:wrap!important; align-items:center!important; }
+ .brand { display:flex!important; flex-direction:row!important; align-items:center!important; gap:10px!important; min-width:0!important; max-width:100%; }
+ .brand .logo { flex:0 0 44px!important; width:44px!important; height:44px!important; }
+ .brand .logo img,.brand .logo svg { display:block!important; width:100%!important; height:100%!important; object-fit:contain; }
+ .brand h1 { min-width:0; overflow-wrap:anywhere; line-height:1.15!important; margin:0!important; }
+ .top>.actions,.top>div[style*="display:flex"] { grid-column:1/-1!important; grid-row:2!important; width:100%!important; min-width:0!important; justify-content:flex-start!important; }
+ #vcs-mobile-bottom-nav { left:8px!important; right:8px!important; width:auto!important; max-width:600px!important; margin-left:auto!important; margin-right:auto!important; transform:none!important; grid-template-columns:repeat(5,minmax(0,1fr))!important; align-items:stretch!important; justify-items:stretch!important; }
+ #vcs-mobile-bottom-nav>a,#vcs-mobile-bottom-nav>button { display:flex!important; align-items:center!important; justify-content:center!important; justify-self:stretch!important; min-width:0!important; width:100%!important; max-width:none!important; padding:5px 0!important; margin:0!important; box-sizing:border-box!important; }
+ #vcs-mobile-bottom-nav svg { display:block!important; flex:0 0 20px!important; width:20px!important; height:20px!important; margin:0 auto!important; }
+ #vcs-mobile-bottom-nav .vcs-label { display:block!important; width:100%!important; margin:0!important; text-align:center!important; white-space:nowrap!important; font-size:10px!important; line-height:12px!important; }
+ body.vcs-mobile-app { padding-bottom:calc(100px + env(safe-area-inset-bottom))!important; }
+}
+</style>
 </head><body>
 <div class="wrap">
 <header class="top"><div class="brand"><div class="logo"><img src="icon.svg?v=8" alt="VCryptoScope"></div><div><h1>VCryptoScope</h1><p>Otomatik piyasa tarayıcı</p></div></div><nav class="site-nav" aria-label="Ana gezinme">
