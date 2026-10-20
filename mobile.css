@@ -44,7 +44,8 @@ img, canvas, video, svg { max-width: 100%; }
   /* Compact, consistent header without squeezing the brand or action controls. */
   header.top {
     display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 40px !important;
+    /* Pages without a settings button must use the entire header width. */
+    grid-template-columns: minmax(0, 1fr) !important;
     grid-template-rows: auto auto !important;
     align-items: center !important;
     justify-content: stretch !important;
@@ -57,6 +58,9 @@ img, canvas, video, svg { max-width: 100%; }
     margin: 0 0 14px !important;
     padding: 2px 0 12px !important;
     overflow: visible !important;
+  }
+  header.top:has(> .prefs-btn) {
+    grid-template-columns: minmax(0, 1fr) 40px !important;
   }
   header.top > .brand {
     grid-column: 1 !important;
