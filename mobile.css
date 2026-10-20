@@ -1,6 +1,7 @@
 /* VCryptoScope responsive layout v18
    Mobile-first foundations. Page-specific charts, cards and data grids keep their own layouts. */
 :root { -webkit-text-size-adjust: 100%; }
+#vcs-mobile-bottom-nav { display: none; }
 html { width: 100%; max-width: 100%; }
 *, *::before, *::after { box-sizing: border-box; }
 img, canvas, video, svg { max-width: 100%; }
@@ -41,10 +42,13 @@ img, canvas, video, svg { max-width: 100%; }
   }
 
   /* Compact, consistent header without squeezing the brand or action controls. */
-  header.top,
-  header.header {
-    display: flex !important;
-    flex-flow: row wrap !important;
+  header.top {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 40px !important;
+    grid-template-rows: auto auto !important;
+    align-items: center !important;
+    justify-content: stretch !important;
+    gap: 8px 10px !important;
     align-items: center !important;
     justify-content: space-between !important;
     gap: 10px !important;
@@ -57,10 +61,11 @@ img, canvas, video, svg { max-width: 100%; }
     padding: 2px 0 12px !important;
     overflow: visible !important;
   }
-  header.top > .brand,
-  header.header > .brand {
+  header.top > .brand {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
     display: flex !important;
-    flex: 1 1 190px !important;
+    flex: initial !important;
     align-items: center !important;
     gap: 9px !important;
     width: auto !important;
@@ -68,8 +73,7 @@ img, canvas, video, svg { max-width: 100%; }
     min-width: 0 !important;
     margin: 0 !important;
   }
-  header.top .brand .logo,
-  header.header .brand .logo {
+  header.top .brand .logo {
     display: grid !important;
     place-items: center !important;
     flex: 0 0 40px !important;
@@ -83,23 +87,20 @@ img, canvas, video, svg { max-width: 100%; }
     padding: 0 !important;
     overflow: hidden !important;
   }
-  header.top .brand .logo img,
-  header.header .brand .logo img {
+  header.top .brand .logo img {
     display: block !important;
     width: 100% !important;
     height: 100% !important;
     object-fit: contain !important;
     margin: 0 !important;
   }
-  header.top .brand > div:not(.logo),
-  header.header .brand > div:not(.logo) {
+  header.top .brand > div:not(.logo) {
     flex: 1 1 auto !important;
     min-width: 0 !important;
     max-width: 100% !important;
     overflow: hidden !important;
   }
-  header.top .brand h1,
-  header.header .brand h1 {
+  header.top .brand h1 {
     max-width: 100% !important;
     margin: 0 !important;
     font-size: clamp(16px, 4.6vw, 21px) !important;
@@ -109,8 +110,7 @@ img, canvas, video, svg { max-width: 100%; }
     overflow: hidden !important;
     text-overflow: ellipsis !important;
   }
-  header.top .brand p,
-  header.header .brand p {
+  header.top .brand p {
     max-width: 100% !important;
     margin: 2px 0 0 !important;
     font-size: 10px !important;
@@ -120,11 +120,12 @@ img, canvas, video, svg { max-width: 100%; }
     text-overflow: ellipsis !important;
   }
   header.top > .actions,
-  header.top > .top-actions,
-  header.header > .top-actions,
   header.top > div[style*="display:flex"] {
     display: flex !important;
-    flex: 1 1 100% !important;
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    display: flex !important;
+    flex: initial !important;
     flex-flow: row wrap !important;
     align-items: center !important;
     justify-content: flex-start !important;
@@ -134,14 +135,16 @@ img, canvas, video, svg { max-width: 100%; }
     min-width: 0 !important;
     margin: 0 !important;
   }
+  header.top .prefs-btn {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+    align-self: center !important;
+  }
   header.top button,
-  header.header button,
   header.top .btn,
-  header.header .btn,
   header.top input,
-  header.header input,
-  header.top select,
-  header.header select {
+  header.top select {
     max-width: 100%;
     min-width: 0;
   }
@@ -177,7 +180,7 @@ img, canvas, video, svg { max-width: 100%; }
   body > main.wrap > #marketView,
   #mapView,
   #marketView {
-    display: block;
+    display: block !important;
     height: auto !important;
     min-height: 0 !important;
     overflow: visible !important;
@@ -201,11 +204,24 @@ img, canvas, video, svg { max-width: 100%; }
   }
 
   /* Full-width bottom dock: equal tap targets, icons and labels centered. */
-  #vcs-mobile-bottom-nav {
+  #pageNav, .site-nav, header.top > .nav { display: none !important; }
+  header.header {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 0 14px !important;
+    padding: 2px 0 12px !important;
+  }
+  header.header > .brand { flex: 1 1 100% !important; width: 100% !important; max-width: 100% !important; }
+  header.header > .top-actions { display: flex !important; flex: 1 1 100% !important; flex-flow: row wrap !important; width: 100% !important; min-width: 0 !important; gap: 8px !important; }
+  body #vcs-mobile-bottom-nav {
     position: fixed !important;
     inset: auto 0 0 0 !important;
     display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(var(--vcs-mobile-nav-count, 5), minmax(0, 1fr)) !important;
     align-items: stretch !important;
     justify-items: stretch !important;
     gap: 2px !important;
@@ -225,8 +241,8 @@ img, canvas, video, svg { max-width: 100%; }
     -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
   }
-  #vcs-mobile-bottom-nav > a,
-  #vcs-mobile-bottom-nav > button {
+  body #vcs-mobile-bottom-nav > a,
+  body #vcs-mobile-bottom-nav > button {
     appearance: none !important;
     display: flex !important;
     flex: initial !important;
@@ -251,8 +267,8 @@ img, canvas, video, svg { max-width: 100%; }
     box-sizing: border-box !important;
     font: 600 10px/1.1 system-ui, -apple-system, sans-serif !important;
   }
-  #vcs-mobile-bottom-nav > a > svg,
-  #vcs-mobile-bottom-nav > button > svg {
+  body #vcs-mobile-bottom-nav > a > svg,
+  body #vcs-mobile-bottom-nav > button > svg {
     display: block !important;
     position: static !important;
     flex: 0 0 20px !important;
@@ -262,7 +278,7 @@ img, canvas, video, svg { max-width: 100%; }
     min-height: 20px !important;
     margin: 0 !important;
   }
-  #vcs-mobile-bottom-nav .vcs-label {
+  body #vcs-mobile-bottom-nav .vcs-label {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -275,12 +291,15 @@ img, canvas, video, svg { max-width: 100%; }
     font-size: 9px !important;
     line-height: 11px !important;
   }
-  #vcs-mobile-bottom-nav .vcs-active {
+  body #vcs-mobile-bottom-nav .vcs-active {
     color: #35dccb !important;
     background: rgba(42,215,198,.12) !important;
     border-color: rgba(42,215,198,.2) !important;
   }
   body.vcs-mobile-app { padding-bottom: 0 !important; }
+  body.vcs-mobile-app > main.wrap { height: auto !important; min-height: 100dvh !important; overflow: visible !important; }
+  body.vcs-mobile-app > main.wrap > #mapView,
+  body.vcs-mobile-app > main.wrap > #marketView { display: block !important; height: auto !important; min-height: 0 !important; overflow: visible !important; }
 }
 @media screen and (max-width: 380px) {
   body > main.wrap, body > main.app, body > main.container,
@@ -288,6 +307,6 @@ img, canvas, video, svg { max-width: 100%; }
     padding-left: 9px !important;
     padding-right: 9px !important;
   }
-  #vcs-mobile-bottom-nav { padding-left: 3px !important; padding-right: 3px !important; }
-  #vcs-mobile-bottom-nav .vcs-label { font-size: 8.5px !important; }
+  body #vcs-mobile-bottom-nav { padding-left: 3px !important; padding-right: 3px !important; }
+  body #vcs-mobile-bottom-nav .vcs-label { font-size: 8.5px !important; }
 }
