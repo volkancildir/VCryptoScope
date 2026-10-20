@@ -384,13 +384,33 @@ button{cursor:pointer}
 </style>
 
 <style id="vcs-mobile-gap-final">
-@media (max-width: 740px) {
-  body.vcs-mobile-app { padding-bottom: 0 !important; margin-bottom: 0 !important; }
-  body > .wrap, body > .app, body > .container,
-  body > main.wrap, body > main.app, body > main.container,
-  .wrap, .app, .container, main.wrap, main.app, main.container {
+/* Mobile: keep the navigation in the page flow so it sits directly after the content,
+   instead of pinning it to the viewport and leaving a large visual gap above it. */
+@media (max-width: 740px), (display-mode: standalone) {
+  body.vcs-mobile-app {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
+  }
+  body.vcs-mobile-app > main.wrap,
+  body.vcs-mobile-app > main.app,
+  body.vcs-mobile-app > .wrap,
+  body.vcs-mobile-app > .app,
+  body.vcs-mobile-app > .container {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  body #vcs-mobile-bottom-nav {
+    position: relative !important;
+    inset: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    border-radius: 14px 14px 0 0 !important;
+    box-sizing: border-box !important;
   }
 }
 </style>
