@@ -47,6 +47,20 @@ button{cursor:pointer}
 
 .site-nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:8px 0 14px}.site-nav a{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border:1px solid var(--line,#263550);border-radius:10px;background:var(--panel,#111a2b);color:var(--text,#eef3ff);text-decoration:none;font-size:12px;font-weight:650;white-space:nowrap}.site-nav a:hover{border-color:var(--blue,#7d9cff)}@media(max-width:700px){.site-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.site-nav a{padding:9px 5px;font-size:11px;text-align:center;white-space:normal}}
 </style>
+
+<style id="vcrypto-alignment-fix">
+/* Consistent logo, title and page-navigation alignment on every screen */
+.brand{display:flex!important;align-items:center!important;gap:10px!important;min-width:0}
+.brand .logo{width:44px!important;height:44px!important;min-width:44px!important;flex:0 0 44px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;margin:0!important;padding:0!important;line-height:0!important}
+.brand .logo img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;vertical-align:middle!important;margin:0!important}
+.brand>div:last-child{min-width:0;align-self:center}
+.brand h1,.brand p{line-height:1.35}
+.site-nav,#pageNav{display:flex;align-items:center!important;gap:7px!important;flex-wrap:wrap}
+.site-nav a,#pageNav a{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;line-height:1.25!important;box-sizing:border-box!important;vertical-align:middle}
+.site-nav a svg,#pageNav a svg{display:block!important;width:16px!important;height:16px!important;min-width:16px!important;flex:0 0 16px!important;margin:0!important;position:static!important;transform:none!important}
+@media(max-width:700px){.site-nav a,#pageNav a{min-height:38px!important}}
+</style>
+
 </head>
 <body>
 <div class="container">
