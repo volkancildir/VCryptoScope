@@ -92,7 +92,7 @@ jobs:
 
                   host = urllib.parse.urlparse(final_url).netloc.lower()
                   allowed = (
-                      "cnbc.com", "cnbc-e.com", "cnbce.com", "bbc.co.uk", "bbc.com",
+                      "cnbc.com", "cnbc-e.com", "cnbce.com", "www.cnbce.com", "bbc.co.uk", "bbc.com",
                       "federalreserve.gov", "coindesk.com", "cointelegraph.com"
                   )
                   if not any(host == domain or host.endswith("." + domain) for domain in allowed):
@@ -324,7 +324,7 @@ jobs:
                       item["articleTextTr"] = ""
                       print(f"ARTICLE TEXT MISSING: {item['source']} | {item['title'][:90]}")
                   item["importance"] = classify_importance(
-                      item["title"], item["summary"], category
+                      item["title"], item["summary"], item["category"]
                   )
                   item["marketImpactTr"] = infer_impact(category)
                   items.append(item)
@@ -351,7 +351,10 @@ jobs:
           print(f"ARTICLE EXTRACTION SUMMARY: {extraction_stats['success']}/{extraction_stats['attempted']} articles with body; translated sentences total={extraction_stats['sentences']}.")
           if extraction_stats["attempted"] and extraction_stats["success"] == 0:
               print("WARNING: No publisher article bodies were extracted; do not treat summaries as full articles.")
-          print("Categories:", ", ".join(FEEDS.keys()))
+          from collections import Counter
+          category_counts = Counter(item["category"] for item in items)
+          print("Category distribution:", json.dumps(category_counts, ensure_ascii=False, sort_keys=True))
+          print("Sources:", json.dumps(dict(Counter(item["source"] for item in items)), ensure_ascii=False))
           PY
 
       - name: Commit and push updated news
