@@ -40,23 +40,27 @@ jobs:
           from email.utils import parsedate_to_datetime
           from html import unescape
 
-          # Direct publisher feeds only; do not use Google News as a news provider.
-          # CNBC-e is the only enabled publisher. Its general RSS feed is
-          # classified into the app's existing sections using headline/summary keywords.
+          # Only direct publisher feeds: CNBC-e and BBC News. No news aggregators.
           FEEDS = {
               "CNBC-e": [
-                  ("CNBC-e", "https://www.cnbce.com/rss")
+                  ("CNBC-e", "https://www.cnbce.com/rss"),
+              ],
+              "BBC News": [
+                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
+                  ("BBC News", "https://feeds.bbci.co.uk/news/business/economy/rss.xml"),
+                  ("BBC News", "https://feeds.bbci.co.uk/news/business/companies/rss.xml"),
+                  ("BBC News", "https://feeds.bbci.co.uk/news/world/rss.xml"),
               ],
           }
 
           def classify_cnbce_category(title, summary):
               text = (title + " " + summary).lower()
               rules = [
-                  ("Fed & Faiz", ("fed ", "federal reserve", "faiz", "faiz kararı", "faiz indir", "faiz artır", "merkez bankası", "politika faizi", "powell", "fomc", "tahvil faizi")),
-                  ("İstihdam & Enflasyon", ("enflasyon", "tüfe", "üfe", "istihdam", "işsizlik", "tarım dışı", "maaş", "ücret artışı", "büyüme verisi", "gsyh", "cpi", "pce")),
-                  ("Petrol & Enerji", ("petrol", "brent", "wti", "doğalgaz", "doğal gaz", "enerji", "opec", "akaryakıt", "elektrik fiyatı")),
-                  ("Regülasyon", ("spk", "sec ", "düzenleme", "regülasyon", "yaptırım", "meclis'ten geçti", "kanun teklifi", "yasak", "soruşturma")),
-                  ("Kripto", ("bitcoin", "btc", "ethereum", "ether", "kripto", "crypto", "binance", "coinbase", "altcoin", "etf", "blockchain", "token")),
+                  ("Fed & Faiz", ("fed ", "federal reserve", "interest rate", "interest rates", "central bank", "powell", "fomc", "treasury yield", "bond yield", "faiz", "merkez bankası", "tahvil faizi", "politika faizi")),
+                  ("İstihdam & Enflasyon", ("inflation", "consumer prices", "producer prices", "employment", "unemployment", "jobs report", "payroll", "wage growth", "economic growth", "gdp", "cpi", "pce", "enflasyon", "istihdam", "işsizlik", "tarım dışı", "maaş", "gsyh")),
+                  ("Petrol & Enerji", ("oil price", "crude oil", "brent", "wti", "natural gas", "energy market", "opec", "fuel price", "petrol", "doğalgaz", "doğal gaz", "enerji", "akaryakıt")),
+                  ("Regülasyon", ("financial regulator", "regulator", "regulation", "regulatory", "sanction", "lawsuit", "sec ", "spk", "düzenleme", "regülasyon", "yaptırım", "yasak", "soruşturma")),
+                  ("Kripto", ("bitcoin", "btc", "ethereum", "ether", "cryptocurrency", "crypto", "binance", "coinbase", "altcoin", "crypto etf", "blockchain", "token", "kripto")),
               ]
               for category, keywords in rules:
                   if any(keyword in text for keyword in keywords):
@@ -284,14 +288,13 @@ jobs:
                               continue
                           seen.add(key)
 
-                          assigned_category = classify_cnbce_category(title, summary)
                           category_items.append({
                               "title": title,
                               "summary": summary,
                               "url": url,
                               "source": source_name,
                               "publishedAt": published,
-                              "category": assigned_category,
+                              "category": "Küresel Piyasalar",
                           })
 
                   except Exception as exc:
@@ -308,6 +311,12 @@ jobs:
                   print("Translating:", item["title"][:100])
                   item["titleTr"] = translate_tr(item["title"])
                   item["summaryTr"] = translate_tr(item["summary"])
+                  # Classify using both original-language and Turkish text so BBC headlines
+                  # are not incorrectly dumped into the global-markets section.
+                  item["category"] = classify_cnbce_category(
+                      item["title"] + " " + item["titleTr"],
+                      item["summary"] + " " + item["summaryTr"]
+                  )
                   extraction_stats["attempted"] += 1
                   article_text = extract_article_text(item["url"], item["title"])
                   # Publish only real publisher text; never pad a headline with generic prose.
@@ -326,7 +335,7 @@ jobs:
                   item["importance"] = classify_importance(
                       item["title"], item["summary"], item["category"]
                   )
-                  item["marketImpactTr"] = infer_impact(category)
+                  item["marketImpactTr"] = infer_impact(item["category"])
                   items.append(item)
                   time.sleep(0.15)
 
