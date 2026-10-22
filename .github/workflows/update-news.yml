@@ -111,7 +111,7 @@ jobs:
                           favor_recall=True, output_format="txt"
                       )
                       extracted = clean_text(extracted or "")
-                      if len(extracted) >= 700:
+                      if len(extracted) >= 350:
                           return extracted[:5000]
                   except Exception as exc:
                       print(f"Readability extraction error: {exc}")
@@ -136,7 +136,7 @@ jobs:
                   fragment = re.sub(r'<(script|style|nav|footer|header|aside)\b[^>]*>.*?</\1>', ' ', fragment, flags=re.I | re.S)
                   paragraphs = re.findall(r'<p\b[^>]*>(.*?)</p>', fragment, re.I | re.S)
                   text = clean_text(' '.join(paragraphs))
-                  if len(text) >= 500:
+                  if len(text) >= 250:
                       return text[:5000]
                   # Last fallback: publisher metadata description, if present.
                   meta = re.search(r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+content=["\']([^"\']+)["\']', raw, re.I)
