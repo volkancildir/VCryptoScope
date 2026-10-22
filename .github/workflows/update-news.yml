@@ -236,6 +236,7 @@ jobs:
 
           items = []
           seen = set()
+          extraction_stats = {"attempted": 0, "success": 0, "sentences": 0}
 
           for category, queries in FEEDS.items():
               category_items = []
@@ -300,14 +301,21 @@ jobs:
                   print("Translating:", item["title"][:100])
                   item["titleTr"] = translate_tr(item["title"])
                   item["summaryTr"] = translate_tr(item["summary"])
+                  extraction_stats["attempted"] += 1
                   article_text = extract_article_text(item["url"])
-                  # Only publish extracted publisher text; never pad a headline with generic prose.
+                  # Publish only real publisher text; never pad a headline with generic prose.
                   if article_text and len(article_text) > len(item["title"]) + 250:
-                      item["articleText"] = article_text
-                      item["articleTextTr"] = translate_tr(article_text[:5000])
+                      translated = translate_tr(article_text[:5000])
+                      item["articleText"] = article_text[:6000]
+                      item["articleTextTr"] = translated[:6500]
+                      sentence_count = len(re.findall(r"[^.!?]+[.!?]+", translated))
+                      extraction_stats["success"] += 1
+                      extraction_stats["sentences"] += sentence_count
+                      print(f"ARTICLE TEXT OK: {item['source']} | chars={len(translated)} | sentences={sentence_count} | {item['title'][:90]}")
                   else:
                       item["articleText"] = ""
                       item["articleTextTr"] = ""
+                      print(f"ARTICLE TEXT MISSING: {item['source']} | {item['title'][:90]}")
                   item["importance"] = classify_importance(
                       item["title"], item["summary"], category
                   )
@@ -333,6 +341,9 @@ jobs:
               json.dump(output, file, ensure_ascii=False, indent=2)
 
           print(f"Saved {len(items)} news items.")
+          print(f"ARTICLE EXTRACTION SUMMARY: {extraction_stats['success']}/{extraction_stats['attempted']} articles with body; translated sentences total={extraction_stats['sentences']}.")
+          if extraction_stats["attempted"] and extraction_stats["success"] == 0:
+              print("WARNING: No publisher article bodies were extracted; do not treat summaries as full articles.")
           print("Categories:", ", ".join(FEEDS.keys()))
           PY
 
