@@ -118,11 +118,11 @@ jobs:
                   pages.append(raw)
                   add_url(final_url)
                   # Publisher links may be embedded in the Google News wrapper as escaped URLs.
-                  for match in re.findall(r'https?:(?:\\/\\/|//)[^\\s"\\'<>\\\\]+', raw):
+                  for match in re.findall(r"https?:(?:\\/\\/|//)[^\\s\"'<>\\\\]+", raw):
                       add_url(match)
                   for pattern in (
-                      r'href=["\\'](https?://[^"\\']+)["\\']',
-                      r'(?:url|article_url|canonical_url)["\\']?\\s*[:=]\\s*["\\'](https?://[^"\\']+)',
+                      r"href=[\"'](https?://[^\"']+)[\"']",
+                      r"(?:url|article_url|canonical_url)[\"']?\\s*[:=]\\s*[\"'](https?://[^\"']+)",
                   ):
                       for match in re.findall(pattern, raw, re.I):
                           add_url(match)
