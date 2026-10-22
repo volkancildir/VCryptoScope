@@ -141,14 +141,27 @@ jobs:
                       if any(marker in lower for marker in bad_markers):
                           return ""
 
-                  # Reject generic pages whose text does not match the RSS article headline.
+                  # Verify that this is the requested article page, not a site-wide
+                  # privacy notice or a redirect page with unrelated text.
                   if expected_title:
-                      terms = [w.lower() for w in re.findall(r"[a-zA-Z0-9]{4,}", expected_title)
-                               if w.lower() not in {"with", "from", "that", "this", "after", "over"}]
+                      title_match = re.search(
+                          r'<title[^>]*>(.*?)</title>', downloaded, re.I | re.S
+                      )
+                      page_title = clean_text(title_match.group(1) if title_match else "").lower()
+                      expected = clean_text(expected_title).lower()
+                      terms = [w.lower() for w in re.findall(r"[a-z0-9]{4,}", expected)
+                               if w.lower() not in {"with", "from", "that", "this", "after", "over", "into", "about"}]
+                      title_terms = [w for w in re.findall(r"[a-z0-9]{4,}", page_title)
+                                     if w not in {"cnbc", "bbc", "news", "latest", "breaking", "live"}]
+                      if expected and expected not in page_title:
+                          title_hits = sum(1 for word in terms if word in page_title)
+                          if not terms or title_hits < max(2, int(len(terms) * 0.5)):
+                              print(f"ARTICLE REJECTED: page title does not match headline; expected={expected_title[:80]!r}, page={page_title[:100]!r}")
+                              return ""
                       if terms:
-                          hits = sum(1 for word in terms if word in lower)
-                          if hits < min(2, len(terms)):
-                              print(f"ARTICLE REJECTED: headline/body mismatch at {final_url}")
+                          body_hits = sum(1 for word in terms if word in lower)
+                          if body_hits < max(3, int(len(terms) * 0.4)):
+                              print(f"ARTICLE REJECTED: article body does not match headline at {final_url}")
                               return ""
                   return extracted if len(extracted) >= 300 else ""
               except Exception as exc:
