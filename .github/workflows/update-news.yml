@@ -94,53 +94,75 @@ jobs:
               return re.sub(r"\s+", " ", value).strip()
 
           def extract_article_text(url):
-              """Resolve feed redirects first, then extract substantial publisher article text."""
+              """Resolve Google News links and extract publisher text with multiple strategies."""
               try:
-                  request = urllib.request.Request(url, headers=HEADERS)
-                  with urllib.request.urlopen(request, timeout=20) as response:
-                      raw = response.read().decode("utf-8", errors="ignore")
-                      final_url = response.geturl()
-                  # Google News RSS links often redirect to a publisher URL; prefer that page.
-                  if final_url and final_url != url and "news.google.com" not in urllib.parse.urlparse(final_url).netloc:
-                      url = final_url
-                  # Dedicated readability extraction handles more publisher layouts.
+                  raw = ""
+                  final_url = url
+                  try:
+                      request = urllib.request.Request(url, headers=HEADERS)
+                      with urllib.request.urlopen(request, timeout=25) as response:
+                          raw = response.read().decode("utf-8", errors="ignore")
+                          final_url = response.geturl()
+                  except Exception as exc:
+                      print(f"Initial article fetch error: {exc}")
+                  # Try trafilatura's downloader against both the feed URL and resolved publisher URL.
+                  pages = []
+                  if raw:
+                      pages.append(raw)
+                  candidates_urls = []
+                  if final_url and "news.google.com" not in urllib.parse.urlparse(final_url).netloc:
+                      candidates_urls.append(final_url)
+                  candidates_urls.append(url)
                   try:
                       import trafilatura
-                      extracted = trafilatura.extract(
-                          raw, include_comments=False, include_tables=False,
-                          favor_recall=True, output_format="txt"
-                      )
-                      extracted = clean_text(extracted or "")
-                      if len(extracted) >= 350:
-                          return extracted[:5000]
+                      for candidate_url in candidates_urls:
+                          try:
+                              downloaded = trafilatura.fetch_url(candidate_url)
+                              if downloaded:
+                                  pages.append(downloaded)
+                          except Exception as exc:
+                              print(f"Trafilatura download error: {exc}")
+                      for page in pages:
+                          try:
+                              extracted = trafilatura.extract(
+                                  page, include_comments=False, include_tables=False,
+                                  favor_recall=True, output_format="txt"
+                              )
+                              extracted = clean_text(extracted or "")
+                              if len(extracted) >= 350:
+                                  return extracted[:6000]
+                          except Exception:
+                              pass
                   except Exception as exc:
                       print(f"Readability extraction error: {exc}")
-                  # Prefer structured article body when publisher exposes it.
-                  candidates = []
-                  for match in re.findall(r'"articleBody"\s*:\s*"((?:\\.|[^"\\])*)"', raw, re.I):
-                      try:
-                          decoded = json.loads('"' + match + '"')
-                          decoded = clean_text(decoded)
-                          if len(decoded) > 250:
-                              candidates.append(decoded)
-                      except Exception:
-                          pass
-                  if candidates:
-                      return max(candidates, key=len)[:5000]
-                  # Extract article/main content and remove scripts/styles/navigation.
-                  main_match = re.search(
-                      r'<(?:article|main)\b[^>]*>(.*?)</(?:article|main)>',
-                      raw, re.I | re.S
-                  )
-                  fragment = main_match.group(1) if main_match else raw
-                  fragment = re.sub(r'<(script|style|nav|footer|header|aside)\b[^>]*>.*?</\1>', ' ', fragment, flags=re.I | re.S)
-                  paragraphs = re.findall(r'<p\b[^>]*>(.*?)</p>', fragment, re.I | re.S)
-                  text = clean_text(' '.join(paragraphs))
-                  if len(text) >= 250:
-                      return text[:5000]
-                  # Last fallback: publisher metadata description, if present.
-                  meta = re.search(r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+content=["\']([^"\']+)["\']', raw, re.I)
-                  return clean_text(meta.group(1))[:1500] if meta else ""
+                  # Prefer structured article bodies from publisher metadata.
+                  for page in pages:
+                      structured = []
+                      for match in re.findall(r'"articleBody"\s*:\s*"((?:\\.|[^"\\])*)"', page, re.I):
+                          try:
+                              decoded = clean_text(json.loads('"' + match + '"'))
+                              if len(decoded) >= 350:
+                                  structured.append(decoded)
+                          except Exception:
+                              pass
+                      if structured:
+                          return max(structured, key=len)[:6000]
+                  # Last extraction fallback: visible paragraphs from article/main.
+                  for page in pages:
+                      main_match = re.search(
+                          r'<(?:article|main)\b[^>]*>(.*?)</(?:article|main)>',
+                          page, re.I | re.S
+                      )
+                      fragment = main_match.group(1) if main_match else page
+                      fragment = re.sub(
+                          r'<(script|style|nav|footer|header|aside)\b[^>]*>.*?</\1>',
+                          ' ', fragment, flags=re.I | re.S
+                      )
+                      paragraphs = re.findall(r'<p\b[^>]*>(.*?)</p>', fragment, re.I | re.S)
+                      text = clean_text(' '.join(paragraphs))
+                      if len(text) >= 250:
+                          return text[:6000]
+                  return ""
               except Exception as exc:
                   print(f"Article extraction error: {exc}")
                   return ""
