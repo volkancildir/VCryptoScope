@@ -69,7 +69,22 @@ jobs:
                   ("İstihdam & Enflasyon", ("inflation", "consumer prices", "producer prices", "employment", "unemployment", "jobs report", "payroll", "wage growth", "economic growth", "gdp", "cpi", "pce", "enflasyon", "istihdam", "işsizlik", "tarım dışı", "maaş", "gsyh")),
                   ("Petrol & Enerji", ("oil price", "crude oil", "brent", "wti", "natural gas", "energy market", "opec", "fuel price", "petrol", "doğalgaz", "doğal gaz", "enerji", "akaryakıt")),
                   ("Regülasyon", ("financial regulator", "regulator", "regulation", "regulatory", "sanction", "lawsuit", "sec ", "spk", "düzenleme", "regülasyon", "yaptırım", "yasak", "soruşturma")),
-                  ("Kripto", ("bitcoin", "btc", "ethereum", "ether", "cryptocurrency", "crypto", "binance", "coinbase", "altcoin", "crypto etf", "blockchain", "token", "kripto")),
+                  ("Kripto", (
+                      "bitcoin", "btc", "ethereum", "ether", "eth", "cryptocurrency", "crypto", "binance", "coinbase",
+                      "altcoin", "crypto etf", "blockchain", "token", "kripto", "digital asset", "digital assets",
+                      "solana", "xrp", "ripple", "bnb", "dogecoin", "doge", "cardano", "ada coin", "toncoin",
+                      "tron", "trx", "polkadot", "chainlink", "avalanche", "avax", "shiba inu", "shib",
+                      "litecoin", "ltc", "bitcoin cash", "bch", "sui network", "aptos", "near protocol",
+                      "arbitrum", "optimism", "pepe token", "uniswap", "aave", "makerdao", "cosmos",
+                      "render token", "fetch.ai", "artificial superintelligence alliance", "bittensor", "tao token",
+                      "ondo finance", "stellar", "xlm", "monero", "xmr", "hedera", "hbar", "vechain",
+                      "the graph", "gala games", "immutable x", "injective", "inj token", "sei network",
+                      "celestia", "tia token", "worldcoin", "wld token", "ethena", "ena token", "hyperliquid",
+                      "hype token", "jupiter exchange", "jup token", "floki", "bonk", "kaspa", "kas token",
+                      "crypto exchange", "crypto market", "crypto markets", "crypto prices", "crypto trading",
+                      "crypto fund", "crypto funds", "crypto investor", "crypto investors", "crypto regulation",
+                      "crypto regulations", "crypto crash", "crypto rally", "crypto sell-off", "crypto selloff"
+                  )),
               ]
               for category, keywords in rules:
                   if any(keyword in text for keyword in keywords):
