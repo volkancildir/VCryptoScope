@@ -40,42 +40,34 @@ jobs:
           from email.utils import parsedate_to_datetime
           from html import unescape
 
+          # Direct publisher feeds only; do not use Google News as a news provider.
           FEEDS = {
               "Kripto": [
-                  "Bitcoin OR Ethereum OR cryptocurrency market when:7d",
-                  "crypto ETF flows OR digital asset funds when:7d",
-                  "Solana OR XRP OR altcoins blockchain when:7d",
-                  "site:tradingview.com/news crypto Bitcoin Ethereum when:7d",
+                  ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/"),
+                  ("Cointelegraph", "https://cointelegraph.com/rss"),
               ],
               "Fed & Faiz": [
-                  "Federal Reserve OR FOMC interest rate decision when:7d",
-                  "Jerome Powell Fed policy OR US Treasury yields when:7d",
-                  "central bank interest rates rate cut rate hike when:7d",
-                  "site:tradingview.com/news Fed interest rates yields when:7d",
+                  ("CNBC", "https://www.cnbc.com/id/10001147/device/rss/rss.html"),
+                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
+                  ("Federal Reserve", "https://www.federalreserve.gov/feeds/press_all.xml"),
               ],
               "İstihdam & Enflasyon": [
-                  "US CPI inflation OR PCE inflation data when:7d",
-                  "US jobs report nonfarm payrolls unemployment wages when:7d",
-                  "US producer price index PPI inflation data when:7d",
-                  "site:tradingview.com/news US inflation employment CPI when:7d",
+                  ("CNBC", "https://www.cnbc.com/id/10001147/device/rss/rss.html"),
+                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
               ],
               "Petrol & Enerji": [
-                  "Brent crude WTI oil prices when:7d",
-                  "OPEC OPEC+ oil production supply decision when:7d",
-                  "EIA US crude oil inventories energy prices when:7d",
-                  "site:tradingview.com/news crude oil Brent energy when:7d",
+                  ("CNBC", "https://www.cnbc.com/id/10001147/device/rss/rss.html"),
+                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
               ],
               "Regülasyon": [
-                  "SEC cryptocurrency regulation lawsuit decision when:7d",
-                  "crypto regulation legislation digital assets law when:7d",
-                  "crypto ETF approval regulator policy when:7d",
-                  "site:tradingview.com/news crypto regulation SEC when:7d",
+                  ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/"),
+                  ("Cointelegraph", "https://cointelegraph.com/rss"),
+                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
               ],
               "Küresel Piyasalar": [
-                  "global stock markets equities futures when:7d",
-                  "US dollar index Treasury bond yields forex when:7d",
-                  "China economy global trade tariffs market when:7d",
-                  "site:tradingview.com/news global markets dollar stocks when:7d",
+                  ("CNBC", "https://www.cnbc.com/id/10001147/device/rss/rss.html"),
+                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
+                  ("Reuters", "https://feeds.reuters.com/reuters/businessNews"),
               ],
           }
 
@@ -244,39 +236,36 @@ jobs:
           for category, queries in FEEDS.items():
               category_items = []
 
-              for query in queries:
+              for source_name, rss_url in queries:
                   try:
-                      rss_url = (
-                          "https://news.google.com/rss/search?"
-                          + urllib.parse.urlencode({
-                              "q": query,
-                              "hl": "en-US",
-                              "gl": "US",
-                              "ceid": "US:en",
-                          })
-                      )
                       root = ET.fromstring(get_url(rss_url))
+                      nodes = root.findall(".//item")
+                      if not nodes:
+                          nodes = root.findall(".//{*}entry")
 
-                      for node in root.findall(".//item"):
+                      for node in nodes:
                           title = clean_text(node.findtext("title", ""))
                           summary = clean_text(
                               node.findtext("description", "")
+                              or node.findtext("{*}summary", "")
+                              or node.findtext("{*}content", "")
                           )
-                          url = (node.findtext("link", "") or "").strip()
-                          source_node = node.find("source")
-                          source = clean_text(
-                              source_node.text
-                              if source_node is not None
-                              else "Google News"
-                          )
+                          link_node = node.find("link")
+                          url = ""
+                          if link_node is not None:
+                              url = (link_node.text or link_node.attrib.get("href", "") or "").strip()
                           published = published_date(
                               node.findtext("pubDate", "")
+                              or node.findtext("{*}published", "")
+                              or node.findtext("{*}updated", "")
                           )
 
                           if not title or not url:
                               continue
+                          if url.startswith("/"):
+                              continue
 
-                          key = url.split("&ved=")[0].strip()
+                          key = url.split("?utm_")[0].strip()
                           if key in seen:
                               continue
                           seen.add(key)
@@ -285,13 +274,13 @@ jobs:
                               "title": title,
                               "summary": summary,
                               "url": url,
-                              "source": source,
+                              "source": source_name,
                               "publishedAt": published,
                               "category": category,
                           })
 
                   except Exception as exc:
-                      print(f"Feed error [{category}] [{query}]: {exc}")
+                      print(f"Direct publisher feed error [{category}] [{source_name} {rss_url}]: {exc}")
 
                   time.sleep(0.3)
 
