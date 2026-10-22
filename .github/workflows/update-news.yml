@@ -42,31 +42,8 @@ jobs:
 
           # Direct publisher feeds only; do not use Google News as a news provider.
           FEEDS = {
-              "Kripto": [
-                  ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/"),
-                  ("Cointelegraph", "https://cointelegraph.com/rss"),
-              ],
-              "Fed & Faiz": [
-                  ("CNBC", "https://www.cnbc.com/id/10001147/device/rss/rss.html"),
-                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
-                  ("Federal Reserve", "https://www.federalreserve.gov/feeds/press_all.xml"),
-              ],
-              "İstihdam & Enflasyon": [
-                  ("CNBC", "https://www.cnbc.com/id/10001147/device/rss/rss.html"),
-                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
-              ],
-              "Petrol & Enerji": [
-                  ("CNBC", "https://www.cnbc.com/id/10001147/device/rss/rss.html"),
-                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
-              ],
-              "Regülasyon": [
-                  ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/"),
-                  ("Cointelegraph", "https://cointelegraph.com/rss"),
-                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
-              ],
               "Küresel Piyasalar": [
-                  ("CNBC", "https://www.cnbc.com/id/10001147/device/rss/rss.html"),
-                  ("BBC News", "https://feeds.bbci.co.uk/news/business/rss.xml"),
+                  ("CNBC-e", "https://www.cnbce.com/rss")
               ],
           }
 
