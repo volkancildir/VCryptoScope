@@ -84,44 +84,73 @@ jobs:
               value = re.sub(r"<[^>]+>", " ", value)
               return re.sub(r"\s+", " ", value).strip()
 
-          def extract_article_text(url):
-              """Fetch the publisher page and return the complete article body, not the RSS teaser."""
+          def extract_article_text(url, expected_title=""):
+              """Extract a publisher article body and reject privacy/legal/consent pages."""
               if not url or not url.startswith(("https://", "http://")):
                   return ""
               try:
                   import trafilatura
-                  downloaded = trafilatura.fetch_url(url)
-                  if not downloaded:
-                      request = urllib.request.Request(url, headers=HEADERS)
-                      with urllib.request.urlopen(request, timeout=30) as response:
-                          downloaded = response.read().decode("utf-8", errors="ignore")
-                  if not downloaded:
+                  request = urllib.request.Request(url, headers=HEADERS)
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      final_url = response.geturl()
+                      downloaded = response.read().decode("utf-8", errors="ignore")
+                  if not downloaded or not final_url.startswith(("https://", "http://")):
+                      return ""
+
+                  host = urllib.parse.urlparse(final_url).netloc.lower()
+                  allowed = (
+                      "cnbc.com", "cnbc-e.com", "bbc.co.uk", "bbc.com",
+                      "federalreserve.gov", "coindesk.com", "cointelegraph.com"
+                  )
+                  if not any(host == domain or host.endswith("." + domain) for domain in allowed):
+                      print(f"ARTICLE REJECTED: unexpected redirect host={host}")
                       return ""
 
                   extracted = trafilatura.extract(
-                      downloaded,
-                      include_comments=False,
-                      include_tables=False,
-                      favor_recall=True,
-                      output_format="txt"
+                      downloaded, include_comments=False, include_tables=False,
+                      favor_recall=True, output_format="txt"
                   ) or ""
                   extracted = clean_text(extracted)
-                  if len(extracted) >= 300:
-                      return extracted
 
-                  # Fallback: extract paragraphs from the publisher's article/main element.
-                  fragment_match = re.search(
-                      r'<(?:article|main)\\b[^>]*>(.*?)</(?:article|main)>',
-                      downloaded, re.I | re.S
+                  # If the extractor returns a consent/privacy page, do not present it as news.
+                  bad_markers = (
+                      "california notice", "california consumer privacy act",
+                      "your privacy choices", "privacy policy", "do not sell or share",
+                      "versant's privacy", "versant privacy", "cookie policy",
+                      "gestiona tus preferencias de privacidad", "avis de confidentialité"
                   )
-                  fragment = fragment_match.group(1) if fragment_match else downloaded
-                  fragment = re.sub(
-                      r'<(script|style|nav|footer|header|aside)\\b[^>]*>.*?</\\1>',
-                      ' ', fragment, flags=re.I | re.S
-                  )
-                  paragraphs = re.findall(r'<p\\b[^>]*>(.*?)</p>', fragment, re.I | re.S)
-                  fallback = clean_text(' '.join(paragraphs))
-                  return fallback if len(fallback) >= 300 else ""
+                  lower = extracted.lower()
+                  if any(marker in lower for marker in bad_markers):
+                      print(f"ARTICLE REJECTED: privacy/legal page at {final_url}")
+                      return ""
+
+                  # Fallback to article paragraphs only, fixing the HTML regex boundaries.
+                  if len(extracted) < 300:
+                      fragment_match = re.search(
+                          r'<(?:article|main)\b[^>]*>(.*?)</(?:article|main)>',
+                          downloaded, re.I | re.S
+                      )
+                      fragment = fragment_match.group(1) if fragment_match else downloaded
+                      fragment = re.sub(
+                          r'<(script|style|nav|footer|header|aside)\b[^>]*>.*?</\1>',
+                          ' ', fragment, flags=re.I | re.S
+                      )
+                      paragraphs = re.findall(r'<p\b[^>]*>(.*?)</p>', fragment, re.I | re.S)
+                      extracted = clean_text(' '.join(paragraphs))
+                      lower = extracted.lower()
+                      if any(marker in lower for marker in bad_markers):
+                          return ""
+
+                  # Reject generic pages whose text does not match the RSS article headline.
+                  if expected_title:
+                      terms = [w.lower() for w in re.findall(r"[a-zA-Z0-9]{4,}", expected_title)
+                               if w.lower() not in {"with", "from", "that", "this", "after", "over"}]
+                      if terms:
+                          hits = sum(1 for word in terms if word in lower)
+                          if hits < min(2, len(terms)):
+                              print(f"ARTICLE REJECTED: headline/body mismatch at {final_url}")
+                              return ""
+                  return extracted if len(extracted) >= 300 else ""
               except Exception as exc:
                   print(f"Publisher article extraction failed for {url[:120]}: {exc}")
                   return ""
@@ -273,7 +302,7 @@ jobs:
                   item["titleTr"] = translate_tr(item["title"])
                   item["summaryTr"] = translate_tr(item["summary"])
                   extraction_stats["attempted"] += 1
-                  article_text = extract_article_text(item["url"])
+                  article_text = extract_article_text(item["url"], item["title"])
                   # Publish only real publisher text; never pad a headline with generic prose.
                   if article_text and len(article_text) > len(item["title"]) + 250:
                       translated = translate_tr(article_text)
