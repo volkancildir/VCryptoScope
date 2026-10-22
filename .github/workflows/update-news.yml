@@ -90,6 +90,40 @@ jobs:
               value = re.sub(r"<[^>]+>", " ", value)
               return re.sub(r"\s+", " ", value).strip()
 
+          def extract_article_text(url):
+              """Best-effort extraction of real article text from publisher pages."""
+              try:
+                  raw = get_url(url, timeout=12).decode("utf-8", errors="ignore")
+                  # Prefer structured article body when publisher exposes it.
+                  candidates = []
+                  for match in re.findall(r'"articleBody"\s*:\s*"((?:\\.|[^"\\])*)"', raw, re.I):
+                      try:
+                          decoded = json.loads('"' + match + '"')
+                          decoded = clean_text(decoded)
+                          if len(decoded) > 250:
+                              candidates.append(decoded)
+                      except Exception:
+                          pass
+                  if candidates:
+                      return max(candidates, key=len)[:5000]
+                  # Extract article/main content and remove scripts/styles/navigation.
+                  main_match = re.search(
+                      r'<(?:article|main)\b[^>]*>(.*?)</(?:article|main)>',
+                      raw, re.I | re.S
+                  )
+                  fragment = main_match.group(1) if main_match else raw
+                  fragment = re.sub(r'<(script|style|nav|footer|header|aside)\b[^>]*>.*?</\1>', ' ', fragment, flags=re.I | re.S)
+                  paragraphs = re.findall(r'<p\b[^>]*>(.*?)</p>', fragment, re.I | re.S)
+                  text = clean_text(' '.join(paragraphs))
+                  if len(text) >= 250:
+                      return text[:5000]
+                  # Last fallback: publisher metadata description, if present.
+                  meta = re.search(r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+content=["\']([^"\']+)["\']', raw, re.I)
+                  return clean_text(meta.group(1))[:1500] if meta else ""
+              except Exception as exc:
+                  print(f"Article extraction error: {exc}")
+                  return ""
+
           def translate_tr(text):
               if not text:
                   return ""
@@ -223,6 +257,14 @@ jobs:
                   print("Translating:", item["title"][:100])
                   item["titleTr"] = translate_tr(item["title"])
                   item["summaryTr"] = translate_tr(item["summary"])
+                  article_text = extract_article_text(item["url"])
+                  # Only publish extracted publisher text; never pad a headline with generic prose.
+                  if article_text and len(article_text) > len(item["title"]) + 80:
+                      item["articleText"] = article_text
+                      item["articleTextTr"] = translate_tr(article_text[:4000])
+                  else:
+                      item["articleText"] = ""
+                      item["articleTextTr"] = ""
                   item["importance"] = classify_importance(
                       item["title"], item["summary"], category
                   )
