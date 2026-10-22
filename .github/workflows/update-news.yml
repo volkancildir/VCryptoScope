@@ -40,7 +40,7 @@ jobs:
           from email.utils import parsedate_to_datetime
           from html import unescape
 
-          # Only direct publisher feeds: CNBC-e and BBC News. No news aggregators.
+          # Direct publisher feeds: general markets plus dedicated crypto news desks.
           FEEDS = {
               "CNBC-e": [
                   ("CNBC-e", "https://www.cnbce.com/rss"),
@@ -50,6 +50,10 @@ jobs:
                   ("BBC News", "https://feeds.bbci.co.uk/news/business/economy/rss.xml"),
                   ("BBC News", "https://feeds.bbci.co.uk/news/business/companies/rss.xml"),
                   ("BBC News", "https://feeds.bbci.co.uk/news/world/rss.xml"),
+              ],
+              "Kripto Haberleri": [
+                  ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"),
+                  ("Cointelegraph", "https://cointelegraph.com/rss"),
               ],
           }
 
