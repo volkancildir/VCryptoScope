@@ -42,6 +42,9 @@ jobs:
 
           # Direct publisher feeds only; do not use Google News as a news provider.
           FEEDS = {
+              "Futbol & Transfer": [
+                  ("Transfermarkt", "https://www.transfermarkt.com/news/rss"),
+              ],
               "Kripto": [
                   ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/"),
                   ("Cointelegraph", "https://cointelegraph.com/rss"),
@@ -95,7 +98,7 @@ jobs:
 
               def add_url(value):
                   value = html.unescape(value or "").replace("\\/", "/").replace("&amp;", "&")
-                  value = value.strip().strip("\\"'<>")
+                  value = value.strip(" <>")
                   parsed = urllib.parse.urlparse(value)
                   if parsed.scheme in ("http", "https") and parsed.netloc and "news.google.com" not in parsed.netloc and "google.com" not in parsed.netloc:
                       if value not in candidate_urls:
@@ -220,6 +223,7 @@ jobs:
 
           def infer_impact(category):
               impacts = {
+                  "Futbol & Transfer": "Transfer haberleri, oyuncu değerleri ve kulüp kadro hareketleri futbol piyasasını etkileyebilir.",
                   "Kripto": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin.",
                   "Fed & Faiz": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir.",
                   "İstihdam & Enflasyon": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir.",
