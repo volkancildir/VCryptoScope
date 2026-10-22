@@ -42,9 +42,6 @@ jobs:
 
           # Direct publisher feeds only; do not use Google News as a news provider.
           FEEDS = {
-              "Futbol & Transfer": [
-                  ("Transfermarkt", "https://www.transfermarkt.com/news/rss"),
-              ],
               "Kripto": [
                   ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/"),
                   ("Cointelegraph", "https://cointelegraph.com/rss"),
@@ -223,7 +220,6 @@ jobs:
 
           def infer_impact(category):
               impacts = {
-                  "Futbol & Transfer": "Transfer haberleri, oyuncu değerleri ve kulüp kadro hareketleri futbol piyasasını etkileyebilir.",
                   "Kripto": "Kripto fiyatları, fon akışları ve risk iştahı üzerindeki olası etkileri takip edin.",
                   "Fed & Faiz": "Faiz beklentileri dolar, tahvil getirileri, hisse senetleri ve kripto varlıkları etkileyebilir.",
                   "İstihdam & Enflasyon": "Veri, Fed'in faiz politikası ve piyasalardaki risk iştahı için önemli olabilir.",
