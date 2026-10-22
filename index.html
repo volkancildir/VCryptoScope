@@ -586,6 +586,7 @@ function compareAndReconcileMarketCaps(primary,secondary){
   if(c._cgMarketCap&&c._cpMarketCap){matched++;const gap=Math.abs(c._cgMarketCap-c._cpMarketCap)/Math.max(c._cgMarketCap,c._cpMarketCap);c._marketCapDiscrepancy=gap*100;if(gap<=0.35){c.market_cap=(c._cgMarketCap+c._cpMarketCap)/2;c._marketCapMethod='CoinGecko + CoinPaprika ortalaması';}else{divergent++;c.market_cap=c._cgMarketCap;c._marketCapMethod='Kaynaklar farklı; CoinGecko değeri kullanıldı';}}
   else{c.market_cap=c._cgMarketCap||c._cpMarketCap||null;c._marketCapMethod=c._cgMarketCap?'Yalnızca CoinGecko':'Yalnızca CoinPaprika';}
  }
+ primary.slice().sort((a,b)=>(Number(b.market_cap)||0)-(Number(a.market_cap)||0)).forEach((c,i)=>{c.market_cap_rank=i+1;});
  const note=$('listCaption');if(note)note.title='Piyasa değerleri CoinGecko ve CoinPaprika ile karşılaştırılır. '+matched+' eşleşme, '+divergent+' belirgin kaynak farkı. Piyasa değeri farkı %35’i aşarsa sıralamada CoinGecko değeri korunur.';
 }
 function sumCap(n){return coins.slice().sort((a,b)=>(Number(b.market_cap)||0)-(Number(a.market_cap)||0)).slice(0,n).reduce((s,c)=>s+(Number(c.market_cap)||0),0)}
@@ -598,7 +599,7 @@ async function refreshData(manual=false){if(busy)return;busy=true;const btn=$('r
  fetchJson(API+'/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C30d'),
  (Date.now()-paprikaFetchedAt>600000||!paprikaCache.length?fetchJson('https://api.coinpaprika.com/v1/tickers').then(data=>{paprikaCache=Array.isArray(data)?data:[];paprikaFetchedAt=Date.now();return paprikaCache}).catch(()=>paprikaCache):Promise.resolve(paprikaCache))
  ]);
- const g=globalData.data||{};coins=Array.isArray(marketData)?marketData:[];compareAndReconcileMarketCaps(coins,Array.isArray(paprikaData)?paprikaData:[]);coins.sort((a,b)=>(Number(b.market_cap)||0)-(Number(a.market_cap)||0));
+ const g=globalData.data||{};coins=Array.isArray(marketData)?marketData:[];compareAndReconcileMarketCaps(coins,Array.isArray(paprikaData)?paprikaData:[]);coins.sort((a,b)=>(a.market_cap_rank||999999)-(b.market_cap_rank||999999));
  $('totalCap').textContent=money(g.total_market_cap?.usd);$('totalVolume').textContent=money(g.total_volume?.usd);$('coinCount').textContent=number(g.active_cryptocurrencies);renderMobileDashboard(g);
  const caps=[3,10,20];for(const n of caps){const s=sumCap(n);$('top'+n).textContent=money(s);$('top'+n+'share').textContent='Toplam piyasa içindeki payı: '+share(s,g.total_market_cap?.usd||0)}
  const top100=coins.slice(0,100);const changes=top100.map(c=>c.price_change_percentage_24h_in_currency??c.price_change_percentage_24h).filter(v=>v!==null&&v!==undefined&&Number.isFinite(Number(v)));const avg=changes.length?changes.reduce((a,b)=>a+Number(b),0)/changes.length:null;setChange('avgChange',avg);$('avgNote').textContent='Piyasa değerine göre ilk 100 coin için basit ortalama';
