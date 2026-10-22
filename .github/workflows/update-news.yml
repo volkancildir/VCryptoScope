@@ -24,6 +24,9 @@ jobs:
         with:
           ref: main
 
+      - name: Install article extraction dependency
+        run: pip install trafilatura
+
       - name: Fetch and classify global market news
         run: |
           python - <<'PY'
@@ -94,6 +97,18 @@ jobs:
               """Best-effort extraction of real article text from publisher pages."""
               try:
                   raw = get_url(url, timeout=12).decode("utf-8", errors="ignore")
+                  # Dedicated readability extraction handles more publisher layouts.
+                  try:
+                      import trafilatura
+                      extracted = trafilatura.extract(
+                          raw, include_comments=False, include_tables=False,
+                          favor_recall=True, output_format="txt"
+                      )
+                      extracted = clean_text(extracted or "")
+                      if len(extracted) >= 350:
+                          return extracted[:5000]
+                  except Exception as exc:
+                      print(f"Readability extraction error: {exc}")
                   # Prefer structured article body when publisher exposes it.
                   candidates = []
                   for match in re.findall(r'"articleBody"\s*:\s*"((?:\\.|[^"\\])*)"', raw, re.I):
