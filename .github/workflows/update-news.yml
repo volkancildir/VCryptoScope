@@ -94,9 +94,15 @@ jobs:
               return re.sub(r"\s+", " ", value).strip()
 
           def extract_article_text(url):
-              """Best-effort extraction of real article text from publisher pages."""
+              """Resolve feed redirects first, then extract substantial publisher article text."""
               try:
-                  raw = get_url(url, timeout=12).decode("utf-8", errors="ignore")
+                  request = urllib.request.Request(url, headers=HEADERS)
+                  with urllib.request.urlopen(request, timeout=20) as response:
+                      raw = response.read().decode("utf-8", errors="ignore")
+                      final_url = response.geturl()
+                  # Google News RSS links often redirect to a publisher URL; prefer that page.
+                  if final_url and final_url != url and "news.google.com" not in urllib.parse.urlparse(final_url).netloc:
+                      url = final_url
                   # Dedicated readability extraction handles more publisher layouts.
                   try:
                       import trafilatura
@@ -105,7 +111,7 @@ jobs:
                           favor_recall=True, output_format="txt"
                       )
                       extracted = clean_text(extracted or "")
-                      if len(extracted) >= 350:
+                      if len(extracted) >= 700:
                           return extracted[:5000]
                   except Exception as exc:
                       print(f"Readability extraction error: {exc}")
@@ -130,7 +136,7 @@ jobs:
                   fragment = re.sub(r'<(script|style|nav|footer|header|aside)\b[^>]*>.*?</\1>', ' ', fragment, flags=re.I | re.S)
                   paragraphs = re.findall(r'<p\b[^>]*>(.*?)</p>', fragment, re.I | re.S)
                   text = clean_text(' '.join(paragraphs))
-                  if len(text) >= 250:
+                  if len(text) >= 500:
                       return text[:5000]
                   # Last fallback: publisher metadata description, if present.
                   meta = re.search(r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+content=["\']([^"\']+)["\']', raw, re.I)
@@ -274,9 +280,9 @@ jobs:
                   item["summaryTr"] = translate_tr(item["summary"])
                   article_text = extract_article_text(item["url"])
                   # Only publish extracted publisher text; never pad a headline with generic prose.
-                  if article_text and len(article_text) > len(item["title"]) + 80:
+                  if article_text and len(article_text) > len(item["title"]) + 250:
                       item["articleText"] = article_text
-                      item["articleTextTr"] = translate_tr(article_text[:4000])
+                      item["articleTextTr"] = translate_tr(article_text[:5000])
                   else:
                       item["articleText"] = ""
                       item["articleTextTr"] = ""
