@@ -55,6 +55,11 @@ jobs:
                   ("CoinDesk", "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"),
                   ("Cointelegraph", "https://cointelegraph.com/rss"),
               ],
+              "Resmî Kurum Duyuruları": [
+                  ("SEC · Resmî", "https://www.sec.gov/news/pressreleases.rss"),
+                  ("CFTC · Resmî", "https://www.cftc.gov/RSS/RSSGP/rssgp.xml"),
+                  ("CFTC · Resmî", "https://www.cftc.gov/RSS/RSSENF/rssenf.xml"),
+              ],
           }
 
           def classify_cnbce_category(title, summary):
@@ -101,7 +106,7 @@ jobs:
                   host = urllib.parse.urlparse(final_url).netloc.lower()
                   allowed = (
                       "cnbc.com", "cnbc-e.com", "cnbce.com", "www.cnbce.com", "bbc.co.uk", "bbc.com",
-                      "federalreserve.gov", "coindesk.com", "cointelegraph.com"
+                      "federalreserve.gov", "sec.gov", "cftc.gov", "coindesk.com", "cointelegraph.com"
                   )
                   if not any(host == domain or host.endswith("." + domain) for domain in allowed):
                       print(f"ARTICLE REJECTED: unexpected redirect host={host}")
@@ -297,6 +302,8 @@ jobs:
                               "summary": summary,
                               "url": url,
                               "source": source_name,
+                              "sourceType": "Resmî kurum" if source_name.endswith("Resmî") else "Haber kuruluşu",
+                              "verification": "Birincil kaynak" if source_name.endswith("Resmî") else "Editoryal haber; resmî duyuru olarak değerlendirilmemeli",
                               "publishedAt": published,
                               "category": "Küresel Piyasalar",
                           })
